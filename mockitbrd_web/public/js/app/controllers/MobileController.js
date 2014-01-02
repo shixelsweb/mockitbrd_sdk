@@ -7,6 +7,9 @@ define(['MB', 'backbone', 'marionette', 'views/WelcomeView', 'views/MobileHeader
         //gets mapped to in AppRouter's appRoutes
         index:function () {
             MB.mainRegion.show(new WelcomeView());
+        },
+        register:function () {
+            MB.mainRegion.show(new RegisterView());
         }
     });
 });

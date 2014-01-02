@@ -20,5 +20,7 @@ define(['jquery', 'backbone', 'marionette', 'underscore', 'handlebars'],
 
         MB.mobile = isMobile();
 
+        MB.api = 'api.mockitbrd.com/';
+
         return MB;
     });

@@ -1,7 +1,7 @@
 {
-    "name":"Marionette-Require-Boilerplate",
-    "title":"Marionette and Require Boilerplate",
-    "description":"A Marionette.js and Require.js Boilerplate that promotes decoupling your JavaScript into modules, separating business logic from application logic using Models and Views, organizing your application into Regions with default build-up/tear-down logic for you Views, reusing your JavaScript between Desktop and Mobile Web versions, including non-AMD Compatible Third Party Scripts in your project, and optimizing all of your JavaScript (minify, concatenate, etc).",
+    "name":"MockitBrd-Beta",
+    "title":"MockitBrd Beta",
+    "description":"Next Generation of mock interviews",
     "version":"1.1.0",
     "homepage":"https://github.com/BoilerplateMVC/Marionette-Require-Boilerplate",
     "author":{

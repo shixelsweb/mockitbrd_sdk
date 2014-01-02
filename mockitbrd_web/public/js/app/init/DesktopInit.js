@@ -6,5 +6,4 @@ require(["MB", "routers/AppRouter", "controllers/DesktopController", "jquery", "
         });
         // Start Marionette Application in desktop mode (default)
         MB.start();
-
     });
