@@ -1,2 +1,268 @@
-@import url("bootstrap.css");
-@import url("commonstyles.css");
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 17, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 2, ../js/app/templates/scss/register.scss */
+.MB-register-switcher .slide-button,
+.toggle p span {
+  display: none;
+}
+
+/* line 6, ../js/app/templates/scss/register.scss */
+.toggle {
+  position: relative;
+  padding: 0;
+  margin-left: 100px;
+}
+
+/* line 12, ../js/app/templates/scss/register.scss */
+.toggle label {
+  position: relative;
+  z-index: 3;
+  display: block;
+  width: 100%;
+}
+
+/* line 20, ../js/app/templates/scss/register.scss */
+.toggle input {
+  position: absolute;
+  opacity: 0;
+  z-index: 5;
+}
+
+/* line 26, ../js/app/templates/scss/register.scss */
+.toggle p {
+  position: absolute;
+  left: -100px;
+  width: 100%;
+  margin: 0;
+  padding-right: 100px;
+  text-align: left;
+}
+
+/* line 37, ../js/app/templates/scss/register.scss */
+.toggle p span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  display: block;
+  width: 50%;
+  margin-left: 100px;
+  text-align: center;
+}
+
+/* line 50, ../js/app/templates/scss/register.scss */
+.toggle p span:last-child {
+  left: 50%;
+}
+
+/* line 54, ../js/app/templates/scss/register.scss */
+.toggle .slide-button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 4;
+  display: block;
+  width: 50%;
+  height: 100%;
+  padding: 0;
+}
+
+/* line 66, ../js/app/templates/scss/register.scss */
+.MB-register-switcher {
+  position: relative;
+  padding: 0;
+}
+
+/* line 71, ../js/app/templates/scss/register.scss */
+.MB-register-switcher input {
+  position: absolute;
+  opacity: 0;
+  left: -100%;
+  z-index: -1;
+}
+
+/* line 78, ../js/app/templates/scss/register.scss */
+.MB-register-switcher label {
+  position: relative;
+  z-index: 2;
+  float: left;
+  width: 50%;
+  height: 100%;
+  margin: 0;
+  padding: 112px 0 20px;
+  text-align: center;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+/* line 94, ../js/app/templates/scss/register.scss */
+.MB-register-switcher .slide-button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0;
+  z-index: 1;
+  width: 50%;
+  height: 100%;
+}
+
+/* line 105, ../js/app/templates/scss/register.scss */
+.MB-register-switcher input:last-of-type:checked ~ .slide-button {
+  left: 50%;
+}
+
+/* line 110, ../js/app/templates/scss/register.scss */
+.toggle,
+.MB-register-switcher {
+  display: block;
+  height: auto;
+  overflow: hidden;
+}
+
+/* line 117, ../js/app/templates/scss/register.scss */
+.MB-register-switcher *,
+.toggle * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 126, ../js/app/templates/scss/register.scss */
+.MB-register-switcher .slide-button,
+.toggle .slide-button {
+  display: block;
+  -webkit-transition: all .3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+/* line 138, ../js/app/templates/scss/register.scss */
+.toggle label,
+.toggle p,
+.MB-register-switcher label {
+  line-height: 30px;
+  vertical-align: middle;
+}
+
+/* line 143, ../js/app/templates/scss/register.scss */
+.toggle input:checked ~ .slide-button {
+  right: 50%;
+}
+
+/* line 148, ../js/app/templates/scss/register.scss */
+.toggle input:focus ~ .slide-button,
+.MB-register-switcher input:focus + label {
+  outline: 1px dotted #888;
+}
+
+/* line 152, ../js/app/templates/scss/register.scss */
+.MB-register-switcher, .toggle {
+  -webkit-animation: bugfix infinite 1s;
+}
+
+@-webkit-keyframes bugfix {
+  /* line 156, ../js/app/templates/scss/register.scss */
+  from {
+    position: relative;
+  }
+
+  /* line 156, ../js/app/templates/scss/register.scss */
+  to {
+    position: relative;
+  }
+}
+
+/* line 158, ../js/app/templates/scss/register.scss */
+.candy {
+  background: #fff;
+  color: #999;
+  text-align: center;
+  border-radius: 3px;
+}
+
+/* line 165, ../js/app/templates/scss/register.scss */
+.candy .slide-button {
+  background-color: #508def;
+}
+
+/* line 169, ../js/app/templates/scss/register.scss */
+.candy p {
+  color: #333;
+  text-shadow: none;
+}
+
+/* line 175, ../js/app/templates/scss/register.scss */
+.candy span {
+  color: #fff;
+}

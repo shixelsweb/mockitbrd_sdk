@@ -12,6 +12,7 @@ define(['MB', 'backbone', 'marionette', 'views/WelcomeView', 'views/DesktopHeade
             MB.mainRegion.show(new LoginView());
         },
         register:function () {
+            //MB.bodyRegion.addClass('MB-registration-page');
             MB.mainRegion.show(new RegisterView());
         }
     });
