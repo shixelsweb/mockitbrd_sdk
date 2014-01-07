@@ -67,202 +67,612 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
 }
 
-/* line 2, ../js/app/templates/scss/register.scss */
-.MB-register-switcher .slide-button,
-.toggle p span {
-  display: none;
+@font-face {
+  font-family: "Open Sans";
+  src: url('/css/fonts/../../fonts/opensans/regular.ttf') format('truetype');
 }
 
-/* line 6, ../js/app/templates/scss/register.scss */
-.toggle {
-  position: relative;
-  padding: 0;
-  margin-left: 100px;
+/* line 18, ../js/app/templates/scss/variables.scss */
+.placeholderHIW {
+  margin-top: 30px;
 }
 
-/* line 12, ../js/app/templates/scss/register.scss */
-.toggle label {
-  position: relative;
-  z-index: 3;
-  display: block;
-  width: 100%;
+/* line 22, ../js/app/templates/scss/variables.scss */
+.MB-boardroom-bg {
+  background: url("../../img/login_bg.jpg") no-repeat;
+  background-position: center;
+  background-size: 100%;
 }
 
-/* line 20, ../js/app/templates/scss/register.scss */
-.toggle input {
-  position: absolute;
-  opacity: 0;
-  z-index: 5;
+/* line 28, ../js/app/templates/scss/variables.scss */
+.MB-office-bg {
+  background: url("../../img/office_bg.jpg") no-repeat;
+  background-position: center;
+  background-size: 100%;
 }
 
-/* line 26, ../js/app/templates/scss/register.scss */
-.toggle p {
-  position: absolute;
-  left: -100px;
-  width: 100%;
-  margin: 0;
-  padding-right: 100px;
-  text-align: left;
+/* line 34, ../js/app/templates/scss/variables.scss */
+.MB-mail-bg {
+  background: url("../../img/mail_bg.jpg") no-repeat;
+  background-position: center;
+  background-size: 100%;
 }
 
-/* line 37, ../js/app/templates/scss/register.scss */
-.toggle p span {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 5;
-  display: block;
-  width: 50%;
-  margin-left: 100px;
-  text-align: center;
+/* line 40, ../js/app/templates/scss/variables.scss */
+.MB-lightGrey-bg {
+  background-color: #f3f3f3;
 }
 
-/* line 50, ../js/app/templates/scss/register.scss */
-.toggle p span:last-child {
-  left: 50%;
+/* line 43, ../js/app/templates/scss/variables.scss */
+.MB-white-bg {
+  background-color: white;
+  box-shadow: 0px 0px 2px #525252;
 }
 
-/* line 54, ../js/app/templates/scss/register.scss */
-.toggle .slide-button {
-  position: absolute;
-  right: 0;
-  top: 0;
-  z-index: 4;
-  display: block;
-  width: 50%;
-  height: 100%;
-  padding: 0;
+/* line 48, ../js/app/templates/scss/variables.scss */
+.clear-left {
+  clear: left;
 }
 
-/* line 66, ../js/app/templates/scss/register.scss */
+/* line 52, ../js/app/templates/scss/variables.scss */
+.clear-right {
+  clear: right;
+}
+
+/* line 56, ../js/app/templates/scss/variables.scss */
+.clear-both {
+  clear: both;
+}
+
+/* line 3, ../js/app/templates/scss/register.scss */
 .MB-register-switcher {
   position: relative;
   padding: 0;
-}
-
-/* line 71, ../js/app/templates/scss/register.scss */
-.MB-register-switcher input {
-  position: absolute;
-  opacity: 0;
-  left: -100%;
-  z-index: -1;
-}
-
-/* line 78, ../js/app/templates/scss/register.scss */
-.MB-register-switcher label {
-  position: relative;
-  z-index: 2;
-  float: left;
-  width: 50%;
-  height: 100%;
-  margin: 0;
-  padding: 112px 0 20px;
+  width: auto;
   text-align: center;
-  font-size: 15px;
+  height: 150px;
+}
+/* line 10, ../js/app/templates/scss/register.scss */
+.MB-register-switcher .candidate {
+  width: 150px;
+  height: 150px;
+  border-radius: 130px;
+  display: inline-block;
   cursor: pointer;
 }
-
-/* line 94, ../js/app/templates/scss/register.scss */
-.MB-register-switcher .slide-button {
+/* line 17, ../js/app/templates/scss/register.scss */
+.MB-register-switcher .candidate.off {
+  background: url("../../img/candidate_off.png") no-repeat;
+  background-color: white;
+  background-size: 60px;
+  background-position: center;
+  box-shadow: 0px 0px 2px #525252;
+}
+/* line 25, ../js/app/templates/scss/register.scss */
+.MB-register-switcher .candidate.on {
+  background: url("../../img/candidate_on.png") no-repeat;
+  background-color: #2bbbff;
+  background-size: 60px;
+  background-position: center;
+}
+/* line 33, ../js/app/templates/scss/register.scss */
+.MB-register-switcher .professional {
+  width: 150px;
+  height: 150px;
+  border-radius: 130px;
+  display: inline-block;
+  cursor: pointer;
+}
+/* line 40, ../js/app/templates/scss/register.scss */
+.MB-register-switcher .professional.off {
+  background: url("../../img/professional_off.png") no-repeat;
+  background-color: white;
+  background-size: 60px;
+  background-position: center;
+}
+/* line 47, ../js/app/templates/scss/register.scss */
+.MB-register-switcher .professional.on {
+  background: url("../../img/professional_on.png") no-repeat;
+  background-color: #2bbbff;
+  background-size: 60px;
+  background-position: center;
+}
+/* line 54, ../js/app/templates/scss/register.scss */
+.MB-register-switcher .or {
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+  line-height: 50px;
+  border-radius: 150px;
+  background-color: #888;
   position: absolute;
-  top: 0;
-  left: 0;
-  padding: 0;
-  z-index: 1;
-  width: 50%;
+  z-index: 2;
+  top: 50px;
+  right: 48%;
+  font-family: cursive;
+  color: white;
+}
+
+/* line 1, ../js/app/templates/scss/welcome.scss */
+.container-fluid {
+  padding: 0px;
+  margin-top: -20px;
+}
+/* line 5, ../js/app/templates/scss/welcome.scss */
+.container-fluid .hero-unit {
+  height: 460px;
+  border-radius: 0px;
+  text-align: center;
+  margin-bottom: 0;
+  font-family: "Open Sans";
+}
+/* line 12, ../js/app/templates/scss/welcome.scss */
+.container-fluid .hero-unit lede {
+  width: 70%;
+  display: block;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 20px;
+}
+/* line 21, ../js/app/templates/scss/welcome.scss */
+.container-fluid .hero-unit.gut {
+  margin-top: 75px;
+  margin-bottom: -50px;
+}
+/* line 26, ../js/app/templates/scss/welcome.scss */
+.container-fluid .hero-unit.full {
   height: 100%;
 }
-
-/* line 105, ../js/app/templates/scss/register.scss */
-.MB-register-switcher input:last-of-type:checked ~ .slide-button {
-  left: 50%;
+/* line 30, ../js/app/templates/scss/welcome.scss */
+.container-fluid .hero-unit.topGut {
+  margin-top: -28px;
 }
 
-/* line 110, ../js/app/templates/scss/register.scss */
-.toggle,
-.MB-register-switcher {
-  display: block;
-  height: auto;
+/* line 36, ../js/app/templates/scss/welcome.scss */
+.overlay {
+  background: url("../../img/pattern.png");
+  width: 100%;
+  height: 560px;
+  top: 0;
+  position: absolute;
   overflow: hidden;
 }
 
-/* line 117, ../js/app/templates/scss/register.scss */
-.MB-register-switcher *,
-.toggle * {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-/* line 126, ../js/app/templates/scss/register.scss */
-.MB-register-switcher .slide-button,
-.toggle .slide-button {
-  display: block;
-  -webkit-transition: all .3s ease;
-  -moz-transition: all 0.3s ease;
-  -ms-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
-
-/* line 138, ../js/app/templates/scss/register.scss */
-.toggle label,
-.toggle p,
-.MB-register-switcher label {
-  line-height: 30px;
-  vertical-align: middle;
-}
-
-/* line 143, ../js/app/templates/scss/register.scss */
-.toggle input:checked ~ .slide-button {
-  right: 50%;
-}
-
-/* line 148, ../js/app/templates/scss/register.scss */
-.toggle input:focus ~ .slide-button,
-.MB-register-switcher input:focus + label {
-  outline: 1px dotted #888;
-}
-
-/* line 152, ../js/app/templates/scss/register.scss */
-.MB-register-switcher, .toggle {
-  -webkit-animation: bugfix infinite 1s;
-}
-
-@-webkit-keyframes bugfix {
-  /* line 156, ../js/app/templates/scss/register.scss */
-  from {
-    position: relative;
-  }
-
-  /* line 156, ../js/app/templates/scss/register.scss */
-  to {
-    position: relative;
-  }
-}
-
-/* line 158, ../js/app/templates/scss/register.scss */
-.candy {
-  background: #fff;
-  color: #999;
+/* line 45, ../js/app/templates/scss/welcome.scss */
+#MB-team-section, #MB-gutter-section, #MB-features-section, #MB-pricing-section, #MB-contact-section {
+  width: 100%;
+  padding-bottom: 50px;
   text-align: center;
-  border-radius: 3px;
+}
+/* line 50, ../js/app/templates/scss/welcome.scss */
+#MB-team-section h1, #MB-gutter-section h1, #MB-features-section h1, #MB-pricing-section h1, #MB-contact-section h1 {
+  font-family: "Open Sans";
+  font-size: 2.5em;
+  font-weight: 100;
+  text-transform: uppercase;
+  line-height: 2.5em;
 }
 
-/* line 165, ../js/app/templates/scss/register.scss */
-.candy .slide-button {
-  background-color: #508def;
+/* line 59, ../js/app/templates/scss/welcome.scss */
+#MB-gutter-section {
+  height: 100px;
+}
+/* line 62, ../js/app/templates/scss/welcome.scss */
+#MB-gutter-section.medium {
+  height: 160px;
+}
+/* line 66, ../js/app/templates/scss/welcome.scss */
+#MB-gutter-section p {
+  font-size: 2em;
+  color: white;
+  font-family: "Open Sans";
+  font-weight: 100;
+  line-height: 150px;
+}
+/* line 73, ../js/app/templates/scss/welcome.scss */
+#MB-gutter-section .author {
+  font-size: 0.5em;
+  display: block;
+}
+/* line 77, ../js/app/templates/scss/welcome.scss */
+#MB-gutter-section .icon-under, #MB-gutter-section .author {
+  color: #ffe42b;
+  margin-top: -110px;
+}
+/* line 82, ../js/app/templates/scss/welcome.scss */
+#MB-gutter-section .business_man {
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: FlipH;
+  -ms-filter: "FlipH";
+  float: left;
+  margin-top: -62px;
+  width: 450px;
 }
 
-/* line 169, ../js/app/templates/scss/register.scss */
-.candy p {
-  color: #333;
+/* line 95, ../js/app/templates/scss/welcome.scss */
+#MB-contact-section {
+  padding-bottom: 0px;
+}
+/* line 97, ../js/app/templates/scss/welcome.scss */
+#MB-contact-section #MB-main-contact-form {
+  margin-right: auto;
+  margin-left: auto;
+  width: 680px;
+}
+/* line 102, ../js/app/templates/scss/welcome.scss */
+#MB-contact-section #MB-main-contact-form .MB-contact-left {
+  float: left;
+}
+/* line 105, ../js/app/templates/scss/welcome.scss */
+#MB-contact-section #MB-main-contact-form .MB-contact-left input {
+  width: 300px;
+  height: 40px;
+  display: block;
+  border-radius: 0px;
+  border: 1px solid black;
+  font-family: "Open Sans";
+  font-weight: 100;
+  font-size: 0.7em;
+}
+/* line 118, ../js/app/templates/scss/welcome.scss */
+#MB-contact-section #MB-main-contact-form .MB-contact-right textarea {
+  width: 340px;
+  height: 98px;
+  border: 1px solid black;
+  border-radius: 0px;
+  display: inline-block;
+  font-family: "Open Sans";
+  font-weight: 100;
+  font-size: 0.7em;
+}
+/* line 128, ../js/app/templates/scss/welcome.scss */
+#MB-contact-section #MB-main-contact-form .MB-contact-right button {
+  width: 350px;
+  height: 51px;
+  border: 1px solid black;
+  font-size: 1.3em;
+  background-color: #ffe42b;
+  color: black;
+}
+/* line 137, ../js/app/templates/scss/welcome.scss */
+#MB-contact-section #MB-main-contact-form #MB-contact-error-msg {
+  width: 680px;
+  height: 60px;
+  display: block;
+}
+
+/* line 148, ../js/app/templates/scss/welcome.scss */
+#MB-team-section .MB-team-photos li {
+  display: inline-block;
+  margin-right: 50px;
+  cursor: pointer;
+}
+/* line 153, ../js/app/templates/scss/welcome.scss */
+#MB-team-section .MB-team-photos li .view {
+  line-height: 200px;
+  font-weight: 100;
+  text-transform: uppercase;
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 200px;
+  font-family: "Open Sans";
+  font-size: 2em;
+  color: #2bbbff;
+  display: none;
+}
+/* line 168, ../js/app/templates/scss/welcome.scss */
+#MB-team-section .MB-team-photos li .MB-team-photo {
+  border-radius: 200px;
+  width: 200px;
+  height: 200px;
+}
+/* line 174, ../js/app/templates/scss/welcome.scss */
+#MB-team-section .MB-team-photos li .MB-team-photo:hover {
+  opacity: 0.3;
+}
+/* line 177, ../js/app/templates/scss/welcome.scss */
+#MB-team-section .MB-team-photos li .MB-team-photo:hover .view {
+  display: block;
+}
+/* line 182, ../js/app/templates/scss/welcome.scss */
+#MB-team-section .MB-team-photos li .MB-team-photo.fara {
+  background: url("../../img/fara.jpg") no-repeat;
+  background-size: 340px;
+  background-position: right;
+}
+/* line 187, ../js/app/templates/scss/welcome.scss */
+#MB-team-section .MB-team-photos li .MB-team-photo.earl {
+  background: url("../../img/earl.jpg") no-repeat;
+  background-size: 215px;
+  background-position: center;
+}
+/* line 192, ../js/app/templates/scss/welcome.scss */
+#MB-team-section .MB-team-photos li .MB-team-photo.clee {
+  background: url("../../img/clee.jpg") no-repeat;
+  background-size: 500px;
+  background-position: -240px -50px;
+}
+/* line 201, ../js/app/templates/scss/welcome.scss */
+#MB-team-section .MB-team-info {
+  font-family: "Open Sans";
+}
+/* line 203, ../js/app/templates/scss/welcome.scss */
+#MB-team-section .MB-team-info .name {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 1em;
+  padding: 10px 0;
+}
+/* line 209, ../js/app/templates/scss/welcome.scss */
+#MB-team-section .MB-team-info .title {
+  font-style: italic;
+}
+
+/* line 1, ../js/app/templates/scss/header.scss */
+header {
+  position: fixed;
+  margin: 0;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+}
+
+/* line 9, ../js/app/templates/scss/header.scss */
+.nav .MB-nav {
+  font-family: "Open Sans";
+  padding-top: 22px;
+  float: right;
+  margin-right: 30px;
+}
+/* line 16, ../js/app/templates/scss/header.scss */
+.nav .MB-nav .dropdown-menu li > a {
+  color: black !important;
+}
+/* line 19, ../js/app/templates/scss/header.scss */
+.nav .MB-nav .dropdown-menu li > a:hover {
+  background-color: #6c6c6c;
+  background-image: none;
+  color: white !important;
+}
+/* line 28, ../js/app/templates/scss/header.scss */
+.nav .MB-nav li.dropdown.open > .dropdown-toggle {
+  color: #ffe42b;
+  background-color: black;
+}
+/* line 32, ../js/app/templates/scss/header.scss */
+.nav .MB-nav li a {
   text-shadow: none;
+  color: #fff;
+  font-weight: 100;
+  text-transform: uppercase;
+  font-size: 0.9em;
+}
+/* line 39, ../js/app/templates/scss/header.scss */
+.nav .MB-nav li a:hover {
+  color: #ffe42b;
+}
+/* line 45, ../js/app/templates/scss/header.scss */
+.nav .navbar-inner {
+  background: black;
+  background-image: none;
+  border-radius: 0px;
+  border: none;
+}
+/* line 51, ../js/app/templates/scss/header.scss */
+.nav .navbar-inner .MB-nav-logo {
+  float: left;
+  padding-top: 10px;
+}
+/* line 55, ../js/app/templates/scss/header.scss */
+.nav .navbar-inner .MB-nav-logo img {
+  width: 250px;
+}
+/* line 60, ../js/app/templates/scss/header.scss */
+.nav .navbar-inner .MB-login-register-nav {
+  right: 0;
+  float: right;
+  margin: 10px 0;
 }
 
-/* line 175, ../js/app/templates/scss/register.scss */
-.candy span {
-  color: #fff;
+/* line 69, ../js/app/templates/scss/header.scss */
+.MB-message {
+  width: 100%;
+  position: absolute;
+  z-index: 2;
+  height: 560px;
+  top: 0;
+  padding-top: 120px;
+  font-family: "Open Sans";
+  text-align: center;
+  color: white;
+}
+/* line 80, ../js/app/templates/scss/header.scss */
+.MB-message .MB-big-social {
+  font-size: 2.5em;
+  padding-left: 30px;
+  padding-top: 20px;
+  padding-bottom: 15px;
+  color: #2bbbff;
+}
+/* line 87, ../js/app/templates/scss/header.scss */
+.MB-message .MB-big-social li {
+  display: inline-block;
+  margin-right: 30px;
+  cursor: pointer;
+}
+/* line 92, ../js/app/templates/scss/header.scss */
+.MB-message .MB-big-social li:hover {
+  color: #0085c4;
+}
+/* line 97, ../js/app/templates/scss/header.scss */
+.MB-message p {
+  width: 55%;
+  font-weight: 100;
+  line-height: 2em;
+  font-size: 1em;
+  padding-left: 30px;
+  padding-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 107, ../js/app/templates/scss/header.scss */
+.MB-message p i {
+  font-size: 1.5em;
+  padding: 0 10px;
+}
+/* line 112, ../js/app/templates/scss/header.scss */
+.MB-message h1 {
+  font-size: 5em;
+  padding-left: 30px;
+}
+
+/* line 1, ../js/app/templates/scss/ui.scss */
+.MB-button {
+  font-family: "Open Sans";
+  padding: 15px 24px;
+  margin-left: 5px;
+  font-size: 18px;
+  font-weight: 300;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  text-shadow: none;
+  font-weight: 100;
+  text-decoration: none;
+}
+/* line 14, ../js/app/templates/scss/ui.scss */
+.MB-button a {
+  text-decoration: none;
+}
+/* line 18, ../js/app/templates/scss/ui.scss */
+.MB-button.med-size {
+  width: 70px;
+  margin-left: 30px;
+}
+/* line 23, ../js/app/templates/scss/ui.scss */
+.MB-button.small {
+  font-size: 15px;
+  padding: 10px 20px;
+}
+/* line 28, ../js/app/templates/scss/ui.scss */
+.MB-button.primary {
+  background-color: #2bbbff;
+  color: white !important;
+}
+/* line 32, ../js/app/templates/scss/ui.scss */
+.MB-button.primary:hover {
+  background-color: #0085c4 !important;
+  text-decoration: none;
+}
+/* line 37, ../js/app/templates/scss/ui.scss */
+.MB-button.secondary {
+  background-color: #ffe42b;
+  color: black !important;
+}
+/* line 41, ../js/app/templates/scss/ui.scss */
+.MB-button.secondary:hover {
+  background-color: #dec100 !important;
+  text-decoration: none;
+}
+/* line 47, ../js/app/templates/scss/ui.scss */
+.MB-button.primary, .MB-button.secondary {
+  text-shadow: none !important;
+}
+
+/* line 52, ../js/app/templates/scss/ui.scss */
+.MB-features {
+  padding-top: 50px;
+  text-align: center;
+}
+/* line 55, ../js/app/templates/scss/ui.scss */
+.MB-features .MB-feature {
+  display: inline-block;
+  font-family: "Open Sans";
+  text-align: center;
+  width: 300px;
+  margin-bottom: 50px;
+  position: relative;
+}
+/* line 63, ../js/app/templates/scss/ui.scss */
+.MB-features .MB-feature .bt-steps-link {
+  background: url("../../img/steps-link.png") no-repeat left top transparent;
+  width: 189px;
+  height: 26px;
+  position: absolute;
+  right: -106px;
+  top: 46px;
+}
+/* line 72, ../js/app/templates/scss/ui.scss */
+.MB-features .MB-feature .title {
+  font-size: 1.5em;
+  line-height: 2em;
+}
+/* line 76, ../js/app/templates/scss/ui.scss */
+.MB-features .MB-feature .title.bold {
+  font-weight: bold;
+  color: #525252;
+}
+/* line 81, ../js/app/templates/scss/ui.scss */
+.MB-features .MB-feature .subtitle {
+  font-size: 1em;
+  color: #2bbbff;
+}
+/* line 85, ../js/app/templates/scss/ui.scss */
+.MB-features .MB-feature .about {
+  height: 80px;
+  font-size: 0.9em;
+  line-height: 2em;
+}
+
+/* line 93, ../js/app/templates/scss/ui.scss */
+.MB-benefits {
+  width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+}
+
+/* line 100, ../js/app/templates/scss/ui.scss */
+.MB-benefit {
+  margin-bottom: 30px;
+}
+/* line 103, ../js/app/templates/scss/ui.scss */
+.MB-benefit h4 {
+  font-weight: bold;
+  font-size: 1.2em;
+  line-height: 2em;
+}
+/* line 108, ../js/app/templates/scss/ui.scss */
+.MB-benefit p {
+  font-size: 0.9em;
+}
+
+/* line 113, ../js/app/templates/scss/ui.scss */
+.MB-icon {
+  width: 90px;
+  height: 90px;
+  display: inline-block;
+  font-size: 80px;
+  color: black;
+}
+/* line 120, ../js/app/templates/scss/ui.scss */
+.MB-icon.small {
+  color: #2bbbff;
+  font-size: 40px;
+}
+/* line 125, ../js/app/templates/scss/ui.scss */
+.MB-icon.smaller {
+  color: #2bbbff;
+  font-size: 30px;
+  line-height: 120px;
+}
+
+/* line 10, ../scss/desktop.scss */
+html, body, #page {
+  height: 100%;
 }

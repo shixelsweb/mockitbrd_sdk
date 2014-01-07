@@ -4,4 +4,10 @@
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
 @import "compass/reset";
-@import "../js/app/templates/scss/all.scss"
+@import "compass/css3";
+@import "../js/app/templates/scss/all.scss";
+
+html, body, #page {
+	height: 100%;
+}
+

@@ -10,9 +10,10 @@ define(['jquery', 'backbone', 'marionette', 'underscore', 'handlebars'],
         //Organize Application into regions corresponding to DOM elements
         //Regions can contain views, Layouts, or subregions nested as necessary
         MB.addRegions({
-            bodyRegion: "body",
+            page: "#page",
             headerRegion:"header",
-            mainRegion:"#main"
+            mainRegion:"#main",
+            hero: ".hero-unit"
         });
 
         MB.addInitializer(function () {

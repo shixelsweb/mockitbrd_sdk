@@ -1,0 +1,58 @@
+$primary_blue: #2bbbff;
+$primary_yellow: #ffe42b;
+$primary_black: #000;
+$primary_grey: #525252;
+$primary_white: #fff;
+$primary_blue_hl: darken($primary_blue, 20%);
+$primary_yellow_hl: darken($primary_yellow, 15%);
+$primary_grey_hl: lighten($primary-grey, 10%);
+$primary_light_grey: #F3F3F3;
+
+$primary_blue_rgb: rgb(43, 187, 255);
+$primary_yellow_rgb: rgb(255, 228, 43);
+
+@include font-face("Open Sans", font-files("../../fonts/opensans/regular.ttf"));
+
+$primary_font: "Open Sans";
+
+.placeholderHIW {
+	margin-top: 30px;
+}
+
+.MB-boardroom-bg {
+	background: url('../../img/login_bg.jpg') no-repeat;
+	background-position: center;
+	background-size: 100%;
+}
+
+.MB-office-bg {
+	background: url('../../img/office_bg.jpg') no-repeat;
+	background-position: center;
+	background-size: 100%;
+}
+
+.MB-mail-bg {
+	background: url('../../img/mail_bg.jpg') no-repeat;
+	background-position: center;
+	background-size: 100%;
+}
+
+.MB-lightGrey-bg {
+	background-color: $primary_light_grey;
+}
+.MB-white-bg {
+	background-color: $primary_white;
+	box-shadow: 0px 0px 2px $primary_grey;
+}
+
+.clear-left {
+	clear: left;
+}
+
+.clear-right {
+	clear: right;
+}
+
+.clear-both {
+	clear: both;
+}

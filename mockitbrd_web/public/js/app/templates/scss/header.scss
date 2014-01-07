@@ -1,0 +1,116 @@
+header {
+	position: fixed;
+	margin: 0;
+	width: 100%;
+	top: 0;
+	z-index: 100;
+}
+.nav {
+	.MB-nav {
+		font-family: $primary_font;
+		padding-top: 22px;
+		float: right;
+		margin-right: 30px;
+
+		.dropdown-menu {
+			li > a {
+				color: $primary_black !important;
+
+				&:hover{
+					background-color: $primary_grey_hl;
+					background-image: none;
+					color:$primary_white !important;
+				}
+			}
+		}
+
+		li {
+			&.dropdown.open > .dropdown-toggle{
+				color:$primary_yellow;
+				background-color: $primary_black;
+			}
+			a {
+				text-shadow: none;
+				color: #fff;
+				font-weight: 100;
+				text-transform: uppercase;
+				font-size: 0.9em;
+
+				&:hover {
+					color:$primary_yellow;
+				}
+			}
+		}
+	}
+	.navbar-inner {
+		background: $primary_black;
+		background-image: none;
+		border-radius: 0px;
+		border: none;
+
+		.MB-nav-logo {
+			float: left;
+			padding-top: 10px;
+
+			img {
+				width: 250px;
+			}
+		}
+
+		.MB-login-register-nav {
+			right: 0;
+			float: right;
+			margin: 10px 0;
+
+		}
+	}
+}
+
+.MB-message {
+	width: 100%;
+	position: absolute;
+	z-index: 2;
+	height: 560px;
+	top: 0;
+	padding-top: 120px;
+	font-family: $primary_font;
+	text-align: center;
+	color: $primary_white;
+
+	.MB-big-social {
+		font-size: 2.5em;
+		padding-left: 30px;
+		padding-top: 20px;
+		padding-bottom: 15px;
+		color: $primary_blue;
+
+		li {
+			display: inline-block;
+			margin-right: 30px;
+			cursor: pointer;
+
+			&:hover {
+				color: $primary_blue_hl;
+			}
+		}
+	}
+	p {
+		width: 55%;
+		font-weight: 100;
+		line-height: 2em;
+		font-size: 1em;
+		padding-left: 30px;
+		padding-bottom: 30px;
+		margin-left: auto;
+		margin-right: auto;
+
+		i {
+			font-size: 1.5em;
+			padding: 0 10px;
+		}
+	}
+	h1 {
+		font-size: 5em;
+		padding-left: 30px;
+	}
+}

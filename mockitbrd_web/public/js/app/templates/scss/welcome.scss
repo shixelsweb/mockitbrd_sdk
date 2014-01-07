@@ -1,0 +1,215 @@
+.container-fluid {
+	padding: 0px;
+	margin-top: -20px;
+
+	.hero-unit {
+		height: 460px;
+		border-radius: 0px;
+		text-align: center;
+		margin-bottom: 0;
+		font-family: $primary_font;
+
+		lede {
+			width: 70%;
+			display: block;
+			text-align: center;
+			margin-left: auto;
+			margin-right: auto;
+			padding-top: 20px;
+		}
+
+		&.gut {
+			margin-top: 75px;
+			margin-bottom: -50px;
+		}
+
+		&.full {
+			height: 100%;
+		}
+
+		&.topGut {
+			margin-top: -28px;
+			position: relative;
+			z-index: -1;
+		}
+	}
+}
+
+.overlay {
+	background: url('../../img/pattern.png');
+	width: 100%;
+	height: 560px;
+	top: 0;
+	position: absolute;
+	overflow: hidden;
+}
+
+#MB-team-section, #MB-gutter-section, #MB-features-section, #MB-pricing-section, #MB-contact-section {
+	width: 100%;
+	padding-bottom: 50px;
+	text-align: center;
+
+	h1 {
+		font-family: $primary_font;
+		font-size: 2.5em;
+		font-weight: 100;
+		text-transform: uppercase;
+		line-height: 2.5em;
+	}
+}
+
+#MB-gutter-section {
+	height: 100px;
+
+	&.medium {
+		height: 160px;
+	}
+
+	p {
+		font-size: 2em;
+		color: $primary_white;
+		font-family: $primary_font;
+		font-weight: 100;
+		line-height: 150px;
+	}
+	.author {
+		font-size: 0.5em;
+		display: block;
+	}
+	.icon-under, .author {
+		color: $primary_yellow;
+		margin-top: -110px;
+	}
+
+	.business_man {
+		-moz-transform: scaleX(-1);
+        -o-transform: scaleX(-1);
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+        filter: FlipH;
+        -ms-filter: "FlipH";
+        float: left;
+		margin-top: -62px;
+		width: 450px;
+	}
+}
+
+#MB-contact-section {
+	padding-bottom: 0px;
+	#MB-main-contact-form {
+		margin-right: auto;
+		margin-left: auto;
+		width: 680px;
+
+		.MB-contact-left {
+			float: left;
+
+			input {
+				width: 300px;
+				height: 40px;
+				display: block;
+				border-radius: 0px;
+				border: 1px solid $primary_black;
+				font-family: $primary_font;
+				font-weight: 100;
+				font-size: 0.7em;
+			}
+		}
+
+		.MB-contact-right {
+			textarea {
+				width: 340px;
+				height: 98px;
+				border:  1px solid $primary_black;
+				border-radius: 0px;
+				display: inline-block;
+				font-family: $primary_font;
+				font-weight: 100;
+				font-size: 0.7em;
+			}
+			button {
+				width: 350px;
+				height: 51px;
+				border:  1px solid $primary_black;
+				font-size: 1.3em;
+				background-color: $primary_yellow;
+				color: $primary_black;
+			}
+		}
+		#MB-contact-error-msg {
+			width: 680px;
+			height: 60px;
+			display: block;
+		}
+	}
+}
+
+#MB-team-section {
+
+	.MB-team-photos {
+		li {
+			display: inline-block;
+			margin-right: 50px;
+			cursor: pointer;
+
+			.view {
+				line-height: 200px;
+				font-weight: 100;
+				text-transform: uppercase;
+				position: absolute;
+				width: 200px;
+				height: 200px;
+				border-radius: 200px;
+				font-family: $primary_font;
+				font-size: 2em;
+				color: $primary_blue;
+				display: none;
+
+			}
+
+			.MB-team-photo {
+				border-radius: 200px;
+				width: 200px;
+				height: 200px;
+
+
+				&:hover {
+					opacity: 0.3;
+
+					.view {
+						display: block;
+					}
+				}
+
+				&.fara {
+					background: url('../../img/fara.jpg') no-repeat;
+					background-size: 340px;
+					background-position: right;
+				}
+				&.earl {
+					background: url('../../img/earl.jpg') no-repeat;
+					background-size: 215px;
+					background-position: center;
+				}
+				&.clee {
+					background: url('../../img/clee.jpg') no-repeat;
+					background-size: 500px;
+					background-position: -240px -50px;
+				}
+			}
+		}
+	}
+
+	.MB-team-info {
+		font-family: $primary_font;
+		.name {
+			font-weight: bold;
+			text-transform: uppercase;
+			font-size: 1em;
+			padding: 10px 0;
+		}
+		.title {
+			font-style: italic;
+		}
+	}
+}

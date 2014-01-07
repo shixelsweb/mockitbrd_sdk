@@ -9,7 +9,6 @@ define( ['MB', 'backbone', 'marionette', 'jquery', 'models/Model', 'hbs!template
 
             // View Event Handlers
             events: {
-
             }
         });
     });

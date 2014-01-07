@@ -1,19 +1,39 @@
-define(['MB', 'backbone', 'marionette', 'views/WelcomeView', 'views/DesktopHeaderView', 'views/RegisterView', 'views/LoginView'],
-    function (MB, Backbone, Marionette, WelcomeView, DesktopHeaderView, RegisterView, LoginView) {
+define(['MB', 'backbone', 'marionette', 'views/WelcomeView', 'views/DesktopHeaderView', 'views/RegisterView', 'views/LoginView', 'views/CandidateLearnMoreView'],
+    function (MB, Backbone, Marionette, WelcomeView, DesktopHeaderView, RegisterView, LoginView, CandidateLearnMoreView) {
     return Backbone.Marionette.Controller.extend({
         initialize:function (options) {
             MB.headerRegion.show(new DesktopHeaderView());
         },
         //gets mapped to in AppRouters's appRoutes
         index:function () {
+            MB.headerRegion.show(new DesktopHeaderView());
+            MB.headerRegion.ensureEl();
+            MB.headerRegion.$el.show();
+            MB.page.ensureEl();
+            MB.page.$el.removeClass('MB-boardroom-bg');
             MB.mainRegion.show(new WelcomeView());
         },
         login:function () {
+            MB.headerRegion.ensureEl();
+            MB.headerRegion.$el.hide();
+            MB.page.ensureEl();
+            MB.page.$el.removeClass('MB-boardroom-bg');
             MB.mainRegion.show(new LoginView());
         },
         register:function () {
-            //MB.bodyRegion.addClass('MB-registration-page');
+            MB.headerRegion.ensureEl();
+            MB.headerRegion.$el.hide();
+            MB.page.ensureEl();
+            MB.page.$el.addClass('MB-boardroom-bg');
             MB.mainRegion.show(new RegisterView());
+        },
+        candidateLearnMore:function () {
+            MB.headerRegion.show(new DesktopHeaderView());
+            MB.headerRegion.ensureEl();
+            MB.headerRegion.$el.show();
+            MB.page.ensureEl();
+            MB.page.$el.removeClass('MB-boardroom-bg');
+            MB.mainRegion.show(new CandidateLearnMoreView());
         }
     });
 });

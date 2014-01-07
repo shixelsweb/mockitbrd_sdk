@@ -4,7 +4,8 @@ define(['backbone', 'marionette'], function(Backbone, Marionette) {
        appRoutes: {
            "": "index",
            "login": "login",
-           "register": "register"
+           "register": "register",
+           "candidateLearnMore": "candidateLearnMore"
        }
    });
 });

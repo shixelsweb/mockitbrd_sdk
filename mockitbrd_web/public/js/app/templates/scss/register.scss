@@ -1,177 +1,68 @@
-.MB-register-switcher .slide-button,
-.toggle p span {
-	display: none;
-}
-
-.toggle {
-	position: relative;
-	padding: 0;
-	margin-left: 100px;
-}
-
-.toggle label {
-	position: relative;
-	z-index: 3;
-	
-	display: block;
-	width: 100%;
-}
-
-.toggle input {
-	position: absolute;
-	opacity: 0;
-	z-index: 5;
-}
-
-.toggle p {
-	position: absolute;
-	left: -100px;
-	
-	width: 100%;
-	margin: 0;
-	padding-right: 100px;
-	
-	text-align: left;
-}
-
-.toggle p span {
-	position: absolute;
-	top: 0;
-	left: 0;
-	z-index: 5;
-	
-	display: block;
-	width: 50%;
-	margin-left: 100px;
-	
-	text-align: center;
-}
-
-.toggle p span:last-child {
-	left: 50%;
-}
-
-.toggle .slide-button {
-	position: absolute;
-	right: 0;
-	top: 0;
-	z-index: 4;
-	
-	display: block;
-	width: 50%;
-	height: 100%;
-	padding: 0;
-}
+@import "variables.scss";
 
 .MB-register-switcher {
 	position: relative;
 	padding: 0;
-}
-
-.MB-register-switcher input {
-	position: absolute;
-	opacity: 0;
-	left: -100%;
-	z-index: -1;
-}
-
-.MB-register-switcher label {
-	position: relative;
-	z-index: 2;
-	
-	float: left;
-	width: 50%;
-	height: 100%;
-	
-	margin: 0;
-	padding: 112px 0 20px;
-
+	width: auto;
 	text-align: center;
-	font-size: 15px;
-	cursor: pointer;
-}
+	height: 150px;
 
-.MB-register-switcher .slide-button {
-	position: absolute;
-	top: 0;
-	left: 0;
-	padding: 0;
-	z-index: 1;
-	
-	width: 50%;
-	height: 100%;
-}
+	.candidate {
+		width: 150px;
+		height: 150px;
+		border-radius: 130px;
+		display: inline-block;
+		cursor: pointer;
 
-.MB-register-switcher input:last-of-type:checked ~ .slide-button {
-	left: 50%;
-}
+		&.off {
+			background: url("../../img/candidate_off.png") no-repeat;
+			background-color: $primary_white;
+			background-size: 60px;
+			background-position: center;
+			box-shadow: 0px 0px 2px $primary_grey;
+		}
 
-.toggle,
-.MB-register-switcher {
-	display: block;
-	height: auto;
-	overflow: hidden;
-}
+		&.on {
+			background: url("../../img/candidate_on.png") no-repeat;
+			background-color: $primary_blue;
+			background-size: 60px;
+			background-position: center;
+		}
+	}
 
-.MB-register-switcher *,
-.toggle * {
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	-ms-box-sizing: border-box;
-	-o-box-sizing: border-box;
-	box-sizing: border-box;
-}
+	.professional {
+		width: 150px;
+		height: 150px;
+		border-radius: 130px;
+		display: inline-block;
+		cursor: pointer;
 
-.MB-register-switcher .slide-button,
-.toggle .slide-button {
-	display: block;
-	
-	-webkit-transition: all .3s ease;
-	-moz-transition: all 0.3s ease;
-	-ms-transition: all 0.3s ease;
-	-o-transition: all 0.3s ease;
-	transition: all 0.3s ease;
-}
+		&.off {
+			background: url("../../img/professional_off.png") no-repeat;
+			background-color: $primary_white;
+			background-size: 60px;
+			background-position: center;
+		}
 
-.toggle label,
-.toggle p,
-.MB-register-switcher label {
-	line-height: 30px;
-	vertical-align: middle;
-}
-
-.toggle input:checked ~ .slide-button {
-	right: 50%;
-}
-
-.toggle input:focus ~ .slide-button,
-.MB-register-switcher input:focus + label {
-	outline: 1px dotted #888;
-}
-
-.MB-register-switcher, .toggle {
-	-webkit-animation: bugfix infinite 1s;
-}
-
-@-webkit-keyframes bugfix { from { position: relative; } to { position: relative; } }
-
-.candy {
-	background: #fff;
-	color: #999;
-	text-align: center;
-	border-radius: 3px;
-}
-	
-.candy .slide-button {
-	background-color: #508def;
-}
-
-.candy p {
-	color: #333;
-	
-	text-shadow: none;
-}
-
-.candy span {
-	color: #fff;
+		&.on {
+			background: url("../../img/professional_on.png") no-repeat;
+			background-color: $primary_blue;
+			background-size: 60px;
+			background-position: center;
+		}
+	}
+	.or {
+		display: inline-block;
+		height: 50px;
+		width: 50px;
+		line-height: 50px;
+		border-radius: 150px;
+		background-color: #888;
+		position: absolute;
+		z-index: 2;
+		top: 50px;
+		right: 48%;
+		font-family: cursive;
+		color: $primary_white;
+	}
 }
