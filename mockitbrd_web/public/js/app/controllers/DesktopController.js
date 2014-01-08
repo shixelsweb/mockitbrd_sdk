@@ -1,5 +1,5 @@
-define(['MB', 'backbone', 'marionette', 'views/WelcomeView', 'views/DesktopHeaderView', 'views/RegisterView', 'views/LoginView', 'views/CandidateLearnMoreView'],
-    function (MB, Backbone, Marionette, WelcomeView, DesktopHeaderView, RegisterView, LoginView, CandidateLearnMoreView) {
+define(['MB', 'backbone', 'marionette', 'views/WelcomeView', 'views/DesktopHeaderView', 'views/RegisterView', 'views/LoginView', 'views/CandidateLearnMoreView', 'views/ProfessionalLearnMoreView'],
+    function (MB, Backbone, Marionette, WelcomeView, DesktopHeaderView, RegisterView, LoginView, CandidateLearnMoreView, ProfessionalLearnMoreView) {
     return Backbone.Marionette.Controller.extend({
         initialize:function (options) {
             MB.headerRegion.show(new DesktopHeaderView());
@@ -33,7 +33,14 @@ define(['MB', 'backbone', 'marionette', 'views/WelcomeView', 'views/DesktopHeade
             MB.headerRegion.$el.show();
             MB.page.ensureEl();
             MB.page.$el.removeClass('MB-boardroom-bg');
-            MB.mainRegion.show(new CandidateLearnMoreView());
+        },
+        professionalLearnMore:function () {
+            MB.headerRegion.show(new DesktopHeaderView());
+            MB.headerRegion.ensureEl();
+            MB.headerRegion.$el.show();
+            MB.page.ensureEl();
+            MB.page.$el.removeClass('MB-boardroom-bg');
+            MB.mainRegion.show(new ProfessionalLearnMoreView());
         }
     });
 });

@@ -5,7 +5,8 @@ define(['backbone', 'marionette'], function(Backbone, Marionette) {
            "": "index",
            "login": "login",
            "register": "register",
-           "candidateLearnMore": "candidateLearnMore"
+           "candidateLearnMore": "candidateLearnMore",
+           "professionalLearnMore": "professionalLearnMore"
        }
    });
 });
