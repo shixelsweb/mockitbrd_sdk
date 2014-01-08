@@ -373,44 +373,58 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   width: 200px;
   height: 200px;
 }
-/* line 176, ../js/app/templates/scss/welcome.scss */
-#MB-team-section .MB-team-photos li .MB-team-photo:hover {
-  opacity: 0.3;
-}
-/* line 179, ../js/app/templates/scss/welcome.scss */
+/* line 177, ../js/app/templates/scss/welcome.scss */
 #MB-team-section .MB-team-photos li .MB-team-photo:hover .view {
   display: block;
 }
-/* line 184, ../js/app/templates/scss/welcome.scss */
+/* line 182, ../js/app/templates/scss/welcome.scss */
 #MB-team-section .MB-team-photos li .MB-team-photo.fara {
+  background: url("../../img/baby_fara.jpg") no-repeat;
+  background-size: 516px;
+  background-position: -141px -70px;
+}
+/* line 187, ../js/app/templates/scss/welcome.scss */
+#MB-team-section .MB-team-photos li .MB-team-photo.fara:hover {
   background: url("../../img/fara.jpg") no-repeat;
   background-size: 340px;
   background-position: right;
 }
-/* line 189, ../js/app/templates/scss/welcome.scss */
+/* line 193, ../js/app/templates/scss/welcome.scss */
 #MB-team-section .MB-team-photos li .MB-team-photo.earl {
+  background: url("../../img/baby_earl.jpg") no-repeat;
+  background-size: 497px;
+  background-position: -123px -42px;
+}
+/* line 198, ../js/app/templates/scss/welcome.scss */
+#MB-team-section .MB-team-photos li .MB-team-photo.earl:hover {
   background: url("../../img/earl.jpg") no-repeat;
   background-size: 215px;
   background-position: center;
 }
-/* line 194, ../js/app/templates/scss/welcome.scss */
+/* line 204, ../js/app/templates/scss/welcome.scss */
 #MB-team-section .MB-team-photos li .MB-team-photo.clee {
+  background: url("../../img/baby_clee.jpg") no-repeat;
+  background-size: 428px;
+  background-position: -109px -23px;
+}
+/* line 209, ../js/app/templates/scss/welcome.scss */
+#MB-team-section .MB-team-photos li .MB-team-photo.clee:hover {
   background: url("../../img/clee.jpg") no-repeat;
   background-size: 500px;
   background-position: -240px -50px;
 }
-/* line 203, ../js/app/templates/scss/welcome.scss */
+/* line 219, ../js/app/templates/scss/welcome.scss */
 #MB-team-section .MB-team-info {
   font-family: "Open Sans";
 }
-/* line 205, ../js/app/templates/scss/welcome.scss */
+/* line 221, ../js/app/templates/scss/welcome.scss */
 #MB-team-section .MB-team-info .name {
   font-weight: bold;
   text-transform: uppercase;
   font-size: 1em;
   padding: 10px 0;
 }
-/* line 211, ../js/app/templates/scss/welcome.scss */
+/* line 227, ../js/app/templates/scss/welcome.scss */
 #MB-team-section .MB-team-info .title {
   font-style: italic;
 }
