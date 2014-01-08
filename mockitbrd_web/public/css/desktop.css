@@ -372,59 +372,62 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   border-radius: 200px;
   width: 200px;
   height: 200px;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
 }
-/* line 177, ../js/app/templates/scss/welcome.scss */
+/* line 180, ../js/app/templates/scss/welcome.scss */
 #MB-team-section .MB-team-photos li .MB-team-photo:hover .view {
   display: block;
 }
-/* line 182, ../js/app/templates/scss/welcome.scss */
+/* line 185, ../js/app/templates/scss/welcome.scss */
 #MB-team-section .MB-team-photos li .MB-team-photo.fara {
   background: url("../../img/baby_fara.jpg") no-repeat;
   background-size: 516px;
   background-position: -141px -70px;
 }
-/* line 187, ../js/app/templates/scss/welcome.scss */
+/* line 190, ../js/app/templates/scss/welcome.scss */
 #MB-team-section .MB-team-photos li .MB-team-photo.fara:hover {
   background: url("../../img/fara.jpg") no-repeat;
   background-size: 340px;
   background-position: right;
 }
-/* line 193, ../js/app/templates/scss/welcome.scss */
+/* line 196, ../js/app/templates/scss/welcome.scss */
 #MB-team-section .MB-team-photos li .MB-team-photo.earl {
   background: url("../../img/baby_earl.jpg") no-repeat;
   background-size: 497px;
   background-position: -123px -42px;
 }
-/* line 198, ../js/app/templates/scss/welcome.scss */
+/* line 201, ../js/app/templates/scss/welcome.scss */
 #MB-team-section .MB-team-photos li .MB-team-photo.earl:hover {
   background: url("../../img/earl.jpg") no-repeat;
   background-size: 215px;
   background-position: center;
 }
-/* line 204, ../js/app/templates/scss/welcome.scss */
+/* line 207, ../js/app/templates/scss/welcome.scss */
 #MB-team-section .MB-team-photos li .MB-team-photo.clee {
   background: url("../../img/baby_clee.jpg") no-repeat;
   background-size: 428px;
   background-position: -109px -23px;
 }
-/* line 209, ../js/app/templates/scss/welcome.scss */
+/* line 212, ../js/app/templates/scss/welcome.scss */
 #MB-team-section .MB-team-photos li .MB-team-photo.clee:hover {
   background: url("../../img/clee.jpg") no-repeat;
   background-size: 500px;
   background-position: -240px -50px;
 }
-/* line 219, ../js/app/templates/scss/welcome.scss */
+/* line 222, ../js/app/templates/scss/welcome.scss */
 #MB-team-section .MB-team-info {
   font-family: "Open Sans";
 }
-/* line 221, ../js/app/templates/scss/welcome.scss */
+/* line 224, ../js/app/templates/scss/welcome.scss */
 #MB-team-section .MB-team-info .name {
   font-weight: bold;
   text-transform: uppercase;
   font-size: 1em;
   padding: 10px 0;
 }
-/* line 227, ../js/app/templates/scss/welcome.scss */
+/* line 230, ../js/app/templates/scss/welcome.scss */
 #MB-team-section .MB-team-info .title {
   font-style: italic;
 }
@@ -688,7 +691,215 @@ header {
   line-height: 120px;
 }
 
+/* line 131, ../js/app/templates/scss/ui.scss */
+.modal-show #MB-modal {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* line 135, ../js/app/templates/scss/ui.scss */
+#MB-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding-left: 50%;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  overflow-y: auto;
+  visibility: hidden;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  backface-visibility: hidden !important;
+  -webkit-backface-visibility: hidden !important;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.95) 255%, rgba(255, 255, 255, 0.95) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#d9ffffff', endColorstr='#d9ffffff',GradientType=0 );
+}
+/* line 155, ../js/app/templates/scss/ui.scss */
+#MB-modal .modal {
+  width: 60%;
+  margin: 0 auto;
+  top: 10px;
+  background: none;
+  padding: 34px 24px 48px;
+  position: relative;
+  z-index: 2000;
+  left: -50%;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+/* line 168, ../js/app/templates/scss/ui.scss */
+#MB-modal .modal .MB-modal-close {
+  position: absolute;
+  right: 0;
+  top: 10px;
+  cursor: pointer;
+}
+/* line 174, ../js/app/templates/scss/ui.scss */
+#MB-modal .modal .MB-modal-close .MB-icon {
+  font-size: 4em;
+  color: black;
+  width: 100%;
+  height: 100%;
+}
+/* line 180, ../js/app/templates/scss/ui.scss */
+#MB-modal .modal .MB-modal-close .MB-icon:hover {
+  color: #2bbbff;
+}
+
+/* line 188, ../js/app/templates/scss/ui.scss */
+.MB-skillbar {
+  width: 100%;
+  height: 35px;
+  display: block;
+  background: rgba(0, 0, 0, 0.04);
+  margin-bottom: 10px;
+  position: relative;
+}
+/* line 196, ../js/app/templates/scss/ui.scss */
+.MB-skillbar .skill-title {
+  font-size: 12px;
+  font-weight: 100;
+  position: absolute;
+  padding: 5px 10px;
+  color: white;
+  z-index: 1;
+  background: transparent;
+  line-height: 25px;
+  text-transform: uppercase;
+}
+/* line 208, ../js/app/templates/scss/ui.scss */
+.MB-skillbar .skill-percentage {
+  background-color: #2bbbff;
+  height: 35px;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url('/css/fonts/../../fonts/opensans/regular.ttf') format('truetype');
+}
+
+/* line 18, ../js/app/templates/scss/variables.scss */
+.placeholderHIW {
+  margin-top: 30px;
+}
+
+/* line 22, ../js/app/templates/scss/variables.scss */
+.MB-boardroom-bg {
+  background: url("../../img/login_bg.jpg") no-repeat;
+  background-position: center;
+  background-size: 100%;
+}
+
+/* line 28, ../js/app/templates/scss/variables.scss */
+.MB-office-bg {
+  background: url("../../img/office_bg.jpg") no-repeat;
+  background-position: center;
+  background-size: 100%;
+}
+
+/* line 34, ../js/app/templates/scss/variables.scss */
+.MB-mail-bg {
+  background: url("../../img/mail_bg.jpg") no-repeat;
+  background-position: center;
+  background-size: 100%;
+}
+
+/* line 40, ../js/app/templates/scss/variables.scss */
+.MB-lightGrey-bg {
+  background-color: #f3f3f3;
+}
+
+/* line 43, ../js/app/templates/scss/variables.scss */
+.MB-white-bg {
+  background-color: white;
+  box-shadow: 0px 0px 2px #525252;
+}
+
+/* line 48, ../js/app/templates/scss/variables.scss */
+.clear-left {
+  clear: left;
+}
+
+/* line 52, ../js/app/templates/scss/variables.scss */
+.clear-right {
+  clear: right;
+}
+
+/* line 56, ../js/app/templates/scss/variables.scss */
+.clear-both {
+  clear: both;
+}
+
+/* line 3, ../js/app/templates/scss/team.scss */
+.MB-teamMember-name {
+  text-align: center;
+  font-size: 3em;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* line 10, ../js/app/templates/scss/team.scss */
+.MB-teamMember-title {
+  text-align: center;
+  font-size: 1.5em;
+  line-height: 1.5em;
+  color: #2bbbff;
+}
+
+/* line 17, ../js/app/templates/scss/team.scss */
+.MB-teamMember-bio {
+  width: 45%;
+  padding: 10px;
+  font-weight: 100;
+  line-height: 1.5em;
+}
+
+/* line 23, ../js/app/templates/scss/team.scss */
+.MB-teamMember-photo {
+  width: 50%;
+}
+
+/* line 27, ../js/app/templates/scss/team.scss */
+.MB-seperator {
+  width: 100%;
+  height: 1px;
+  background: #f3f3f3;
+  display: block;
+  margin-bottom: 20px;
+}
+
+/* line 35, ../js/app/templates/scss/team.scss */
+.MB-teamMember-subHeader {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 1.2em;
+  padding: 20px 0;
+}
+
+/* line 42, ../js/app/templates/scss/team.scss */
+.MB-teamMember-skills {
+  width: 50%;
+}
+
+/* line 48, ../js/app/templates/scss/team.scss */
+.MB-teamMember-social li {
+  font-size: 2em;
+  display: inline-block;
+  margin-right: 30px;
+  cursor: pointer;
+}
+/* line 54, ../js/app/templates/scss/team.scss */
+.MB-teamMember-social li:hover {
+  color: #2bbbff;
+}
+
 /* line 10, ../scss/desktop.scss */
 html, body, #page {
   height: 100%;
+  font-family: "Open Sans";
 }

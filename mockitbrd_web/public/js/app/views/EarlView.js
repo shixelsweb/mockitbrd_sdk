@@ -1,15 +1,15 @@
-define(['jquery', 'hbs!templates/login', 'backbone', 'marionette'],
+define(['jquery', 'hbs!templates/earl', 'backbone', 'marionette'],
     function ($, template, Backbone) {
         //ItemView provides some default rendering logic
         return Backbone.Marionette.ItemView.extend({
             template:template,
 
             events: {
-				'click .MB-modal-close': 'hideModal'
+                'click .MB-modal-close': 'hideModal'
             },
 
             hideModal: function() {
-				this.close();
+                this.close();
                 MB.body.ensureEl();
                 MB.body.$el.removeClass('modal-show');
                 window.history.back();

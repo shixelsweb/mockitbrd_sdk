@@ -4,6 +4,9 @@ define(['backbone', 'marionette'], function(Backbone, Marionette) {
        appRoutes: {
            "": "index",
            "login": "login",
+           "earl": "earl",
+           "fara": "fara",
+           "clee": "clee",
            "register": "register",
            "candidateLearnMore": "candidateLearnMore",
            "professionalLearnMore": "professionalLearnMore"

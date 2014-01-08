@@ -9,6 +9,14 @@ define( ['MB', 'backbone', 'marionette', 'jquery', 'models/Model', 'hbs!template
 
             // View Event Handlers
             events: {
+                'click .earl': 'showTeamMember',
+                'click .fara': 'showTeamMember',
+                'click .clee': 'showTeamMember'
+            },
+
+            showTeamMember: function(e) {
+                var member = e.currentTarget.classList[1];
+                MB.appRouter.navigate(member, { trigger: true });
             }
         });
     });

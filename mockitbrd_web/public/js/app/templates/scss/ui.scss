@@ -128,3 +128,85 @@
 		line-height: 120px;
 	}
 }
+.modal-show #MB-modal {
+	visibility: visible;
+	opacity: 1;
+}
+#MB-modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	padding-left: 50%;
+	width: 100%;
+	height: 100%;
+	z-index: 1000;
+	overflow-y: auto;
+	visibility: hidden;
+	opacity: 0;
+	filter: alpha(opacity=0);
+	backface-visibility: hidden !important;
+	-webkit-backface-visibility: hidden !important;
+	-webkit-transition: all 0.4s;
+	-moz-transition: all 0.4s;
+	transition: all 0.4s;
+	background: linear-gradient(to bottom, rgba(255, 255, 255, 0.95) 255%, rgba(255, 255, 255,0.95) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#d9ffffff', endColorstr='#d9ffffff',GradientType=0 );
+
+	.modal {
+		width: 60%;
+		margin: 0 auto;
+		top: 10px;
+		background: none;
+		padding: 34px 24px 48px;
+		position: relative;
+		z-index: 2000;
+		left: -50%;
+		border: none;
+		border-radius: 0;
+		box-shadow: none;
+
+		.MB-modal-close {
+			position: absolute;
+			right: 0;
+			top: 10px;
+			cursor: pointer;
+
+			.MB-icon {
+				font-size: 4em;
+				color: $primary_black;
+				width: 100%;
+				height: 100%;
+
+				&:hover {
+					color: $primary_blue;
+				}
+			}
+		}
+	}
+}
+
+.MB-skillbar {
+	width: 100%;
+	height: 35px;
+	display: block;
+	background: rgba(0, 0, 0, 0.04);
+	margin-bottom: 10px;
+	position: relative;
+
+	.skill-title {
+		font-size: 12px;
+		font-weight: 100;
+		position: absolute;
+		padding: 5px 10px;
+		color: $primary_white;
+		z-index: 1;
+		background: transparent;
+		line-height: 25px;
+		text-transform: uppercase;
+	}
+
+	.skill-percentage {
+		background-color: $primary_blue;
+		height: 35px;
+	}
+}
