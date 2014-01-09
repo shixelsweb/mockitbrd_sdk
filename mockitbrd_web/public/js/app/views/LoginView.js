@@ -10,15 +10,14 @@ define(['MB', 'jquery', 'hbs!templates/login', 'backbone', 'marionette'],
             },
             loginUser: function(e) {
                 e.preventDefault();
-                console.log('here1');
-                    var email = $('.MB-login-email').val();
-                    var password = $('.MB-login-password').val();
-                    var data = {
-                        'email': email,
-                        'password': password
-                    };
-                    MB.api.login(data);
+
+                var email = $('.MB-login-email').val();
+                var password = $('.MB-login-password').val();
+                var data = {'email': email, 'password': password};
+
+                MB.api.login(data);
             },
+
             hideModal: function() {
 				this.close();
                 MB.body.ensureEl();

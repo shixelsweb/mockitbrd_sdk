@@ -1,5 +1,5 @@
-define(['jquery', 'backbone', 'marionette', 'underscore', 'handlebars'],
-    function ($, Backbone, Marionette, _, Handlebars) {
+define(['jquery', 'cookie', 'backbone', 'marionette', 'underscore', 'handlebars', 'models/Model'],
+    function ($, cookie, Backbone, Marionette, _, Handlebars, Model) {
         var MB = window.MB = new Backbone.Marionette.Application();
 
         function isMobile() {
@@ -68,21 +68,57 @@ define(['jquery', 'backbone', 'marionette', 'underscore', 'handlebars'],
             MB.appRouter.navigate(href, { trigger: true });
           }
         });
+
+        MB.session = {
+            user: $.cookie('MB-session-user') || null,
+            token: $.cookie('MB-session-auth-token') || null,
+
+            generateToken: function () {
+                var MAX = 9e15;
+                var MIN = 1e15;
+                var safegap = 1000;
+                var counter = MIN;
+
+                var increment = Math.floor(safegap*Math.random());
+                if(counter > (MAX - increment)) {
+                    counter = MIN;
+                }
+                counter += increment;
+                return counter.toString(36);
+            },
+
+            start: function(user) {
+                var auth_token = MB.session.generateToken();
+                var session_user = user;
+                //TODO: Remove password from user object
+                if (!MB.session.user && !MB.session.token) { //only create a session if one doesn't already exsist
+                    $.cookie('MB-session-auth-token', auth_token);
+                    $.cookie('MB-session-user', JSON.stringify(user));
+                }
+            }
+        };
+
         MB.mobile = isMobile();
 
         MB.api = {
-            url: "http://api.mockitbrd.com/v1/",
-
+            url: "http://api.mockitbrd.com/",
+            //TODO: remember email, stay logged in (increase session time), only login if status is active
             login: function(params) {
-                console.log("here2", params);
                 $.ajax({
                     type: "POST",
-                    url: MB.api.url + "user/verify_user",
+                    url: MB.api.url + "v1/user/verify_user",
                     data: params,
-                    dataType: "json",
-                    crossDomain: true,
+                    dataType: 'json',
                     success: function (response) {
-                        console.log("logged in!", response);
+                        if (response.success === 0) {
+                            alert("error: ", response.data.error); //TODO: add to Error Modal
+                        } else {
+                          MB.session.start(response.data.user);
+                          //TODO FIGURE OUT DUPLILCATE SESSIONS AND CLOSE ON SUCCESS
+                        }
+                    },
+                    error: function(response) {
+                        alert("error! ", response); //TODO: add to Error Modal
                     }
                 });
             }
