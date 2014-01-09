@@ -102,24 +102,24 @@ define(['jquery', 'cookie', 'backbone', 'marionette', 'underscore', 'handlebars'
             },
 
             load: function (user_type, isAdmin, user_status) {
-                 //TODO-(Earl) - put handeling of login location here
-                if (user_status === 'active') {
-                    switch (isAdmin) {
-                        case 0: {
-                            if (user_type === "interviewer") {
-                                //SHOW INTERVIEWER LANDING VIEW
-                            } else if (user_type === "candidate") {
-                                //SHOW CANDIDATE LANDING VIEW
-                            }
-                            break;
-                        }
-                        case 1:{
-                            break;
-                        } //SHOW ADMIN VIEW
-                    }
-                } else if (user_status === 'pending') {
-                    //SHOW NAVIFATE TO VERIFY EMAIL VIEW
-                }
+                //  //TODO-(Earl) - put handeling of login location here
+                // if (user_status === 'active') {
+                //     switch (isAdmin) {
+                //         case 0: {
+                //             if (user_type === "interviewer") {
+                //                 //SHOW INTERVIEWER LANDING VIEW
+                //             } else if (user_type === "candidate") {
+                //                 //SHOW CANDIDATE LANDING VIEW
+                //             }
+                //             break;
+                //         }
+                //         case 1:{
+                //             break;
+                //         } //SHOW ADMIN VIEW
+                //     }
+                // } else if (user_status === 'pending') {
+                //     //SHOW NAVIFATE TO VERIFY EMAIL VIEW
+                // }
             }
         };
 

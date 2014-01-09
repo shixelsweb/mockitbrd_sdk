@@ -8,6 +8,7 @@ define(['backbone', 'marionette'], function(Backbone, Marionette) {
            "fara": "fara",
            "clee": "clee",
            "register": "register",
+           "educationLearnMore": "educationLearnMore",
            "candidateLearnMore": "candidateLearnMore",
            "professionalLearnMore": "professionalLearnMore"
        }

@@ -55,12 +55,21 @@ define(['MB', 'backbone', 'marionette', 'views/WelcomeView', 'views/DesktopHeade
         login:function () {
             this.hideModal();
             this.showModal(LoginView);
+            this.showHeader();
+            this.removeBGfromPage('MB-boardroom-bg');
+            MB.body.ensureEl();
+            MB.body.$el.addClass('modal-show');
+            MB.modal.show(new View());
         },
         register:function () {
             this.hideModal();
             this.hideHeader();
             this.addBGtoPage('MB-boardroom-bg');
             MB.mainRegion.show(new RegisterView());
+        },
+        educationLearnMore: function() {
+            this.hideModal();
+            this.showHeader();
         },
         candidateLearnMore:function () {
             this.hideModal();
