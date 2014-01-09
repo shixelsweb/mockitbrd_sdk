@@ -72,6 +72,7 @@ define(['jquery', 'cookie', 'backbone', 'marionette', 'underscore', 'handlebars'
         MB.session = {
             user: $.cookie('MB-session-user') || null,
             token: $.cookie('MB-session-auth-token') || null,
+            user_type: $.cookie('MB-session-user-type') || null,
 
             generateToken: function () {
                 var MAX = 9e15;
@@ -94,6 +95,30 @@ define(['jquery', 'cookie', 'backbone', 'marionette', 'underscore', 'handlebars'
                 if (!MB.session.user && !MB.session.token) { //only create a session if one doesn't already exsist
                     $.cookie('MB-session-auth-token', auth_token);
                     $.cookie('MB-session-user', JSON.stringify(user));
+                    $.cookie('MB-session-user-typ', user.user_type);
+
+                    MB.session.load(user.user_type, isAdmin, user.status);
+                }
+            },
+
+            load: function (user_type, isAdmin, user_status) {
+                 //TODO-(Earl) - put handeling of login location here
+                if (user_status === 'active') {
+                    switch (isAdmin) {
+                        case 0: {
+                            if (user_type === "interviewer") {
+                                //SHOW INTERVIEWER LANDING VIEW
+                            } else if (user_type === "candidate") {
+                                //SHOW CANDIDATE LANDING VIEW
+                            }
+                            break;
+                        }
+                        case 1:{
+                            break;
+                        } //SHOW ADMIN VIEW
+                    }
+                } else if (user_status === 'pending') {
+                    //SHOW NAVIFATE TO VERIFY EMAIL VIEW
                 }
             }
         };
@@ -111,14 +136,15 @@ define(['jquery', 'cookie', 'backbone', 'marionette', 'underscore', 'handlebars'
                     dataType: 'json',
                     success: function (response) {
                         if (response.success === 0) {
-                            alert("error: ", response.data.error); //TODO: add to Error Modal
+                            alert("error: ", response.data.error); //TODO-(Fara) : add to Error Modal
                         } else {
                           MB.session.start(response.data.user);
+                          //TODO-(Earl) - Create BLANK Landing views with words (interviewer, candidate, or verify) - DO THIS IN MB.session
                           //TODO FIGURE OUT DUPLILCATE SESSIONS AND CLOSE ON SUCCESS
                         }
                     },
                     error: function(response) {
-                        alert("error! ", response); //TODO: add to Error Modal
+                        alert("error! ", response); //TODO-(Fara): add to Error Modal
                     }
                 });
             }

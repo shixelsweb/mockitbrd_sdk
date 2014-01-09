@@ -14,9 +14,7 @@ define(['jquery', 'hbs!templates/desktopHeader', 'backbone', 'marionette'],
 			// Remove "link" from the ID
 			ev.preventDefault();
 			id = $(ev.target).data('scrolllink');
-
-			console.log(ev, $(ev.target), $(ev.target).data(), id);
-			// Scroll
+			// Scroll to Id
 			MB.body.ensureEl();
 			MB.body.$el.animate({scrollTop: $("#"+id).offset().top - 40},'slow');
 
