@@ -25,6 +25,20 @@
 		padding: 10px 20px;
 	}
 
+	&.login {
+		padding: 10px 140px;
+		border-radius: 0;
+		top: 20px;
+		position: relative;
+		}
+	&.facebook {
+		background-color: #4c66a4 !important;
+		border-radius: 0;
+	}
+	&.linkedin {
+		background-color: #006699 !important;
+		border-radius: 0;
+	}
 	&.primary {
 		background-color: $primary_blue;
 		color: $primary_white !important;

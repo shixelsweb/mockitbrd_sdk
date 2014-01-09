@@ -20,5 +20,8 @@
         "Ember": true,
         "Handlebars": true,
         "DS": true
-    }
+        "define": true,
+        "scripturl": "false"
+    },
+    "scripturl": false
 }

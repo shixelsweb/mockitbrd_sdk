@@ -1,0 +1,33 @@
+#MB-login-form {
+	text-align: center;
+	margin-top: 50px;
+
+	label {
+		font-size: 1.5em;
+		text-transform: uppercase;
+		padding: 10px 0;
+		display: block;
+	}
+	input {
+		width: 50%;
+		height: 40px;
+		border-radius: 0;
+		border: 2px solid black;
+		background: transparent;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.MB-login-alt {
+		margin-top: 45px;
+		width: 50%;
+		margin-left: auto;
+		margin-right: auto;
+
+		p {
+			text-transform: uppercase;
+			font-size: 0.8em;
+			padding: 10px;
+		}
+	}
+}

@@ -29,34 +29,46 @@ define(['MB', 'backbone', 'marionette', 'views/WelcomeView', 'views/DesktopHeade
             MB.body.$el.addClass('modal-show');
             MB.modal.show(new View());
         },
+        hideModal: function() {
+            MB.body.ensureEl();
+            MB.body.$el.removeClass('modal-show');
+        },
         //gets mapped to in AppRouters's appRoutes
         index:function () {
+            this.hideModal();
             this.showHeader();
             this.removeBGfromPage('MB-boardroom-bg');
             MB.mainRegion.show(new WelcomeView());
         },
         earl:function () {
+            this.hideModal();
             this.showModal(EarlView);
         },
         fara:function () {
+            this.hideModal();
             this.showModal(FaraView);
         },
         clee:function () {
-           this.showModal(CleeView);
+            this.hideModal();
+            this.showModal(CleeView);
         },
         login:function () {
+            this.hideModal();
             this.showModal(LoginView);
         },
         register:function () {
+            this.hideModal();
             this.hideHeader();
             this.addBGtoPage('MB-boardroom-bg');
             MB.mainRegion.show(new RegisterView());
         },
         candidateLearnMore:function () {
+            this.hideModal();
             this.showHeader();
             this.removeBGfromPage('MB-boardroom-bg');
         },
         professionalLearnMore:function () {
+            this.hideModal();
             this.showHeader();
             this.removeBGfromPage('MB-boardroom-bg');
             MB.mainRegion.show(new ProfessionalLearnMoreView());
