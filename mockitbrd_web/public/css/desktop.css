@@ -69,7 +69,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 @font-face {
   font-family: "Open Sans";
-  src: url('/css/fonts/../../fonts/opensans/regular.ttf') format('truetype');
+  src: url('fonts/../../fonts/opensans/regular.ttf') format('truetype');
 }
 
 /* line 18, ../js/app/templates/scss/variables.scss */
@@ -124,7 +124,18 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   clear: both;
 }
 
-/* line 3, ../js/app/templates/scss/register.scss */
+/* line 60, ../js/app/templates/scss/variables.scss */
+.noShadow {
+  box-shadow: none;
+  text-shadow: none;
+}
+
+/* line 65, ../js/app/templates/scss/variables.scss */
+.plus150 {
+  padding-top: 150px;
+}
+
+/* line 1, ../js/app/templates/scss/register.scss */
 .MB-register-switcher {
   position: relative;
   padding: 0;
@@ -132,7 +143,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   text-align: center;
   height: 150px;
 }
-/* line 10, ../js/app/templates/scss/register.scss */
+/* line 8, ../js/app/templates/scss/register.scss */
 .MB-register-switcher .candidate {
   width: 150px;
   height: 150px;
@@ -140,7 +151,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: inline-block;
   cursor: pointer;
 }
-/* line 17, ../js/app/templates/scss/register.scss */
+/* line 15, ../js/app/templates/scss/register.scss */
 .MB-register-switcher .candidate.off {
   background: url("../../img/candidate_off.png") no-repeat;
   background-color: white;
@@ -148,14 +159,14 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   background-position: center;
   box-shadow: 0px 0px 2px #525252;
 }
-/* line 25, ../js/app/templates/scss/register.scss */
+/* line 23, ../js/app/templates/scss/register.scss */
 .MB-register-switcher .candidate.on {
   background: url("../../img/candidate_on.png") no-repeat;
   background-color: #2bbbff;
   background-size: 60px;
   background-position: center;
 }
-/* line 33, ../js/app/templates/scss/register.scss */
+/* line 31, ../js/app/templates/scss/register.scss */
 .MB-register-switcher .professional {
   width: 150px;
   height: 150px;
@@ -163,21 +174,21 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: inline-block;
   cursor: pointer;
 }
-/* line 40, ../js/app/templates/scss/register.scss */
+/* line 38, ../js/app/templates/scss/register.scss */
 .MB-register-switcher .professional.off {
   background: url("../../img/professional_off.png") no-repeat;
   background-color: white;
   background-size: 60px;
   background-position: center;
 }
-/* line 47, ../js/app/templates/scss/register.scss */
+/* line 45, ../js/app/templates/scss/register.scss */
 .MB-register-switcher .professional.on {
   background: url("../../img/professional_on.png") no-repeat;
   background-color: #2bbbff;
   background-size: 60px;
   background-position: center;
 }
-/* line 54, ../js/app/templates/scss/register.scss */
+/* line 52, ../js/app/templates/scss/register.scss */
 .MB-register-switcher .or {
   display: inline-block;
   height: 50px;
@@ -731,27 +742,25 @@ header {
   height: 90px;
   display: inline-block;
   font-size: 80px;
-  color: black;
+  color: #2bbbff;
 }
 /* line 134, ../js/app/templates/scss/ui.scss */
 .MB-icon.small {
-  color: #2bbbff;
   font-size: 40px;
 }
-/* line 139, ../js/app/templates/scss/ui.scss */
+/* line 138, ../js/app/templates/scss/ui.scss */
 .MB-icon.smaller {
-  color: #2bbbff;
   font-size: 30px;
   line-height: 120px;
 }
 
-/* line 145, ../js/app/templates/scss/ui.scss */
+/* line 143, ../js/app/templates/scss/ui.scss */
 .modal-show #MB-modal {
   visibility: visible;
   opacity: 1;
 }
 
-/* line 149, ../js/app/templates/scss/ui.scss */
+/* line 147, ../js/app/templates/scss/ui.scss */
 #MB-modal {
   position: fixed;
   top: 0;
@@ -772,7 +781,7 @@ header {
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0.95) 255%, rgba(255, 255, 255, 0.95) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#d9ffffff', endColorstr='#d9ffffff',GradientType=0 );
 }
-/* line 169, ../js/app/templates/scss/ui.scss */
+/* line 167, ../js/app/templates/scss/ui.scss */
 #MB-modal .modal {
   width: 60%;
   margin: 0 auto;
@@ -786,26 +795,26 @@ header {
   border-radius: 0;
   box-shadow: none;
 }
-/* line 182, ../js/app/templates/scss/ui.scss */
+/* line 180, ../js/app/templates/scss/ui.scss */
 #MB-modal .modal .MB-modal-close {
   position: absolute;
   right: 0;
   top: 10px;
   cursor: pointer;
 }
-/* line 188, ../js/app/templates/scss/ui.scss */
+/* line 186, ../js/app/templates/scss/ui.scss */
 #MB-modal .modal .MB-modal-close .MB-icon {
   font-size: 4em;
   color: black;
   width: 100%;
   height: 100%;
 }
-/* line 194, ../js/app/templates/scss/ui.scss */
+/* line 192, ../js/app/templates/scss/ui.scss */
 #MB-modal .modal .MB-modal-close .MB-icon:hover {
   color: #2bbbff;
 }
 
-/* line 202, ../js/app/templates/scss/ui.scss */
+/* line 200, ../js/app/templates/scss/ui.scss */
 .MB-skillbar {
   width: 100%;
   height: 35px;
@@ -814,7 +823,7 @@ header {
   margin-bottom: 10px;
   position: relative;
 }
-/* line 210, ../js/app/templates/scss/ui.scss */
+/* line 208, ../js/app/templates/scss/ui.scss */
 .MB-skillbar .skill-title {
   font-size: 12px;
   font-weight: 100;
@@ -826,70 +835,13 @@ header {
   line-height: 25px;
   text-transform: uppercase;
 }
-/* line 222, ../js/app/templates/scss/ui.scss */
+/* line 220, ../js/app/templates/scss/ui.scss */
 .MB-skillbar .skill-percentage {
   background-color: #2bbbff;
   height: 35px;
 }
 
-@font-face {
-  font-family: "Open Sans";
-  src: url('/css/fonts/../../fonts/opensans/regular.ttf') format('truetype');
-}
-
-/* line 18, ../js/app/templates/scss/variables.scss */
-.placeholderHIW {
-  margin-top: 30px;
-}
-
-/* line 22, ../js/app/templates/scss/variables.scss */
-.MB-boardroom-bg {
-  background: url("../../img/login_bg.jpg") no-repeat;
-  background-position: center;
-  background-size: 100%;
-}
-
-/* line 28, ../js/app/templates/scss/variables.scss */
-.MB-office-bg {
-  background: url("../../img/office_bg.jpg") no-repeat;
-  background-position: center;
-  background-size: 100%;
-}
-
-/* line 34, ../js/app/templates/scss/variables.scss */
-.MB-mail-bg {
-  background: url("../../img/mail_bg.jpg") no-repeat;
-  background-position: center;
-  background-size: 100%;
-}
-
-/* line 40, ../js/app/templates/scss/variables.scss */
-.MB-lightGrey-bg {
-  background-color: #f3f3f3;
-}
-
-/* line 43, ../js/app/templates/scss/variables.scss */
-.MB-white-bg {
-  background-color: white;
-  box-shadow: 0px 0px 2px #525252;
-}
-
-/* line 48, ../js/app/templates/scss/variables.scss */
-.clear-left {
-  clear: left;
-}
-
-/* line 52, ../js/app/templates/scss/variables.scss */
-.clear-right {
-  clear: right;
-}
-
-/* line 56, ../js/app/templates/scss/variables.scss */
-.clear-both {
-  clear: both;
-}
-
-/* line 3, ../js/app/templates/scss/team.scss */
+/* line 1, ../js/app/templates/scss/team.scss */
 .MB-teamMember-name {
   text-align: center;
   font-size: 3em;
@@ -897,7 +849,7 @@ header {
   text-transform: uppercase;
 }
 
-/* line 10, ../js/app/templates/scss/team.scss */
+/* line 8, ../js/app/templates/scss/team.scss */
 .MB-teamMember-title {
   text-align: center;
   font-size: 1.5em;
@@ -905,7 +857,7 @@ header {
   color: #2bbbff;
 }
 
-/* line 17, ../js/app/templates/scss/team.scss */
+/* line 15, ../js/app/templates/scss/team.scss */
 .MB-teamMember-bio {
   width: 45%;
   padding: 10px;
@@ -913,12 +865,12 @@ header {
   line-height: 1.5em;
 }
 
-/* line 23, ../js/app/templates/scss/team.scss */
+/* line 21, ../js/app/templates/scss/team.scss */
 .MB-teamMember-photo {
   width: 50%;
 }
 
-/* line 27, ../js/app/templates/scss/team.scss */
+/* line 25, ../js/app/templates/scss/team.scss */
 .MB-seperator {
   width: 100%;
   height: 1px;
@@ -927,7 +879,7 @@ header {
   margin-bottom: 20px;
 }
 
-/* line 35, ../js/app/templates/scss/team.scss */
+/* line 33, ../js/app/templates/scss/team.scss */
 .MB-teamMember-subHeader {
   font-weight: bold;
   text-transform: uppercase;
@@ -935,21 +887,111 @@ header {
   padding: 20px 0;
 }
 
-/* line 42, ../js/app/templates/scss/team.scss */
+/* line 40, ../js/app/templates/scss/team.scss */
 .MB-teamMember-skills {
   width: 50%;
 }
 
-/* line 48, ../js/app/templates/scss/team.scss */
+/* line 46, ../js/app/templates/scss/team.scss */
 .MB-teamMember-social li {
   font-size: 2em;
   display: inline-block;
   margin-right: 30px;
   cursor: pointer;
 }
-/* line 54, ../js/app/templates/scss/team.scss */
+/* line 52, ../js/app/templates/scss/team.scss */
 .MB-teamMember-social li:hover {
   color: #2bbbff;
+}
+
+/* line 1, ../js/app/templates/scss/pricing.scss */
+.MB-education-pricing-grad {
+  position: relative;
+  top: 162px;
+  margin-top: -150px;
+}
+
+/* line 6, ../js/app/templates/scss/pricing.scss */
+.MB-pricing-plans {
+  top: 50px;
+  position: relative;
+}
+/* line 9, ../js/app/templates/scss/pricing.scss */
+.MB-pricing-plans .plan {
+  width: 300px;
+  height: 320px;
+  padding: 30px 10px;
+  background: #f3f3f3;
+  margin-right: -6px;
+  display: inline-table;
+  border: 1px solid #ddd;
+}
+/* line 18, ../js/app/templates/scss/pricing.scss */
+.MB-pricing-plans .plan.popular {
+  background: #2bbbff;
+  height: 360px;
+  position: relative;
+  top: -20px;
+  width: 320px;
+  box-shadow: 0px 3px 10px #525252;
+  border: 0;
+  color: white;
+}
+/* line 28, ../js/app/templates/scss/pricing.scss */
+.MB-pricing-plans .plan.popular .description {
+  padding-bottom: 20px;
+}
+/* line 33, ../js/app/templates/scss/pricing.scss */
+.MB-pricing-plans .plan.popular .pricing-select .pricing .price {
+  color: white;
+}
+/* line 37, ../js/app/templates/scss/pricing.scss */
+.MB-pricing-plans .plan .title {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+/* line 41, ../js/app/templates/scss/pricing.scss */
+.MB-pricing-plans .plan .seperator {
+  width: 100%;
+  height: 1px;
+  background: white;
+  margin: 10px 0;
+}
+/* line 47, ../js/app/templates/scss/pricing.scss */
+.MB-pricing-plans .plan .benefits {
+  height: 120px;
+}
+/* line 50, ../js/app/templates/scss/pricing.scss */
+.MB-pricing-plans .plan .pricing-select {
+  padding: 0 15px;
+}
+/* line 53, ../js/app/templates/scss/pricing.scss */
+.MB-pricing-plans .plan .pricing-select .pricing {
+  float: right;
+}
+/* line 56, ../js/app/templates/scss/pricing.scss */
+.MB-pricing-plans .plan .pricing-select .pricing .attributes {
+  float: left;
+  text-align: right;
+}
+/* line 59, ../js/app/templates/scss/pricing.scss */
+.MB-pricing-plans .plan .pricing-select .pricing .attributes .term {
+  font-size: 0.8em;
+}
+/* line 63, ../js/app/templates/scss/pricing.scss */
+.MB-pricing-plans .plan .pricing-select .pricing .price {
+  float: right;
+  font-size: 3em;
+  line-height: 60px;
+  padding-left: 15px;
+  color: #2bbbff;
+}
+/* line 71, ../js/app/templates/scss/pricing.scss */
+.MB-pricing-plans .plan .pricing-select .disclaimer {
+  clear: both;
+  font-size: 0.6em;
+  text-align: right;
+  font-style: italic;
 }
 
 /* line 10, ../scss/desktop.scss */

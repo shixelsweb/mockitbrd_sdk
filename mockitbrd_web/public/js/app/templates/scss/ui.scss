@@ -129,15 +129,13 @@
 	height: 90px;
 	display: inline-block;
 	font-size: 80px;
-	color: $primary_black;
+	color: $primary_blue;
 
 	&.small {
-		color: $primary_blue;
 		font-size: 40px;
 	}
 
 	&.smaller {
-		color: $primary_blue;
 		font-size: 30px;
 		line-height: 120px;
 	}

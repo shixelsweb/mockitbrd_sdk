@@ -56,3 +56,12 @@ $primary_font: "Open Sans";
 .clear-both {
 	clear: both;
 }
+
+.noShadow {
+	box-shadow: none;
+	text-shadow:none;
+}
+
+.plus150 {
+	padding-top: 150px;
+}
