@@ -7,8 +7,40 @@ define(['jquery', 'cookie', 'backbone', 'marionette', 'underscore', 'handlebars'
             return ((/iPhone|iPod|iPad|Android|BlackBerry|Opera Mini|IEMobile/).test(userAgent));
         }
 
-        MB.modalRegion = Backbone.Marionette.Region.extend({
-            el: "#MB-modal .modal",
+        MB.modalWhite = Backbone.Marionette.Region.extend({
+            el: "#MB-modal-white .modal",
+
+            events: {
+                "click .MB-modal-close": "hideModal"
+            },
+
+            constructor: function() {
+                _.bindAll(this);
+                Backbone.Marionette.Region.prototype.constructor.apply(this, arguments);
+                this.on('view:show', this.showModal, this);
+            },
+
+            getEl: function(selector){
+                var $el = $(selector);
+
+                $el.on('hidden', this.close);
+
+                return $el;
+            },
+
+            showModal: function(view) {
+                view.on('close', this.hideModal, this);
+                this.$el_region.modal('show');
+            },
+
+            hideModal: function(){
+                console.log("hide");
+                this.$el_region.modal('hide');
+            }
+        });
+
+        MB.modalBlack = Backbone.Marionette.Region.extend({
+            el: "#MB-modal-black .modal",
 
             events: {
                 "click .MB-modal-close": "hideModal"
@@ -46,7 +78,8 @@ define(['jquery', 'cookie', 'backbone', 'marionette', 'underscore', 'handlebars'
             headerRegion:"header",
             mainRegion:"#main",
             hero: ".hero-unit",
-            modal: MB.modalRegion,
+            modalWhite: MB.modalWhite,
+            modalBlack: MB.modalBlack,
             body: "body"
         });
 

@@ -37,6 +37,12 @@ $primary_font: "Open Sans";
 	background-size: 100%;
 }
 
+.MB-waiting-bg {
+	background: url('../../img/waiting.jpg') no-repeat;
+	background-position: top;
+	background-size: 100%;
+}
+
 .MB-lightGrey-bg {
 	background-color: $primary_light_grey;
 }
@@ -64,4 +70,12 @@ $primary_font: "Open Sans";
 
 .plus150 {
 	padding-top: 150px;
+}
+
+.top52 {
+	margin-top: 52px;
+}
+
+.plus100 {
+	padding-top: 100px;
 }

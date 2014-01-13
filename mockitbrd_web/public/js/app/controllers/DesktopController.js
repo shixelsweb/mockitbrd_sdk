@@ -65,16 +65,23 @@ function (
             MB.page.ensureEl();
             MB.page.$el.removeClass(bg);
         },
-        showModal: function(View) {
+        showModal: function(View, color) {
             this.showHeader();
             this.removeBGfromPage('MB-boardroom-bg');
             MB.body.ensureEl();
-            MB.body.$el.addClass('modal-show');
-            MB.modal.show(new View());
+
+            if (color === 'white') {
+                MB.body.$el.addClass('modal-white-show');
+                MB.modalWhite.show(new View());
+            } else if (color === 'black') {
+                MB.body.$el.addClass('modal-black-show');
+                MB.modalBlack.show(new View());
+            }
         },
         hideModal: function() {
             MB.body.ensureEl();
-            MB.body.$el.removeClass('modal-show');
+            MB.body.$el.removeClass('modal-black-show');
+            MB.body.$el.removeClass('modal-white-show');
         },
         //gets mapped to in AppRouters's appRoutes
         index:function () {
@@ -85,25 +92,25 @@ function (
         },
         earl:function () {
             this.hideModal();
-            this.showModal(EarlView);
+            this.showModal(EarlView, 'white');
         },
         fara:function () {
             this.hideModal();
-            this.showModal(FaraView);
+            this.showModal(FaraView, 'white');
         },
         clee:function () {
             this.hideModal();
-            this.showModal(CleeView);
+            this.showModal(CleeView, 'white');
         },
         login:function () {
             this.hideModal();
-            this.showModal(LoginView);
+            this.showModal(LoginView, 'black');
         },
         register:function () {
             this.hideModal();
             this.hideHeader();
             this.addBGtoPage('MB-boardroom-bg');
-            MB.mainRegion.show(new RegisterView());
+            this.showModal(RegisterView, 'black');
         },
         educationLearnMore: function() {
             this.hideModal();

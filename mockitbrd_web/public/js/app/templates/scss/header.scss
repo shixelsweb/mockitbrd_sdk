@@ -4,6 +4,15 @@ header {
 	width: 100%;
 	top: 0;
 	z-index: 100;
+
+	&.solid {
+
+		.navbar-inner {
+			border: none;
+			box-shadow: 0px 0px 2px $primary_grey;
+			background: $primary_black;
+		}
+	}
 }
 .nav {
 	.MB-nav {
@@ -27,7 +36,7 @@ header {
 		li {
 			&.dropdown.open > .dropdown-toggle{
 				color:$primary_yellow;
-				background-color: $primary_black;
+				background-color: transparent;
 			}
 			a {
 				text-shadow: none;
@@ -43,10 +52,12 @@ header {
 		}
 	}
 	.navbar-inner {
-		background: $primary_black;
+		background: transparent;
 		background-image: none;
 		border-radius: 0px;
 		border: none;
+		padding: 0 120px;
+		box-shadow: none;
 
 		.MB-nav-logo {
 			float: left;
@@ -60,7 +71,13 @@ header {
 		.MB-login-register-nav {
 			right: 0;
 			float: right;
-			margin: 10px 0;
+			margin: 20px 0;
+			margin-left: -25px;
+
+			li {
+				margin-left: 15px;
+				height: 34px;
+			}
 
 		}
 	}
@@ -112,5 +129,6 @@ header {
 	h1 {
 		font-size: 5em;
 		padding-left: 30px;
+		font-weight: bold;
 	}
 }

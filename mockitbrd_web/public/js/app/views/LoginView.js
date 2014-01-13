@@ -8,6 +8,11 @@ define(['MB', 'jquery', 'hbs!templates/login', 'backbone', 'marionette'],
 				'click .MB-modal-close': 'hideModal',
                 'click .login': 'loginUser'
             },
+            initialize: function() {
+                _.bindAll(this, 'on_keyup');
+                $(document).bind('keyup', this.on_keyup);
+            },
+
             loginUser: function(e) {
                 e.preventDefault();
 
@@ -18,8 +23,19 @@ define(['MB', 'jquery', 'hbs!templates/login', 'backbone', 'marionette'],
                 MB.api.login(data);
             },
 
-            hideModal: function() {
-				this.close();
+            hideModal: function(e) {
+                this.closeModal();
+            },
+
+            on_keyup: function(e) {
+                if (e.keyCode === 27) {
+                    this.closeModal();
+                    $(document).unbind('keyupkeyup', 'on_keyup'); 
+                }
+            },
+
+            closeModal: function() {
+                this.close();
                 MB.body.ensureEl();
                 MB.body.$el.removeClass('modal-show');
                 window.history.back();
