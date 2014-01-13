@@ -5,32 +5,16 @@ define(['jquery', 'hbs!templates/desktopHeader', 'backbone', 'marionette'],
         template:template,
 
         events: {
-			'click #team_link': 'goToByScroll',
-			'click #contact_link': 'goToByScroll'
+			'mouseover .MB-nav-logo': 'startHover',
+			'mouseout .MB-nav-logo': 'endHover'
         },
 
-        initialize: function () {
-            $(window).scroll(function(){
-				MB.headerRegion.ensureEl();
+		startHover: function() {
+			$('.MB-nav-logo').addClass('pulse');
+		},
 
-				if ($(this).scrollTop() > 470){
-					MB.headerRegion.$el.addClass('solid');
-				}
-				else{
-					MB.headerRegion.$el.removeClass('solid');
-				}
-			});
-        },
-
-              // This is a functions that scrolls to #{blah}link
-		goToByScroll: function(ev){
-			// Remove "link" from the ID
-			ev.preventDefault();
-			id = $(ev.target).data('scrolllink');
-			// Scroll to Id
-			MB.body.ensureEl();
-			MB.body.$el.animate({scrollTop: $("#"+id).offset().top - 40},'slow');
-
+		endHover: function() {
+			$('.MB-nav-logo').removeClass('pulse');
 		}
 	});
 });

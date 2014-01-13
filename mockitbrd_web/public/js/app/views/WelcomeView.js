@@ -9,14 +9,27 @@ define( ['MB', 'backbone', 'marionette', 'jquery', 'models/Model', 'hbs!template
 
             // View Event Handlers
             events: {
-                'click .earl': 'showTeamMember',
-                'click .fara': 'showTeamMember',
-                'click .clee': 'showTeamMember'
+                'click #learnMore_link': 'goToByScroll'
             },
 
-            showTeamMember: function(e) {
-                var member = e.currentTarget.classList[1];
-                MB.appRouter.navigate(member, { trigger: true });
+            onRender: function () {
+              // get rid of that pesky wrapping-div
+              // assumes 1 child element.
+              this.$el = this.$el.children();
+              this.setElement(this.$el);
+            },
+
+            goToByScroll: function(ev){
+                ev.preventDefault();
+
+                var id = $(ev.target).data('scrolllink');
+                var section = $("#"+id).offset() || $('body').offset();
+
+                MB.body.ensureEl();
+
+                if (section) {
+                    MB.body.$el.animate({scrollTop: section.top - 20},'slow');
+                }
             }
         });
     });

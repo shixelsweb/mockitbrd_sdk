@@ -307,3 +307,11 @@
 		height: 35px;
 	}
 }
+
+.MB-scrollDown-indicator {
+	font-size: 80px;
+	position: absolute;
+	bottom: 50px;
+	color: $primary_yellow;
+	margin-left: -10px;
+}

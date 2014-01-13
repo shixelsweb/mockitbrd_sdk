@@ -5,12 +5,12 @@ header {
 	top: 0;
 	z-index: 100;
 
-	&.solid {
+	&.ghost {
 
 		.navbar-inner {
 			border: none;
-			box-shadow: 0px 0px 2px $primary_grey;
-			background: $primary_black;
+			background: transparent;
+			box-shadow: none;
 		}
 	}
 }
@@ -48,16 +48,21 @@ header {
 				&:hover {
 					color:$primary_yellow;
 				}
+
+				&:focus {
+					outline: none;
+					color: $primary_yellow;
+				}
 			}
 		}
 	}
 	.navbar-inner {
-		background: transparent;
+		box-shadow: 0px 0px 2px $primary_grey;
+		background: $primary_black;
 		background-image: none;
 		border-radius: 0px;
 		border: none;
 		padding: 0 120px;
-		box-shadow: none;
 
 		.MB-nav-logo {
 			float: left;
@@ -66,6 +71,7 @@ header {
 			img {
 				width: 250px;
 			}
+
 		}
 
 		.MB-login-register-nav {
@@ -83,52 +89,4 @@ header {
 	}
 }
 
-.MB-message {
-	width: 100%;
-	position: absolute;
-	z-index: 2;
-	height: 560px;
-	top: 0;
-	padding-top: 120px;
-	font-family: $primary_font;
-	text-align: center;
-	color: $primary_white;
 
-	.MB-big-social {
-		font-size: 2.5em;
-		padding-left: 30px;
-		padding-top: 20px;
-		padding-bottom: 15px;
-		color: $primary_blue;
-
-		li {
-			display: inline-block;
-			margin-right: 30px;
-			cursor: pointer;
-
-			&:hover {
-				color: $primary_blue_hl;
-			}
-		}
-	}
-	p {
-		width: 55%;
-		font-weight: 100;
-		line-height: 2em;
-		font-size: 1em;
-		padding-left: 30px;
-		padding-bottom: 30px;
-		margin-left: auto;
-		margin-right: auto;
-
-		i {
-			font-size: 1.5em;
-			padding: 0 10px;
-		}
-	}
-	h1 {
-		font-size: 5em;
-		padding-left: 30px;
-		font-weight: bold;
-	}
-}

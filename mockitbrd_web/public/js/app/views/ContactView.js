@@ -1,11 +1,11 @@
-define(['jquery', 'hbs!templates/fara', 'backbone', 'marionette'],
+define(['jquery', 'hbs!templates/contact', 'backbone', 'marionette'],
     function ($, template, Backbone) {
         //ItemView provides some default rendering logic
         return Backbone.Marionette.ItemView.extend({
             template:template,
 
             events: {
-                'click .MB-modal-close': 'hideModal'
+				'click .MB-modal-close': 'hideModal'
             },
             initialize: function() {
                 _.bindAll(this, 'on_keyup');

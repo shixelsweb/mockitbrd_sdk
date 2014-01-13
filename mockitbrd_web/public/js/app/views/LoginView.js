@@ -29,8 +29,8 @@ define(['MB', 'jquery', 'hbs!templates/login', 'backbone', 'marionette'],
 
             on_keyup: function(e) {
                 if (e.keyCode === 27) {
+                    $(document).unbind('keyup', this.on_keyup);
                     this.closeModal();
-                    $(document).unbind('keyupkeyup', 'on_keyup'); 
                 }
             },
 

@@ -6,6 +6,10 @@ define(['backbone', 'marionette'], function(Backbone, Marionette) {
            "": "index",
            "login": "login",
            "register": "register",
+           //Top Level Navigation routes
+           "services": "services",
+           "team": "team",
+           "contact": "contact",
            //Team Member Routes
            "earl": "earl",
            "fara": "fara",
