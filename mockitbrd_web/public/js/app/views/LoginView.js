@@ -1,5 +1,5 @@
-define(['MB', 'jquery', 'hbs!templates/login', 'backbone', 'marionette'],
-    function (MB, $, template, Backbone) {
+define(['MB', 'jquery', 'hbs!templates/login', 'backbone', 'marionette', 'toggleJS'],
+    function (MB, $, template, Backbone, toggleJS) {
         //ItemView provides some default rendering logic
         return Backbone.Marionette.ItemView.extend({
             template:template,
