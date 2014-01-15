@@ -175,6 +175,12 @@
 	opacity: 1;
 }
 
+.modal-bg-show #MB-modal-bg {
+	visibility: visible;
+	opacity: 1;
+}
+
+
 #MB-modal-white {
 	position: fixed;
 	top: 0;
@@ -251,6 +257,61 @@
 	transition: all 0.4s;
 	background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 255%, rgba(0, 0, 0,0.5) 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#d9ffffff', endColorstr='#d9ffffff',GradientType=0 );
+
+	.modal {
+		width: 60%;
+		margin: 0 auto;
+		top: 10px;
+		background: none;
+		padding: 34px 24px 48px;
+		position: relative;
+		z-index: 2000;
+		left: -50%;
+		border: none;
+		border-radius: 0;
+		box-shadow: none;
+
+		.body {
+			text-align: center;
+		}
+
+		.MB-modal-close {
+			position: absolute;
+			right: 0;
+			top: 10px;
+			cursor: pointer;
+
+			.MB-icon {
+				font-size: 4em;
+				color: $primary_white;
+				width: 100%;
+				height: 100%;
+
+				&:hover {
+					color: $primary_blue;
+				}
+			}
+		}
+	}
+}
+
+#MB-modal-bg {
+	position: fixed;
+	top: 0;
+	left: 0;
+	padding-left: 50%;
+	width: 100%;
+	height: 100%;
+	z-index: 1000;
+	overflow-y: auto;
+	visibility: hidden;
+	opacity: 0;
+	filter: alpha(opacity=0);
+	backface-visibility: hidden !important;
+	-webkit-backface-visibility: hidden !important;
+	-webkit-transition: all 0.4s;
+	-moz-transition: all 0.4s;
+	transition: all 0.4s;
 
 	.modal {
 		width: 60%;

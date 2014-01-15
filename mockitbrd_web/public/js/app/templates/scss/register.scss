@@ -15,6 +15,7 @@
     margin-bottom: 30px;
     box-shadow: 0px 0px 3px #ddd;
     position: relative;
+    visibility:hidden;
 
     .user-type {
         display: inline-block;
@@ -25,8 +26,8 @@
         cursor: pointer;
 
         &.selected {
-            background:#2bbbff;
-            color:#fff;
+            background: $primary_blue;
+            color: $primary_white;
         }
     }
 
@@ -36,13 +37,13 @@
         height: 100px;
         border-radius: 100px;
         text-align: center;
-        border: 1px solid #f4f4f4;
+        border: 1px solid primary_light_grey;
         position: absolute;
         line-height: 100px;
         left: 200px;
         z-index: 2;
         top: -6px;
-        background: #fff;
+        background: $primary_white;
     }
     }
 
@@ -51,12 +52,12 @@
     width: 49%;
     text-align: center;
     height: 100%;
-    border-right: 1px solid #f4f4f4;
+    border-right: 1px solid $primary_light_grey;
     cursor:pointer;
 
     &.selected {
-        background:#2bbbff;
-        color:#fff;
+        background: $primary_blue;
+        color: $primary_white;
     }
 
     &.no-border {
@@ -74,4 +75,14 @@
         font-weight:100;
         font-size:1em;
     }
+}
+
+.MB-HE-registration-form, .MB-Ent-registration-form, .MB-Int-registration-form, .MB-Ca-registration-form {
+    visibility:hidden;
+   	width: 100%;
+    height: 500px;
+    background: #fff;
+    margin: auto;
+    margin-bottom: 30px;
+    box-shadow: 0px 0px 3px #ddd;
 }

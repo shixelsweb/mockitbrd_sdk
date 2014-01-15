@@ -7,22 +7,22 @@ define(['backbone', 'marionette'], function(Backbone, Marionette) {
            "login": "login",
            "register": "register",
            //Top Level Navigation routes
-           "services": "services",
+           "learnmore": "services",
            "team": "team",
            "contact": "contact",
            //Team Member Routes
-           "earl": "earl",
-           "fara": "fara",
-           "clee": "clee",
+           "team/earl": "earl",
+           "team/fara": "fara",
+           "team/clee": "clee",
            //Learn More Routes
-           "educationLearnMore": "educationLearnMore",
-           "candidateLearnMore": "candidateLearnMore",
-           "professionalLearnMore": "professionalLearnMore",
+           "learnmore/education": "educationLearnMore",
+           "learnmore/candidates": "candidateLearnMore",
+           "learnmore/professionals": "professionalLearnMore",
            //Pricing Routes
-           "educationPricing": "educationPricing",
-           "enterprisePricing": "enterprisePricing",
-           "candidatePricing": "candidatePricing",
-           "professionalPricing": "professionalPricing"
+           "pricing/education": "educationPricing",
+           "pricing/enterprise": "enterprisePricing",
+           "pricing/candidates": "candidatePricing",
+           "pricing/professionals": "professionalPricing"
        }
    });
 });

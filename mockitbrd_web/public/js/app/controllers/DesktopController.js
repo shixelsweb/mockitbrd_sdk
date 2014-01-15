@@ -82,6 +82,7 @@ function (
         },
         showModal: function(View, color) { //shows a modal and passes in the view to show in modal and the color or the modal bg
             MB.body.ensureEl();
+            var url = "../../img/" + color;
 
             if (color === 'white') {
                 MB.body.$el.addClass('modal-white-show');
@@ -89,12 +90,19 @@ function (
             } else if (color === 'black') {
                 MB.body.$el.addClass('modal-black-show');
                 MB.modalBlack.show(new View());
+            } else {
+                MB.body.$el.addClass('modal-bg-show');
+                $('#MB-modal-bg').css('background-image', 'url(' + url + ')');
+                $('#MB-modal-bg').css('background-postion', 'center');
+                $('#MB-modal-bg').css('background-size', 'cover');
+                MB.modalBg.show(new View());
             }
         },
         hideModal: function() { //hides the modal
             MB.body.ensureEl();
             MB.body.$el.removeClass('modal-black-show');
             MB.body.$el.removeClass('modal-white-show');
+            MB.body.$el.removeClass('modal-bg-show');
         },
         //gets mapped to in AppRouters's appRoutes
         index: function () {
@@ -116,7 +124,7 @@ function (
         },
         login: function () {
             this.hideModal();
-            this.showModal(LoginView, 'black');
+            this.showModal(LoginView, 'office_bg.jpg');
         },
         register: function () {
             this.hideModal();

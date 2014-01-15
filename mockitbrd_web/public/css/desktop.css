@@ -181,8 +181,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   margin-bottom: 30px;
   box-shadow: 0px 0px 3px #ddd;
   position: relative;
+  visibility: hidden;
 }
-/* line 19, ../js/app/templates/scss/register.scss */
+/* line 20, ../js/app/templates/scss/register.scss */
 .MB-choose-user-type .user-type {
   display: inline-block;
   width: 49%;
@@ -191,28 +192,28 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   font-size: 0.9em;
   cursor: pointer;
 }
-/* line 27, ../js/app/templates/scss/register.scss */
+/* line 28, ../js/app/templates/scss/register.scss */
 .MB-choose-user-type .user-type.selected {
   background: #2bbbff;
-  color: #fff;
+  color: white;
 }
-/* line 33, ../js/app/templates/scss/register.scss */
+/* line 34, ../js/app/templates/scss/register.scss */
 .MB-choose-user-type .or_sep {
   display: inline-block;
   width: 100px;
   height: 100px;
   border-radius: 100px;
   text-align: center;
-  border: 1px solid #f4f4f4;
+  border: 1px solid primary_light_grey;
   position: absolute;
   line-height: 100px;
   left: 200px;
   z-index: 2;
   top: -6px;
-  background: #fff;
+  background: white;
 }
 
-/* line 49, ../js/app/templates/scss/register.scss */
+/* line 50, ../js/app/templates/scss/register.scss */
 .account-type {
   display: inline-block;
   width: 49%;
@@ -221,27 +222,38 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   border-right: 1px solid #f4f4f4;
   cursor: pointer;
 }
-/* line 57, ../js/app/templates/scss/register.scss */
+/* line 58, ../js/app/templates/scss/register.scss */
 .account-type.selected {
   background: #2bbbff;
-  color: #fff;
+  color: white;
 }
-/* line 62, ../js/app/templates/scss/register.scss */
+/* line 63, ../js/app/templates/scss/register.scss */
 .account-type.no-border {
   border: none;
   margin-left: -5px;
 }
-/* line 67, ../js/app/templates/scss/register.scss */
+/* line 68, ../js/app/templates/scss/register.scss */
 .account-type .icon {
   font-size: 4em;
   position: relative;
   top: 30px;
 }
-/* line 72, ../js/app/templates/scss/register.scss */
+/* line 73, ../js/app/templates/scss/register.scss */
 .account-type .title {
   line-height: 90px;
   font-weight: 100;
   font-size: 1em;
+}
+
+/* line 80, ../js/app/templates/scss/register.scss */
+.MB-HE-registration-form, .MB-Ent-registration-form, .MB-Int-registration-form, .MB-Ca-registration-form {
+  visibility: hidden;
+  width: 100%;
+  height: 500px;
+  background: #fff;
+  margin: auto;
+  margin-bottom: 30px;
+  box-shadow: 0px 0px 3px #ddd;
 }
 
 /* line 1, ../js/app/templates/scss/login.scss */
@@ -658,6 +670,12 @@ header.ghost .navbar-inner {
 }
 
 /* line 178, ../js/app/templates/scss/ui.scss */
+.modal-bg-show #MB-modal-bg {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* line 184, ../js/app/templates/scss/ui.scss */
 #MB-modal-white {
   position: fixed;
   top: 0;
@@ -678,7 +696,7 @@ header.ghost .navbar-inner {
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0.95) 255%, rgba(255, 255, 255, 0.95) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#d9ffffff', endColorstr='#d9ffffff',GradientType=0 );
 }
-/* line 198, ../js/app/templates/scss/ui.scss */
+/* line 204, ../js/app/templates/scss/ui.scss */
 #MB-modal-white .modal {
   width: 450px;
   margin: 0 auto;
@@ -692,30 +710,30 @@ header.ghost .navbar-inner {
   border-radius: 0;
   box-shadow: none;
 }
-/* line 211, ../js/app/templates/scss/ui.scss */
+/* line 217, ../js/app/templates/scss/ui.scss */
 #MB-modal-white .modal .body {
   text-align: center;
 }
-/* line 215, ../js/app/templates/scss/ui.scss */
+/* line 221, ../js/app/templates/scss/ui.scss */
 #MB-modal-white .modal .MB-modal-close {
   position: absolute;
   right: 0;
   top: 10px;
   cursor: pointer;
 }
-/* line 221, ../js/app/templates/scss/ui.scss */
+/* line 227, ../js/app/templates/scss/ui.scss */
 #MB-modal-white .modal .MB-modal-close .MB-icon {
   font-size: 4em;
   color: black;
   width: 100%;
   height: 100%;
 }
-/* line 227, ../js/app/templates/scss/ui.scss */
+/* line 233, ../js/app/templates/scss/ui.scss */
 #MB-modal-white .modal .MB-modal-close .MB-icon:hover {
   color: #2bbbff;
 }
 
-/* line 235, ../js/app/templates/scss/ui.scss */
+/* line 241, ../js/app/templates/scss/ui.scss */
 #MB-modal-black {
   position: fixed;
   top: 0;
@@ -736,7 +754,7 @@ header.ghost .navbar-inner {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 255%, rgba(0, 0, 0, 0.5) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#d9ffffff', endColorstr='#d9ffffff',GradientType=0 );
 }
-/* line 255, ../js/app/templates/scss/ui.scss */
+/* line 261, ../js/app/templates/scss/ui.scss */
 #MB-modal-black .modal {
   width: 60%;
   margin: 0 auto;
@@ -750,30 +768,86 @@ header.ghost .navbar-inner {
   border-radius: 0;
   box-shadow: none;
 }
-/* line 268, ../js/app/templates/scss/ui.scss */
+/* line 274, ../js/app/templates/scss/ui.scss */
 #MB-modal-black .modal .body {
   text-align: center;
 }
-/* line 272, ../js/app/templates/scss/ui.scss */
+/* line 278, ../js/app/templates/scss/ui.scss */
 #MB-modal-black .modal .MB-modal-close {
   position: absolute;
   right: 0;
   top: 10px;
   cursor: pointer;
 }
-/* line 278, ../js/app/templates/scss/ui.scss */
+/* line 284, ../js/app/templates/scss/ui.scss */
 #MB-modal-black .modal .MB-modal-close .MB-icon {
   font-size: 4em;
   color: white;
   width: 100%;
   height: 100%;
 }
-/* line 284, ../js/app/templates/scss/ui.scss */
+/* line 290, ../js/app/templates/scss/ui.scss */
 #MB-modal-black .modal .MB-modal-close .MB-icon:hover {
   color: #2bbbff;
 }
 
-/* line 292, ../js/app/templates/scss/ui.scss */
+/* line 298, ../js/app/templates/scss/ui.scss */
+#MB-modal-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding-left: 50%;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  overflow-y: auto;
+  visibility: hidden;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  backface-visibility: hidden !important;
+  -webkit-backface-visibility: hidden !important;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+}
+/* line 316, ../js/app/templates/scss/ui.scss */
+#MB-modal-bg .modal {
+  width: 60%;
+  margin: 0 auto;
+  top: 10px;
+  background: none;
+  padding: 34px 24px 48px;
+  position: relative;
+  z-index: 2000;
+  left: -50%;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+/* line 329, ../js/app/templates/scss/ui.scss */
+#MB-modal-bg .modal .body {
+  text-align: center;
+}
+/* line 333, ../js/app/templates/scss/ui.scss */
+#MB-modal-bg .modal .MB-modal-close {
+  position: absolute;
+  right: 0;
+  top: 10px;
+  cursor: pointer;
+}
+/* line 339, ../js/app/templates/scss/ui.scss */
+#MB-modal-bg .modal .MB-modal-close .MB-icon {
+  font-size: 4em;
+  color: white;
+  width: 100%;
+  height: 100%;
+}
+/* line 345, ../js/app/templates/scss/ui.scss */
+#MB-modal-bg .modal .MB-modal-close .MB-icon:hover {
+  color: #2bbbff;
+}
+
+/* line 353, ../js/app/templates/scss/ui.scss */
 .MB-skillbar {
   width: 100%;
   height: 35px;
@@ -782,7 +856,7 @@ header.ghost .navbar-inner {
   margin-bottom: 10px;
   position: relative;
 }
-/* line 300, ../js/app/templates/scss/ui.scss */
+/* line 361, ../js/app/templates/scss/ui.scss */
 .MB-skillbar .skill-title {
   font-size: 12px;
   font-weight: 100;
@@ -794,13 +868,13 @@ header.ghost .navbar-inner {
   line-height: 25px;
   text-transform: uppercase;
 }
-/* line 312, ../js/app/templates/scss/ui.scss */
+/* line 373, ../js/app/templates/scss/ui.scss */
 .MB-skillbar .skill-percentage {
   background-color: #2bbbff;
   height: 35px;
 }
 
-/* line 318, ../js/app/templates/scss/ui.scss */
+/* line 379, ../js/app/templates/scss/ui.scss */
 .MB-scrollDown-indicator {
   font-size: 80px;
   position: absolute;
