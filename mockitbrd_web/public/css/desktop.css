@@ -2,7 +2,7 @@
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-/* line 17, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 17, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -24,45 +24,45 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 22, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 24, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 26, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 28, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 30, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 103, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 32, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 116, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
   display: block;
 }
@@ -235,37 +235,34 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 #MB-login-form {
   text-align: center;
   margin-top: 50px;
+  padding-top: 50px;
+  background-color: #fff;
 }
-/* line 5, ../js/app/templates/scss/login.scss */
-#MB-login-form label {
-  font-size: 1.5em;
-  text-transform: uppercase;
-  padding: 10px 0;
-  display: block;
-}
-/* line 11, ../js/app/templates/scss/login.scss */
+/* line 8, ../js/app/templates/scss/login.scss */
 #MB-login-form input {
   width: 50%;
   height: 40px;
   border-radius: 0;
-  border: 2px solid black;
-  background: transparent;
+  background: #F2F0F0;
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
-/* line 21, ../js/app/templates/scss/login.scss */
+/* line 17, ../js/app/templates/scss/login.scss */
 #MB-login-form .MB-login-alt {
+  background-color: #cfcfcf;
   margin-top: 45px;
-  width: 50%;
+  width: 100%;
+  height: 100px;
   margin-left: auto;
   margin-right: auto;
 }
-/* line 27, ../js/app/templates/scss/login.scss */
+/* line 25, ../js/app/templates/scss/login.scss */
 #MB-login-form .MB-login-alt p {
   text-transform: uppercase;
   font-size: 0.8em;
   padding: 10px;
+  margin-bottom: 20px;
 }
 
 /* line 1, ../js/app/templates/scss/welcome.scss */
@@ -656,7 +653,6 @@ header.ghost .navbar-inner {
 .MB-button {
   font-family: "Open Sans";
   padding: 15px 24px;
-  margin-left: 5px;
   font-size: 18px;
   font-weight: 300;
   -webkit-border-radius: 4px;
@@ -667,48 +663,48 @@ header.ghost .navbar-inner {
   text-decoration: none;
   font-size: 0.9em !important;
 }
-/* line 15, ../js/app/templates/scss/ui.scss */
+/* line 14, ../js/app/templates/scss/ui.scss */
 .MB-button a {
   text-decoration: none;
 }
-/* line 19, ../js/app/templates/scss/ui.scss */
+/* line 18, ../js/app/templates/scss/ui.scss */
 .MB-button.med-size {
   width: 70px;
   margin-left: 30px;
 }
-/* line 24, ../js/app/templates/scss/ui.scss */
+/* line 23, ../js/app/templates/scss/ui.scss */
 .MB-button.small {
   font-size: 15px;
   padding: 10px 20px;
 }
-/* line 29, ../js/app/templates/scss/ui.scss */
+/* line 28, ../js/app/templates/scss/ui.scss */
 .MB-button.login {
   padding: 10px 140px;
   border-radius: 0;
   top: 20px;
   position: relative;
 }
-/* line 35, ../js/app/templates/scss/ui.scss */
+/* line 34, ../js/app/templates/scss/ui.scss */
 .MB-button.facebook {
   background-color: #4c66a4 !important;
   border-radius: 0;
 }
-/* line 39, ../js/app/templates/scss/ui.scss */
+/* line 38, ../js/app/templates/scss/ui.scss */
 .MB-button.linkedin {
   background-color: #006699 !important;
   border-radius: 0;
 }
-/* line 43, ../js/app/templates/scss/ui.scss */
+/* line 42, ../js/app/templates/scss/ui.scss */
 .MB-button.primary {
   background-color: #2bbbff;
   color: white !important;
 }
-/* line 47, ../js/app/templates/scss/ui.scss */
+/* line 46, ../js/app/templates/scss/ui.scss */
 .MB-button.primary:hover {
   background-color: #0085c4 !important;
   text-decoration: none;
 }
-/* line 52, ../js/app/templates/scss/ui.scss */
+/* line 51, ../js/app/templates/scss/ui.scss */
 .MB-button.ghost {
   background: transparent;
   border: 2px solid rgba(255, 255, 255, 0.4);
@@ -717,13 +713,13 @@ header.ghost .navbar-inner {
   height: 15px;
   line-height: 15px;
 }
-/* line 59, ../js/app/templates/scss/ui.scss */
+/* line 58, ../js/app/templates/scss/ui.scss */
 .MB-button.ghost:hover {
   border: 2px solid white;
   color: white;
   text-decoration: none;
 }
-/* line 65, ../js/app/templates/scss/ui.scss */
+/* line 64, ../js/app/templates/scss/ui.scss */
 .MB-button.fog {
   background: rgba(255, 255, 255, 0.2);
   border: none;
@@ -731,32 +727,32 @@ header.ghost .navbar-inner {
   color: white !important;
   border: 3px solid transparent;
 }
-/* line 72, ../js/app/templates/scss/ui.scss */
+/* line 71, ../js/app/templates/scss/ui.scss */
 .MB-button.fog:hover {
   background-color: rgba(255, 255, 255, 0.4) !important;
   text-decoration: none;
 }
-/* line 77, ../js/app/templates/scss/ui.scss */
+/* line 76, ../js/app/templates/scss/ui.scss */
 .MB-button.secondary {
   background-color: #ffe42b;
   color: black !important;
 }
-/* line 81, ../js/app/templates/scss/ui.scss */
+/* line 80, ../js/app/templates/scss/ui.scss */
 .MB-button.secondary:hover {
   background-color: #dec100 !important;
   text-decoration: none;
 }
-/* line 87, ../js/app/templates/scss/ui.scss */
+/* line 86, ../js/app/templates/scss/ui.scss */
 .MB-button.primary, .MB-button.secondary {
   text-shadow: none !important;
 }
 
-/* line 92, ../js/app/templates/scss/ui.scss */
+/* line 91, ../js/app/templates/scss/ui.scss */
 .MB-features {
   padding-top: 50px;
   text-align: center;
 }
-/* line 95, ../js/app/templates/scss/ui.scss */
+/* line 94, ../js/app/templates/scss/ui.scss */
 .MB-features .MB-feature {
   display: inline-block;
   font-family: "Open Sans";
@@ -765,7 +761,7 @@ header.ghost .navbar-inner {
   margin-bottom: 50px;
   position: relative;
 }
-/* line 103, ../js/app/templates/scss/ui.scss */
+/* line 102, ../js/app/templates/scss/ui.scss */
 .MB-features .MB-feature .bt-steps-link {
   background: url("../../img/steps-link.png") no-repeat left top transparent;
   width: 189px;
@@ -774,29 +770,29 @@ header.ghost .navbar-inner {
   right: -106px;
   top: 46px;
 }
-/* line 112, ../js/app/templates/scss/ui.scss */
+/* line 111, ../js/app/templates/scss/ui.scss */
 .MB-features .MB-feature .title {
   font-size: 1.5em;
   line-height: 2em;
 }
-/* line 116, ../js/app/templates/scss/ui.scss */
+/* line 115, ../js/app/templates/scss/ui.scss */
 .MB-features .MB-feature .title.bold {
   font-weight: bold;
   color: #525252;
 }
-/* line 121, ../js/app/templates/scss/ui.scss */
+/* line 120, ../js/app/templates/scss/ui.scss */
 .MB-features .MB-feature .subtitle {
   font-size: 1em;
   color: #2bbbff;
 }
-/* line 125, ../js/app/templates/scss/ui.scss */
+/* line 124, ../js/app/templates/scss/ui.scss */
 .MB-features .MB-feature .about {
   height: 80px;
   font-size: 0.9em;
   line-height: 2em;
 }
 
-/* line 133, ../js/app/templates/scss/ui.scss */
+/* line 132, ../js/app/templates/scss/ui.scss */
 .MB-benefits {
   width: 960px;
   margin-left: auto;
@@ -804,22 +800,22 @@ header.ghost .navbar-inner {
   margin-top: 30px;
 }
 
-/* line 140, ../js/app/templates/scss/ui.scss */
+/* line 139, ../js/app/templates/scss/ui.scss */
 .MB-benefit {
   margin-bottom: 30px;
 }
-/* line 143, ../js/app/templates/scss/ui.scss */
+/* line 142, ../js/app/templates/scss/ui.scss */
 .MB-benefit h4 {
   font-weight: bold;
   font-size: 1.2em;
   line-height: 2em;
 }
-/* line 148, ../js/app/templates/scss/ui.scss */
+/* line 147, ../js/app/templates/scss/ui.scss */
 .MB-benefit p {
   font-size: 0.9em;
 }
 
-/* line 153, ../js/app/templates/scss/ui.scss */
+/* line 152, ../js/app/templates/scss/ui.scss */
 .MB-icon {
   width: 90px;
   height: 90px;
@@ -827,29 +823,29 @@ header.ghost .navbar-inner {
   font-size: 80px;
   color: #2bbbff;
 }
-/* line 160, ../js/app/templates/scss/ui.scss */
+/* line 159, ../js/app/templates/scss/ui.scss */
 .MB-icon.small {
   font-size: 40px;
 }
-/* line 164, ../js/app/templates/scss/ui.scss */
+/* line 163, ../js/app/templates/scss/ui.scss */
 .MB-icon.smaller {
   font-size: 30px;
   line-height: 120px;
 }
 
-/* line 169, ../js/app/templates/scss/ui.scss */
+/* line 168, ../js/app/templates/scss/ui.scss */
 .modal-black-show #MB-modal-black {
   visibility: visible;
   opacity: 1;
 }
 
-/* line 174, ../js/app/templates/scss/ui.scss */
+/* line 173, ../js/app/templates/scss/ui.scss */
 .modal-white-show #MB-modal-white {
   visibility: visible;
   opacity: 1;
 }
 
-/* line 179, ../js/app/templates/scss/ui.scss */
+/* line 178, ../js/app/templates/scss/ui.scss */
 #MB-modal-white {
   position: fixed;
   top: 0;
@@ -870,9 +866,9 @@ header.ghost .navbar-inner {
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0.95) 255%, rgba(255, 255, 255, 0.95) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#d9ffffff', endColorstr='#d9ffffff',GradientType=0 );
 }
-/* line 199, ../js/app/templates/scss/ui.scss */
+/* line 198, ../js/app/templates/scss/ui.scss */
 #MB-modal-white .modal {
-  width: 60%;
+  width: 450px;
   margin: 0 auto;
   top: 10px;
   background: none;
@@ -884,26 +880,26 @@ header.ghost .navbar-inner {
   border-radius: 0;
   box-shadow: none;
 }
-/* line 212, ../js/app/templates/scss/ui.scss */
+/* line 211, ../js/app/templates/scss/ui.scss */
 #MB-modal-white .modal .MB-modal-close {
   position: absolute;
   right: 0;
   top: 10px;
   cursor: pointer;
 }
-/* line 218, ../js/app/templates/scss/ui.scss */
+/* line 217, ../js/app/templates/scss/ui.scss */
 #MB-modal-white .modal .MB-modal-close .MB-icon {
   font-size: 4em;
   color: black;
   width: 100%;
   height: 100%;
 }
-/* line 224, ../js/app/templates/scss/ui.scss */
+/* line 223, ../js/app/templates/scss/ui.scss */
 #MB-modal-white .modal .MB-modal-close .MB-icon:hover {
   color: #2bbbff;
 }
 
-/* line 232, ../js/app/templates/scss/ui.scss */
+/* line 231, ../js/app/templates/scss/ui.scss */
 #MB-modal-black {
   position: fixed;
   top: 0;
@@ -924,7 +920,7 @@ header.ghost .navbar-inner {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 255%, rgba(0, 0, 0, 0.5) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#d9ffffff', endColorstr='#d9ffffff',GradientType=0 );
 }
-/* line 252, ../js/app/templates/scss/ui.scss */
+/* line 251, ../js/app/templates/scss/ui.scss */
 #MB-modal-black .modal {
   width: 60%;
   margin: 0 auto;
@@ -938,26 +934,26 @@ header.ghost .navbar-inner {
   border-radius: 0;
   box-shadow: none;
 }
-/* line 265, ../js/app/templates/scss/ui.scss */
+/* line 264, ../js/app/templates/scss/ui.scss */
 #MB-modal-black .modal .MB-modal-close {
   position: absolute;
   right: 0;
   top: 10px;
   cursor: pointer;
 }
-/* line 271, ../js/app/templates/scss/ui.scss */
+/* line 270, ../js/app/templates/scss/ui.scss */
 #MB-modal-black .modal .MB-modal-close .MB-icon {
   font-size: 4em;
   color: white;
   width: 100%;
   height: 100%;
 }
-/* line 277, ../js/app/templates/scss/ui.scss */
+/* line 276, ../js/app/templates/scss/ui.scss */
 #MB-modal-black .modal .MB-modal-close .MB-icon:hover {
   color: #2bbbff;
 }
 
-/* line 285, ../js/app/templates/scss/ui.scss */
+/* line 284, ../js/app/templates/scss/ui.scss */
 .MB-skillbar {
   width: 100%;
   height: 35px;
@@ -966,7 +962,7 @@ header.ghost .navbar-inner {
   margin-bottom: 10px;
   position: relative;
 }
-/* line 293, ../js/app/templates/scss/ui.scss */
+/* line 292, ../js/app/templates/scss/ui.scss */
 .MB-skillbar .skill-title {
   font-size: 12px;
   font-weight: 100;
@@ -978,13 +974,13 @@ header.ghost .navbar-inner {
   line-height: 25px;
   text-transform: uppercase;
 }
-/* line 305, ../js/app/templates/scss/ui.scss */
+/* line 304, ../js/app/templates/scss/ui.scss */
 .MB-skillbar .skill-percentage {
   background-color: #2bbbff;
   height: 35px;
 }
 
-/* line 311, ../js/app/templates/scss/ui.scss */
+/* line 310, ../js/app/templates/scss/ui.scss */
 .MB-scrollDown-indicator {
   font-size: 80px;
   position: absolute;
@@ -2588,6 +2584,141 @@ stretchRight
   100% {
     -webkit-transform: scaleX(1);
   }
+}
+
+/* line 1, ../js/app/templates/scss/vendor/toggle.scss */
+.toggle-slide {
+  overflow: hidden;
+  cursor: pointer;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  direction: ltr;
+}
+
+/* line 12, ../js/app/templates/scss/vendor/toggle.scss */
+.toggle-slide .toggle-on, .toggle-slide .toggle-off, .toggle-slide .toggle-blob {
+  float: left;
+}
+
+/* line 15, ../js/app/templates/scss/vendor/toggle.scss */
+.toggle-slide .toggle-blob {
+  position: relative;
+  z-index: 99;
+  cursor: hand;
+  cursor: grab;
+  cursor: -moz-grab;
+  cursor: -webkit-grab;
+}
+
+/* line 24, ../js/app/templates/scss/vendor/toggle.scss */
+.toggle-slide {
+  overflow: hidden;
+  cursor: pointer;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  direction: ltr;
+}
+
+/* line 35, ../js/app/templates/scss/vendor/toggle.scss */
+.toggle-slide .toggle-on, .toggle-slide .toggle-off, .toggle-slide .toggle-blob {
+  float: left;
+}
+
+/* line 38, ../js/app/templates/scss/vendor/toggle.scss */
+.toggle-slide .toggle-blob {
+  position: relative;
+  z-index: 99;
+  cursor: hand;
+  cursor: grab;
+  cursor: -moz-grab;
+  cursor: -webkit-grab;
+}
+
+/* line 47, ../js/app/templates/scss/vendor/toggle.scss */
+.toggle-modern .toggle-slide {
+  border-radius: 4px;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.25), 0 0 1px rgba(0, 0, 0, 0.2);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #c0c5c9), color-stop(1, #a1a9af));
+  background-image: -webkit-linear-gradient(#c0c5c9, #a1a9af);
+  background-image: -moz-linear-gradient(#c0c5c9, #a1a9af);
+  background-image: -o-linear-gradient(#c0c5c9, #a1a9af);
+  background-image: -ms-linear-gradient(#c0c5c9, #a1a9af);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#c0c5c9', endColorstr='#a1a9af');
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#c0c5c9', endColorstr='#a1a9af')";
+  box-shadow: inset 0 2px 1px rgba(0, 0, 0, 0.2), inset 0 0 0 1px rgba(0, 0, 0, 0.15), 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+/* line 59, ../js/app/templates/scss/vendor/toggle.scss */
+.toggle-modern .toggle-slide .toggle-on, .toggle-modern .toggle-slide .toggle-off {
+  -moz-transition: all 0.1s ease-out;
+  -webkit-transition: all 0.1s ease-out;
+  -o-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
+  color: white;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.1);
+  font-size: 11px;
+  box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.2), inset 0 0 0 1px rgba(0, 0, 0, 0.2), inset 0 -1px 1px rgba(0, 0, 0, 0.1), 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+/* line 70, ../js/app/templates/scss/vendor/toggle.scss */
+.toggle-modern .toggle-slide .toggle-off, .toggle-modern .toggle-slide .toggle-off.active {
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #737e8d), color-stop(1, #3f454e));
+  background-image: -webkit-linear-gradient(#737e8d, #3f454e);
+  background-image: -moz-linear-gradient(#737e8d, #3f454e);
+  background-image: -o-linear-gradient(#737e8d, #3f454e);
+  background-image: -ms-linear-gradient(#737e8d, #3f454e);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#737e8d', endColorstr='#3f454e');
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#737e8d', endColorstr='#3f454e')";
+}
+
+/* line 79, ../js/app/templates/scss/vendor/toggle.scss */
+.toggle-modern .toggle-slide .toggle-on, .toggle-modern .toggle-slide .toggle-on.active {
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #4894cd), color-stop(1, #2852a6));
+  background-image: -webkit-linear-gradient(#4894cd, #2852a6);
+  background-image: -moz-linear-gradient(#4894cd, #2852a6);
+  background-image: -o-linear-gradient(#4894cd, #2852a6);
+  background-image: -ms-linear-gradient(#4894cd, #2852a6);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4894cd', endColorstr='#2852a6');
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#4894cd', endColorstr='#2852a6')";
+}
+
+/* line 88, ../js/app/templates/scss/vendor/toggle.scss */
+.toggle-modern .toggle-select .toggle-off, .toggle-modern .toggle-select .toggle-on {
+  background: none;
+}
+
+/* line 91, ../js/app/templates/scss/vendor/toggle.scss */
+.toggle-modern .toggle-slide .toggle-blob {
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #c0c5c9), color-stop(1, #81898f));
+  background-image: -webkit-linear-gradient(#c0c6c9, #81898f);
+  background-image: -moz-linear-gradient(#c0c6c9, #81898f);
+  background-image: -o-linear-gradient(#c0c6c9, #81898f);
+  background-image: -ms-linear-gradient(#c0c6c9, #81898f);
+  background-image: linear-gradient(#c0c6c9, #81898f);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#c0c6c9', endColorstr='#81898f');
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#c0c5c9', endColorstr='#a1a9af')";
+  box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.2), inset 0 0 0 1px rgba(0, 0, 0, 0.2), inset 0 -1px 1px rgba(0, 0, 0, 0.1), 1px 1px 2px rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+}
+
+/* line 103, ../js/app/templates/scss/vendor/toggle.scss */
+.toggle-modern .toggle-slide .toggle-blob:hover {
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #a1a9af), color-stop(1, #a1a9af));
+  background-image: -webkit-linear-gradient(#a1a9af, #81898f);
+  background-image: -moz-linear-gradient(#a1a9af, #a1a9af);
+  background-image: -o-linear-gradient(#a1a9af, #a1a9af);
+  background-image: -ms-linear-gradient(#a1a9af, #a1a9af);
+  background-image: linear-gradient(#a1a9af, #a1a9af);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a1a9af', endColorstr='#a1a9af');
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#a1a9af', endColorstr='#a1a9af')";
 }
 
 /* line 10, ../scss/desktop.scss */

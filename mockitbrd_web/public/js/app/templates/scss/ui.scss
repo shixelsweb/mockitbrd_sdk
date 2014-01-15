@@ -1,7 +1,6 @@
 .MB-button {
 	font-family: $primary_font;
 	padding: 15px 24px;
-	margin-left: 5px;
 	font-size: 18px;
 	font-weight: 300;
 	-webkit-border-radius: 4px;
@@ -197,7 +196,7 @@
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#d9ffffff', endColorstr='#d9ffffff',GradientType=0 );
 
 	.modal {
-		width: 60%;
+		width: 450px;
 		margin: 0 auto;
 		top: 10px;
 		background: none;
