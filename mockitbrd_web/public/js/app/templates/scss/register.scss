@@ -1,66 +1,77 @@
-.MB-register-switcher {
-	position: relative;
-	padding: 0;
-	width: auto;
-	text-align: center;
-	height: 150px;
+.MB-choose-account-type {
+    width: 100%;
+    height: 150px;
+    background: #fff;
+    margin: auto;
+    margin-bottom: 30px;
+    box-shadow: 0px 0px 3px #ddd;
+}
 
-	.candidate {
-		width: 150px;
-		height: 150px;
-		border-radius: 130px;
-		display: inline-block;
-		cursor: pointer;
+.MB-choose-user-type {
+    width: 100%;
+    height: 80px;
+    background: #fff;
+    margin: auto;
+    margin-bottom: 30px;
+    box-shadow: 0px 0px 3px #ddd;
+    position: relative;
 
-		&.off {
-			background: url("../../img/candidate_off.png") no-repeat;
-			background-color: $primary_white;
-			background-size: 60px;
-			background-position: center;
-			box-shadow: 0px 0px 2px $primary_grey;
-		}
+    .user-type {
+        display: inline-block;
+        width: 49%;
+        text-align: center;
+        line-height: 80px;
+        font-size: 0.9em;
+        cursor: pointer;
 
-		&.on {
-			background: url("../../img/candidate_on.png") no-repeat;
-			background-color: $primary_blue;
-			background-size: 60px;
-			background-position: center;
-		}
-	}
+        &.selected {
+            background:#2bbbff;
+            color:#fff;
+        }
+    }
 
-	.professional {
-		width: 150px;
-		height: 150px;
-		border-radius: 130px;
-		display: inline-block;
-		cursor: pointer;
+    .or_sep {
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+        border-radius: 100px;
+        text-align: center;
+        border: 1px solid #f4f4f4;
+        position: absolute;
+        line-height: 100px;
+        left: 200px;
+        z-index: 2;
+        top: -6px;
+        background: #fff;
+    }
+    }
 
-		&.off {
-			background: url("../../img/professional_off.png") no-repeat;
-			background-color: $primary_white;
-			background-size: 60px;
-			background-position: center;
-		}
+.account-type {
+    display: inline-block;
+    width: 49%;
+    text-align: center;
+    height: 100%;
+    border-right: 1px solid #f4f4f4;
+    cursor:pointer;
 
-		&.on {
-			background: url("../../img/professional_on.png") no-repeat;
-			background-color: $primary_blue;
-			background-size: 60px;
-			background-position: center;
-		}
-	}
-	.or {
-		display: inline-block;
-		height: 50px;
-		width: 50px;
-		line-height: 50px;
-		border-radius: 150px;
-		background-color: #888;
-		position: absolute;
-		z-index: 2;
-		top: 50px;
-		right: 48%;
-		font-family: cursive;
-		color: $primary_white;
-	}
+    &.selected {
+        background:#2bbbff;
+        color:#fff;
+    }
+
+    &.no-border {
+        border: none;
+        margin-left: -5px;
+
+    }
+    .icon {
+        font-size: 4em;
+        position: relative;
+        top: 30px;
+    }
+    .title {
+        line-height: 90px;
+        font-weight:100;
+        font-size:1em;
+    }
 }

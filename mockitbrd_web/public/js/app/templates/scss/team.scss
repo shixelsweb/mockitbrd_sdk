@@ -55,3 +55,92 @@ width: 50%;
 	}
 
 }
+
+#MB-team-section {
+
+	.MB-team-photos {
+		li {
+			display: inline-block;
+			margin-right: 50px;
+			cursor: pointer;
+
+			.view {
+				line-height: 200px;
+				font-weight: 100;
+				text-transform: uppercase;
+				position: absolute;
+				width: 200px;
+				height: 200px;
+				border-radius: 200px;
+				font-family: $primary_font;
+				font-size: 2em;
+				color: $primary_blue;
+				display: none;
+
+			}
+
+			.MB-team-photo {
+				border-radius: 200px;
+				width: 200px;
+				height: 200px;
+				-webkit-transition: all 0.3s;
+	           -moz-transition: all 0.3s;
+				transition: all 0.3s;
+
+
+				&:hover {
+					.view {
+						display: block;
+					}
+				}
+
+				&.fara {
+					background: url('../../img/baby_fara.jpg') no-repeat;
+					background-size: 516px;
+					background-position: -141px -70px;
+
+					&:hover {
+						background: url('../../img/fara.jpg') no-repeat;
+						background-size: 340px;
+						background-position: right;
+					}
+				}
+				&.earl {
+					background: url('../../img/baby_earl.jpg') no-repeat;
+					background-size: 497px;
+					background-position: -123px -42px;
+
+					&:hover {
+						background: url('../../img/earl.jpg') no-repeat;
+						background-size: 215px;
+						background-position: center;
+					}
+				}
+				&.clee {
+					background: url('../../img/baby_clee.jpg') no-repeat;
+					background-size: 428px;
+					background-position: -109px -23px;
+
+					&:hover {
+						background: url('../../img/clee.jpg') no-repeat;
+						background-size: 288px;
+						background-position: -4px -16px;
+				}
+			}
+		}
+	}
+
+	.MB-team-info {
+		font-family: $primary_font;
+		.name {
+			font-weight: bold;
+			text-transform: uppercase;
+			font-size: 1em;
+			padding: 10px 0;
+		}
+		.title {
+			font-style: italic;
+	
+	}	}
+	}
+}

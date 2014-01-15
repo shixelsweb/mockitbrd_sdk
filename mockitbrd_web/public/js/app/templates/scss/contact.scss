@@ -1,0 +1,49 @@
+#MB-contact-section {
+	padding-bottom: 0px;
+	#MB-main-contact-form {
+		margin-right: auto;
+		margin-left: auto;
+		width: 680px;
+
+		.MB-contact-left {
+			float: left;
+
+			input {
+				width: 300px;
+				height: 40px;
+				display: block;
+				border-radius: 0px;
+				border: 1px solid $primary_black;
+				font-family: $primary_font;
+				font-weight: 100;
+				font-size: 0.7em;
+			}
+		}
+
+		.MB-contact-right {
+			textarea {
+				width: 340px;
+				height: 98px;
+				border:  1px solid $primary_black;
+				border-radius: 0px;
+				display: inline-block;
+				font-family: $primary_font;
+				font-weight: 100;
+				font-size: 0.7em;
+			}
+			button {
+				width: 350px;
+				height: 51px;
+				border:  1px solid $primary_black;
+				font-size: 1.3em;
+				background-color: $primary_yellow;
+				color: $primary_black;
+			}
+		}
+		#MB-contact-error-msg {
+			width: 680px;
+			height: 60px;
+			display: block;
+		}
+	}
+}

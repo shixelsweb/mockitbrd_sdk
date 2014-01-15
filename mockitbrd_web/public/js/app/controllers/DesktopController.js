@@ -51,10 +51,21 @@ function (
 ){
     return Backbone.Marionette.Controller.extend({
         initialize: function (options) {
-            MB.headerRegion.show(new DesktopHeaderView());
+            this.showPublicHeader(true);
         },
         //Helper functions
-        showHeader: function(isGhost) { //shows the non logged in versino of the nav bar and passes in a boolean that says whether or not the nav background is transparant
+        showPublicHeader: function(isGhost) { //shows the non logged in versino of the nav bar and passes in a boolean that says whether or not the nav background is transparant
+            MB.headerRegion.show(new DesktopHeaderView());
+            MB.headerRegion.ensureEl();
+
+            if (isGhost === true) {
+                MB.headerRegion.$el.addClass('ghost');
+            } else {
+                MB.headerRegion.$el.removeClass('ghost');
+            }
+            MB.headerRegion.$el.show();
+        },
+        showPrivateHeader: function(isBusiness) { //shows the non logged in versino of the nav bar and passes in a boolean that says whether or not the nav background is transparant
             MB.headerRegion.show(new DesktopHeaderView());
             MB.headerRegion.ensureEl();
 
@@ -70,7 +81,6 @@ function (
             MB.headerRegion.$el.hide();
         },
         showModal: function(View, color) { //shows a modal and passes in the view to show in modal and the color or the modal bg
-            this.showHeader();
             MB.body.ensureEl();
 
             if (color === 'white') {
@@ -89,7 +99,7 @@ function (
         //gets mapped to in AppRouters's appRoutes
         index: function () {
             this.hideModal();
-            this.showHeader(true);
+            this.showPublicHeader(true);
             MB.mainRegion.show(new WelcomeView());
         },
         earl: function () {
@@ -110,12 +120,11 @@ function (
         },
         register: function () {
             this.hideModal();
-            this.hideHeader();
             this.showModal(RegisterView, 'black');
         },
         services: function() {
             this.hideModal();
-            this.showHeader(false);
+            this.showPublicHeader(false);
             MB.mainRegion.show(new ServicesView());
         },
         contact: function () {
@@ -124,21 +133,21 @@ function (
         },
         team: function () {
             this.hideModal();
-            this.showHeader(false);
+            this.showPublicHeader(false);
             MB.mainRegion.show(new TeamView());
         },
         educationLearnMore: function() {
             this.hideModal();
-            this.showHeader(false);
+            this.showPublicHeader(false);
             MB.mainRegion.show(new EducationLearnMoreView());
         },
         candidateLearnMore: function () {
             this.hideModal();
-            this.showHeader(false);
+            this.showPublicHeader(false);
         },
         professionalLearnMore: function () {
             this.hideModal();
-            this.showHeader(false);
+            this.showPublicHeader(false);
             MB.mainRegion.show(new ProfessionalLearnMoreView());
         },
         professionalPricing: function () {
@@ -152,7 +161,7 @@ function (
         },
         educationPricing: function () {
             this.hideModal();
-            this.showHeader(false);
+            this.showPublicHeader(false);
             MB.mainRegion.show(new EducationPricingView());
 
         }
