@@ -22,7 +22,7 @@ define(["jquery", "underscore", "backbone"],
                         if (response.success === 0) {
                             alert("error: ", response.data.error); //TODO-(Fara) : add to Error Modal
                         } else {
-                            MB.session.start(response.data.user);
+                            MB.session.start(response.data.user); //add  ", params.stayLoggedIn"
                           //TODO-(Earl) - Create BLANK Landing views with words (interviewer, candidate, or verify) - DO THIS IN MB.session
                           //TODO FIGURE OUT DUPLILCATE SESSIONS AND CLOSE ON SUCCESS
                         }

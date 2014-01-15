@@ -27,9 +27,9 @@ define(["jquery", "backbone"],
                 return counter.toString(36);
             },
 
-            start: function(user) {
+            start: function(user) { //add stayLoggedIn
                 var auth_token = this.generateToken();
-
+                
                 //TODO: Remove password from user object
                 if (!this.get('user') && !this.get('token')) { //only create a session if one doesn't already exsist
 

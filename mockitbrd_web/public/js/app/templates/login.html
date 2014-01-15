@@ -7,23 +7,37 @@
 	</div>
 	<div class="body">
 		<form id="MB-login-form">
+		<div class="MB-login-input">
+
+			<div class="input-group in-group">
+	  		<span class="input-group-addon"><i class="fa fa-user"></i></span>
+			<input type="email" name="email" placeholder="email" class="MB-login-email form-control"/>
+			</div>
+
+			<div class="input-group in-group">
+			<span class="input-group-addon"><i class="fa fa-key"></i></span>
+			<input type="password" name="password" placeholder="password" class="MB-login-password form-control"/>
+			</div>
+
+			<hr>
+
+		</div>	
+
+
+
+				
+		<a class="MB-button" id="Log-Button" href="#">Login</a>
+
 		
 
-		<div class="input-group">
-  		<span class="input-group-addon">@</span>
-		<input type="email" name="email" placeholder="email" class="MB-login-email"/>
-		</div>
-
-
-
-
-
-		<input type="password" name="password" placeholder="password" class="MB-login-password"/>
-		<a class="MB-button primary login" href="#">Login</a>
 		<div class="MB-login-alt">
-			<p>or, login with</p>
-			<a class="MB-button primary facebook clear-left" href="#"><i class="fa fa-facebook"></i> Facebook</a>
-			<a class="MB-button primary linkedin clear-right" href="#"><i class="fa fa-linkedin"></i> LinkedIn</a>
+			
+			<div class="MB-login-login">SIGN IN WITH</div>
+			<a href="#" id="link-link"><div class="MB-button-size button-link"><i class="fa fa50 fa-linkedin"></i></div></a>
+			<a href="#" id="link-twit"><div class="MB-button-size button-twit"><i class="fa fa50 fa-twitter"></i></div></a>
+			<a href="#" id="link-face"><div class="MB-button-size button-face"><i class="fa fa50 fa-facebook"></i></div></a>
+
+
 		</div>
 		
 	</form>

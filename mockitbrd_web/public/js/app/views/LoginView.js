@@ -18,7 +18,10 @@ define(['MB', 'jquery', 'hbs!templates/login', 'backbone', 'marionette', 'toggle
 
                 var email = $('.MB-login-email').val();
                 var password = $('.MB-login-password').val();
+                //var stayLoggedIn = value;
+                //if user hasnt entered email or password do a validation before sending to API
                 var data = {'email': email, 'password': password};
+
 
                 MB.api.login(data);
             },
@@ -31,6 +34,9 @@ define(['MB', 'jquery', 'hbs!templates/login', 'backbone', 'marionette', 'toggle
                 if (e.keyCode === 27) {
                     $(document).unbind('keyup', this.on_keyup);
                     this.closeModal();
+                } else if (e.keyCode === 27) {
+                    $(document).unbind('keyup', this.on_keyup);
+                    this.loginUser();
                 }
             },
 
@@ -40,5 +46,7 @@ define(['MB', 'jquery', 'hbs!templates/login', 'backbone', 'marionette', 'toggle
                 MB.body.$el.removeClass('modal-show');
                 window.history.back();
             }
+
         });
     });
+
