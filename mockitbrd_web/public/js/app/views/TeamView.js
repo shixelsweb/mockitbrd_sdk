@@ -19,7 +19,8 @@ define(['jquery', 'hbs!templates/team', 'backbone', 'marionette'],
 
             showTeamMember: function(e) {
                 var member = e.currentTarget.classList[1];
-                MB.appRouter.navigate(member, { trigger: true });
+                var url = "#team/" + member;
+                MB.appRouter.navigate(url, { trigger: true });
             }
         });
     });

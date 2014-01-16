@@ -128,7 +128,7 @@ function (
         },
         register: function () {
             this.hideModal();
-            this.showModal(RegisterView, 'black');
+            this.showModal(RegisterView, 'login_bg.jpg');
         },
         services: function() {
             this.hideModal();
@@ -137,7 +137,7 @@ function (
         },
         contact: function () {
             this.hideModal();
-            this.showModal(ContactView, 'white');
+            this.showModal(ContactView, 'mail_bg_grid.jpg');
         },
         team: function () {
             this.hideModal();

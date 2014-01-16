@@ -1,5 +1,9 @@
 #MB-contact-section {
 	padding-bottom: 0px;
+	h1 {
+		font-size: 3em;
+		color: $primary_white;
+	}
 	#MB-main-contact-form {
 		margin-right: auto;
 		margin-left: auto;
@@ -38,6 +42,10 @@
 				font-size: 1.3em;
 				background-color: $primary_yellow;
 				color: $primary_black;
+
+				&:hover {
+					background-color: $primary_yellow_hl;
+				}
 			}
 		}
 		#MB-contact-error-msg {
