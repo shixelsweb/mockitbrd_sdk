@@ -321,6 +321,45 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   top: -3px;
   right: 5px;
 }
+/* line 138, ../js/app/templates/scss/register.scss */
+.MB-registration-form .tooltip-inner h2 {
+  text-align: center;
+  padding: 0;
+  color: #2bbbff;
+  font-size: 1.5em;
+  font-weight: 100;
+  text-transform: uppercase;
+  line-height: 2em;
+}
+/* line 147, ../js/app/templates/scss/register.scss */
+.MB-registration-form .tooltip-inner p {
+  text-align: left;
+  line-height: 1.8em;
+}
+/* line 155, ../js/app/templates/scss/register.scss */
+.MB-registration-form h3 .popover-title {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+/* line 161, ../js/app/templates/scss/register.scss */
+.MB-registration-form .popover-content {
+  font-size: 1em;
+  text-align: left;
+  font-weight: 100;
+}
+/* line 166, ../js/app/templates/scss/register.scss */
+.MB-registration-form .popover-content h2 {
+  font-weight: bold;
+  padding: 0;
+}
+/* line 171, ../js/app/templates/scss/register.scss */
+.MB-registration-form .MB-button.primary.fullReg.disabled {
+  background-color: #525252;
+}
+/* line 174, ../js/app/templates/scss/register.scss */
+.MB-registration-form .MB-button.primary.fullReg.disabled:hover {
+  background-color: #525252 !important;
+}
 
 /* line 1, ../js/app/templates/scss/login.scss */
 .MB-button-register {
@@ -654,6 +693,15 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   right: 115%;
   color: #fff;
   text-shadow: 0 1px 0 #afcb9b, 0 -1px 0 #6b8659;
+}
+/* line 342, ../js/app/templates/scss/login.scss */
+#MB-login-form .MB-login-alert {
+  display: none;
+  width: 75%;
+  margin: 15px auto;
+  position: relative;
+  border-collapse: separate;
+  border-radius: 0;
 }
 
 /* line 1, ../js/app/templates/scss/welcome.scss */

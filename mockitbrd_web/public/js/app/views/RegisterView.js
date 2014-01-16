@@ -5,8 +5,13 @@ define(['jquery', 'hbs!templates/register', 'backbone', 'marionette'],
             template:template,
 
             defaults: {
-                account_type: null,
-                user_type: null
+                password_ready: null,
+                fname_ready: null,
+                lname_ready: null,
+                rpassword_ready: null,
+                email_ready: null,
+                user_type_ready: null,
+                toc_ready: null
             },
 
             events: {
@@ -14,7 +19,13 @@ define(['jquery', 'hbs!templates/register', 'backbone', 'marionette'],
                 'click .account-type': 'accountTypeHandler',
                 'propertychange input.MB-reg-input': 'on_form_change',
                 'input input.MB-reg-input': 'on_form_change',
-                'paste input.MB-reg-input': 'on_form_change'
+                'paste input.MB-reg-input': 'on_form_change',
+                'focus .reg-password': 'show_tooltip',
+                'click .reg-password': 'show_tooltip',
+                'hover .reg-password': 'show_tooltip',
+                'click .reg-roles': 'explain_roles',
+                'hover .reg-roles': 'explain_roles',
+                'click .fullReg': 'registerUser'
             },
             initialize: function() {
                 _.bindAll(this, 'on_keyup');
@@ -27,7 +38,15 @@ define(['jquery', 'hbs!templates/register', 'backbone', 'marionette'],
               this.$el = this.$el.children();
               this.setElement(this.$el);
             },
-
+            show_tooltip: function() {
+                var password_html = '<h2>Password Help</h2><p class="step1">1. Must be at least 8 character long</p><p class="step2">2. Must contain at least 1 uppercase letter</p><p class="step3">3. Must contain at least 1 lowercase letter</p><p class="step4">4. Must containt at least 1 number (0-9)</p>';
+                $('.reg-password').tooltip({'trigger':'focus click hover', 'title': password_html, 'html': true, delay: {hide: 100}});
+            },
+            explain_roles: function(e) {
+                e.preventDefault();
+                var roles_html = "<h2>Candidate</h2><p>Get interviewed by industy professionals and land your next job!</p><h2>Interviewer</h2><p>An interviewer's role is to interview candidates, and earn cash in the process</p>";
+                $('.reg-roles').popover({'trigger':'click', 'placement': 'top', 'title': 'User Types', 'content': roles_html, 'html': true, delay: {hide: 100}});
+            },
             hideModal: function(e) {
                 this.closeModal();
             },
@@ -37,6 +56,10 @@ define(['jquery', 'hbs!templates/register', 'backbone', 'marionette'],
                     $(document).unbind('keyup', this.on_keyup);
                     this.closeModal();
                 }
+            },
+            registerUser: function(e) {
+                e.preventDefault();
+                $(e.currentTarget).button('loading');
             },
             on_form_change: function(e) {
                 var successIndicator = "i." + e.currentTarget.classList[1] + ".success.fa.fa-check-circle";
@@ -82,16 +105,42 @@ define(['jquery', 'hbs!templates/register', 'backbone', 'marionette'],
                 }
 
                 if ((targetClass === 'reg-password') && target.value) {
+                    if (target.value.length >= 8) {
+                        $('.step1').css('color', '#2bbbff');
+                    } else {
+                        $('.step1').css('color', '#fff');
+                    }
+
+                    if (this.contains_upper(target.value)) {
+                        $('.step2').css('color', '#2bbbff');
+                    } else {
+                        $('.step2').css('color', '#fff');
+                    }
+
+                    if (this.contains_lower(target.value)) {
+                        $('.step3').css('color', '#2bbbff');
+                    } else {
+                        $('.step3').css('color', '#fff');
+                    }
+
+                    if (this.contains_number(target.value)) {
+                        $('.step4').css('color', '#2bbbff');
+                    } else {
+                        $('.step4').css('color', '#fff');
+                    }
+
                     if ((target.value.length >= 8) && this.contains_upper(target.value) && this.contains_number(target.value) && this.contains_lower(target.value)) {
+                        $('.reg-password').tooltip('destroy');
                         $(successIndicator).css('visibility', 'visible');
                         $(successIndicator).css('display', 'inline');
                         $(failIndicator).css('display', 'none');
                     } else if ((target.value.length < 8) || !this.contains_upper(target.value) || this.contains_number(target.value) || this.contains_lower(target.value)) {
-                         $(failIndicator).css('visibility', 'visible');
-                         $(failIndicator).css('display', 'inline');
-                         $(successIndicator).css('display', 'none');
+                        $(failIndicator).css('visibility', 'visible');
+                        $(failIndicator).css('display', 'inline');
+                        $(successIndicator).css('display', 'none');
                     }
                 } else if ((targetClass === 'reg-password') && !target.value) {
+                    $('.reg-password').tooltip('destroy');
                     $(failIndicator).css('visibility', 'hidden');
                     $(failIndicator).css('display', 'none');
                     $(successIndicator).css('display', 'inline');

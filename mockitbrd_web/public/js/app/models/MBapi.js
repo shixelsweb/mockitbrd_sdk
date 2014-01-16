@@ -37,7 +37,8 @@ define(["jquery", "underscore", "backbone"],
                     dataType: 'json',
                     success: function (response) {
                         if (response.success === 0) {
-                            $('#MB-login-error').html(response.data.error);
+                            $('.MB-login-error').html(response.data.error);
+                            $('.MB-login-alert').css('display', 'table');
                         } else {
                             MB.session.start(response.data.user); //add  ", params.stayLoggedIn"
                           //TODO-(Earl) - Create BLANK Landing views with words (interviewer, candidate, or verify) - DO THIS IN MB.session

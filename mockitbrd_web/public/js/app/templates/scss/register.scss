@@ -134,4 +134,45 @@
         right: 5px;
     }
 
+    .tooltip-inner {
+         h2 {
+            text-align: center;
+            padding: 0;
+            color: #2bbbff;
+            font-size: 1.5em;
+            font-weight: 100;
+            text-transform: uppercase;
+            line-height: 2em;
+        }
+        p {
+            text-align: left;
+            line-height: 1.8em;
+        }
+
+    }
+
+    h3 {
+        .popover-title {
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+    }
+
+    .popover-content {
+        font-size: 1em;
+        text-align: left;
+        font-weight: 100;
+
+        h2 {
+            font-weight: bold;
+            padding: 0;
+        }
+    }
+    .MB-button.primary.fullReg.disabled {
+        background-color: $primary_grey;
+
+        &:hover{
+            background-color: $primary_grey !important;
+        }
+    }
 }

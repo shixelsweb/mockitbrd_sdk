@@ -56,8 +56,6 @@ define([
         Backbone.history.start();
     });
 
-    $('#dimension-switch').bootstrapSwitch('setSizeClass', 'switch-large');
-
     //TODO-(Fara) - make the push state work on refresh
     // $(document).delegate("a", "click", function(evt) {
     //   // Get the anchor href and protcol
