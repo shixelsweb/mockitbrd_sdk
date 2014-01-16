@@ -11,6 +11,10 @@
 	text-decoration: none;
 	font-size: 0.9em !important;
 
+	&:focus {
+		outline: none;
+	}
+
 	a {
 		text-decoration: none;
 	}
@@ -81,6 +85,12 @@
 			background-color: $primary_yellow_hl !important;
 			text-decoration: none;
 		}
+	}
+
+	&.fullReg {
+		width: 465px;
+		border: 0;
+		border-radius: 0;
 	}
 
 	&.primary, &.secondary {

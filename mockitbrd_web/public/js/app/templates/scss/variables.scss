@@ -8,6 +8,9 @@ $primary_blue_hl: darken($primary_blue, 20%);
 $primary_yellow_hl: darken($primary_yellow, 15%);
 $primary_grey_hl: lighten($primary-grey, 10%);
 $primary_light_grey: #F4F4F4;
+$primary_darker_light_grey: darken($primary_light_grey, 10%);
+$primary_green: #629A40;
+$primary_red: #CD0000;
 
 $primary_blue_rgb: rgb(43, 187, 255);
 $primary_yellow_rgb: rgb(255, 228, 43);
@@ -15,6 +18,13 @@ $primary_yellow_rgb: rgb(255, 228, 43);
 @include font-face("Open Sans", font-files("../../fonts/opensans/regular.ttf"));
 
 $primary_font: "Open Sans";
+
+.unselectable {
+	-moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+}
 
 .placeholderHIW {
 	margin-top: 30px;

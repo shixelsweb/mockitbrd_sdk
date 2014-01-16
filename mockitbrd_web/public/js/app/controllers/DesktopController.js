@@ -128,7 +128,7 @@ function (
         },
         register: function () {
             this.hideModal();
-            this.showModal(RegisterView, 'login_bg.jpg');
+            this.showModal(RegisterView, 'office_bg.jpg');
         },
         services: function() {
             this.hideModal();

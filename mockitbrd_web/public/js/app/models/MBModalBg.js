@@ -1,4 +1,12 @@
+/*
+    MBModalBg
+    - Creates a popup modal with an image as its background
 
+    Use:
+    this.showModal(VIEW_NAME, 'IMAGE_NAME_WITH_EXT'); <- in DecktopController.js
+
+    ex of IMAGE_NAME_WITH_EXT = 'image.jpg' or 'image.png'
+*/
 define(["MB","jquery", "backbone", 'marionette', 'underscore'],
     function(MB, $, Backbone, Marionette, _) {
         // Creates a new Backbone Model class object

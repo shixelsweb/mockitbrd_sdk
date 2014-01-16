@@ -1,10 +1,27 @@
+/*
+    MBapi
+    - Does all API calls and returns JSON objects for use
+
+    Use:
+    First make sure "MB" is in the define function
+
+    URL PARAMATER - MB.api.url
+    LOGIN USER - MB.api.login(LOGIN_DATA)
+
+    ex of LOGIN DATA = {
+                        'email': EMAIL,
+                        'paddword': PADDWORD
+                    };
+
+*/
 define(["jquery", "underscore", "backbone"],
     function($, _, Backbone) {
         // Creates a new Backbone Model class object
         var MBapi = Backbone.Model.extend({
 
             defaults: {
-                url: "http://api.mockitbrd.com/"
+                url: "http://api.mockitbrd.com/",
+                registered_user: null
             },
 
             initialize: function() {
@@ -29,6 +46,22 @@ define(["jquery", "underscore", "backbone"],
                     },
                     error: function(response) {
                         alert("error! ", response); //TODO-(Fara): add to Error Modal
+                    }
+                });
+            },
+            register: function(params) {
+                $.ajax({
+                    type: "POST",
+                    url: this.get('url') + "v1/user/register",
+                    data: params,
+                    dataType: 'json',
+                    success: function (response) {
+                        this.set({'registered_user': response.data.user});
+                        return response.success;
+                        //MB.appRouter.navigate('#register', { trigger: true });
+                    },
+                    error: function (response) {
+                        alert("error: ", response.data.error); //TODO-(Fara) : add to Error Modal
                     }
                 });
             }

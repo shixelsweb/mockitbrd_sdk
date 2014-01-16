@@ -1,3 +1,10 @@
+/*
+    MBModalBlack
+    - Creates a popup modal with a black see through background
+
+    Use:
+    this.showModal(VIEW_NAME,'black'); <- in DecktopController.js
+*/
 define(["MB","jquery", "backbone", 'marionette', 'underscore'],
     function(MB, $, Backbone, Marionette, _) {
         // Creates a new Backbone Model class object
