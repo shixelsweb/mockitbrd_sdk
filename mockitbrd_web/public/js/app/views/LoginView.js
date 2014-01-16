@@ -1,16 +1,21 @@
-define(['MB', 'jquery', 'hbs!templates/login', 'backbone', 'marionette', 'toggleJS'],
-    function (MB, $, template, Backbone, toggleJS) {
+define(['MB', 'jquery', 'hbs!templates/login', 'backbone', 'marionette', 'toggle'],
+    function (MB, $, template, Backbone, toggle) {
         //ItemView provides some default rendering logic
         return Backbone.Marionette.ItemView.extend({
             template:template,
 
             events: {
 				'click .MB-modal-close': 'hideModal',
-                'click .login': 'loginUser'
+                'click #Log-Button': 'loginUser'
             },
             initialize: function() {
                 _.bindAll(this, 'on_keyup');
                 $(document).bind('keyup', this.on_keyup);
+            },
+
+            onRender: function() {
+                $(':checkbox').iphoneStyle();
+                console.log($(':checkbox').iphoneStyle());
             },
 
             loginUser: function(e) {

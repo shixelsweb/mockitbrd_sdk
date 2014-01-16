@@ -6,7 +6,7 @@ define(['jquery', 'hbs!templates/register', 'backbone', 'marionette'],
 
             defaults: {
                 account_type: null,
-                user_type: null,
+                user_type: null
             },
 
             events: {

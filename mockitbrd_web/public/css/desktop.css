@@ -323,23 +323,54 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 
 /* line 1, ../js/app/templates/scss/login.scss */
+.MB-button-register {
+  width: 400px;
+  height: 70px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  background: #0088cc;
+  text-transform: uppercase;
+}
+
+/* line 11, ../js/app/templates/scss/login.scss */
+.MB-button-register > h1 {
+  color: #fff;
+  font-size: 30px;
+  padding-top: 20px;
+}
+
+/* line 17, ../js/app/templates/scss/login.scss */
+#MB-register-link {
+  text-decoration: none;
+}
+
+/* line 21, ../js/app/templates/scss/login.scss */
+.MB-button-register:hover {
+  background: #FFE42B;
+  color: #0088cc;
+}
+
+/* line 26, ../js/app/templates/scss/login.scss */
 #MB-login-form {
   text-align: center;
   margin-top: 50px;
   padding-top: 50px;
   background-color: #fff;
-  width: 500px;
+  width: 400px;
   margin-left: auto;
   margin-right: auto;
+  /*  LOGIN SWITCH */
+  /* DEMO 3 */
 }
-/* line 10, ../js/app/templates/scss/login.scss */
+/* line 35, ../js/app/templates/scss/login.scss */
 #MB-login-form input {
   height: 40px;
   border-radius: 0;
   background: #F2F0F0;
   display: block;
 }
-/* line 16, ../js/app/templates/scss/login.scss */
+/* line 41, ../js/app/templates/scss/login.scss */
 #MB-login-form .MB-login-alt {
   background-color: #cfcfcf;
   margin-top: 45px;
@@ -348,67 +379,281 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   margin-left: auto;
   margin-right: auto;
 }
-/* line 24, ../js/app/templates/scss/login.scss */
+/* line 49, ../js/app/templates/scss/login.scss */
 #MB-login-form .MB-login-alt p {
   text-transform: uppercase;
   font-size: 0.8em;
   padding: 10px;
   margin-bottom: 20px;
 }
-/* line 31, ../js/app/templates/scss/login.scss */
+/* line 57, ../js/app/templates/scss/login.scss */
+#MB-login-form .MB-login-title {
+  font-weight: bold;
+  margin-top: -15px;
+  font-size: 20px;
+  padding-bottom: 10px;
+  text-transform: uppercase;
+  text-align: center;
+  height: 30px;
+}
+/* line 67, ../js/app/templates/scss/login.scss */
 #MB-login-form .in-group {
   width: 50%;
   margin: 0 auto;
 }
-/* line 37, ../js/app/templates/scss/login.scss */
+/* line 73, ../js/app/templates/scss/login.scss */
 #MB-login-form .MB-login-input {
   width: 100%;
 }
-/* line 42, ../js/app/templates/scss/login.scss */
+/* line 78, ../js/app/templates/scss/login.scss */
 #MB-login-form hr {
   width: 50%;
   margin-left: auto;
   margin-right: auto;
   padding-top: 6px;
 }
-/* line 50, ../js/app/templates/scss/login.scss */
+/* line 86, ../js/app/templates/scss/login.scss */
 #MB-login-form #Log-Button {
   padding-top: 10px;
+  margin-top: 15px;
+  color: #fff;
 }
-/* line 54, ../js/app/templates/scss/login.scss */
+/* line 92, ../js/app/templates/scss/login.scss */
+#MB-login-form #Log-Button:hover {
+  background: #FFE42B;
+  text-decoration: none;
+}
+/* line 97, ../js/app/templates/scss/login.scss */
 #MB-login-form .MB-button-size {
   height: 100%;
   width: 50px;
 }
-/* line 59, ../js/app/templates/scss/login.scss */
+/* line 102, ../js/app/templates/scss/login.scss */
 #MB-login-form .button-link, #MB-login-form .button-twit, #MB-login-form .button-face {
   float: right;
   border-left: 1px groove #fff;
 }
-/* line 64, ../js/app/templates/scss/login.scss */
+/* line 107, ../js/app/templates/scss/login.scss */
 #MB-login-form .fa50 {
   margin-top: 20px;
 }
-/* line 68, ../js/app/templates/scss/login.scss */
+/* line 111, ../js/app/templates/scss/login.scss */
 #MB-login-form .fa-user {
   height: 14px;
   width: 14px;
 }
-/* line 73, ../js/app/templates/scss/login.scss */
+/* line 116, ../js/app/templates/scss/login.scss */
 #MB-login-form .MB-login-login {
-  font-weight: 100;
+  font-weight: 900;
   float: left;
   margin-top: 20px;
   padding-left: 20px;
 }
-/* line 80, ../js/app/templates/scss/login.scss */
+/* line 123, ../js/app/templates/scss/login.scss */
 #MB-login-form .button-link:hover, #MB-login-form .button-twit:hover, #MB-login-form .button-face:hover {
   background-color: #fff;
   color: #FFE42B;
 }
-/* line 85, ../js/app/templates/scss/login.scss */
-#MB-login-form input[type="email"] {
+/* line 128, ../js/app/templates/scss/login.scss */
+#MB-login-form input[type="email"], #MB-login-form input[type="password"] {
+  width: 300px;
   border: none !important;
+  text-transform: uppercase;
+  font-family: "Open Sans";
+}
+/* line 135, ../js/app/templates/scss/login.scss */
+#MB-login-form input[type="email"]:hover, #MB-login-form input[type="password"]:hover {
+  text-decoration: none;
+}
+/* line 139, ../js/app/templates/scss/login.scss */
+#MB-login-form input:hover {
+  color: none !important;
+}
+/* line 143, ../js/app/templates/scss/login.scss */
+#MB-login-form .clear-add {
+  border-radius: 0px;
+  border: none !important;
+}
+/* line 148, ../js/app/templates/scss/login.scss */
+#MB-login-form .MB-login-line-in {
+  position: relative;
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 155, ../js/app/templates/scss/login.scss */
+#MB-login-form .MB-login-line {
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 161, ../js/app/templates/scss/login.scss */
+#MB-login-form .MB-switch-label {
+  position: absolute;
+  top: 0;
+  left: 130px;
+}
+/* line 167, ../js/app/templates/scss/login.scss */
+#MB-login-form .MB-button-login {
+  width: 350px;
+  height: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  background: #0088cc;
+  color: #fff;
+  padding: 5px;
+  font-size: 30px;
+}
+/* line 183, ../js/app/templates/scss/login.scss */
+#MB-login-form .MB-button-switch {
+  margin: 50px auto;
+  position: relative;
+}
+/* line 188, ../js/app/templates/scss/login.scss */
+#MB-login-form .MB-button-switch label {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: block;
+}
+/* line 195, ../js/app/templates/scss/login.scss */
+#MB-login-form .MB-button-switch input {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  z-index: 100;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+/* line 213, ../js/app/templates/scss/login.scss */
+#MB-login-form .MB-button-switch.switch {
+  top: 0;
+  margin-left: 35px;
+  width: 79px;
+  height: 15px;
+}
+/* line 220, ../js/app/templates/scss/login.scss */
+#MB-login-form .MB-button-switch.switch label {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #a5a39d;
+  border-radius: 40px;
+  box-shadow: inset 0 3px 8px 1px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+/* line 231, ../js/app/templates/scss/login.scss */
+#MB-login-form .MB-button-switch.switch label:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: -8px;
+  right: -8px;
+  bottom: -8px;
+  left: -8px;
+  border-radius: inherit;
+  background: #ababab;
+  background: -moz-linear-gradient(#f2f2f2, #ababab);
+  background: -ms-linear-gradient(#f2f2f2, #ababab);
+  background: -o-linear-gradient(#f2f2f2, #ababab);
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#f2f2f2), to(#ababab));
+  background: -webkit-linear-gradient(#f2f2f2, #ababab);
+  background: linear-gradient(#f2f2f2, #ababab);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3), 0 1px 1px rgba(0, 0, 0, 0.25);
+}
+/* line 248, ../js/app/templates/scss/login.scss */
+#MB-login-form .MB-button-switch.switch label:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: -18px;
+  right: -18px;
+  bottom: -18px;
+  left: -18px;
+  border-radius: inherit;
+  background: #eee;
+  background: -moz-linear-gradient(#e5e7e6, #eeeeee);
+  background: -ms-linear-gradient(#e5e7e6, #eeeeee);
+  background: -o-linear-gradient(#e5e7e6, #eeeeee);
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#e5e7e6), to(#eeeeee));
+  background: -webkit-linear-gradient(#e5e7e6, #eeeeee);
+  background: linear-gradient(#e5e7e6, #eeeeee);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  -webkit-filter: blur(1px);
+  -moz-filter: blur(1px);
+  -ms-filter: blur(1px);
+  -o-filter: blur(1px);
+  filter: blur(1px);
+}
+/* line 270, ../js/app/templates/scss/login.scss */
+#MB-login-form .MB-button-switch.switch label i {
+  display: block;
+  height: 100%;
+  width: 60%;
+  border-radius: inherit;
+  background: silver;
+  position: absolute;
+  z-index: 2;
+  right: 40%;
+  top: 0;
+  background: #b2ac9e;
+  background: -moz-linear-gradient(#f7f2f6, #b2ac9e);
+  background: -ms-linear-gradient(#f7f2f6, #b2ac9e);
+  background: -o-linear-gradient(#f7f2f6, #b2ac9e);
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#f7f2f6), to(#b2ac9e));
+  background: -webkit-linear-gradient(#f7f2f6, #b2ac9e);
+  background: linear-gradient(#f7f2f6, #b2ac9e);
+  box-shadow: inset 0 1px 0 white, 0 0 8px rgba(0, 0, 0, 0.3), 0 5px 5px rgba(0, 0, 0, 0.2);
+}
+/* line 293, ../js/app/templates/scss/login.scss */
+#MB-login-form .MB-button-switch.switch label i:after {
+  content: "";
+  position: absolute;
+  left: 15%;
+  top: 25%;
+  width: 70%;
+  height: 50%;
+  background: #d2cbc3;
+  background: -moz-linear-gradient(#cbc7bc, #d2cbc3);
+  background: -ms-linear-gradient(#cbc7bc, #d2cbc3);
+  background: -o-linear-gradient(#cbc7bc, #d2cbc3);
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#cbc7bc), to(#d2cbc3));
+  background: -webkit-linear-gradient(#cbc7bc, #d2cbc3);
+  background: linear-gradient(#cbc7bc, #d2cbc3);
+  border-radius: inherit;
+}
+/* line 310, ../js/app/templates/scss/login.scss */
+#MB-login-form .MB-button-switch.switch label i:before {
+  content: "off";
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 0 1px 0 #bcb8ae, 0 -1px 0 #97958e;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 11px;
+  position: absolute;
+  top: 90%;
+  margin-top: -12px;
+  right: -50%;
+}
+/* line 325, ../js/app/templates/scss/login.scss */
+#MB-login-form .MB-button-switch.switch input:checked ~ label {
+  background: #0088cc;
+}
+/* line 329, ../js/app/templates/scss/login.scss */
+#MB-login-form .MB-button-switch.switch input:checked ~ label i {
+  right: -1%;
+}
+/* line 333, ../js/app/templates/scss/login.scss */
+#MB-login-form .MB-button-switch.switch input:checked ~ label i:before {
+  content: "on";
+  right: 115%;
+  color: #fff;
+  text-shadow: 0 1px 0 #afcb9b, 0 -1px 0 #6b8659;
 }
 
 /* line 1, ../js/app/templates/scss/welcome.scss */
@@ -2838,241 +3083,211 @@ stretchRight
   display: block;
 }
 
-/* ========================================================================
- * bootstrap-switch - v2.0.0
- * http://www.bootstrap-switch.org
- * ========================================================================
- * Copyright 2012-2013 Mattia Larentis
- *
- * ========================================================================
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- * ========================================================================
- */
-/* line 22, ../js/app/templates/scss/vendor/toggle.scss */
-.has-switch {
-  display: inline-block;
-  cursor: pointer;
-  border-radius: 4px;
-  border: 1px solid;
-  border-color: #cccccc;
+/* line 1, ../js/app/templates/scss/vendor/toggle.scss */
+.iPhoneCheckContainer {
+  -webkit-transform: translate3d(0, 0, 0);
   position: relative;
-  text-align: left;
+  height: 27px;
+  cursor: pointer;
   overflow: hidden;
-  line-height: 8px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  -o-user-select: none;
+}
+
+/* line 7, ../js/app/templates/scss/vendor/toggle.scss */
+.iPhoneCheckContainer input {
+  position: absolute;
+  top: 5px;
+  left: 30px;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+}
+
+/* line 13, ../js/app/templates/scss/vendor/toggle.scss */
+.iPhoneCheckContainer label {
+  white-space: nowrap;
+  font-size: 17px;
+  line-height: 17px;
+  font-weight: bold;
+  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+  cursor: pointer;
+  display: block;
+  height: 27px;
+  position: absolute;
+  width: auto;
+  top: 0;
+  padding-top: 5px;
+  overflow: hidden;
+}
+
+/* line 27, ../js/app/templates/scss/vendor/toggle.scss */
+.iPhoneCheckContainer, .iPhoneCheckContainer label {
   user-select: none;
-  vertical-align: middle;
-  min-width: 100px;
-  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
-  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+}
+
+/* line 32, ../js/app/templates/scss/vendor/toggle.scss */
+.iPhoneCheckDisabled {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+  opacity: 0.5;
+}
+
+/* line 36, ../js/app/templates/scss/vendor/toggle.scss */
+label.iPhoneCheckLabelOn {
+  color: white;
+  background: url("../../../img/iphone-style-checkboxes/on.png?1284697268") no-repeat;
+  text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.6);
+  left: 0;
+  padding-top: 5px;
 }
 
 /* line 42, ../js/app/templates/scss/vendor/toggle.scss */
-.has-switch:focus {
-  border-color: #66afe9;
-  outline: 0;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+label.iPhoneCheckLabelOn span {
+  padding-left: 8px;
 }
 
-/* line 48, ../js/app/templates/scss/vendor/toggle.scss */
-.has-switch.switch-mini {
-  min-width: 72px;
+/* line 44, ../js/app/templates/scss/vendor/toggle.scss */
+label.iPhoneCheckLabelOff {
+  color: #8b8b8b;
+  background: url("../../../img/iphone-style-checkboxes/off.png?1284697268") no-repeat right 0;
+  text-shadow: 0px 0px 2px rgba(255, 255, 255, 0.6);
+  text-align: right;
+  right: 0;
 }
 
-/* line 51, ../js/app/templates/scss/vendor/toggle.scss */
-.has-switch.switch-mini i.switch-mini-icons {
-  height: 1.20em;
-  line-height: 9px;
-  vertical-align: text-top;
-  text-align: center;
-  transform: scale(0.6);
-  margin-top: -1px;
-  margin-bottom: -1px;
+/* line 50, ../js/app/templates/scss/vendor/toggle.scss */
+label.iPhoneCheckLabelOff span {
+  padding-right: 8px;
 }
 
-/* line 60, ../js/app/templates/scss/vendor/toggle.scss */
-.has-switch.switch-small {
-  min-width: 80px;
+/* line 53, ../js/app/templates/scss/vendor/toggle.scss */
+.iPhoneCheckHandle {
+  display: block;
+  height: 27px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  background: url("../../../img/iphone-style-checkboxes/slider_left.png?1284697268") no-repeat;
+  padding-left: 3px;
 }
 
-/* line 63, ../js/app/templates/scss/vendor/toggle.scss */
-.has-switch.switch-large {
-  min-width: 120px;
+/* line 64, ../js/app/templates/scss/vendor/toggle.scss */
+.iPhoneCheckHandleRight {
+  height: 100%;
+  width: 100%;
+  padding-right: 3px;
+  background: url("../../../img/iphone-style-checkboxes/slider_right.png?1284697268") no-repeat right 0;
 }
 
-/* line 66, ../js/app/templates/scss/vendor/toggle.scss */
-.has-switch.disabled {
-  opacity: 0.5;
-  filter: alpha(opacity=50);
-  cursor: default !important;
-}
-
-/* line 72, ../js/app/templates/scss/vendor/toggle.scss */
-.has-switch.disabled label,
-.has-switch.disabled span {
-  cursor: default !important;
+/* line 70, ../js/app/templates/scss/vendor/toggle.scss */
+.iPhoneCheckHandleCenter {
+  height: 100%;
+  width: 100%;
+  background: url("../../../img/iphone-style-checkboxes/slider_center.png?1284697268");
 }
 
 /* line 75, ../js/app/templates/scss/vendor/toggle.scss */
-.has-switch > div {
-  display: inline-block;
-  width: 150%;
+.iOSCheckContainer {
   position: relative;
-  top: 0;
-}
-
-/* line 81, ../js/app/templates/scss/vendor/toggle.scss */
-.has-switch > div.switch-animate {
-  -webkit-transition: left 0.5s;
-  transition: left 0.5s;
-}
-
-/* line 85, ../js/app/templates/scss/vendor/toggle.scss */
-.has-switch > div.switch-off {
-  left: -50%;
-}
-
-/* line 88, ../js/app/templates/scss/vendor/toggle.scss */
-.has-switch > div.switch-on {
-  left: 0%;
-}
-
-/* line 92, ../js/app/templates/scss/vendor/toggle.scss */
-.has-switch input[type=radio],
-.has-switch input[type=checkbox] {
-  display: none;
-}
-
-/* line 96, ../js/app/templates/scss/vendor/toggle.scss */
-.has-switch span,
-.has-switch label {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+  height: 27px;
   cursor: pointer;
-  position: relative;
-  display: inline-block !important;
-  height: 100%;
-  padding-bottom: 4px;
-  padding-top: 4px;
-  font-size: 14px;
-  line-height: 20px;
+  overflow: hidden;
 }
 
-/* line 110, ../js/app/templates/scss/vendor/toggle.scss */
-.has-switch span.switch-mini,
-.has-switch label.switch-mini {
-  padding-bottom: 4px;
-  padding-top: 4px;
-  font-size: 10px;
-  line-height: 9px;
+/* line 80, ../js/app/templates/scss/vendor/toggle.scss */
+.iOSCheckContainer input {
+  position: absolute;
+  top: 5px;
+  left: 30px;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+}
+
+/* line 86, ../js/app/templates/scss/vendor/toggle.scss */
+.iOSCheckContainer label {
+  white-space: nowrap;
+  font-size: 17px;
+  line-height: 17px;
+  font-weight: bold;
+  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+  cursor: pointer;
+  display: block;
+  height: 27px;
+  position: absolute;
+  width: auto;
+  top: 0;
+  padding-top: 5px;
+  overflow: hidden;
+}
+
+/* line 100, ../js/app/templates/scss/vendor/toggle.scss */
+.iOSCheckContainer, .iOSCheckContainer label {
+  user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+}
+
+/* line 105, ../js/app/templates/scss/vendor/toggle.scss */
+.iOSCheckDisabled {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+  opacity: 0.5;
+}
+
+/* line 109, ../js/app/templates/scss/vendor/toggle.scss */
+label.iOSCheckLabelOn {
+  color: white;
+  background: url("../../../img/ios-style-checkboxes/on.png?1284697268") no-repeat;
+  text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.6);
+  left: 0;
+  padding-top: 5px;
+}
+
+/* line 115, ../js/app/templates/scss/vendor/toggle.scss */
+label.iOSCheckLabelOn span {
+  padding-left: 8px;
 }
 
 /* line 117, ../js/app/templates/scss/vendor/toggle.scss */
-.has-switch span.switch-small,
-.has-switch label.switch-small {
-  padding-bottom: 3px;
-  padding-top: 3px;
-  font-size: 12px;
-  line-height: 18px;
+label.iOSCheckLabelOff {
+  color: #8b8b8b;
+  background: url("../../../img/ios-style-checkboxes/off.png?1284697268") no-repeat right 0;
+  text-shadow: 0px 0px 2px rgba(255, 255, 255, 0.6);
+  text-align: right;
+  right: 0;
 }
 
-/* line 124, ../js/app/templates/scss/vendor/toggle.scss */
-.has-switch span.switch-large,
-.has-switch label.switch-large {
-  padding-bottom: 9px;
-  padding-top: 9px;
-  font-size: 16px;
-  line-height: normal;
+/* line 123, ../js/app/templates/scss/vendor/toggle.scss */
+label.iOSCheckLabelOff span {
+  padding-right: 8px;
 }
 
-/* line 130, ../js/app/templates/scss/vendor/toggle.scss */
-.has-switch label {
-  text-align: center;
-  margin-top: -1px;
-  margin-bottom: -1px;
-  z-index: 100;
-  width: 34%;
-  background: #ffffff;
+/* line 126, ../js/app/templates/scss/vendor/toggle.scss */
+.iOSCheckHandle {
+  display: block;
+  height: 27px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  background: url("../../../img/ios-style-checkboxes/slider_left.png?1284697268") no-repeat;
+  padding-left: 3px;
 }
 
-/* line 138, ../js/app/templates/scss/vendor/toggle.scss */
-.has-switch label i {
-  color: #000;
-  text-shadow: 0 1px 0 #fff;
-  line-height: 18px;
-  pointer-events: none;
+/* line 137, ../js/app/templates/scss/vendor/toggle.scss */
+.iOSCheckHandleRight {
+  height: 100%;
+  width: 100%;
+  padding-right: 3px;
+  background: url("../../../img/ios-style-checkboxes/slider_right.png?1284697268") no-repeat right 0;
 }
 
-/* line 144, ../js/app/templates/scss/vendor/toggle.scss */
-.has-switch span {
-  text-align: center;
-  z-index: 1;
-  width: 33%;
-}
-
-/* line 149, ../js/app/templates/scss/vendor/toggle.scss */
-.has-switch span.switch-left {
-  color: #f00;
-  border-bottom-left-radius: 4px;
-  border-top-left-radius: 4px;
-}
-
-/* line 154, ../js/app/templates/scss/vendor/toggle.scss */
-.has-switch span.switch-right {
-  color: #000;
-  background: #eeeeee;
-}
-
-/* line 159, ../js/app/templates/scss/vendor/toggle.scss */
-.has-switch span.switch-primary,
-.has-switch span.switch-left {
-  color: #fff;
-  background: #428bca;
-}
-
-/* line 163, ../js/app/templates/scss/vendor/toggle.scss */
-.has-switch span.switch-info {
-  color: #fff;
-  background: #5bc0de;
-}
-
-/* line 167, ../js/app/templates/scss/vendor/toggle.scss */
-.has-switch span.switch-success {
-  color: #fff;
-  background: #5cb85c;
-}
-
-/* line 171, ../js/app/templates/scss/vendor/toggle.scss */
-.has-switch span.switch-warning {
-  background: #f0ad4e;
-  color: #fff;
-}
-
-/* line 175, ../js/app/templates/scss/vendor/toggle.scss */
-.has-switch span.switch-danger {
-  color: #fff;
-  background: #d9534f;
-}
-
-/* line 179, ../js/app/templates/scss/vendor/toggle.scss */
-.has-switch span.switch-default {
-  color: #000;
-  background: #eeeeee;
+/* line 143, ../js/app/templates/scss/vendor/toggle.scss */
+.iOSCheckHandleCenter {
+  height: 100%;
+  width: 100%;
+  background: url("../../../img/ios-style-checkboxes/slider_center.png?1284697268");
 }
 
 /* line 10, ../scss/desktop.scss */

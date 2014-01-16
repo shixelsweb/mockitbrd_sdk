@@ -37,7 +37,7 @@ define(["jquery", "underscore", "backbone"],
                     dataType: 'json',
                     success: function (response) {
                         if (response.success === 0) {
-                            alert("error: ", response.data.error); //TODO-(Fara) : add to Error Modal
+                            $('#MB-login-error').html(response.data.error);
                         } else {
                             MB.session.start(response.data.user); //add  ", params.stayLoggedIn"
                           //TODO-(Earl) - Create BLANK Landing views with words (interviewer, candidate, or verify) - DO THIS IN MB.session
@@ -45,7 +45,7 @@ define(["jquery", "underscore", "backbone"],
                         }
                     },
                     error: function(response) {
-                        alert("error! ", response); //TODO-(Fara): add to Error Modal
+                        alert("error! ", response.data.error); //TODO-(Fara): add to Error Modal
                     }
                 });
             },

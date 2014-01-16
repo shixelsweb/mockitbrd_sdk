@@ -1,9 +1,34 @@
+.MB-button-register{
+	width: 400px;
+	height: 70px;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	background: #0088cc;
+	text-transform: uppercase; 
+}
+
+.MB-button-register > h1{
+	color: #fff;
+	font-size: 30px;
+	padding-top: 20px;
+}
+
+#MB-register-link{
+text-decoration: none;	
+}
+
+.MB-button-register:hover, {
+background: #FFE42B;
+color: #0088cc;	
+}
+
 #MB-login-form {
 	text-align: center;
 	margin-top: 50px;
 	padding-top: 50px;
 	background-color: #fff;
-	width: 500px;
+	width: 400px;
 	margin-left: auto;
 	margin-right: auto;
 	
@@ -28,6 +53,17 @@
 			margin-bottom: 20px;
 		}
 	}
+
+	.MB-login-title{
+		font-weight: bold;
+		margin-top: -15px;
+		font-size: 20px;
+		padding-bottom: 10px;
+		text-transform: uppercase;
+		text-align: center;
+		height: 30px;
+	}
+
 	.in-group{
 		width: 50%;
 		margin: 0 auto;
@@ -49,6 +85,13 @@
 
 	#Log-Button{
 		padding-top: 10px;
+		margin-top: 15px;
+		color: #fff;	
+	}
+
+	#Log-Button:hover{
+		background: #FFE42B;
+		text-decoration: none;
 	}
 
 	.MB-button-size{
@@ -71,7 +114,7 @@
 	}
 
 	.MB-login-login{
-		font-weight: 100;
+		font-weight: 900;
 		float: left;
 		margin-top: 20px;
 		padding-left: 20px;
@@ -82,7 +125,219 @@
 		color: #FFE42B;
 	}
 
-	input[type="email"]{
+	input[type="email"], input[type="password"]{
+		width: 300px;
+		border: none !important;
+		text-transform: uppercase;
+		font-family: "Open Sans";
+	}
+
+	input[type="email"]:hover, input[type="password"]:hover{
+		text-decoration: none;
+	}
+
+	input:hover{
+		color: none !important;
+	}
+
+	.clear-add{
+		border-radius: 0px;
 		border: none !important;
 	}
+
+	.MB-login-line-in{
+	position: relative;	
+	width: 400px;
+	margin-left: auto;
+	margin-right: auto;	
+	}
+
+	.MB-login-line{
+	width: 400px;
+	margin-left: auto;
+	margin-right: auto;
+	}
+
+	.MB-switch-label{
+	position: absolute;
+	top: 0;
+	left: 130px;	
+	}
+
+	.MB-button-login{
+	width: 350px;
+	height: 40px;
+	margin-left: auto;
+	margin-right: auto;
+	background: #0088cc;
+	color: #fff;
+	padding: 5px;
+	font-size: 30px;
+
+	}
+
+
+/*  LOGIN SWITCH */
+
+
+.MB-button-switch {
+  margin: 50px auto;
+  position: relative;
+}
+
+.MB-button-switch label {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: block;
+}
+
+.MB-button-switch input {
+  top: 0; 
+  right: 0; 
+  bottom: 0; 
+  left: 0;
+  opacity: 0;
+  z-index: 100;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+
+
+/* DEMO 3 */
+
+
+.MB-button-switch.switch {
+top: 0;
+margin-left: 35px;
+width:79px;
+height: 15px;
+}
+
+.MB-button-switch.switch label {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #a5a39d;
+  border-radius: 40px;
+  box-shadow:
+      inset 0 3px 8px 1px rgba(0,0,0,0.2),
+      0 1px 0 rgba(255,255,255,0.5);
+}
+
+.MB-button-switch.switch label:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: -8px; right: -8px; bottom: -8px; left: -8px;
+  border-radius: inherit;
+  background: #ababab;
+  background: -moz-linear-gradient(#f2f2f2, #ababab);
+  background: -ms-linear-gradient(#f2f2f2, #ababab);
+  background: -o-linear-gradient(#f2f2f2, #ababab);
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#f2f2f2), to(#ababab));
+  background: -webkit-linear-gradient(#f2f2f2, #ababab);
+  background: linear-gradient(#f2f2f2, #ababab);
+  box-shadow: 0 0 10px rgba(0,0,0,0.3),
+        0 1px 1px rgba(0,0,0,0.25);
+}
+
+.MB-button-switch.switch label:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: -18px; right: -18px; bottom: -18px; left: -18px;
+  border-radius: inherit;
+  background: #eee;
+  background: -moz-linear-gradient(#e5e7e6, #eee);
+  background: -ms-linear-gradient(#e5e7e6, #eee);
+  background: -o-linear-gradient(#e5e7e6, #eee);
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#e5e7e6), to(#eee));
+  background: -webkit-linear-gradient(#e5e7e6, #eee);
+  background: linear-gradient(#e5e7e6, #eee);
+  box-shadow:
+      0 1px 0 rgba(255,255,255,0.5);
+  -webkit-filter: blur(1px);
+  -moz-filter: blur(1px);
+  -ms-filter: blur(1px);
+  -o-filter: blur(1px);
+  filter: blur(1px);
+}
+
+.MB-button-switch.switch label i {
+  display: block;
+  height: 100%;
+  width: 60%;
+  border-radius: inherit;
+  background: silver;
+  position: absolute;
+  z-index: 2;
+  right: 40%;
+  top: 0;
+  background: #b2ac9e;
+  background: -moz-linear-gradient(#f7f2f6, #b2ac9e);
+  background: -ms-linear-gradient(#f7f2f6, #b2ac9e);
+  background: -o-linear-gradient(#f7f2f6, #b2ac9e);
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#f7f2f6), to(#b2ac9e));
+  background: -webkit-linear-gradient(#f7f2f6, #b2ac9e);
+  background: linear-gradient(#f7f2f6, #b2ac9e);
+  box-shadow:
+      inset 0 1px 0 white,
+      0 0 8px rgba(0,0,0,0.3),
+      0 5px 5px rgba(0,0,0,0.2);
+}
+
+.MB-button-switch.switch label i:after {
+  content: "";
+  position: absolute;
+  left: 15%;
+  top: 25%;
+  width: 70%;
+  height: 50%;
+  background: #d2cbc3;
+  background: -moz-linear-gradient(#cbc7bc, #d2cbc3);
+  background: -ms-linear-gradient(#cbc7bc, #d2cbc3);
+  background: -o-linear-gradient(#cbc7bc, #d2cbc3);
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#cbc7bc), to(#d2cbc3));
+  background: -webkit-linear-gradient(#cbc7bc, #d2cbc3);
+  background: linear-gradient(#cbc7bc, #d2cbc3);
+  border-radius: inherit;
+}
+
+.MB-button-switch.switch label i:before {
+  content: "off";
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: 300;
+  color: rgba(255,255,255,0.9);
+  text-shadow: 0 1px 0 #bcb8ae, 0 -1px 0 #97958e;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 11px;
+  position: absolute;
+  top: 90%;
+  margin-top: -12px;
+  right: -50%;
+}
+
+.MB-button-switch.switch input:checked ~ label {
+  background: #0088cc;
+}
+
+.MB-button-switch.switch input:checked ~ label i {
+  right: -1%;
+}
+
+.MB-button-switch.switch input:checked ~ label i:before {
+  content: "on";
+  right: 115%;
+  color: #fff;
+  text-shadow: 
+    0 1px 0 #afcb9b,
+    0 -1px 0 #6b8659;
+}
+
+	
 }

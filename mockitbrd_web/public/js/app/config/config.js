@@ -23,7 +23,7 @@ require.config({
         "text":"../libs/plugins/text",
         "jasminejquery": "../libs/plugins/jasmine-jquery",
         "cookie": "../libs/plugins/jquery.cookie",
-        "toggleJS": "../libs/plugins/toggles"
+        "toggle": "../libs/plugins/toggle"
     },
     // Sets the configuration for your third party scripts that are not AMD compatible
     shim:{
