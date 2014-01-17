@@ -10,7 +10,7 @@ define(['jquery', 'hbs!templates/register', 'backbone', 'marionette'],
                 lname: {ready: null, value: null},
                 rpassword: {ready: null, value: null},
                 email: {ready: null, value: null},
-                user_type: {ready: null, value: null},
+                user_type: {ready: false, value: null},
                 toc: {ready: null, value: null}
             },
 

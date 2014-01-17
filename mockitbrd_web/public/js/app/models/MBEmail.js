@@ -57,8 +57,9 @@ define(["jquery", "underscore", "backbone"],
                 body_email.find('.salutation').html(title);
                 body_email.find('.message').html(message);
                 body_email.find('.team').html(company.team);
+                body_email.find('.note_email').html(company.email);
 
-                var html = '<html><head><style type="text/css">' + body_email[1].innerHTML + '</style</head><body>' + body_email[3].innerHTML + '</body></html>';
+                var html = '<html><body>' + body_email[1].innerHTML + '</body></html>';
 
                 var email_send = {'to': email, 'from': from, 'subject': company.subject, 'message': html};
 
@@ -68,7 +69,7 @@ define(["jquery", "underscore", "backbone"],
             send: function(params) {
                 $.ajax({
                     type: "POST",
-                    url: MB.api.get('url') + 'v2/email',
+                    url: 'http://mockitbrd.com/email_php_sender.php',
                     data: params,
                     dataType: "json",
                     success: function (response) {
