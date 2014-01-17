@@ -9,7 +9,8 @@ define([
     'models/MBModalBlack',
     'models/MBModalWhite',
     'models/MBModalBg',
-    'models/MBCookie'
+    'models/MBCookie',
+    'models/MBEmail'
     ],
     function (
     $,
@@ -22,7 +23,8 @@ define([
     MBModalBlack,
     MBModalWhite,
     MBModalBg,
-    MBCookie
+    MBCookie,
+    MBEmail
 ){
     var MB = window.MB = new Backbone.Marionette.Application();
 
@@ -34,6 +36,7 @@ define([
     MB.modalWhite = MBModalWhite;
     MB.modalBlack = MBModalBlack;
     MB.modalBg = MBModalBg;
+    MB.email = new MBEmail();
     MB.cookie = new MBCookie();
     MB.session = new MBSession();
     MB.api = new MBapi();

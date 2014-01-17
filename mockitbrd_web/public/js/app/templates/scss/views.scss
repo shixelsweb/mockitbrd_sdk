@@ -8,6 +8,20 @@
     height:650px;
     padding: 30px;
     margin: auto;
+
+    .body {
+    	height: 736px;
+    	background: $primary_light_grey;
+    	h1 {
+	        font-size: 1.3em;
+	        font-weight: 100;
+	        text-transform: uppercase;
+	        line-height: 1.3em;
+	        background: $primary_blue;
+	        padding: 15px;
+	        color: $primary_white;
+	    }
+    }
 }
 
 #MB-gutter-section {

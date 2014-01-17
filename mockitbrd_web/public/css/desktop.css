@@ -171,7 +171,41 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 
 /* line 1, ../js/app/templates/scss/register.scss */
-.MB-choose-account-type {
+.MB-reg-success {
+  visibility: hidden;
+  padding-bottom: 0;
+}
+/* line 4, ../js/app/templates/scss/register.scss */
+.MB-reg-success h2 {
+  text-align: left;
+  padding-left: 20px;
+  line-height: 3em;
+}
+/* line 9, ../js/app/templates/scss/register.scss */
+.MB-reg-success h3 {
+  font-size: 0.8em;
+}
+/* line 12, ../js/app/templates/scss/register.scss */
+.MB-reg-success p {
+  padding: 1em;
+  font-size: 1.2em;
+  font-weight: 100;
+  line-height: 1.2em;
+}
+/* line 19, ../js/app/templates/scss/register.scss */
+.MB-reg-success .MB-reg-success-icon {
+  font-size: 10em;
+  color: #2bbbff;
+  display: block;
+  padding: 20px 0;
+}
+/* line 26, ../js/app/templates/scss/register.scss */
+.MB-reg-success .MB-reg-email {
+  color: #2bbbff;
+}
+
+/* line 30, ../js/app/templates/scss/register.scss */
+.MB-choose-user-type {
   width: 450px;
   height: 90px;
   background: #fff;
@@ -180,8 +214,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   box-shadow: 0px 0px 3px #ddd;
 }
 
-/* line 10, ../js/app/templates/scss/register.scss */
-.account-type {
+/* line 39, ../js/app/templates/scss/register.scss */
+.user-type {
   display: inline-block;
   width: 50%;
   text-align: center;
@@ -189,40 +223,39 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   border-right: 1px solid #f4f4f4;
   cursor: pointer;
 }
-/* line 18, ../js/app/templates/scss/register.scss */
-.account-type.selected {
+/* line 47, ../js/app/templates/scss/register.scss */
+.user-type.selected {
   background: #2bbbff;
   color: white;
 }
-/* line 21, ../js/app/templates/scss/register.scss */
-.account-type.selected .icon {
+/* line 50, ../js/app/templates/scss/register.scss */
+.user-type.selected .icon {
   color: white;
 }
-/* line 26, ../js/app/templates/scss/register.scss */
-.account-type.no-border {
+/* line 55, ../js/app/templates/scss/register.scss */
+.user-type.no-border {
   border: none;
   margin-left: -5px;
 }
-/* line 31, ../js/app/templates/scss/register.scss */
-.account-type .icon {
+/* line 60, ../js/app/templates/scss/register.scss */
+.user-type .icon {
   font-size: 2em;
   position: relative;
   top: 20px;
   color: #525252;
 }
-/* line 37, ../js/app/templates/scss/register.scss */
-.account-type .title {
+/* line 66, ../js/app/templates/scss/register.scss */
+.user-type .title {
   line-height: 70px;
   font-weight: 100;
   font-size: 0.8em;
 }
 
-/* line 44, ../js/app/templates/scss/register.scss */
+/* line 73, ../js/app/templates/scss/register.scss */
 .MB-registration-form {
-  background: #f4f4f4;
   padding-bottom: 0;
 }
-/* line 47, ../js/app/templates/scss/register.scss */
+/* line 75, ../js/app/templates/scss/register.scss */
 .MB-registration-form h1 {
   font-size: 1.3em;
   font-weight: 100;
@@ -232,17 +265,17 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   padding: 15px;
   color: white;
 }
-/* line 56, ../js/app/templates/scss/register.scss */
+/* line 84, ../js/app/templates/scss/register.scss */
 .MB-registration-form h2 {
   text-align: left;
   padding-left: 20px;
   line-height: 3em;
 }
-/* line 61, ../js/app/templates/scss/register.scss */
+/* line 89, ../js/app/templates/scss/register.scss */
 .MB-registration-form h3 {
   font-size: 0.8em;
 }
-/* line 65, ../js/app/templates/scss/register.scss */
+/* line 93, ../js/app/templates/scss/register.scss */
 .MB-registration-form input.MB-reg-input {
   width: 450px;
   height: 40px;
@@ -250,7 +283,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   position: relative;
   left: 15px;
 }
-/* line 74, ../js/app/templates/scss/register.scss */
+/* line 102, ../js/app/templates/scss/register.scss */
 .MB-registration-form .MB-reg-alt {
   background-color: #dbdbdb;
   margin-top: 30px;
@@ -259,47 +292,47 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   margin-left: auto;
   margin-right: auto;
 }
-/* line 82, ../js/app/templates/scss/register.scss */
+/* line 110, ../js/app/templates/scss/register.scss */
 .MB-registration-form .MB-reg-alt p {
   text-transform: uppercase;
   font-size: 0.8em;
   padding: 10px;
   margin-bottom: 20px;
 }
-/* line 89, ../js/app/templates/scss/register.scss */
+/* line 117, ../js/app/templates/scss/register.scss */
 .MB-registration-form .MB-button-size {
   height: 100%;
   width: 50px;
 }
-/* line 94, ../js/app/templates/scss/register.scss */
+/* line 122, ../js/app/templates/scss/register.scss */
 .MB-registration-form .button-link, .MB-registration-form .button-twit, .MB-registration-form .button-face {
   float: right;
   border-left: 1px groove white;
   color: #2bbbff;
   line-height: 3em;
 }
-/* line 101, ../js/app/templates/scss/register.scss */
+/* line 129, ../js/app/templates/scss/register.scss */
 .MB-registration-form .MB-reg-reg {
   font-weight: 100;
   float: left;
   margin-top: 20px;
   padding-left: 20px;
 }
-/* line 107, ../js/app/templates/scss/register.scss */
+/* line 135, ../js/app/templates/scss/register.scss */
 .MB-registration-form .button-link:hover, .MB-registration-form .button-twit:hover, .MB-registration-form .button-face:hover {
   background-color: #f4f4f4;
   color: #ffe42b;
 }
-/* line 112, ../js/app/templates/scss/register.scss */
+/* line 140, ../js/app/templates/scss/register.scss */
 .MB-registration-form .success.fa-check-circle {
   color: #2bbbff;
 }
-/* line 113, ../js/app/templates/scss/register.scss */
+/* line 141, ../js/app/templates/scss/register.scss */
 .MB-registration-form .fail.fa-times-circle {
   color: #cd0000;
   display: none;
 }
-/* line 115, ../js/app/templates/scss/register.scss */
+/* line 143, ../js/app/templates/scss/register.scss */
 .MB-registration-form .success.fa-check-circle, .MB-registration-form .fail.fa-times-circle {
   position: relative;
   z-index: 100;
@@ -307,21 +340,21 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   font-size: 2em;
   visibility: hidden;
 }
-/* line 123, ../js/app/templates/scss/register.scss */
+/* line 151, ../js/app/templates/scss/register.scss */
 .MB-registration-form .MB-agree-toc {
   font-size: 0.8em;
   position: relative;
   top: -4px;
   line-height: 2em;
 }
-/* line 130, ../js/app/templates/scss/register.scss */
+/* line 158, ../js/app/templates/scss/register.scss */
 .MB-registration-form .MB-agree-toc-box {
   font-size: 3em;
   position: relative;
   top: -3px;
   right: 5px;
 }
-/* line 138, ../js/app/templates/scss/register.scss */
+/* line 166, ../js/app/templates/scss/register.scss */
 .MB-registration-form .tooltip-inner h2 {
   text-align: center;
   padding: 0;
@@ -331,34 +364,43 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   text-transform: uppercase;
   line-height: 2em;
 }
-/* line 147, ../js/app/templates/scss/register.scss */
+/* line 175, ../js/app/templates/scss/register.scss */
 .MB-registration-form .tooltip-inner p {
   text-align: left;
   line-height: 1.8em;
 }
-/* line 155, ../js/app/templates/scss/register.scss */
+/* line 183, ../js/app/templates/scss/register.scss */
 .MB-registration-form h3 .popover-title {
   font-size: 1.2em;
   font-weight: bold;
 }
-/* line 161, ../js/app/templates/scss/register.scss */
+/* line 189, ../js/app/templates/scss/register.scss */
 .MB-registration-form .popover-content {
   font-size: 1em;
   text-align: left;
   font-weight: 100;
 }
-/* line 166, ../js/app/templates/scss/register.scss */
+/* line 194, ../js/app/templates/scss/register.scss */
 .MB-registration-form .popover-content h2 {
   font-weight: bold;
   padding: 0;
 }
-/* line 171, ../js/app/templates/scss/register.scss */
+/* line 199, ../js/app/templates/scss/register.scss */
 .MB-registration-form .MB-button.primary.fullReg.disabled {
   background-color: #525252;
 }
-/* line 174, ../js/app/templates/scss/register.scss */
+/* line 202, ../js/app/templates/scss/register.scss */
 .MB-registration-form .MB-button.primary.fullReg.disabled:hover {
   background-color: #525252 !important;
+}
+/* line 207, ../js/app/templates/scss/register.scss */
+.MB-registration-form .MB-reg-alert {
+  display: none;
+  width: 75%;
+  margin: 15px auto;
+  position: relative;
+  border-collapse: separate;
+  border-radius: 0;
 }
 
 /* line 1, ../js/app/templates/scss/login.scss */
@@ -1558,17 +1600,32 @@ header.ghost .navbar-inner {
   padding: 30px;
   margin: auto;
 }
+/* line 12, ../js/app/templates/scss/views.scss */
+#register-view .body {
+  height: 736px;
+  background: #f4f4f4;
+}
+/* line 15, ../js/app/templates/scss/views.scss */
+#register-view .body h1 {
+  font-size: 1.3em;
+  font-weight: 100;
+  text-transform: uppercase;
+  line-height: 1.3em;
+  background: #2bbbff;
+  padding: 15px;
+  color: white;
+}
 
-/* line 13, ../js/app/templates/scss/views.scss */
+/* line 27, ../js/app/templates/scss/views.scss */
 #MB-gutter-section {
   height: 100px;
   margin-bottom: 0;
 }
-/* line 17, ../js/app/templates/scss/views.scss */
+/* line 31, ../js/app/templates/scss/views.scss */
 #MB-gutter-section.medium {
   height: 160px;
 }
-/* line 21, ../js/app/templates/scss/views.scss */
+/* line 35, ../js/app/templates/scss/views.scss */
 #MB-gutter-section p {
   font-size: 2em;
   color: white;
@@ -1576,19 +1633,19 @@ header.ghost .navbar-inner {
   font-weight: 100;
   line-height: 30px;
 }
-/* line 28, ../js/app/templates/scss/views.scss */
+/* line 42, ../js/app/templates/scss/views.scss */
 #MB-gutter-section .author {
   font-size: 0.5em;
   display: block;
 }
-/* line 32, ../js/app/templates/scss/views.scss */
+/* line 46, ../js/app/templates/scss/views.scss */
 #MB-gutter-section .icon-under, #MB-gutter-section .author {
   color: #ffe42b;
   position: absolute;
   right: 0;
   left: 0;
 }
-/* line 39, ../js/app/templates/scss/views.scss */
+/* line 53, ../js/app/templates/scss/views.scss */
 #MB-gutter-section .business_man {
   -moz-transform: scaleX(-1);
   -o-transform: scaleX(-1);
@@ -1601,7 +1658,7 @@ header.ghost .navbar-inner {
   width: 450px;
 }
 
-/* line 52, ../js/app/templates/scss/views.scss */
+/* line 66, ../js/app/templates/scss/views.scss */
 #MB-team-section, #MB-gutter-section, #MB-features-section, #MB-pricing-section, #MB-contact-section {
   width: 100%;
   height: 100%;
@@ -1609,7 +1666,7 @@ header.ghost .navbar-inner {
   text-align: center;
   margin-bottom: -230px;
 }
-/* line 59, ../js/app/templates/scss/views.scss */
+/* line 73, ../js/app/templates/scss/views.scss */
 #MB-team-section h1, #MB-gutter-section h1, #MB-features-section h1, #MB-pricing-section h1, #MB-contact-section h1 {
   font-family: "Open Sans";
   font-size: 2.5em;

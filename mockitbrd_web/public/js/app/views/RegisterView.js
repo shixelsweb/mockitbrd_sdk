@@ -5,18 +5,18 @@ define(['jquery', 'hbs!templates/register', 'backbone', 'marionette'],
             template:template,
 
             defaults: {
-                password_ready: null,
-                fname_ready: null,
-                lname_ready: null,
-                rpassword_ready: null,
-                email_ready: null,
-                user_type_ready: null,
-                toc_ready: null
+                password: {ready: null, value: null},
+                fname: {ready: null, value: null},
+                lname: {ready: null, value: null},
+                rpassword: {ready: null, value: null},
+                email: {ready: null, value: null},
+                user_type: {ready: null, value: null},
+                toc: {ready: null, value: null}
             },
 
             events: {
 				'click .MB-modal-close': 'hideModal',
-                'click .account-type': 'accountTypeHandler',
+                'click .user-type': 'userTypeHandler',
                 'propertychange input.MB-reg-input': 'on_form_change',
                 'input input.MB-reg-input': 'on_form_change',
                 'paste input.MB-reg-input': 'on_form_change',
@@ -25,7 +25,8 @@ define(['jquery', 'hbs!templates/register', 'backbone', 'marionette'],
                 'hover .reg-password': 'show_tooltip',
                 'click .reg-roles': 'explain_roles',
                 'hover .reg-roles': 'explain_roles',
-                'click .fullReg': 'registerUser'
+                'click .fullReg': 'registerUser',
+                'click .MB-agree-toc-box': 'toc_check'
             },
             initialize: function() {
                 _.bindAll(this, 'on_keyup');
@@ -52,6 +53,8 @@ define(['jquery', 'hbs!templates/register', 'backbone', 'marionette'],
             },
 
             on_keyup: function(e) {
+                var email_data = {title: "You're almost there!", email: 'me@faraashiru.com', message: 'HELLO!!!!', type: 'general'};
+                MB.email.start(email_data);
                 if (e.keyCode === 27) {
                     $(document).unbind('keyup', this.on_keyup);
                     this.closeModal();
@@ -60,6 +63,53 @@ define(['jquery', 'hbs!templates/register', 'backbone', 'marionette'],
             registerUser: function(e) {
                 e.preventDefault();
                 $(e.currentTarget).button('loading');
+
+                if (this.defaults.password.ready === true &&
+                    this.defaults.fname.ready === true &&
+                    this.defaults.lname.ready === true &&
+                    this.defaults.rpassword.ready === true &&
+                    this.defaults.email.ready === true &&
+                    this.defaults.user_type.ready === true &&
+                    this.defaults.toc.ready === true) {
+
+                    var client_ip = this.getClientIP();
+                    var reg_send = {
+                        'fname':  this.defaults.fname.value,
+                        'lname':  this.defaults.lname.value,
+                        'email':  this.defaults.email.value,
+                        'password':  this.defaults.password.value,
+                        'client_ip_address':  client_ip,
+                        'user_type':  this.defaults.user_type.value,
+                        'agree_toc':  this.defaults.toc.value,
+                        'status': 'pending'
+                    };
+
+                    MB.api.register(reg_send);
+
+
+                } else if (this.defaults.password.ready === true &&
+                    this.defaults.fname.ready === true &&
+                    this.defaults.lname.ready === true &&
+                    this.defaults.rpassword.ready === true &&
+                    this.defaults.email.ready === true &&
+                    this.defaults.user_type.ready === true &&
+                    this.defaults.toc.ready === false) {
+                    $('.fullReg').button('reset');
+                    $('.MB-reg-error').html('Please accept Terms of Conditions');
+                    $('.MB-reg-alert').css('display', 'table');
+                } else {
+                    $('.fullReg').button('reset');
+                    $('.MB-reg-error').html('Please fill form completely');
+                    $('.MB-reg-alert').css('display', 'table');
+                }
+            },
+            toc_check: function(e) {
+                if ($(e.currentTarget).attr('checked')) {
+                    this.defaults.toc.ready = true;
+                    this.defaults.toc.value = 1;
+                } else {
+                    this.defaults.toc.ready = false;
+                }
             },
             on_form_change: function(e) {
                 var successIndicator = "i." + e.currentTarget.classList[1] + ".success.fa.fa-check-circle";
@@ -71,20 +121,26 @@ define(['jquery', 'hbs!templates/register', 'backbone', 'marionette'],
                     $(successIndicator).css('visibility', 'visible');
                     $(successIndicator).css('display', 'inline');
                     $(failIndicator).css('display', 'none');
+                    this.defaults.fname.ready = true;
+                    this.defaults.fname.value = target.value;
                 } else if ((targetClass === 'reg-fname') && !target.value) {
                     $(successIndicator).css('visibility', 'hidden');
                     $(successIndicator).css('display', 'inline');
                     $(failIndicator).css('display', 'none');
+                    this.defaults.fname.ready = false;
                 }
 
                 if ((targetClass === 'reg-lname') && target.value) {
                     $(successIndicator).css('visibility', 'visible');
                     $(successIndicator).css('display', 'inline');
                     $(failIndicator).css('display', 'none');
+                    this.defaults.lname.ready = true;
+                    this.defaults.lname.value = target.value;
                 } else if ((targetClass === 'reg-lname') && !target.value) {
                     $(successIndicator).css('visibility', 'hidden');
                     $(successIndicator).css('display', 'inline');
                     $(failIndicator).css('display', 'none');
+                    this.defaults.lname.ready = false;
                 }
 
                 if ((targetClass === 'reg-email') && target.value) {
@@ -92,6 +148,8 @@ define(['jquery', 'hbs!templates/register', 'backbone', 'marionette'],
                         $(successIndicator).css('visibility', 'visible');
                         $(successIndicator).css('display', 'inline');
                         $(failIndicator).css('display', 'none');
+                        this.defaults.email.ready = true;
+                        this.defaults.email.value = target.value;
                     } else if (!this.validateEmail(target.value)) {
                          $(failIndicator).css('visibility', 'visible');
                          $(failIndicator).css('display', 'inline');
@@ -102,6 +160,7 @@ define(['jquery', 'hbs!templates/register', 'backbone', 'marionette'],
                     $(successIndicator).css('display', 'inline');
                     $(successIndicator).css('visibility', 'hidden');
                     $(failIndicator).css('display', 'none');
+                    this.defaults.email.ready = false;
                 }
 
                 if ((targetClass === 'reg-password') && target.value) {
@@ -134,25 +193,28 @@ define(['jquery', 'hbs!templates/register', 'backbone', 'marionette'],
                         $(successIndicator).css('visibility', 'visible');
                         $(successIndicator).css('display', 'inline');
                         $(failIndicator).css('display', 'none');
+                        this.defaults.password.ready = true;
+                        this.defaults.password.value = target.value;
                     } else if ((target.value.length < 8) || !this.contains_upper(target.value) || this.contains_number(target.value) || this.contains_lower(target.value)) {
                         $(failIndicator).css('visibility', 'visible');
                         $(failIndicator).css('display', 'inline');
                         $(successIndicator).css('display', 'none');
                     }
                 } else if ((targetClass === 'reg-password') && !target.value) {
-                    $('.reg-password').tooltip('destroy');
                     $(failIndicator).css('visibility', 'hidden');
                     $(failIndicator).css('display', 'none');
                     $(successIndicator).css('display', 'inline');
-                    $(successIndicator).css('visibility', 'hidden');
+                    $(failIndicator).css('visibility', 'hidden');
+                    this.defaults.password.ready = false;
                 }
 
                 if ((targetClass === 'reg-rpassword') && target.value) {
-                    console.log(target.value, $('.reg-password')[0].value);
                       if (target.value === $('.reg-password')[0].value) {
                         $(successIndicator).css('visibility', 'visible');
                         $(successIndicator).css('display', 'inline');
                         $(failIndicator).css('display', 'none');
+                        this.defaults.rpassword.ready = true;
+                        this.defaults.rpassword.value = target.value;
                     } else if (target.value !== $('.reg-rpassword').value) {
                          $(failIndicator).css('visibility', 'visible');
                          $(failIndicator).css('display', 'inline');
@@ -163,6 +225,7 @@ define(['jquery', 'hbs!templates/register', 'backbone', 'marionette'],
                     $(failIndicator).css('display', 'none');
                     $(successIndicator).css('display', 'inline');
                     $(successIndicator).css('visibility', 'hidden');
+                    this.defaults.rpassword.ready = false;
                 }
             },
             closeModal: function() {
@@ -172,14 +235,9 @@ define(['jquery', 'hbs!templates/register', 'backbone', 'marionette'],
                 window.history.back();
             },
 
-            accountTypeHandler: function(e) {
-                var user_right = $('.user-type.right');
-                var user_left = $('.user-type.left');
-
-                this.account_type = $(e.currentTarget).data('accounttype');
-
-                $('.MB-choose-user-type').css("visibility", "hidden");
-                $('div.account-type').removeClass('selected');
+            userTypeHandler: function(e) {
+                this.defaults.user_type.ready = true;
+                this.defaults.user_type.value = $(e.currentTarget).data('usertype');
                 $('div.user-type').removeClass('selected');
                 $(e.currentTarget).addClass('selected');
 
@@ -211,7 +269,7 @@ define(['jquery', 'hbs!templates/register', 'backbone', 'marionette'],
                     xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
                 }
 
-                xmlhttp.open("GET","http://api.hostip.info/get_html.php",false);
+                xmlhttp.open("GET","http://api.hostip.info/get_html.php", false);
                 xmlhttp.send();
 
                 hostipInfo = xmlhttp.responseText.split("\n");
