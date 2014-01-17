@@ -21,7 +21,9 @@ define([ //VIEWS
     //Team Member Views
     'views/EarlView',
     'views/FaraView',
-    'views/CleeView'
+    'views/CleeView',
+    //Application Views
+    'views/AccountView'
 ],
 function (
 //IDS
@@ -47,7 +49,9 @@ function (
     //Team Member Views
     EarlView,
     FaraView,
-    CleeView
+    CleeView,
+    //Application Views
+    AccountView
 ){
     return Backbone.Marionette.Controller.extend({
         initialize: function (options) {
@@ -65,7 +69,7 @@ function (
             }
             MB.headerRegion.$el.show();
         },
-        showPrivateHeader: function(isBusiness) { //shows the non logged in versino of the nav bar and passes in a boolean that says whether or not the nav background is transparant
+        showPrivateHeader: function(isGhost) { //shows the non logged in versino of the nav bar and passes in a boolean that says whether or not the nav background is transparant
             MB.headerRegion.show(new DesktopHeaderView());
             MB.headerRegion.ensureEl();
 
@@ -172,6 +176,11 @@ function (
             this.showPublicHeader(false);
             MB.mainRegion.show(new EducationPricingView());
 
+        },
+        account: function () {
+            this.hideModal();
+            this.showPrivateHeader(false);
+            MB.mainRegion.show(new AccountView());
         }
     });
 });

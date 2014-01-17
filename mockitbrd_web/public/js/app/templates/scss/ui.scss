@@ -93,6 +93,13 @@
 		border-radius: 0;
 	}
 
+	&.loginFullreg {
+		width: 400px;
+		border: none;
+		border-radius: 0;
+		text-transform: uppercase;
+	}
+
 	&.fullLog {
 		width: 350px;
 		border: 0;

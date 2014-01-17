@@ -22,7 +22,9 @@ define(['backbone', 'marionette'], function(Backbone, Marionette) {
            "pricing/education": "educationPricing",
            "pricing/enterprise": "enterprisePricing",
            "pricing/candidates": "candidatePricing",
-           "pricing/professionals": "professionalPricing"
+           "pricing/professionals": "professionalPricing",
+           //Application Pages
+           "app/user/account": "account"
        }
    });
 });

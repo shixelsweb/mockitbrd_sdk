@@ -6,7 +6,8 @@ define(['MB', 'jquery', 'hbs!templates/login', 'backbone', 'marionette', 'toggle
 
             events: {
 				'click .MB-modal-close': 'hideModal',
-                'click .fullLog': 'loginUser'
+                'click .fullLog': 'loginUser',
+                'click .loginFullreg': 'goToRegisterPage'
             },
             initialize: function() {
                 _.bindAll(this, 'on_keyup');
@@ -18,6 +19,14 @@ define(['MB', 'jquery', 'hbs!templates/login', 'backbone', 'marionette', 'toggle
                 console.log($(':checkbox').iphoneStyle());
             },
 
+            goToRegisterPage: function(e) {
+                 e.preventDefault();
+
+                 var url = "#register";
+
+                 MB.appRouter.navigate(url, { trigger: true });
+
+            },
             loginUser: function(e) {
                 e.preventDefault();
 

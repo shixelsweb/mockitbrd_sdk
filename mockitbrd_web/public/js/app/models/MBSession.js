@@ -1,11 +1,11 @@
-define(["jquery", "backbone"],
-    function($, Backbone) {
+define(["jquery", "backbone", "cookie"],
+    function($, Backbone, cookie) {
         // Creates a new Backbone Model class object
         var MBSession = Backbone.Model.extend({
             defaults: {
-                // user: MB.cookie.get('MB-session-user') || null,
-                // token: MB.cookie.get('MB-session-auth-token') || null,
-                // user_type: MB.cookie.get('MB-session-user-type') || null
+                user: $.cookie('MB-session-user') || null,
+                token: $.cookie('MB-session-auth-token') || null,
+                user_type: $.cookie('MB-session-user-type') || null
             },
 
             initialize: function() {
@@ -29,7 +29,6 @@ define(["jquery", "backbone"],
 
             start: function(user) { //add stayLoggedIn
                 var auth_token = this.generateToken();
-                
                 //TODO: Remove password from user object
                 if (!this.get('user') && !this.get('token')) { //only create a session if one doesn't already exsist
 

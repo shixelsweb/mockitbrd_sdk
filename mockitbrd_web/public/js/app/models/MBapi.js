@@ -6,12 +6,23 @@
     First make sure "MB" is in the define function
 
     URL PARAMATER - MB.api.url
-    LOGIN USER - MB.api.login(LOGIN_DATA)
+    LOGIN USER - MB.api.login(LOGIN_DATA);
 
     ex of LOGIN DATA = {
                         'email': EMAIL,
                         'paddword': PADDWORD
                     };
+----------------------------------------------------
+
+    UPDATE USER - MB.api.update(UPDATE_DATA);
+
+    ex of UPDATE_DATA = {
+                            'value_to_update': 'new_value',
+                            'value_to_update': 'new_value'
+                        } //CAN BE MORE THAT ONE PARAMETER
+    e.g. //example of updates isFirst database value and first name value
+    var data = {'isFirst': 1, 'fname': 'Earl'};
+    MB.api.update(data);
 
 */
 define(["jquery", "underscore", "backbone"],
@@ -48,6 +59,9 @@ define(["jquery", "underscore", "backbone"],
                         alert("error! ", response.data.error); //TODO-(Fara): add to Error Modal
                     }
                 });
+            },
+            update: function(param) {
+
             },
             register: function(params) {
                 var self = this;
