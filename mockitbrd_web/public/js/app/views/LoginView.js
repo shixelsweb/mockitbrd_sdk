@@ -6,7 +6,7 @@ define(['MB', 'jquery', 'hbs!templates/login', 'backbone', 'marionette', 'toggle
 
             events: {
 				'click .MB-modal-close': 'hideModal',
-                'click #Log-Button': 'loginUser'
+                'click .fullLog': 'loginUser'
             },
             initialize: function() {
                 _.bindAll(this, 'on_keyup');
