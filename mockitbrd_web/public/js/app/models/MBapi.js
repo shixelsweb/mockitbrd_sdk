@@ -20,8 +20,7 @@ define(["jquery", "underscore", "backbone"],
         var MBapi = Backbone.Model.extend({
 
             defaults: {
-                url: "http://api.mockitbrd.com/",
-                registered_user: null
+                url: "http://api.mockitbrd.com/"
             },
 
             initialize: function() {
@@ -51,14 +50,26 @@ define(["jquery", "underscore", "backbone"],
                 });
             },
             register: function(params) {
+                var self = this;
                 $.ajax({
                     type: "POST",
                     url: this.get('url') + "v1/user/register",
                     data: params,
                     dataType: 'json',
                     success: function (response) {
-                        this.set({'registered_user': response.data.user});
-                        return response.success;
+                        if (response.success === 0) {
+                            console.log(response);
+                            $('.fullReg').button('reset');
+                            if (response.data.code === 'MBREG101') {
+                                $('.MB-reg-error').html(response.data.error).append(' try ', $('<a href="#login">Logging in</a>'));
+                                $('.MB-reg-alert').css('display', 'table');
+                            }
+                        } else {
+                            $('.MB-registration-form').hide();
+                            $('.MB-reg-name').html(response.data.registeredUser.fname);
+                            $('.MB-reg-email').html(response.data.registeredUser.email);
+                            $('.MB-reg-success').addClass('hatch');
+                        }
                         //MB.appRouter.navigate('#register', { trigger: true });
                     },
                     error: function (response) {

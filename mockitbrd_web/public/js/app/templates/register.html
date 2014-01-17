@@ -6,15 +6,15 @@
         </div>
     </div>
     <div class="body">
+        <h1>Get Registered</h1>
         <div class="MB-registration-form">
-            <h1>Get Registered</h1>
             <h2>Step 1: User Type</h2>
-            <div class="MB-choose-account-type">
-                <div class="account-type" data-accountType="business">
+            <div class="MB-choose-user-type">
+                <div class="user-type" data-userType="candidate">
                     <i class="fa fa-user icon"></i>
                     <div class="title">Candidate</div>
                 </div>
-                <div class="account-type no-border" data-accountType="personal">
+                <div class="user-type no-border" data-userType="interviewer">
                     <i class="fa fa-user icon"></i>
                     <div class="title">Interviewer</div>
                 </div>
@@ -46,12 +46,21 @@
             <label class="MB-agree-toc"><input class="MB-agree-toc-box" type="checkbox" name="checkbox" value="value"> I have read and agree to the <a href="#toc">Terms of Conditions</a></label>
 
             <button data-loading-text="Loading..." class="MB-button primary fullReg" type="submit">Register Now</button>
+            <div class="alert alert-danger alert-dismissable MB-reg-alert">
+                  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                  <span class="MB-reg-error"></span>
+            </div>
             <div class="MB-reg-alt">
                 <div class="MB-reg-reg">OR REGISTER WITH</div>
                 <a href="#" id="link-link"><div class="MB-button-size button-link"><i class="fa fa50 fa-linkedin"></i></div></a>
                 <a href="#" id="link-twit"><div class="MB-button-size button-twit"><i class="fa fa50 fa-twitter"></i></div></a>
                 <a href="#" id="link-face"><div class="MB-button-size button-face"><i class="fa fa50 fa-facebook"></i></div></a>
         </div>
+        </div>
+        <div class="MB-reg-success unselectable">
+            <div class="MB-reg-success-icon"><i class="fa fa-check-circle "></i></div>
+            <p>Thank you for registering <span class="MB-reg-name">Test</span>!</p>
+            <p>We have sent an activation link to <span class="MB-reg-email">test@test.com</span>, please click the link in order to login!</p>
         </div>
     </div>
 </div>
