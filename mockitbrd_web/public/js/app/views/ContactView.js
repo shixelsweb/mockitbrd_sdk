@@ -1,11 +1,12 @@
-define(['jquery', 'hbs!templates/contact', 'backbone', 'marionette'],
-    function ($, template, Backbone) {
+define(['MB', 'jquery', 'hbs!templates/contact', 'backbone', 'marionette'],
+    function (MB, $, template, Backbone) {
         //ItemView provides some default rendering logic
         return Backbone.Marionette.ItemView.extend({
             template:template,
 
             events: {
-				'click .MB-modal-close': 'hideModal'
+				'click .MB-modal-close': 'hideModal',
+                'click .MB-contact-submit-button': 'submitForm'
             },
             initialize: function() {
                 _.bindAll(this, 'on_keyup');
@@ -28,6 +29,27 @@ define(['jquery', 'hbs!templates/contact', 'backbone', 'marionette'],
                     $(document).unbind('keyup', this.on_keyup);
                     this.closeModal();
                 }
+            },
+
+            submitForm: function(e) {
+                e.preventDefault();
+
+                var data = {};
+
+                data.contactName = $('#contactName').val();
+                data.contactSubject = $('#contactSubject').val();
+                data.contactEmail = $('#contactEmail').val();
+                data.contactMessage = $('#contactMessage').val();
+
+                var message = data.contactMessage + " - " + data.contactName;
+
+                if ((data.contactName === "") && (data.contactEmail  === "") && (data.contactMessage  === "") && (data.contactSubject === "" ))  {
+                    $('#MB-contact-error-msg').html('Please fill all fields!').css('display', 'table');
+                } else {
+                    MB.email.start({'title': data.contactSubject, 'email': 'me@faraashiru.com', 'message': message, 'type:': data.contactEmail});
+                }
+
+                console.log(data);
             },
 
             closeModal: function() {

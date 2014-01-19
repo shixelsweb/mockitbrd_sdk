@@ -1,0 +1,30 @@
+#!/usr/bin/env node
+var path = require('path');
+var rapido = require('rapido').create();
+
+// Want to use something other than "rapido.json"?
+rapido.configFilename = 'mockitbrd.json';
+
+// Give your command line tool a name:
+rapido.title = 'MockitBrd developer command line interface';
+
+// Does your project have its own Rápido that were installed from npm?
+// If so, you'll need to tell Rápido where to find them:
+rapido.addNodeModulesDir(path.join(__dirname, '../node_modules'));
+
+// Enable any stacks you need for your Command Line Tool
+rapido.enableStack('mockitbrd');
+
+// Add a specific directory that contains a Rápido stack
+rapido.addStackDir(path.join(__dirname, '..'));
+
+// Multiple stacks with the same command names? Make one of the stacks
+// exclusive to avoid ambigous commands
+rapido.exclusiveStackCommands('mockitbrd');
+
+// Don't want to list a command in one of the enabled stacks?
+// Then hide it:
+//rapido.hideCommand('another-stack', 'useless command');
+
+// Now run Rápido and let it take care of the rest!
+rapido.run(process.argv);

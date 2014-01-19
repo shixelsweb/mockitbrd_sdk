@@ -7,10 +7,13 @@
 @import "compass/css3";
 @import "../js/app/templates/scss/all.scss";
 
-html, body, #page {
+html, body, #page, #left-header, #dashboard {
 	height: 100%;
 	font-family: $primary_font;
 }
+
+#left-header {float: left;}
+#dashboard {display: none;}
 
 a {
 	color: $primary_blue;

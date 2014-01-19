@@ -1,0 +1,19 @@
+{
+    "name": "mockitbrd",
+    "description": "Commands for thr MockitBrd SDK",
+
+    "scaffold.page.dir": "scaffolds/page",
+    "scaffold.model.dir": "scaffolds/model",
+
+    "commands": {
+        "create page": {
+            "description": "Creat a MockitBrd Page (includes route, controller, view, template, scss, and adding scss to all.scss)",
+            "file": "commands/cli-create-page.js"
+        },
+
+        "create model": {
+            "description": "Create a MockitBrd model (creates the model and adds it to the global scope in MB.js)",
+            "file": "commands/cli-create-model.js"
+        }
+    }
+}

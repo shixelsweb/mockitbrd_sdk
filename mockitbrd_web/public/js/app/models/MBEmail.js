@@ -45,23 +45,33 @@ define(["jquery", "underscore", "backbone"],
                 var company = null;
                 var body_email = $(email_body);
                 var subject = null;
+                var html = null;
+                var html_flag = null;
 
                 if (email_data.type === 'general') {company = this.general;}
-                if (email_data.type === 'jobs') {company = this.jobs_email_data; }
-                if (email_data.type === 'help') {company = this.help_email_data;}
-                if (email_data.type === 'activatation') {company = this.activation_email;}
-                if (email_data.type === 'forgot') {company = this.forgot_email;}
+                else if (email_data.type === 'jobs') {company = this.jobs_email; }
+                else if (email_data.type === 'help') {company = this.help_email;}
+                else if (email_data.type === 'activatation') {company = this.activation_email;}
+                else if (email_data.type === 'forgot') {company = this.forgot_email;}
+                else { html_flag = false;}
 
-                var from = company.email;
+                if (html_flag === true) {
+                    body_email.find('.salutation').html(title);
+                    body_email.find('.message').html(message);
+                    body_email.find('.team').html(company.team);
+                    body_email.find('.note_email').html(company.email);
+                    from = company.email;
 
-                body_email.find('.salutation').html(title);
-                body_email.find('.message').html(message);
-                body_email.find('.team').html(company.team);
-                body_email.find('.note_email').html(company.email);
+                    html = '<html><body>' + body_email[1].innerHTML + '</body></html>';
+                    subject = company.subject;
+                } else {
+                    html = message;
+                    subject = title;
+                    from = email_data.type;
+                }
+                console.log(email, from, subject, html);
 
-                var html = '<html><body>' + body_email[1].innerHTML + '</body></html>';
-
-                var email_send = {'to': email, 'from': from, 'subject': company.subject, 'message': html};
+                var email_send = {'to': email, 'from': from, 'subject': subject, 'message': html};
 
                 this.send(email_send);
             },

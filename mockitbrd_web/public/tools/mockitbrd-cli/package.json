@@ -1,0 +1,11 @@
+{
+  "name": "mockitbrd-cli",
+  "version": "0.1.0",
+  "description": "MockitBrd developer command line interface",
+  "dependencies": {
+    "rapido": "~0.3.1-SNAPSHOT"
+  },
+  "bin": {
+    "mockitbrd": "bin/mockitbrd"
+  }
+}

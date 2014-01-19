@@ -1,4 +1,4 @@
-define(['jquery', 'hbs!templates/desktopHeader', 'backbone', 'marionette'],
+define(['jquery', 'hbs!templates/desktopFooter', 'backbone', 'marionette'],
     function ($, template, Backbone) {
         //ItemView provides some default rendering logic
         return Backbone.Marionette.ItemView.extend({
@@ -10,11 +10,11 @@ define(['jquery', 'hbs!templates/desktopHeader', 'backbone', 'marionette'],
         },
 
 		startHover: function() {
-			$('.MB-nav-logo').addClass('pulse animated');
+			$('.MB-nav-logo').addClass('pulse');
 		},
 
 		endHover: function() {
-			$('.MB-nav-logo').removeClass('pulse animated');
+			$('.MB-nav-logo').removeClass('pulse');
 		}
 	});
 });

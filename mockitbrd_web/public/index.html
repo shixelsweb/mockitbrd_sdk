@@ -29,7 +29,7 @@
             // App Environment
             // ---------------
             //  Tip: Set to true to turn on "production" mode
-            var production = true,
+            var production = false,
                     filesToLoad,
             //BoilerplateMVC Helper Methods
                     boilerplateMVC = {
@@ -160,8 +160,17 @@
 <div id="page">
 
     <header data-role="header"></header>
+    <div id="main" class="container-fluid" data-role="content">
+        <div id="dashboard">
+            <div id="left-header" data-role="left-rail"></div>
+            <div id="dashboard-content" data-role="dashboard">
+                <div id="app-header"></div>
+                <div id="calendar-model"></div>
+            </div>
+    </div>
+    </div>
 
-    <div id="main" class="container-fluid" data-role="content"></div>
+    <footer data-role="footer"></footer>
 
 </div>
 

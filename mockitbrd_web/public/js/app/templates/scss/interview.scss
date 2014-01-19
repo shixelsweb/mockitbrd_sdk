@@ -1,0 +1,29 @@
+#interview-video {
+	#remoteVideo {
+		width: 720px;
+		margin-left: 200px;
+		float: left;
+		height: 400px;
+		margin-top: 30px;
+		border: 1px solid $devil_grey;
+	}
+
+	#localVideo {
+		float: right;
+		position: relative;
+		top: 450px;
+		width: 250px;
+		left: -520px;
+		border: 1px solid $devil_grey;
+	}
+}
+
+#interview-chat {
+	border: 1px solid $devil_grey;
+	width: 380px;
+	height: 608px;
+	float: right;
+	position: absolute;
+	top: 90px;
+	right: 60px;
+}

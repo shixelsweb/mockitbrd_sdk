@@ -23,7 +23,9 @@ require.config({
         "text":"../libs/plugins/text",
         "jasminejquery": "../libs/plugins/jasmine-jquery",
         "cookie": "../libs/plugins/jquery.cookie",
-        "toggle": "../libs/plugins/toggle"
+        "toggle": "../libs/plugins/toggle",
+        "moment": "../libs/plugins/moment",
+        "webrtc": "../libs/plugins/webrtc"
     },
     // Sets the configuration for your third party scripts that are not AMD compatible
     shim:{

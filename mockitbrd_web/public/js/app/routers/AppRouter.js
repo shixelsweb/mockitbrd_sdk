@@ -24,7 +24,10 @@ define(['backbone', 'marionette'], function(Backbone, Marionette) {
            "pricing/candidates": "candidatePricing",
            "pricing/professionals": "professionalPricing",
            //Application Pages
-           "app/user/account": "account"
+           "dashboard": "dashboard",
+           // "app/user": "user",
+           "dashboard/user/account": "account",
+           "interview/:id": "interview"
        }
    });
 });

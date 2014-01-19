@@ -1,0 +1,98 @@
+#user-app-menu-view {
+	width: 280px;
+	height: 100%;
+	float: right;
+	margin-right: 145px;
+	position: relative;
+	top: -10px;
+}
+
+.MB-notification-icon {
+	width: 40px;
+	height: 100%;
+	font-size: 2em;
+	line-height: 2.5em;
+	color: $dashboard_offset;
+	cursor: pointer;
+	margin-left: 15px;
+
+	&:hover {
+		color: $light_grey;
+	}
+}
+
+.MB-user-menu {
+	height: 60px;
+	float: left;
+	position: relative;
+	cursor: default;
+	text-align: right;
+	font-weight: 100;
+	top: 17px;
+
+
+	li {
+		display: inline-block;
+		margin-right: 15px;
+		vertical-align: middle;
+	}
+}
+
+.MB-user-menu-image {
+	border-radius: 100px;
+	overflow: hidden;
+	width: 45px;
+	height: 45px;
+	border: 1px solid $app_menu_grey;
+	cursor: pointer;
+}
+
+.MB-user-menu-menu {
+	cursor: pointer;
+	font-size: 1.8em;
+	position: relative;
+	top: 2px;
+
+	&:hover {
+		color: $devil_grey;
+	}
+}
+
+.MB-user-menu-open {
+	position: absolute;
+	top: -180px;
+	background: $app_menu_grey;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+	box-shadow: 0px 0px 2px #777;
+	color: $app_menu_hover_font;
+	font-weight: 100;
+	right: 170px;
+	-webkit-transition-property: top;
+    -webkit-transition-duration: 0.5s;
+    z-index: 1;
+
+    a {
+		color: $app_menu_hover_font;
+	}
+	li {
+		padding: 15px;
+		border-bottom: 1px solid $darker_grey;
+		cursor: pointer;
+		font-size: 0.9em;
+
+		&.last {
+			border-bottom: 0;
+		}
+
+		&:hover {
+			background: $app_menu_hover_active;
+		}
+
+		i {
+			padding-right: 15px;
+			font-size: 1.2em;
+		}
+
+	}
+}
