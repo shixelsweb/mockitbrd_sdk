@@ -23,15 +23,26 @@
     }
   ],
   "dependencies": {
-    "express": "3.x"
+    "express": "3.x",
+    "webrtcsupport": "0.7.1",
+    "wildemitter": "0.0.5",
+    "getscreenmedia": "0.2.1",
+    "socket.io-client": "0.9.16",
+    "attachmediastream": "1.0.1",
+    "hark": "0.1.1",
+    "webrtc": "1.1.1",
+    "mockconsole": "0.0.1"
   },
   "devDependencies": {
     "express": "3.x",
     "grunt": "~0.4.1",
     "grunt-contrib-requirejs": "~0.4.0",
     "grunt-contrib-jshint": "~0.3.0",
-    "uglify-js": "~2.2.5",
-    "grunt-contrib-watch": "~0.5.3"
+    "uglify-js": "2.3.6",
+    "grunt-contrib-watch": "~0.5.3",
+    "browserify": "2.22.0",
+    "request": "",
+    "uglify-js": "~2.2.5"
   },
   "main": "./server/server",
   "keywords": [
@@ -39,5 +50,8 @@
     "Backbone.js",
     "Require.js",
     "Marionette and Require Boilerplate"
-  ]
+  ],
+  "scripts": {
+    "updateLatest": "./scripts/updateLatest.sh"
+  }
 }

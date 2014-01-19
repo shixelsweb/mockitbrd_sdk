@@ -25,7 +25,9 @@ require.config({
         "cookie": "../libs/plugins/jquery.cookie",
         "toggle": "../libs/plugins/toggle",
         "moment": "../libs/plugins/moment",
-        "webrtc": "../libs/plugins/webrtc"
+        "webrtc": "../libs/plugins/video-chat/webrtc",
+        "socket": "../libs/plugins/video-chat/socket.io",
+        "simplewebrtc": "../libs/plugins/video-chat/simplewebrtc"
     },
     // Sets the configuration for your third party scripts that are not AMD compatible
     shim:{
