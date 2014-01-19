@@ -5,7 +5,6 @@ define([ //VIEWS
     'marionette',
     'webrtc',
     'socket',
-    'simplewebrtc',
     //UI Views
     'views/WelcomeView',
     'views/DesktopHeaderView',
@@ -46,7 +45,6 @@ function (
     Marionette,
     SimpleWebRTC,
     socket,
-    simplewebrtc,
     //UI Views
     WelcomeView,
     DesktopHeaderView,
