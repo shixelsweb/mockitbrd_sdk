@@ -7216,7 +7216,7 @@ label.iOSCheckLabelOff span {
 #interview-chat {
   border: 1px solid #666666;
   width: 380px;
-  height: 608px;
+  height: 616px;
   float: right;
   position: absolute;
   top: 90px;
@@ -7286,19 +7286,26 @@ label.iOSCheckLabelOff span {
 
 /* line 100, ../js/app/templates/scss/interview.scss */
 .interview-chat-window {
-  width: 100%;
-  height: 400px;
+  width: 380px;
+  height: 408px;
   border-bottom: 1px solid #666666;
+  border-right: none;
+  border-radius: 0;
+  border-top: none;
+  border-left: none;
+  margin-bottom: 0;
+  background: white;
+  overflow-y: scroll;
 }
 
-/* line 107, ../js/app/templates/scss/interview.scss */
+/* line 114, ../js/app/templates/scss/interview.scss */
 .interview-chat-type {
   width: 100%;
   height: 207px;
   background: #666666;
 }
 
-/* line 113, ../js/app/templates/scss/interview.scss */
+/* line 120, ../js/app/templates/scss/interview.scss */
 .interview-chat-type-window {
   width: 368px;
   border-radius: 0;
@@ -7307,9 +7314,23 @@ label.iOSCheckLabelOff span {
   border: 1px solid #666666;
   border-left: none;
   border-top: none;
+  background: #eee;
+}
+/* line 130, ../js/app/templates/scss/interview.scss */
+.interview-chat-type-window:focus {
+  outline: none;
+  border: none;
+  box-shadow: none;
 }
 
-/* line 123, ../js/app/templates/scss/interview.scss */
+/* line 137, ../js/app/templates/scss/interview.scss */
+.interview-chat-type-window:focus, .interview-chat-window:focus {
+  outline: none;
+  border: none;
+  box-shadow: none;
+}
+
+/* line 143, ../js/app/templates/scss/interview.scss */
 .interview-chat-send-button {
   border: 0;
   right: 0;
@@ -7318,9 +7339,39 @@ label.iOSCheckLabelOff span {
   right: 4px;
 }
 
-/* line 131, ../js/app/templates/scss/interview.scss */
+/* line 151, ../js/app/templates/scss/interview.scss */
 #tempVideo {
   display: none;
+}
+
+/* line 155, ../js/app/templates/scss/interview.scss */
+.chatBubble {
+  padding: 15px;
+  float: left;
+  width: 90%;
+}
+/* line 159, ../js/app/templates/scss/interview.scss */
+.chatBubble .chat-bubble-pic {
+  float: left;
+}
+/* line 162, ../js/app/templates/scss/interview.scss */
+.chatBubble .chatBubble-bubble {
+  float: left;
+  width: 70%;
+  background: #2bbbff;
+  margin-left: 25px;
+  border-radius: 5px;
+  padding: 15px;
+  position: relative;
+  word-wrap: break-word;
+}
+/* line 171, ../js/app/templates/scss/interview.scss */
+.chatBubble .chatBubble-bubble .chatBubble-caret {
+  position: absolute;
+  left: -10px;
+  font-size: 2em;
+  top: 8px;
+  color: #2bbbff;
 }
 
 /* Smartphones (portrait and landscape) ----------- */

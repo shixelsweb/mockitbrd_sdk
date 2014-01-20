@@ -7,6 +7,7 @@ define(['jquery', 'hbs!templates/interview', 'backbone', 'marionette', 'webrtc',
           shareButton: $('.interview-share'),
           webrtc: null,
           confirm: null,
+          user: null,
 
           events:{
             'hover #remoteVideo': 'toggleToolbar',
@@ -14,13 +15,15 @@ define(['jquery', 'hbs!templates/interview', 'backbone', 'marionette', 'webrtc',
             'click .interview-off': 'endVideo',
             // 'click .interview-share': 'shareScreenHandler',
             'click .interview-mute': 'interviewVolume',
-            'click .interview-unmute': 'interviewVolume'
+            'click .interview-unmute': 'interviewVolume',
+            'click .interview-chat-send-button': 'sendChatMessage'
           },
 
           initialize: function(options) {
               this.confirm = options.confirm;
               this.createConnection(options.webrtc, options.interview_id);
               this.setShareButton(true);
+              this.user = $.parseJSON(MB.session.get('user'));
           },
           onRender: function () {
             // get rid of that pesky wrapping-div
@@ -46,7 +49,7 @@ define(['jquery', 'hbs!templates/interview', 'backbone', 'marionette', 'webrtc',
                 remoteVideosEl: 'remoteVideo',
                 // immediately ask for camera access
                 autoRequestMedia: true,
-                debug: false,
+                debug: true,
                 detectSpeakingEvents: true,
                 autoAdjustMic: false
             });
@@ -68,8 +71,9 @@ define(['jquery', 'hbs!templates/interview', 'backbone', 'marionette', 'webrtc',
             var localVidSrc = localVid.attr('src');
 
             if(this.webrtc.webrtc.localStream && (this.webrtc.webrtc.peers.length > 0)) {
+              var holder = localVidSrc;
               remoteVid.attr('src', localVidSrc);
-              localVid.attr('src', remoteVidSrc);
+              localVid.attr('src', holder);
             } else if (this.webrtc.webrtc.localStream && (this.webrtc.webrtc.peers.length <= 0)) {
 
               if (!localVid.attr('src')) {
@@ -112,6 +116,17 @@ define(['jquery', 'hbs!templates/interview', 'backbone', 'marionette', 'webrtc',
                 $('.interview-mute').css('display', 'block');
               }
             }
+          },
+          sendChatMessage: function() {
+            //if(this.webrtc.webrtc.localStream) {
+                var message = document.getElementById('dataChannelSend').value;
+                var messageHTML = '<div class="chatBubble"><div class="MB-user-menu-image chat-bubble-pic"><img src="../../img/earl.jpg"></div><div class="chatBubble-bubble"><i class="fa fa-caret-left chatBubble-caret"/> ' + message+ '</div> ';
+                //console.log(this.webrtc);
+                this.webrtc.webrtc.sendToAll(message);
+                $("#dataChannelReceive").append(messageHTML);
+                document.getElementById('dataChannelSend').value = '';
+                $("#dataChannelReceive")[0].scrollTop = $("#dataChannelReceive")[0].scrollHeight;
+            //}
           }
       });
 });

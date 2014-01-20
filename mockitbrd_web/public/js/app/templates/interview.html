@@ -25,10 +25,10 @@
 		<div id="videoStatus" class="video-status"></div>
 	</div>
 	<div id="interview-chat">
-		<div class="interview-chat-window"></div>
+		<div id="dataChannelReceive"class="interview-chat-window" readonly="readonly"> </div>
 		<div class="interview-chat-type">
-			<textarea class="interview-chat-type-window" placeholder="Type message here.."></textarea>
-			<button class="MB-button primary small interview-chat-send-button">Send</button>
+			<textarea id="dataChannelSend" class="interview-chat-type-window" placeholder="Type message here.." />
+			<button class="MB-button primary small interview-chat-send-button" id="sendButton">Send</button>
 		</div>
 
 	</div>
