@@ -58,6 +58,7 @@ define([
         modalWhite: MB.modalWhite,
         modalBlack: MB.modalBlack,
         modalBg: MB.modalBg,
+        confirmRegion: "#MB-confirm .modal",
         body: "body"
     });
 

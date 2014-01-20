@@ -1,15 +1,35 @@
 <div id="interview-view" class="interviewView">
-<!-- <button id="screenShareButton"></button>
- --><!--         <p id="subTitle"></p>
- -->	<div id="interview-video">
-<!-- 		<div id="localVideo" class="local-video"><img src="../../img/local.jpg"></div>
- -->		<video id="localVideo" class="local-video"><img src="../../img/local.jpg"></video>
-<!-- 		<div id="remoteVideo" class="remote-video" autoplay><img src="../../img/remote.jpg"></div>
- -->		<video id="remoteVideo" class="remote-video" autoplay><img src="../../img/remote.jpg"></video>
-		<div id="videoStatus" class="video-status">
+
+	<div id="interview-video">
+
+		<div id="remoteVideo" class="remote-video unselectable">
+			<ul id="interview-video-toolbar">
+				<li class="fa fa-power-off interview-off"></li>
+				<li class="fa fa-exchange fa-rotate-90 interview-switch"></li>
+				<li class="fa fa-volume-up interview-mute" data-volume="on"></li>
+				<span class="fa-stack fa-lg interview-unmute reduce-size" data-volume="off">
+				  <i class="fa fa-volume-up fa-stack-1x"></i>
+				  <i class="fa fa-ban fa-stack-2x"></i>
+				</span>
+				<!-- <span class="fa-stack fa-lg interview-share reduce-size">
+				  <i class="fa fa-share fa-stack-1x"></i>
+				  <i class="fa fa-desktop fa-stack-2x"></i>
+				</span> -->
+			</ul>
+			<!-- spinner loader before video appears -->
+			<i class="fa fa-spinner fa-spin MB-interview-wait"></i>
+			<span class="MBinterview-wait-text">Please be patient while the other party arrives</span>
+			<video id="tempVideo" autoplay src=""></video>
 		</div>
+		<video id="localVideo" class="local-video"></video>
+		<div id="videoStatus" class="video-status"></div>
 	</div>
 	<div id="interview-chat">
-		
+		<div class="interview-chat-window"></div>
+		<div class="interview-chat-type">
+			<textarea class="interview-chat-type-window" placeholder="Type message here.."></textarea>
+			<button class="MB-button primary small interview-chat-send-button">Send</button>
+		</div>
+
 	</div>
 </div>
