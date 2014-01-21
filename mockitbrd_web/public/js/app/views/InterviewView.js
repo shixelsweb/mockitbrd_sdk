@@ -10,13 +10,15 @@ define(['jquery', 'hbs!templates/interview', 'backbone', 'marionette', 'webrtc',
           user: null,
 
           events:{
-            'hover #remoteVideo': 'toggleToolbar',
+            'hover .localVid': 'toggleToolbar',
             'click .interview-switch': 'switchVideos',
             'click .interview-off': 'endVideo',
             // 'click .interview-share': 'shareScreenHandler',
             'click .interview-mute': 'interviewVolume',
             'click .interview-unmute': 'interviewVolume',
-            'click .interview-chat-send-button': 'sendChatMessage'
+            'click .interview-chat-send-button': 'sendChatMessage',
+            'click .interview-pause': 'toggleVideoState',
+            'click .interview-play': 'toggleVideoState'
           },
 
           initialize: function(options) {
@@ -58,8 +60,11 @@ define(['jquery', 'hbs!templates/interview', 'backbone', 'marionette', 'webrtc',
                 if (location.hash.split('/')[1] === id) {
                   self.webrtc.joinRoom(id);
                   self.setRoom(id);
+                  $('#localVideo').removeAttr('style');
                 }
               });
+
+            console.log(this.webrtc);
           },
           toggleToolbar: function() {
             $('#interview-video-toolbar').toggle();
@@ -115,6 +120,21 @@ define(['jquery', 'hbs!templates/interview', 'backbone', 'marionette', 'webrtc',
                 volumeButton.hide();
                 $('.interview-mute').css('display', 'block');
               }
+            }
+          },
+          toggleVideoState: function(e) {
+              var stateButton = $(e.currentTarget);
+
+              if (this.webrtc.roomName) {
+                if (stateButton.data('videostate') === "paused") {
+                  this.webrtc.pause();
+                  stateButton.hide();
+                  $('.interview-play').css('display', 'block');
+                } else if(stateButton.data('videostate') === "playing") {
+                  this.webrtc.resume();
+                  stateButton.hide();
+                  $('.interview-pause').css('display', 'block');
+                }
             }
           },
           sendChatMessage: function() {

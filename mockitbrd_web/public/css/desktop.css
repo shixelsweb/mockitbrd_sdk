@@ -7230,16 +7230,14 @@ label.iOSCheckLabelOff span {
 /* line 22, ../js/app/templates/scss/interview.scss */
 #interview-video #localVideo {
   float: right;
-  position: relative;
-  top: 450px;
+  position: absolute;
   width: 250px;
   height: 190px;
   background: black;
-  left: -520px;
   border: 1px solid #666666;
 }
 
-/* line 34, ../js/app/templates/scss/interview.scss */
+/* line 32, ../js/app/templates/scss/interview.scss */
 #interview-chat {
   width: 380px;
   height: 630px;
@@ -7251,7 +7249,7 @@ label.iOSCheckLabelOff span {
   box-shadow: 0px 0px 0px 8px rgba(0, 0, 0, 0.3), 0px 2px 3px 0px rgba(0, 0, 0, 0.6);
 }
 
-/* line 46, ../js/app/templates/scss/interview.scss */
+/* line 44, ../js/app/templates/scss/interview.scss */
 .MB-interview-wait {
   color: #999;
   top: 170px;
@@ -7260,7 +7258,7 @@ label.iOSCheckLabelOff span {
   left: 340px;
 }
 
-/* line 54, ../js/app/templates/scss/interview.scss */
+/* line 52, ../js/app/templates/scss/interview.scss */
 .MBinterview-wait-text {
   position: relative;
   top: 210px;
@@ -7269,9 +7267,9 @@ label.iOSCheckLabelOff span {
   font-weight: 100;
 }
 
-/* line 62, ../js/app/templates/scss/interview.scss */
+/* line 60, ../js/app/templates/scss/interview.scss */
 #interview-video-toolbar {
-  font-size: 2em;
+  font-size: 1em;
   float: right;
   margin: 25px;
   display: none;
@@ -7280,12 +7278,14 @@ label.iOSCheckLabelOff span {
   right: 0;
   color: white;
   text-align: center;
+  margin-right: 10px;
 }
-/* line 73, ../js/app/templates/scss/interview.scss */
+/* line 72, ../js/app/templates/scss/interview.scss */
 #interview-video-toolbar .reduce-size {
   font-size: 0.5em;
   cursor: pointer;
   opacity: 0.7;
+  margin-bottom: 12px;
 }
 /* line 77, ../js/app/templates/scss/interview.scss */
 #interview-video-toolbar .reduce-size:hover {
@@ -7294,7 +7294,7 @@ label.iOSCheckLabelOff span {
 /* line 82, ../js/app/templates/scss/interview.scss */
 #interview-video-toolbar .interview-unmute {
   display: none;
-  margin-bottom: 16px;
+  margin-bottom: 13px;
 }
 /* line 87, ../js/app/templates/scss/interview.scss */
 #interview-video-toolbar li {
@@ -7308,11 +7308,15 @@ label.iOSCheckLabelOff span {
   font-size: 1em;
 }
 /* line 98, ../js/app/templates/scss/interview.scss */
-#interview-video-toolbar .interview-off, #interview-video-toolbar .interview-switch, #interview-video-toolbar .interview-mute {
+#interview-video-toolbar .interview-off, #interview-video-toolbar .interview-switch, #interview-video-toolbar .interview-mute, #interview-video-toolbar .interview-share, #interview-video-toolbar .interview-pause, #interview-video-toolbar .interview-play {
   opacity: 0.7;
 }
-
 /* line 102, ../js/app/templates/scss/interview.scss */
+#interview-video-toolbar .interview-play {
+  display: none;
+}
+
+/* line 106, ../js/app/templates/scss/interview.scss */
 .interview-chat-window {
   width: 380px;
   height: 408px;
@@ -7327,14 +7331,14 @@ label.iOSCheckLabelOff span {
   padding-bottom: 25px;
 }
 
-/* line 117, ../js/app/templates/scss/interview.scss */
+/* line 121, ../js/app/templates/scss/interview.scss */
 .interview-chat-type {
   width: 100%;
   height: 207px;
   text-align: center;
 }
 
-/* line 123, ../js/app/templates/scss/interview.scss */
+/* line 127, ../js/app/templates/scss/interview.scss */
 .interview-chat-type-window {
   width: 350px;
   border-radius: 0;
@@ -7345,14 +7349,14 @@ label.iOSCheckLabelOff span {
   margin-top: 10px;
 }
 
-/* line 133, ../js/app/templates/scss/interview.scss */
+/* line 137, ../js/app/templates/scss/interview.scss */
 .interview-chat-type-window:focus {
   outline: none;
   border: 1px solid #ccc;
   box-shadow: 0px 0px 2px #ccc;
 }
 
-/* line 139, ../js/app/templates/scss/interview.scss */
+/* line 143, ../js/app/templates/scss/interview.scss */
 .interview-chat-send-button {
   border: 0;
   right: 0;
@@ -7361,26 +7365,26 @@ label.iOSCheckLabelOff span {
   right: 4px;
 }
 
-/* line 147, ../js/app/templates/scss/interview.scss */
+/* line 151, ../js/app/templates/scss/interview.scss */
 #tempVideo {
   display: none;
 }
 
-/* line 151, ../js/app/templates/scss/interview.scss */
+/* line 155, ../js/app/templates/scss/interview.scss */
 .chatBubble-left {
   padding: 15px;
   float: left;
   width: 90%;
   position: relative;
 }
-/* line 156, ../js/app/templates/scss/interview.scss */
+/* line 160, ../js/app/templates/scss/interview.scss */
 .chatBubble-left .chatBubbleDate {
   position: absolute;
   font-size: 0.7em;
   bottom: -4px;
   left: 10px;
 }
-/* line 163, ../js/app/templates/scss/interview.scss */
+/* line 167, ../js/app/templates/scss/interview.scss */
 .chatBubble-left .chatBubble-bubble {
   float: left;
   width: auto;
@@ -7393,7 +7397,7 @@ label.iOSCheckLabelOff span {
   font-weight: 100;
   font-size: 0.9em;
 }
-/* line 175, ../js/app/templates/scss/interview.scss */
+/* line 179, ../js/app/templates/scss/interview.scss */
 .chatBubble-left .chatBubble-bubble .chatBubble-caret {
   position: absolute;
   left: -10px;
@@ -7402,21 +7406,21 @@ label.iOSCheckLabelOff span {
   color: #eee;
 }
 
-/* line 184, ../js/app/templates/scss/interview.scss */
+/* line 188, ../js/app/templates/scss/interview.scss */
 .chatBubble-right {
   padding: 15px;
   float: right;
   width: 90%;
   position: relative;
 }
-/* line 189, ../js/app/templates/scss/interview.scss */
+/* line 193, ../js/app/templates/scss/interview.scss */
 .chatBubble-right .chatBubbleDate {
   position: absolute;
   font-size: 0.7em;
   bottom: -4px;
   right: 10px;
 }
-/* line 196, ../js/app/templates/scss/interview.scss */
+/* line 200, ../js/app/templates/scss/interview.scss */
 .chatBubble-right .chatBubble-bubble {
   float: right;
   width: auto;
@@ -7430,7 +7434,7 @@ label.iOSCheckLabelOff span {
   font-weight: 100;
   font-size: 0.9em;
 }
-/* line 209, ../js/app/templates/scss/interview.scss */
+/* line 213, ../js/app/templates/scss/interview.scss */
 .chatBubble-right .chatBubble-bubble .chatBubble-caret {
   position: absolute;
   right: -8px;
@@ -7439,7 +7443,7 @@ label.iOSCheckLabelOff span {
   color: #2bbbff;
 }
 
-/* line 220, ../js/app/templates/scss/interview.scss */
+/* line 224, ../js/app/templates/scss/interview.scss */
 .interview-user-entered {
   padding: 15px;
   font-size: 0.8em;
@@ -7447,6 +7451,17 @@ label.iOSCheckLabelOff span {
   color: #888;
   font-style: italic;
   display: inline-block;
+}
+
+/* line 232, ../js/app/templates/scss/interview.scss */
+.localVid {
+  float: right;
+  position: relative;
+  top: 450px;
+  width: 250px;
+  height: 190px;
+  background: black;
+  left: -520px;
 }
 
 /* Smartphones (portrait and landscape) ----------- */

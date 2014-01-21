@@ -3,7 +3,13 @@
 	<div id="interview-video">
 
 		<div id="remoteVideo" class="remote-video unselectable">
-			<ul id="interview-video-toolbar">
+			<!-- spinner loader before video appears -->
+			<i class="fa fa-spinner fa-spin MB-interview-wait"></i>
+			<span class="MBinterview-wait-text">Please be patient while the other party arrives</span>
+			<video id="tempVideo" autoplay src=""></video>
+		</div>
+		<div class="localVid">
+			<ul id="interview-video-toolbar" class="unselectable">
 				<li class="fa fa-power-off interview-off"></li>
 				<li class="fa fa-exchange fa-rotate-90 interview-switch"></li>
 				<li class="fa fa-volume-up interview-mute" data-volume="on"></li>
@@ -15,14 +21,11 @@
 				  <i class="fa fa-share fa-stack-1x"></i>
 				  <i class="fa fa-desktop fa-stack-2x"></i>
 				</span>
+				<li class="fa fa-pause interview-pause" data-videoState="paused"></li>
+				<li class="fa fa-play interview-play" data-videoState="playing"></li>
 			</ul>
-			<!-- spinner loader before video appears -->
-			<i class="fa fa-spinner fa-spin MB-interview-wait"></i>
-			<span class="MBinterview-wait-text">Please be patient while the other party arrives</span>
-			<video id="tempVideo" autoplay src=""></video>
+			<video id="localVideo" class="local-video"></video>
 		</div>
-		<video id="localVideo" class="local-video"></video>
-		<div id="videoStatus" class="video-status"></div>
 	</div>
 	<div id="interview-chat">
 		<div id="dataChannelReceive"class="interview-chat-window" readonly="readonly"> </div>
