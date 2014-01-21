@@ -121,7 +121,7 @@ define(['jquery', 'hbs!templates/interview', 'backbone', 'marionette', 'webrtc',
             //if(this.webrtc.webrtc.localStream) {
                 var message = document.getElementById('dataChannelSend').value;
                 var messageHTML = '<div class="chatBubble"><div class="MB-user-menu-image chat-bubble-pic"><img src="../../img/earl.jpg"></div><div class="chatBubble-bubble"><i class="fa fa-caret-left chatBubble-caret"/> ' + message+ '</div> ';
-                //console.log(this.webrtc);
+                console.log(this.webrtc);
                 this.webrtc.webrtc.sendToAll(message);
                 $("#dataChannelReceive").append(messageHTML);
                 document.getElementById('dataChannelSend').value = '';
@@ -130,26 +130,6 @@ define(['jquery', 'hbs!templates/interview', 'backbone', 'marionette', 'webrtc',
           }
       });
 });
-
-//DONT THINK WE WILL EVER NEED THIS BUT WILL KEEP JUST IN CASE
-//             if (room) {
-//                 setRoom(room);
-//             } else {
-//                 $('form').submit(function () {
-//                     var val = $('#sessionInput').val().toLowerCase().replace(/\s/g, '-').replace(/[^A-Za-z0-9_\-]/g, '');
-//                     webrtc.createRoom(val, function (err, name) {
-//                         console.log(' create room cb', arguments);
-//                         var newUrl = location.pathname + '?' + name;
-//                         if (!err) {
-//                             history.replaceState({foo: 'bar'}, null, newUrl);
-//                             setRoom(name);
-//                         } else {
-//                             console.log(err);
-//                         }
-//                     });
-//                     return false;
-//                 });
-//             }
 
 //CANT DO THIS WITHOUT HTTPS
           // shareScreenHandler: function() {
