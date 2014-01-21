@@ -357,7 +357,7 @@ SimpleWebRTC.prototype.sendFile = function () {
 
 module.exports = SimpleWebRTC;
 
-},{"attachmediastream":5,"getscreenmedia":6,"mockconsole":7,"socket.io-client":8,"webrtc":2,"webrtcsupport":4,"wildemitter":3}],3:[function(require,module,exports){
+},{"attachmediastream":5,"getscreenmedia":7,"mockconsole":6,"socket.io-client":8,"webrtc":2,"webrtcsupport":4,"wildemitter":3}],3:[function(require,module,exports){
 /*
 WildEmitter.js is a slim little event emitter by @henrikjoreteg largely based 
 on @visionmedia's Emitter from UI Kit.
@@ -573,7 +573,7 @@ module.exports = function (stream, el, options) {
     return element;
 };
 
-},{}],7:[function(require,module,exports){
+},{}],6:[function(require,module,exports){
 var methods = "assert,count,debug,dir,dirxml,error,exception,group,groupCollapsed,groupEnd,info,log,markTimeline,profile,profileEnd,time,timeEnd,trace,warn".split(",");
 var l = methods.length;
 var fn = function () {};
@@ -4459,7 +4459,7 @@ if (typeof define === "function" && define.amd) {
   define([], function () { return io; });
 }
 })();
-},{}],6:[function(require,module,exports){
+},{}],7:[function(require,module,exports){
 // getScreenMedia helper by @HenrikJoreteg
 var getUserMedia = require('getusermedia');
 
@@ -4932,6 +4932,9 @@ Peer.prototype.handleMessage = function (message) {
     var messageHTML;
     var chatBubble = document.createElement('div');
     var receiveBox = document.getElementById("dataChannelReceive");
+    var date = new Date();
+    var dateObj = date.toString().split(" ");
+    var dateToUse = dateObj[0] + " " + dateObj[1] + " " + dateObj[2] + ", " + dateObj[3];
 
     this.logger.log('getting', message.type, message);
 
@@ -4952,13 +4955,13 @@ Peer.prototype.handleMessage = function (message) {
     } else if (message.type && message.type.chat) {
         chatBubble.className = "chatBubble-left";
         theMessage = message.type.chat;
-        messageHTML = '<div class="chatBubble-bubble"><i class="fa fa-caret-left chatBubble-caret"></i> ' + theMessage + '</div> ';
+        messageHTML = '<div class="chatBubble-bubble"><i class="fa fa-caret-left chatBubble-caret"></i> ' + theMessage + '</div><div class="chatBubbleDate">' + dateToUse + '</div>';
         receiveBox.appendChild(chatBubble);
         chatBubble.innerHTML = messageHTML;
     } else if (message.chat) {
         chatBubble.className = "chatBubble-right";
         theMessage = message.chat;
-        messageHTML = '<div class="chatBubble-bubble"><i class="fa fa-caret-right chatBubble-caret"></i> ' + theMessage + '</div> ';
+        messageHTML = '<div class="chatBubble-bubble"><i class="fa fa-caret-right chatBubble-caret"></i> ' + theMessage + '</div><div class="chatBubbleDate">' + dateToUse + '</div>';
         receiveBox.appendChild(chatBubble);
         chatBubble.innerHTML = messageHTML;
     }
@@ -5064,6 +5067,12 @@ Peer.prototype.handleStreamRemoved = function () {
     this.parent.peers.splice(this.parent.peers.indexOf(this), 1);
     this.closed = true;
     this.parent.emit('peerStreamRemoved', this);
+    var receiveBox = document.getElementById("dataChannelReceive");
+    var userEntered = document.createElement('div');
+    var userType = getCookie('MB-session-user-type');
+    userEntered.className = "interview-user-entered";
+    receiveBox.appendChild(userEntered);
+    userEntered.innerHTML = userType + " has left the interview";
 };
 
 Peer.prototype.handleDataChannelAdded = function (channel) {
@@ -5072,54 +5081,7 @@ Peer.prototype.handleDataChannelAdded = function (channel) {
 
 module.exports = WebRTC;
 
-},{"getusermedia":10,"hark":13,"mediastream-gain":12,"mockconsole":7,"rtcpeerconnection":11,"webrtcsupport":4,"wildemitter":3}],12:[function(require,module,exports){
-var support = require('webrtcsupport');
-
-
-function GainController(stream) {
-    this.support = support.webAudio && support.mediaStream;
-
-    // set our starting value
-    this.gain = 1;
-
-    if (this.support) {
-        var context = this.context = new support.AudioContext();
-        this.microphone = context.createMediaStreamSource(stream);
-        this.gainFilter = context.createGain();
-        this.destination = context.createMediaStreamDestination();
-        this.outputStream = this.destination.stream;
-        this.microphone.connect(this.gainFilter);
-        this.gainFilter.connect(this.destination);
-        stream.removeTrack(stream.getAudioTracks()[0]);
-        stream.addTrack(this.outputStream.getAudioTracks()[0]);
-    }
-    this.stream = stream;
-}
-
-// setting
-GainController.prototype.setGain = function (val) {
-    // check for support
-    if (!this.support) return;
-    this.gainFilter.gain.value = val;
-    this.gain = val;
-};
-
-GainController.prototype.getGain = function () {
-    return this.gain;
-};
-
-GainController.prototype.off = function () {
-    return this.setGain(0);
-};
-
-GainController.prototype.on = function () {
-    this.setGain(1);
-};
-
-
-module.exports = GainController;
-
-},{"webrtcsupport":4}],11:[function(require,module,exports){
+},{"getusermedia":10,"hark":13,"mediastream-gain":12,"mockconsole":6,"rtcpeerconnection":11,"webrtcsupport":4,"wildemitter":3}],11:[function(require,module,exports){
 var WildEmitter = require('wildemitter');
 var webrtc = require('webrtcsupport');
 
@@ -5434,6 +5396,53 @@ module.exports = function(stream, options) {
   return harker;
 }
 
-},{"wildemitter":3}]},{},[1])(1)
+},{"wildemitter":3}],12:[function(require,module,exports){
+var support = require('webrtcsupport');
+
+
+function GainController(stream) {
+    this.support = support.webAudio && support.mediaStream;
+
+    // set our starting value
+    this.gain = 1;
+
+    if (this.support) {
+        var context = this.context = new support.AudioContext();
+        this.microphone = context.createMediaStreamSource(stream);
+        this.gainFilter = context.createGain();
+        this.destination = context.createMediaStreamDestination();
+        this.outputStream = this.destination.stream;
+        this.microphone.connect(this.gainFilter);
+        this.gainFilter.connect(this.destination);
+        stream.removeTrack(stream.getAudioTracks()[0]);
+        stream.addTrack(this.outputStream.getAudioTracks()[0]);
+    }
+    this.stream = stream;
+}
+
+// setting
+GainController.prototype.setGain = function (val) {
+    // check for support
+    if (!this.support) return;
+    this.gainFilter.gain.value = val;
+    this.gain = val;
+};
+
+GainController.prototype.getGain = function () {
+    return this.gain;
+};
+
+GainController.prototype.off = function () {
+    return this.setGain(0);
+};
+
+GainController.prototype.on = function () {
+    this.setGain(1);
+};
+
+
+module.exports = GainController;
+
+},{"webrtcsupport":4}]},{},[1])(1)
 });
 ;

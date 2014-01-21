@@ -118,7 +118,9 @@ define(['jquery', 'hbs!templates/interview', 'backbone', 'marionette', 'webrtc',
             }
           },
           sendChatMessage: function() {
-            //TODO: add a "user is typing.." support, also user left room support, clear remote video when user leaves
+            //TODO: add a "user is typing.." support,
+            // clear remote video when user leaves,
+            // send on enter
                 var message = {'chat': document.getElementById('dataChannelSend').value};
 
                 if (this.webrtc.webrtc.peers.length > 0) {
