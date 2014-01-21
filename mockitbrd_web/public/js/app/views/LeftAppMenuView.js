@@ -41,9 +41,11 @@ define(['jquery', 'hbs!templates/leftAppMenu', 'backbone', 'marionette'],
 
             if ($('.MB-left-app-menu').css('left') === '0px') {
               $('.MB-left-app-menu').css('left', '-60px');
+              $('#dashboard-content').css('left', '-60px');
               $('.MB-left-app-menu-button').css('left', '0px');
             } else {
               $('.MB-left-app-menu').css('left', '0px');
+              $('#dashboard-content').css('left', '60px');
               $('.MB-left-app-menu-button').css('left', '60px');
             }
           }

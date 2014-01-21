@@ -13,7 +13,7 @@ html, body, #page, #left-header, #dashboard {
 }
 
 #left-header {float: left;}
-#dashboard {display: none;}
+#dashboard {display: none; background: $dashboard_bg;}
 
 a {
 	color: $primary_blue;
