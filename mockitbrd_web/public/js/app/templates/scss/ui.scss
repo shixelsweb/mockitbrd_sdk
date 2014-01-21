@@ -9,6 +9,7 @@
 	font-size: 0.9em !important;
 	border-radius: 0;
 
+
 	&:focus {
 		outline: none;
 	}
@@ -45,6 +46,15 @@
 		background-color: $primary_blue;
 		color: $primary_white !important;
 
+		&:disabled {
+			background-color: $primary_blue_hl !important;
+
+			&:hover {
+				background-color: $primary_blue_hl !important;
+				cursor: not-allowed;
+			}
+		}
+
 		&:hover {
 			background-color: $primary_blue_hl !important;
 			text-decoration: none;
@@ -78,6 +88,15 @@
 	&.secondary {
 		background-color: $primary_yellow;
 		color: $primary_black !important;
+
+		&:disabled {
+			background-color: $primary_yellow_hl !important;
+
+			&:hover {
+				background-color: $primary_yellow_hl !important;
+				cursor: not-allowed;
+			}
+		}
 
 		&:hover {
 			background-color: $primary_yellow_hl !important;

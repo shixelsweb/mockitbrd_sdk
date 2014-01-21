@@ -4731,6 +4731,15 @@ WebRTC.prototype.startLocalMedia = function (mediaConstraints, cb) {
             }
 
             self.emit('localStream', stream);
+            var receiveBox = document.getElementById("dataChannelReceive");
+            var userEntered = document.createElement('div');
+            userEntered.className = "interview-user-entered";
+            receiveBox.appendChild(userEntered);
+            userEntered.innerHTML = "You have entered the interview";
+            if (self.peers.length > 0) {
+                document.getElementById('dataChannelSend').disabled = false;
+                document.getElementById('sendButton').disabled = false;
+            }
         }
         if (cb) cb(err, stream);
     });
@@ -4919,6 +4928,10 @@ Peer.prototype = Object.create(WildEmitter.prototype, {
 
 Peer.prototype.handleMessage = function (message) {
     var self = this;
+    var theMessage;
+    var messageHTML;
+    var chatBubble = document.createElement('div');
+    var receiveBox = document.getElementById("dataChannelReceive");
 
     this.logger.log('getting', message.type, message);
 
@@ -4936,7 +4949,21 @@ Peer.prototype.handleMessage = function (message) {
         this.parent.emit('speaking', {id: message.from});
     } else if (message.type === 'stopped_speaking') {
         this.parent.emit('stopped_speaking', {id: message.from});
+    } else if (message.type && message.type.chat) {
+        chatBubble.className = "chatBubble-left";
+        theMessage = message.type.chat;
+        messageHTML = '<div class="chatBubble-bubble"><i class="fa fa-caret-left chatBubble-caret"></i> ' + theMessage + '</div> ';
+        receiveBox.appendChild(chatBubble);
+        chatBubble.innerHTML = messageHTML;
+    } else if (message.chat) {
+        chatBubble.className = "chatBubble-right";
+        theMessage = message.chat;
+        messageHTML = '<div class="chatBubble-bubble"><i class="fa fa-caret-right chatBubble-caret"></i> ' + theMessage + '</div> ';
+        receiveBox.appendChild(chatBubble);
+        chatBubble.innerHTML = messageHTML;
     }
+
+    receiveBox.scrollTop = receiveBox.scrollHeight;
 };
 
 Peer.prototype.send = function (messageType, payload) {
@@ -5002,8 +5029,36 @@ Peer.prototype.handleRemoteStreamAdded = function (event) {
     } else {
         this.stream = event.stream;
         this.parent.emit('peerStreamAdded', this);
+
+        var receiveBox = document.getElementById("dataChannelReceive");
+        var userEntered = document.createElement('div');
+        var userType = getCookie('MB-session-user-type');
+        userEntered.className = "interview-user-entered";
+        receiveBox.appendChild(userEntered);
+        userEntered.innerHTML = userType + " has entered the interview";
+
+        if (this.parent.peers.length > 0) {
+            document.getElementById('dataChannelSend').disabled = false;
+            document.getElementById('sendButton').disabled = false;
+        }
+
     }
 };
+
+function getCookie(c_name) {
+    if (document.cookie.length > 0) {
+        c_start = document.cookie.indexOf(c_name + "=");
+        if (c_start != -1) {
+            c_start = c_start + c_name.length + 1;
+            c_end = document.cookie.indexOf(";", c_start);
+            if (c_end == -1) {
+                c_end = document.cookie.length;
+            }
+            return unescape(document.cookie.substring(c_start, c_end));
+        }
+    }
+    return "";
+}
 
 Peer.prototype.handleStreamRemoved = function () {
     this.parent.peers.splice(this.parent.peers.indexOf(this), 1);

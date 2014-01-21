@@ -152,32 +152,59 @@ background: #eee;
 	display: none;
 }
 
-.chatBubble {
-padding: 15px;
-float: left;
-width: 90%;
-.chat-bubble-pic {
-float: left;
+.chatBubble-left {
+	padding: 15px;
+	float: left;
+	width: 90%;
+
+	.chatBubble-bubble {
+	float: left;
+	width: 70%;
+	background: $primary_yellow;
+	margin-left: 25px;
+	border-radius: 5px;
+	padding: 15px;
+	position: relative;
+	word-wrap: break-word;
+		.chatBubble-caret {
+		position: absolute;
+		left: -10px;
+		font-size: 2em;
+		top: 8px;
+		color: $primary_yellow;
+		}
+	}
 }
-.chatBubble-bubble {
-float: left;
-width: 70%;
-background: $primary_blue;
-margin-left: 25px;
-border-radius: 5px;
-padding: 15px;
-position: relative;
-word-wrap: break-word;
-.chatBubble-caret {
-position: absolute;
-left: -10px;
-font-size: 2em;
-top: 8px;
-color: #2bbbff;
-}
-}
+.chatBubble-right {
+	padding: 15px;
+	float: right;
+	width: 90%;
+
+	.chatBubble-bubble {
+	float: right;
+	width: 70%;
+	background: $primary_blue;
+	border-radius: 5px;
+	padding: 15px;
+	position: relative;
+	word-wrap: break-word;
+		.chatBubble-caret {
+		position: absolute;
+		right: -8px;
+		font-size: 2em;
+		top: 8px;
+		color: $primary_blue;
+		}
+	}
 }
 
+.interview-user-entered {
+padding: 15px;
+font-size: 0.8em;
+font-weight: 100;
+color: #888;
+font-style: italic;
+}
 
 
 

@@ -118,15 +118,14 @@ define(['jquery', 'hbs!templates/interview', 'backbone', 'marionette', 'webrtc',
             }
           },
           sendChatMessage: function() {
-            //if(this.webrtc.webrtc.localStream) {
-                var message = document.getElementById('dataChannelSend').value;
-                var messageHTML = '<div class="chatBubble"><div class="MB-user-menu-image chat-bubble-pic"><img src="../../img/earl.jpg"></div><div class="chatBubble-bubble"><i class="fa fa-caret-left chatBubble-caret"/> ' + message+ '</div> ';
-                console.log(this.webrtc);
-                this.webrtc.webrtc.sendToAll(message);
-                $("#dataChannelReceive").append(messageHTML);
+            //TODO: add a "user is typing.." support
+                var message = {'chat': document.getElementById('dataChannelSend').value};
+
+                if (this.webrtc.webrtc.peers.length > 0) {
+                  this.webrtc.webrtc.peers[0].send(message);
+                  this.webrtc.webrtc.peers[0].handleMessage(message);
+                }
                 document.getElementById('dataChannelSend').value = '';
-                $("#dataChannelReceive")[0].scrollTop = $("#dataChannelReceive")[0].scrollHeight;
-            //}
           }
       });
 });

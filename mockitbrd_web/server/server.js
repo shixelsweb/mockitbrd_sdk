@@ -18,9 +18,9 @@ bundle.add('./public/js/libs/plugins/video-chat/simplewebrtc');
 //     fs.writeFileSync('public/js/libs/plugins/video-chat/simplewebrtc.bundle.js', source);
 //     request.get('http://signaling.simplewebrtc.com:8888/socket.io/socket.io.js', function (err, res, body) {
 //         if (!err && body && body.length) {
-//             fs.writeFile('public/js/libs/plugins/webrtc.js', uglify.minify(source + body, {fromString: true}).code, function (err) {
+//             fs.writeFile('public/js/libs/plugins/video-chat/webrtc.js', uglify.minify(source + body, {fromString: true}).code, function (err) {
 //                 if (err) throw err;
-//             });
+            // });
 //         }
 //     });
 // });
