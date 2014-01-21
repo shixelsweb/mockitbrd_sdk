@@ -65,27 +65,27 @@ define(['jquery', 'hbs!templates/interview', 'backbone', 'marionette', 'webrtc',
             $('#interview-video-toolbar').toggle();
           },
           switchVideos: function() {
-            var remoteVid = $('#remoteVideo video');
-            var localVid = $('#localVideo');
-            var remoteVidSrc = remoteVid.attr('src');
-            var localVidSrc = localVid.attr('src');
+            // var remoteVid = $('#remoteVideo video');
+            // var localVid = $('#localVideo');
+            // var remoteVidSrc = remoteVid.attr('src');
+            // var localVidSrc = localVid.attr('src');
 
-            if(this.webrtc.webrtc.localStream && (this.webrtc.webrtc.peers.length > 0)) {
-              var holder = localVidSrc;
-              remoteVid.attr('src', localVidSrc);
-              localVid.attr('src', holder);
-            } else if (this.webrtc.webrtc.localStream && (this.webrtc.webrtc.peers.length <= 0)) {
+            // if(this.webrtc.webrtc.localStream && (this.webrtc.webrtc.peers.length > 0)) {
+            //   var holder = localVidSrc;
+            //   remoteVid.attr('src', localVidSrc);
+            //   localVid.attr('src', holder);
+            // } else if (this.webrtc.webrtc.localStream && (this.webrtc.webrtc.peers.length <= 0)) {
 
-              if (!localVid.attr('src')) {
-                $('#tempVideo').css('display', 'none');
-                localVid.attr('src', $('#tempVideo').attr('src'));
-                $('#tempVideo').attr('src', '');
-              } else {
-                  $('#tempVideo').css('display', 'block');
-                  $('#tempVideo').attr('src', localVidSrc);
-                  localVid.attr('src', '');
-              }
-            }
+            //   if (!localVid.attr('src')) {
+            //     $('#tempVideo').css('display', 'none');
+            //     localVid.attr('src', $('#tempVideo').attr('src'));
+            //     $('#tempVideo').attr('src', '');
+            //   } else {
+            //       $('#tempVideo').css('display', 'block');
+            //       $('#tempVideo').attr('src', localVidSrc);
+            //       localVid.attr('src', '');
+            //   }
+            // }
           },
           endVideo: function() {
             var self = this;
@@ -118,7 +118,7 @@ define(['jquery', 'hbs!templates/interview', 'backbone', 'marionette', 'webrtc',
             }
           },
           sendChatMessage: function() {
-            //TODO: add a "user is typing.." support
+            //TODO: add a "user is typing.." support, also user left room support, clear remote video when user leaves
                 var message = {'chat': document.getElementById('dataChannelSend').value};
 
                 if (this.webrtc.webrtc.peers.length > 0) {
