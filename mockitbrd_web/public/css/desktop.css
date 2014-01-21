@@ -6910,7 +6910,7 @@ label.iOSCheckLabelOff span {
   border-right: 1px groove #777;
   overflow-y: scroll;
   -webkit-transition-property: left;
-  -webkit-transition-duration: 0.5s;
+  -webkit-transition-duration: 0.2s;
   left: 0;
   z-index: 99;
   position: absolute;
@@ -6971,7 +6971,7 @@ label.iOSCheckLabelOff span {
   border-top: none;
   cursor: pointer;
   -webkit-transition-property: left;
-  -webkit-transition-duration: 0.5s;
+  -webkit-transition-duration: 0.2s;
 }
 
 /* line 1, ../js/app/templates/scss/topAppMenu.scss */
@@ -7099,7 +7099,7 @@ label.iOSCheckLabelOff span {
   height: 100%;
   background: #edeff0;
   -webkit-transition-property: left;
-  -webkit-transition-duration: 0.5s;
+  -webkit-transition-duration: 0.2s;
   position: relative;
   left: 0;
 }

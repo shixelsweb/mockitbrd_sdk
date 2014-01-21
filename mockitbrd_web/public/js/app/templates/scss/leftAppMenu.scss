@@ -6,7 +6,7 @@
 	border-right: 1px groove #777;
 	overflow-y: scroll;
 	-webkit-transition-property: left;
-    -webkit-transition-duration: 0.5s;
+    -webkit-transition-duration: 0.2s;
     left: 0;
     z-index: 99;
     position: absolute;
@@ -65,5 +65,5 @@
 	border-top: none;
 	cursor: pointer;
 	-webkit-transition-property: left;
-    -webkit-transition-duration: 0.5s;
+    -webkit-transition-duration: 0.2s;
 }
