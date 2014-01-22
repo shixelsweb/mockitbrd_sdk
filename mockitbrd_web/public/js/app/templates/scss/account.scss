@@ -1,0 +1,180 @@
+html, body{
+	height: 100%;
+	overflow: hidden;
+}
+
+#account-view{
+	height: 100%;
+}
+
+#general-head{
+	font-size: 23px;
+	margin-bottom: 5px;
+}
+
+#account-head{
+	font-size: 25px;
+}
+
+#profile-pic-head{
+	font-size: 17px;
+	margin-bottom: 15px;
+	margin-left: 76px;
+	text-align: left;
+}
+
+.MB-row-space{
+	margin-top: 5%;
+}
+
+
+.MB-modal-body{
+	width: 950px;
+	margin-right: auto;
+	margin-left: auto;
+	background: $primary_light_grey;
+	padding: 25px;
+	height: 100%;
+}
+
+.MB-account-desc{
+	margin-left: 30px;
+}
+
+.MB-account-nav{
+	border-right: 1px $primary_white solid;
+	text-align: center;
+	width: 200px;
+}
+
+.MB-account-container{
+	width: 100%;
+}
+
+.MB-account-nav-links{
+	a{
+	color: $primary_grey;	
+	}
+
+	li{
+	text-align: center;	
+	padding-top: 50px; 
+	}
+
+	li:hover{
+		background-color: red;
+		width: 100%;
+		height: 100%;
+		color: green;
+	}
+
+	li:active{
+		background: $primary_white;
+		color: $primary_blue;
+		width: 100%;
+	}
+}	
+
+.MB-account-window{
+
+	padding: 15px;
+	width: 98%;
+	height: 100%;
+	background: $primary_white;
+	border-radius: 3px;
+	border: $primary_grey_hl 1px solid;
+}
+
+.Photo-user-name{
+text-align: center;
+margin-bottom: 2px;
+}
+
+.name-info-input{
+	
+}
+
+.photo-section-align{
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+.MB-user-align{
+	text-align:center;
+}
+
+.MB-name-info > div > div > input{
+	margin-top: 10px;
+	margin-bottom: 15px;
+	border-radius: 2px;
+	width: 90%;
+}
+
+.MB-button-upload{
+	margin-top: 15px;
+	border: none;
+	color: $primary_grey_hl;
+
+	a{
+		color: $primary_grey_hl !important;
+	}
+
+	a:hover{
+		color: $primary_blue_hl !important;
+		cursor: pointer;
+	}
+
+}
+
+.MB-user-photo-frame{
+	border: 1px solid $primary_light_grey;
+	border-width: 0px 1px 3px 1px;
+	height: 325px;
+	width: 300px;
+	text-align: center;
+	margin-right: auto;
+	margin-left: auto;
+	background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#faf4f4));;
+	vertical-align: middle;
+	border-radius: 2px;
+}
+
+.MB-user-photo-frame:before {
+  content: '';
+  border-radius: 2px;
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -0.25em; /* Adjusts for spacing */
+}
+
+.MB-user-photo{
+	margin-left: auto;
+	margin-right: auto;
+	width: 250px;
+	height: 250px;
+	border: 2px solid $primary_blue;
+	border-radius: 2px;
+	border-color: $primary_black; 
+	background-color: $primary_light_grey;
+	display: inline-block;
+	vertical-align: middle;
+	position: relative;
+}
+
+.MB-user-photo > img{
+	margin-bottom: 15px;
+	border-radius: 2px;
+}
+
+.shadow{
+	-webkit-box-shadow: 0 8px 6px -6px red;
+	   -moz-box-shadow: 0 8px 6px -6px black;
+	        box-shadow: 0 8px 6px -6px $primary_grey_hl;
+}
+
+
+#notContent, #payContent, #supContent{
+	display: none;
+}

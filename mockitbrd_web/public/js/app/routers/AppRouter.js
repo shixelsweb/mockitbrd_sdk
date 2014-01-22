@@ -27,7 +27,7 @@ define(['backbone', 'marionette'], function(Backbone, Marionette) {
            "dashboard": "dashboard",
            "user/:id": "user",
            "tasks": "tasks",
-           "user/account": "account",
+           "user/:id/account": "account",
            "interview/:id": "interview"
        }
    });

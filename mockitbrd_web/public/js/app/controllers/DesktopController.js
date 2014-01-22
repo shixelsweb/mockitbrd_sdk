@@ -37,7 +37,12 @@ define([ //VIEWS
     //Dashboard Views
     'views/DashboardCalendarView',
     //Interview Views
-    'views/InterviewView'
+    'views/InterviewView',
+    //Account Views
+    'views/AccountNotificationsView',
+    'views/AccountPaymentView',
+    'views/AccountSupportView',
+    'views/AccountGeneralView'
 ],
 function (
 //IDS
@@ -79,7 +84,12 @@ function (
     //Dashboard Views
     DashboardCalendarView,
     //Interview Views
-    InterviewView
+    InterviewView,
+    //Account Views
+    AccountNotificationsView,
+    AccountPaymentView,
+    AccountSupportView,
+    AccountGeneralView
 ){
     return Backbone.Marionette.Controller.extend({
         initialize: function (options) {
@@ -232,10 +242,15 @@ function (
 
         },
         account: function () {
+            var paymentView = new AccountPaymentView();
+            var notificationView = new AccountNotificationsView();
+            var supportView = new AccountSupportView();
+            var generalView = new AccountGeneralView();
+
             this.hideModal();
-            this.showPrivateHeader(false);
-            this.showFooter();
-            MB.mainRegion.show(new AccountView());
+            this.hideHeader();
+            MB.mainRegion.show(new AccountView({'paymentView': paymentView, 'notificationView': notificationView, 'supportView': supportView, 'generalView': generalView}));
+            $("#accountViewRegion").html(generalView.render().el);
         },
         dashboard: function () {
             var dashboardCalendar = new DashboardCalendarView();

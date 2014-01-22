@@ -1,0 +1,38 @@
+<div id="account-general-view">
+<div class="MB-account-window-titie">
+	<h2 id="general-head">General</h2>
+	<h4>Update personal account information</h4>
+</div>
+<hr>
+<div class="MB-name-info">
+	<div class="row">
+		<div class="span4 name-info-input">
+			<label>First Name:</label>
+			<input type="text" value="{{user.fname}}"><br>
+			<label>Last Name:</label>
+			<input type="text" value="{{user.lname}}"><br>
+			<label>Telephone Number:</label>
+			<input type="text" value="{{user.phone}}"><br>
+			<label>Email:</label>
+			<input type="email" value="{{user.email}}"><br>
+			<label>Change Password:</label>
+			<input type="password" placeholder=""><br>
+			<label>Confirm Password:</label>
+			<input type="password" placeholder=""><br> 
+		</div>
+		<div class="span6 photo-section-align">
+			<h1 id="profile-pic-head">Profile Picture:</h1>
+
+			<div class="MB-user-photo-frame shadow">
+				<div class="MB-user-photo">
+					<img src="../../../img/earl.jpg">
+					<span id="photo-username">{{user.fname}} {{user.lname}}</span>
+				</div>	
+				
+			</div>
+
+			<div class="MB-button-upload"><a><i class="fa fa-picture-o"></i> Upload Photo</a></div>
+		</div>
+	</div>
+</div>			
+</div>

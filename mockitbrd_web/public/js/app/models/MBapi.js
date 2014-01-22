@@ -72,7 +72,7 @@ define(["jquery", "underscore", "backbone"],
                     error: function(response) {
                         alert("error! ", response.data.error); //TODO-(Fara): add to Error Modal
                     },
-                    async: false,
+                    async: false
                 });
 
                 return send;
@@ -93,7 +93,7 @@ define(["jquery", "underscore", "backbone"],
                     error: function(response) {
                         alert("error! ", response.data.error); //TODO-(Fara): add to Error Modal
                     },
-                    async: false,
+                    async: false
                 });
 
                 return tasks;
@@ -108,9 +108,9 @@ define(["jquery", "underscore", "backbone"],
                         send = response.data.user;
                     },
                     error: function(response) {
-                        alert("error! ", response.data.error); //TODO-(Fara): add to Error Modal
+                        alert("error! ", response.error); //TODO-(Fara): add to Error Modal
                     },
-                    async: false,
+                    async: false
                 });
 
                 return send;
@@ -127,7 +127,7 @@ define(["jquery", "underscore", "backbone"],
                     error: function(response) {
                         alert("error! ", response.data.error); //TODO-(Fara): add to Error Modal
                     },
-                    async: false,
+                    async: false
                 });
 
                 return send;
