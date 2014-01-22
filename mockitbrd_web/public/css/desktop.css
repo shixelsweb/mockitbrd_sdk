@@ -7090,11 +7090,9 @@ label.iOSCheckLabelOff span {
   border-left: none;
   border-top: none;
   cursor: pointer;
-  -webkit-transition-property: left;
-  -webkit-transition-duration: 0.2s;
 }
 
-/* line 89, ../js/app/templates/scss/leftAppMenu.scss */
+/* line 87, ../js/app/templates/scss/leftAppMenu.scss */
 .scroll-left-menu {
   overflow-y: scroll;
   margin-top: 60px;
