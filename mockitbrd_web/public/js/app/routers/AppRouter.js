@@ -25,7 +25,7 @@ define(['backbone', 'marionette'], function(Backbone, Marionette) {
            "pricing/professionals": "professionalPricing",
            //Application Pages
            "dashboard": "dashboard",
-           // "app/user": "user",
+           "user/:id": "user",
            "tasks": "tasks",
            "user/account": "account",
            "interview/:id": "interview"

@@ -9,6 +9,7 @@ define(['jquery', 'models/Model', 'hbs!templates/tasks', 'backbone', 'marionette
           tasks: null,
 
           initialize: function() {
+
             this.user = $.parseJSON(MB.session.get('user'));
             this.tasks = MB.api.getUserTasksFull(this.user._id);
 
@@ -38,6 +39,8 @@ define(['jquery', 'models/Model', 'hbs!templates/tasks', 'backbone', 'marionette
             // assumes 1 child element.
             this.$el = this.$el.children();
             this.setElement(this.$el);
+            $('.left-menu-item').removeClass('active');
+            $('.MB-interviews').addClass('active');
           }
       });
 });

@@ -29,6 +29,7 @@ define([ //VIEWS
     'views/DashboardView',
     'views/AccountView',
     'views/TaskView',
+    'views/UserView',
     //Application UI
     'views/LeftAppMenuView',
     'views/TopAppMenuView',
@@ -70,6 +71,7 @@ function (
     DashboardView,
     AccountView,
     TaskView,
+    UserView,
     //Application UI
     LeftAppMenuView,
     TopAppMenuView,
@@ -254,6 +256,14 @@ function (
             this.launchApp();
 
             $('#dashboard-view').append(taskView.render().el);
+        },
+        user: function(id) {
+            var getUser = MB.api.user(id);
+            var userView = new UserView({'user': getUser});
+
+            this.launchApp();
+
+            $('#dashboard-view').append(userView.render().el);
         }
     });
 });

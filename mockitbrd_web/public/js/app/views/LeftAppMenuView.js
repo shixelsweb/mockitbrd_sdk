@@ -1,14 +1,20 @@
-define(['jquery', 'hbs!templates/leftAppMenu', 'backbone', 'marionette'],
-    function ($, template, Backbone) {
+define(['jquery','models/Model', 'hbs!templates/leftAppMenu', 'backbone', 'marionette'],
+    function ($, Model, template, Backbone) {
       //ItemView provides some default rendering logic
       return Backbone.Marionette.ItemView.extend({
           template:template,
+
+          user: null,
 
           events: {
             'click .left-menu-item': 'onLeftMenuClick',
             'click .MB-left-app-menu-button': 'onLeftAppMenuButtonClick'
           },
+          initialize: function() {
+            this.user = $.parseJSON(MB.session.get('user'));
 
+            this.model = new Model({user: this.user});
+          },
           onRender: function () {
             // get rid of that pesky wrapping-div
             // assumes 1 child element.
@@ -16,8 +22,6 @@ define(['jquery', 'hbs!templates/leftAppMenu', 'backbone', 'marionette'],
             this.setElement(this.$el);
           },
           onLeftMenuClick: function(e) {
-            e.preventDefault();
-
             $('.left-menu-item').removeClass('active');
             $(e.currentTarget).addClass('active');
           },

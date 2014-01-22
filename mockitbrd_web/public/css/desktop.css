@@ -7669,6 +7669,53 @@ label.iOSCheckLabelOff span {
   text-transform: capitalize;
 }
 
+/* line 1, ../js/app/templates/scss/user.scss */
+#user-view {
+  margin-left: 280px;
+}
+
+/* line 5, ../js/app/templates/scss/user.scss */
+.MB-user-profile-top {
+  width: 85%;
+  min-height: 250px;
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 0px 0px 2px #999;
+}
+
+/* line 13, ../js/app/templates/scss/user.scss */
+.MB-user-profile-photo {
+  width: 20%;
+  height: 100%;
+  border-radius: 100px;
+  overflow: hidden;
+  float: left;
+  margin: 20px 30px;
+  display: inline-block;
+}
+
+/* line 23, ../js/app/templates/scss/user.scss */
+.MB-user-profile-top-info {
+  float: left;
+  min-height: 250px;
+  display: inline-block;
+  width: 40%;
+}
+/* line 29, ../js/app/templates/scss/user.scss */
+.MB-user-profile-top-info h1 {
+  padding: 50px 0;
+  font-size: 2em;
+  color: #2bbbff;
+  font-weight: 100;
+}
+
+/* line 37, ../js/app/templates/scss/user.scss */
+.MB-user-profile-quick-links {
+  width: 30%;
+  min-height: 250px;
+  display: inline-block;
+}
+
 /* line 10, ../scss/desktop.scss */
 html, body, #page, #left-header, #dashboard {
   height: 100%;
