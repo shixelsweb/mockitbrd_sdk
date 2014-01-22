@@ -67,6 +67,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
 }
 
+/* line 28, ../js/app/templates/scss/variables.scss */
+.glass-effect {
+  box-shadow: 0px 0px 0px 8px rgba(0, 0, 0, 0.3), 0px 2px 3px 0px rgba(0, 0, 0, 0.6);
+}
+
 @font-face {
   font-family: "Open Sans";
   src: url('fonts/../../fonts/opensans/regular.ttf') format('truetype');
@@ -92,7 +97,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   src: url('fonts/../../fonts/ethon/ethon_roman.ttf') format('truetype');
 }
 
-/* line 40, ../js/app/templates/scss/variables.scss */
+/* line 47, ../js/app/templates/scss/variables.scss */
 .unselectable {
   -moz-user-select: none;
   -khtml-user-select: none;
@@ -100,12 +105,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   -o-user-select: none;
 }
 
-/* line 47, ../js/app/templates/scss/variables.scss */
+/* line 54, ../js/app/templates/scss/variables.scss */
 .placeholderHIW {
   margin-top: 30px;
 }
 
-/* line 51, ../js/app/templates/scss/variables.scss */
+/* line 58, ../js/app/templates/scss/variables.scss */
 .MB-boardroom-bg {
   background: url("../../img/login_bg.jpg") no-repeat;
   background-position: center;
@@ -113,7 +118,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   -moz-background-size: cover;
 }
 
-/* line 58, ../js/app/templates/scss/variables.scss */
+/* line 65, ../js/app/templates/scss/variables.scss */
 .MB-office-bg {
   background: url("../../img/office_bg.jpg") no-repeat;
   background-position: center;
@@ -121,7 +126,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   -moz-background-size: cover;
 }
 
-/* line 65, ../js/app/templates/scss/variables.scss */
+/* line 72, ../js/app/templates/scss/variables.scss */
 .MB-mail-bg {
   background: url("../../img/mail_bg.jpg") no-repeat;
   background-position: center;
@@ -129,7 +134,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   -moz-background-size: cover;
 }
 
-/* line 72, ../js/app/templates/scss/variables.scss */
+/* line 79, ../js/app/templates/scss/variables.scss */
 .MB-waiting-bg {
   background: url("../../img/waiting.jpg") no-repeat;
   background-position: top;
@@ -137,55 +142,55 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   -moz-background-size: cover;
 }
 
-/* line 79, ../js/app/templates/scss/variables.scss */
+/* line 86, ../js/app/templates/scss/variables.scss */
 .MB-lightGrey-bg {
   background-color: #f4f4f4;
 }
 
-/* line 82, ../js/app/templates/scss/variables.scss */
+/* line 89, ../js/app/templates/scss/variables.scss */
 .MB-white-bg {
   background-color: white;
   box-shadow: 0px 0px 2px #525252;
 }
 
-/* line 87, ../js/app/templates/scss/variables.scss */
+/* line 94, ../js/app/templates/scss/variables.scss */
 .MB-geom-bg {
   background: url("../../img/geometry.png");
   box-shadow: 0px 0px 2px #525252;
 }
 
-/* line 91, ../js/app/templates/scss/variables.scss */
+/* line 98, ../js/app/templates/scss/variables.scss */
 .clear-left {
   clear: left;
 }
 
-/* line 95, ../js/app/templates/scss/variables.scss */
+/* line 102, ../js/app/templates/scss/variables.scss */
 .clear-right {
   clear: right;
 }
 
-/* line 99, ../js/app/templates/scss/variables.scss */
+/* line 106, ../js/app/templates/scss/variables.scss */
 .clear-both {
   clear: both;
 }
 
-/* line 103, ../js/app/templates/scss/variables.scss */
+/* line 110, ../js/app/templates/scss/variables.scss */
 .noShadow {
   box-shadow: none;
   text-shadow: none;
 }
 
-/* line 108, ../js/app/templates/scss/variables.scss */
+/* line 115, ../js/app/templates/scss/variables.scss */
 .plus150 {
   padding-top: 150px;
 }
 
-/* line 112, ../js/app/templates/scss/variables.scss */
+/* line 119, ../js/app/templates/scss/variables.scss */
 .top52 {
   margin-top: 52px;
 }
 
-/* line 116, ../js/app/templates/scss/variables.scss */
+/* line 123, ../js/app/templates/scss/variables.scss */
 .plus100 {
   padding-top: 100px;
 }
@@ -965,62 +970,67 @@ header.ghost .navbar-inner {
   text-decoration: none;
   font-size: 0.9em !important;
   border-radius: 0;
+  border: 0;
 }
 /* line 13, ../js/app/templates/scss/ui.scss */
+.MB-button:disabled:hover {
+  cursor: not-allowed;
+}
+/* line 19, ../js/app/templates/scss/ui.scss */
 .MB-button:focus {
   outline: none;
 }
-/* line 17, ../js/app/templates/scss/ui.scss */
+/* line 23, ../js/app/templates/scss/ui.scss */
 .MB-button a {
   text-decoration: none;
 }
-/* line 21, ../js/app/templates/scss/ui.scss */
+/* line 27, ../js/app/templates/scss/ui.scss */
 .MB-button.med-size {
   width: 70px;
   margin-left: 30px;
 }
-/* line 26, ../js/app/templates/scss/ui.scss */
+/* line 32, ../js/app/templates/scss/ui.scss */
 .MB-button.small {
   font-size: 15px;
   padding: 10px 20px;
 }
-/* line 31, ../js/app/templates/scss/ui.scss */
+/* line 37, ../js/app/templates/scss/ui.scss */
 .MB-button.login {
   padding: 10px 140px;
   border-radius: 0;
   top: 20px;
   position: relative;
 }
-/* line 37, ../js/app/templates/scss/ui.scss */
+/* line 43, ../js/app/templates/scss/ui.scss */
 .MB-button.facebook {
   background-color: #4c66a4 !important;
   border-radius: 0;
 }
-/* line 41, ../js/app/templates/scss/ui.scss */
+/* line 47, ../js/app/templates/scss/ui.scss */
 .MB-button.linkedin {
   background-color: #006699 !important;
   border-radius: 0;
 }
-/* line 45, ../js/app/templates/scss/ui.scss */
+/* line 51, ../js/app/templates/scss/ui.scss */
 .MB-button.primary {
   background-color: #2bbbff;
   color: white !important;
 }
-/* line 49, ../js/app/templates/scss/ui.scss */
+/* line 55, ../js/app/templates/scss/ui.scss */
 .MB-button.primary:disabled {
   background-color: #0085c4 !important;
 }
-/* line 52, ../js/app/templates/scss/ui.scss */
+/* line 58, ../js/app/templates/scss/ui.scss */
 .MB-button.primary:disabled:hover {
   background-color: #0085c4 !important;
   cursor: not-allowed;
 }
-/* line 58, ../js/app/templates/scss/ui.scss */
+/* line 64, ../js/app/templates/scss/ui.scss */
 .MB-button.primary:hover {
   background-color: #0085c4 !important;
   text-decoration: none;
 }
-/* line 63, ../js/app/templates/scss/ui.scss */
+/* line 69, ../js/app/templates/scss/ui.scss */
 .MB-button.ghost {
   background: transparent;
   border: 2px solid rgba(255, 255, 255, 0.4);
@@ -1029,13 +1039,13 @@ header.ghost .navbar-inner {
   height: 15px;
   line-height: 15px;
 }
-/* line 70, ../js/app/templates/scss/ui.scss */
+/* line 76, ../js/app/templates/scss/ui.scss */
 .MB-button.ghost:hover {
   border: 2px solid white;
   color: white;
   text-decoration: none;
 }
-/* line 76, ../js/app/templates/scss/ui.scss */
+/* line 82, ../js/app/templates/scss/ui.scss */
 .MB-button.fog {
   background: rgba(255, 255, 255, 0.2);
   border: none;
@@ -1043,60 +1053,60 @@ header.ghost .navbar-inner {
   color: white !important;
   border: 3px solid transparent;
 }
-/* line 83, ../js/app/templates/scss/ui.scss */
+/* line 89, ../js/app/templates/scss/ui.scss */
 .MB-button.fog:hover {
   background-color: rgba(255, 255, 255, 0.4) !important;
   text-decoration: none;
 }
-/* line 88, ../js/app/templates/scss/ui.scss */
+/* line 94, ../js/app/templates/scss/ui.scss */
 .MB-button.secondary {
   background-color: #ffe42b;
   color: black !important;
 }
-/* line 92, ../js/app/templates/scss/ui.scss */
+/* line 98, ../js/app/templates/scss/ui.scss */
 .MB-button.secondary:disabled {
   background-color: #dec100 !important;
 }
-/* line 95, ../js/app/templates/scss/ui.scss */
+/* line 101, ../js/app/templates/scss/ui.scss */
 .MB-button.secondary:disabled:hover {
   background-color: #dec100 !important;
   cursor: not-allowed;
 }
-/* line 101, ../js/app/templates/scss/ui.scss */
+/* line 107, ../js/app/templates/scss/ui.scss */
 .MB-button.secondary:hover {
   background-color: #dec100 !important;
   text-decoration: none;
 }
-/* line 107, ../js/app/templates/scss/ui.scss */
+/* line 113, ../js/app/templates/scss/ui.scss */
 .MB-button.fullReg {
   width: 465px;
   border: 0;
   border-radius: 0;
 }
-/* line 113, ../js/app/templates/scss/ui.scss */
+/* line 119, ../js/app/templates/scss/ui.scss */
 .MB-button.loginFullreg {
   width: 400px;
   border: none;
   border-radius: 0;
   text-transform: uppercase;
 }
-/* line 120, ../js/app/templates/scss/ui.scss */
+/* line 126, ../js/app/templates/scss/ui.scss */
 .MB-button.fullLog {
   width: 350px;
   border: 0;
   border-radius: 0;
 }
-/* line 126, ../js/app/templates/scss/ui.scss */
+/* line 132, ../js/app/templates/scss/ui.scss */
 .MB-button.primary, .MB-button.secondary {
   text-shadow: none !important;
 }
 
-/* line 131, ../js/app/templates/scss/ui.scss */
+/* line 137, ../js/app/templates/scss/ui.scss */
 .MB-features {
   padding-top: 50px;
   text-align: center;
 }
-/* line 134, ../js/app/templates/scss/ui.scss */
+/* line 140, ../js/app/templates/scss/ui.scss */
 .MB-features .MB-feature {
   display: inline-block;
   font-family: "Open Sans";
@@ -1105,7 +1115,7 @@ header.ghost .navbar-inner {
   margin-bottom: 50px;
   position: relative;
 }
-/* line 142, ../js/app/templates/scss/ui.scss */
+/* line 148, ../js/app/templates/scss/ui.scss */
 .MB-features .MB-feature .bt-steps-link {
   background: url("../../img/steps-link.png") no-repeat left top transparent;
   width: 189px;
@@ -1114,29 +1124,29 @@ header.ghost .navbar-inner {
   right: -106px;
   top: 46px;
 }
-/* line 151, ../js/app/templates/scss/ui.scss */
+/* line 157, ../js/app/templates/scss/ui.scss */
 .MB-features .MB-feature .title {
   font-size: 1.5em;
   line-height: 2em;
 }
-/* line 155, ../js/app/templates/scss/ui.scss */
+/* line 161, ../js/app/templates/scss/ui.scss */
 .MB-features .MB-feature .title.bold {
   font-weight: bold;
   color: #525252;
 }
-/* line 160, ../js/app/templates/scss/ui.scss */
+/* line 166, ../js/app/templates/scss/ui.scss */
 .MB-features .MB-feature .subtitle {
   font-size: 1em;
   color: #2bbbff;
 }
-/* line 164, ../js/app/templates/scss/ui.scss */
+/* line 170, ../js/app/templates/scss/ui.scss */
 .MB-features .MB-feature .about {
   height: 80px;
   font-size: 0.9em;
   line-height: 2em;
 }
 
-/* line 172, ../js/app/templates/scss/ui.scss */
+/* line 178, ../js/app/templates/scss/ui.scss */
 .MB-benefits {
   width: 960px;
   margin-left: auto;
@@ -1144,22 +1154,22 @@ header.ghost .navbar-inner {
   margin-top: 30px;
 }
 
-/* line 179, ../js/app/templates/scss/ui.scss */
+/* line 185, ../js/app/templates/scss/ui.scss */
 .MB-benefit {
   margin-bottom: 30px;
 }
-/* line 182, ../js/app/templates/scss/ui.scss */
+/* line 188, ../js/app/templates/scss/ui.scss */
 .MB-benefit h4 {
   font-weight: bold;
   font-size: 1.2em;
   line-height: 2em;
 }
-/* line 187, ../js/app/templates/scss/ui.scss */
+/* line 193, ../js/app/templates/scss/ui.scss */
 .MB-benefit p {
   font-size: 0.9em;
 }
 
-/* line 192, ../js/app/templates/scss/ui.scss */
+/* line 198, ../js/app/templates/scss/ui.scss */
 .MB-icon {
   width: 90px;
   height: 90px;
@@ -1167,35 +1177,35 @@ header.ghost .navbar-inner {
   font-size: 80px;
   color: #2bbbff;
 }
-/* line 199, ../js/app/templates/scss/ui.scss */
+/* line 205, ../js/app/templates/scss/ui.scss */
 .MB-icon.small {
   font-size: 40px;
 }
-/* line 203, ../js/app/templates/scss/ui.scss */
+/* line 209, ../js/app/templates/scss/ui.scss */
 .MB-icon.smaller {
   font-size: 30px;
   line-height: 120px;
 }
 
-/* line 208, ../js/app/templates/scss/ui.scss */
+/* line 214, ../js/app/templates/scss/ui.scss */
 .modal-black-show #MB-modal-black, .modal-black-show #MB-confirm {
   visibility: visible;
   opacity: 1;
 }
 
-/* line 213, ../js/app/templates/scss/ui.scss */
+/* line 219, ../js/app/templates/scss/ui.scss */
 .modal-white-show #MB-modal-white {
   visibility: visible;
   opacity: 1;
 }
 
-/* line 218, ../js/app/templates/scss/ui.scss */
+/* line 224, ../js/app/templates/scss/ui.scss */
 .modal-bg-show #MB-modal-bg {
   visibility: visible;
   opacity: 1;
 }
 
-/* line 224, ../js/app/templates/scss/ui.scss */
+/* line 230, ../js/app/templates/scss/ui.scss */
 #MB-modal-white {
   position: fixed;
   top: 0;
@@ -1216,7 +1226,7 @@ header.ghost .navbar-inner {
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0.95) 255%, rgba(255, 255, 255, 0.95) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#d9ffffff', endColorstr='#d9ffffff',GradientType=0 );
 }
-/* line 244, ../js/app/templates/scss/ui.scss */
+/* line 250, ../js/app/templates/scss/ui.scss */
 #MB-modal-white .modal {
   width: 450px;
   margin: 0 auto;
@@ -1230,30 +1240,30 @@ header.ghost .navbar-inner {
   border-radius: 0;
   box-shadow: none;
 }
-/* line 257, ../js/app/templates/scss/ui.scss */
+/* line 263, ../js/app/templates/scss/ui.scss */
 #MB-modal-white .modal .body {
   text-align: center;
 }
-/* line 261, ../js/app/templates/scss/ui.scss */
+/* line 267, ../js/app/templates/scss/ui.scss */
 #MB-modal-white .modal .MB-modal-close {
   position: absolute;
   right: 0;
   top: 10px;
   cursor: pointer;
 }
-/* line 267, ../js/app/templates/scss/ui.scss */
+/* line 273, ../js/app/templates/scss/ui.scss */
 #MB-modal-white .modal .MB-modal-close .MB-icon {
   font-size: 4em;
   color: black;
   width: 100%;
   height: 100%;
 }
-/* line 273, ../js/app/templates/scss/ui.scss */
+/* line 279, ../js/app/templates/scss/ui.scss */
 #MB-modal-white .modal .MB-modal-close .MB-icon:hover {
   color: #2bbbff;
 }
 
-/* line 281, ../js/app/templates/scss/ui.scss */
+/* line 287, ../js/app/templates/scss/ui.scss */
 #MB-modal-black {
   position: fixed;
   top: 0;
@@ -1274,7 +1284,7 @@ header.ghost .navbar-inner {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 255%, rgba(0, 0, 0, 0.5) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#d9ffffff', endColorstr='#d9ffffff',GradientType=0 );
 }
-/* line 301, ../js/app/templates/scss/ui.scss */
+/* line 307, ../js/app/templates/scss/ui.scss */
 #MB-modal-black .modal {
   width: 60%;
   margin: 0 auto;
@@ -1288,30 +1298,30 @@ header.ghost .navbar-inner {
   border-radius: 0;
   box-shadow: none;
 }
-/* line 314, ../js/app/templates/scss/ui.scss */
+/* line 320, ../js/app/templates/scss/ui.scss */
 #MB-modal-black .modal .body {
   text-align: center;
 }
-/* line 318, ../js/app/templates/scss/ui.scss */
+/* line 324, ../js/app/templates/scss/ui.scss */
 #MB-modal-black .modal .MB-modal-close {
   position: absolute;
   right: 0;
   top: 10px;
   cursor: pointer;
 }
-/* line 324, ../js/app/templates/scss/ui.scss */
+/* line 330, ../js/app/templates/scss/ui.scss */
 #MB-modal-black .modal .MB-modal-close .MB-icon {
   font-size: 4em;
   color: white;
   width: 100%;
   height: 100%;
 }
-/* line 330, ../js/app/templates/scss/ui.scss */
+/* line 336, ../js/app/templates/scss/ui.scss */
 #MB-modal-black .modal .MB-modal-close .MB-icon:hover {
   color: #2bbbff;
 }
 
-/* line 338, ../js/app/templates/scss/ui.scss */
+/* line 344, ../js/app/templates/scss/ui.scss */
 #MB-modal-bg {
   position: fixed;
   top: 0;
@@ -1330,7 +1340,7 @@ header.ghost .navbar-inner {
   -moz-transition: all 0.4s;
   transition: all 0.4s;
 }
-/* line 356, ../js/app/templates/scss/ui.scss */
+/* line 362, ../js/app/templates/scss/ui.scss */
 #MB-modal-bg .modal {
   width: 60%;
   margin: 0 auto;
@@ -1344,30 +1354,30 @@ header.ghost .navbar-inner {
   border-radius: 0;
   box-shadow: none;
 }
-/* line 369, ../js/app/templates/scss/ui.scss */
+/* line 375, ../js/app/templates/scss/ui.scss */
 #MB-modal-bg .modal .body {
   text-align: center;
 }
-/* line 373, ../js/app/templates/scss/ui.scss */
+/* line 379, ../js/app/templates/scss/ui.scss */
 #MB-modal-bg .modal .MB-modal-close {
   position: absolute;
   right: 0;
   top: 10px;
   cursor: pointer;
 }
-/* line 379, ../js/app/templates/scss/ui.scss */
+/* line 385, ../js/app/templates/scss/ui.scss */
 #MB-modal-bg .modal .MB-modal-close .MB-icon {
   font-size: 4em;
   color: white;
   width: 100%;
   height: 100%;
 }
-/* line 385, ../js/app/templates/scss/ui.scss */
+/* line 391, ../js/app/templates/scss/ui.scss */
 #MB-modal-bg .modal .MB-modal-close .MB-icon:hover {
   color: #2bbbff;
 }
 
-/* line 393, ../js/app/templates/scss/ui.scss */
+/* line 399, ../js/app/templates/scss/ui.scss */
 #MB-confirm {
   position: fixed;
   top: 0;
@@ -1386,7 +1396,7 @@ header.ghost .navbar-inner {
   -moz-transition: all 0.4s;
   transition: all 0.4s;
 }
-/* line 411, ../js/app/templates/scss/ui.scss */
+/* line 417, ../js/app/templates/scss/ui.scss */
 #MB-confirm .modal {
   margin: 0 auto;
   top: 25%;
@@ -1398,40 +1408,40 @@ header.ghost .navbar-inner {
   border-radius: 0;
   box-shadow: none;
 }
-/* line 422, ../js/app/templates/scss/ui.scss */
+/* line 428, ../js/app/templates/scss/ui.scss */
 #MB-confirm .modal .confirm-body {
   line-height: 2em;
   font-weight: 100;
 }
-/* line 426, ../js/app/templates/scss/ui.scss */
+/* line 432, ../js/app/templates/scss/ui.scss */
 #MB-confirm .modal .body {
   text-align: center;
 }
-/* line 429, ../js/app/templates/scss/ui.scss */
+/* line 435, ../js/app/templates/scss/ui.scss */
 #MB-confirm .modal .confirm-header h3 {
   font-size: 1.2em;
   font-weight: bold;
 }
-/* line 434, ../js/app/templates/scss/ui.scss */
+/* line 440, ../js/app/templates/scss/ui.scss */
 #MB-confirm .modal .MB-modal-close {
   position: absolute;
   right: 0;
   top: 10px;
   cursor: pointer;
 }
-/* line 440, ../js/app/templates/scss/ui.scss */
+/* line 446, ../js/app/templates/scss/ui.scss */
 #MB-confirm .modal .MB-modal-close .MB-icon {
   font-size: 4em;
   color: white;
   width: 100%;
   height: 100%;
 }
-/* line 446, ../js/app/templates/scss/ui.scss */
+/* line 452, ../js/app/templates/scss/ui.scss */
 #MB-confirm .modal .MB-modal-close .MB-icon:hover {
   color: #2bbbff;
 }
 
-/* line 454, ../js/app/templates/scss/ui.scss */
+/* line 460, ../js/app/templates/scss/ui.scss */
 .MB-skillbar {
   width: 100%;
   height: 35px;
@@ -1440,7 +1450,7 @@ header.ghost .navbar-inner {
   margin-bottom: 10px;
   position: relative;
 }
-/* line 462, ../js/app/templates/scss/ui.scss */
+/* line 468, ../js/app/templates/scss/ui.scss */
 .MB-skillbar .skill-title {
   font-size: 12px;
   font-weight: 100;
@@ -1452,19 +1462,93 @@ header.ghost .navbar-inner {
   line-height: 25px;
   text-transform: uppercase;
 }
-/* line 474, ../js/app/templates/scss/ui.scss */
+/* line 480, ../js/app/templates/scss/ui.scss */
 .MB-skillbar .skill-percentage {
   background-color: #2bbbff;
   height: 35px;
 }
 
-/* line 480, ../js/app/templates/scss/ui.scss */
+/* line 486, ../js/app/templates/scss/ui.scss */
 .MB-scrollDown-indicator {
   font-size: 80px;
   position: absolute;
   bottom: 50px;
   color: #ffe42b;
   margin-left: -10px;
+}
+
+/* SQUARED ONE */
+/* line 495, ../js/app/templates/scss/ui.scss */
+.squaredOne {
+  width: 28px;
+  height: 28px;
+  background: #fcfff4;
+  background: -webkit-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+  background: -moz-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+  background: -o-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+  background: -ms-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+  background: linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fcfff4', endColorstr='#b3bead',GradientType=0 );
+  margin: 20px auto;
+  -webkit-box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+
+/* line 513, ../js/app/templates/scss/ui.scss */
+.squaredOne label {
+  cursor: pointer;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: 4px;
+  top: 4px;
+  -webkit-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 1px 0px white;
+  -moz-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 1px 0px white;
+  box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 1px 0px white;
+  background: -webkit-linear-gradient(top, #222222 0%, #45484d 100%);
+  background: -moz-linear-gradient(top, #222222 0%, #45484d 100%);
+  background: -o-linear-gradient(top, #222222 0%, #45484d 100%);
+  background: -ms-linear-gradient(top, #222222 0%, #45484d 100%);
+  background: linear-gradient(top, #222222 0%, #45484d 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#222', endColorstr='#45484d',GradientType=0 );
+}
+
+/* line 533, ../js/app/templates/scss/ui.scss */
+.squaredOne label:after {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  opacity: 0;
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background: #00bf00;
+  background: -webkit-linear-gradient(top, #00bf00 0%, #009400 100%);
+  background: -moz-linear-gradient(top, #00bf00 0%, #009400 100%);
+  background: -o-linear-gradient(top, #00bf00 0%, #009400 100%);
+  background: -ms-linear-gradient(top, #00bf00 0%, #009400 100%);
+  background: linear-gradient(top, #00bf00 0%, #009400 100%);
+  top: 2px;
+  left: 2px;
+  -webkit-box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* line 557, ../js/app/templates/scss/ui.scss */
+.squaredOne label:hover::after {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+  filter: alpha(opacity=30);
+  opacity: 0.3;
+}
+
+/* line 563, ../js/app/templates/scss/ui.scss */
+.squaredOne input[type=checkbox]:checked + label:after {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  filter: alpha(opacity=100);
+  opacity: 1;
 }
 
 /* line 1, ../js/app/templates/scss/team.scss */
@@ -6921,8 +7005,8 @@ label.iOSCheckLabelOff span {
 
 /* line 1, ../js/app/templates/scss/leftAppMenu.scss */
 .MB-left-app-menu {
-  background: #384047;
-  width: 60px;
+  background: #3b3a3f;
+  width: 180px;
   height: 100%;
   float: left;
   border-right: 1px groove #777;
@@ -6940,50 +7024,64 @@ label.iOSCheckLabelOff span {
 }
 /* line 17, ../js/app/templates/scss/leftAppMenu.scss */
 .MB-left-app-menu li {
-  width: 100%;
   height: 60px;
-  color: #545b62;
-  font-size: 1.5em;
-  text-align: center;
-  line-height: 2.5em;
-  border-bottom: 1px groove #777;
+  color: #848488;
+  font-size: 0.8em;
+  text-align: left;
+  line-height: 5em;
   cursor: pointer;
+  padding: 0 20px;
 }
-/* line 27, ../js/app/templates/scss/leftAppMenu.scss */
+/* line 26, ../js/app/templates/scss/leftAppMenu.scss */
+.MB-left-app-menu li i {
+  font-size: 1.5em;
+  padding-right: 15px;
+}
+/* line 31, ../js/app/templates/scss/leftAppMenu.scss */
 .MB-left-app-menu li.half-word-logo {
-  font-family: "Ethon Black";
+  position: fixed;
+  background: #3b3a3f;
+  width: 140px;
 }
-/* line 30, ../js/app/templates/scss/leftAppMenu.scss */
+/* line 35, ../js/app/templates/scss/leftAppMenu.scss */
+.MB-left-app-menu li.half-word-logo img {
+  width: 160px;
+  position: relative;
+  left: -10px;
+}
+/* line 41, ../js/app/templates/scss/leftAppMenu.scss */
 .MB-left-app-menu li.half-word-logo:hover {
-  color: #545b62;
   background: none;
   cursor: default;
-}
-/* line 37, ../js/app/templates/scss/leftAppMenu.scss */
-.MB-left-app-menu li:hover {
-  background: #2d3339;
-  color: #f4f4f4;
-}
-/* line 42, ../js/app/templates/scss/leftAppMenu.scss */
-.MB-left-app-menu li.active {
-  background: #2d3339;
-  color: #f4f4f4;
+  border: none;
 }
 /* line 48, ../js/app/templates/scss/leftAppMenu.scss */
+.MB-left-app-menu li:hover {
+  background: #353439;
+  color: #f4f4f4;
+  border-right: 8px solid #ffe42b;
+}
+/* line 54, ../js/app/templates/scss/leftAppMenu.scss */
+.MB-left-app-menu li.active {
+  background: #353439;
+  color: #f4f4f4;
+  border-right: 8px solid #2bbbff;
+}
+/* line 61, ../js/app/templates/scss/leftAppMenu.scss */
 .MB-left-app-menu .tooltip-inner {
   padding: 10px;
   font-size: 1.5em;
   font-weight: 100;
 }
 
-/* line 55, ../js/app/templates/scss/leftAppMenu.scss */
+/* line 68, ../js/app/templates/scss/leftAppMenu.scss */
 .MB-left-app-menu-button {
   width: 45px;
   height: 45px;
   color: white;
   position: absolute;
-  background: #384047;
-  left: 60px;
+  background: #3b3a3f;
+  left: 180px;
   top: 0;
   z-index: 100;
   line-height: 45px;
@@ -6993,6 +7091,15 @@ label.iOSCheckLabelOff span {
   border-left: none;
   border-top: none;
   cursor: pointer;
+  -webkit-transition-property: left;
+  -webkit-transition-duration: 0.2s;
+}
+
+/* line 88, ../js/app/templates/scss/leftAppMenu.scss */
+.scroll-left-menu {
+  overflow-y: scroll;
+  margin-top: 60px;
+  height: 100%;
   -webkit-transition-property: left;
   -webkit-transition-duration: 0.2s;
 }
@@ -7055,7 +7162,7 @@ label.iOSCheckLabelOff span {
   overflow: hidden;
   width: 45px;
   height: 45px;
-  border: 1px solid #384047;
+  border: 1px solid #3b3a3f;
   cursor: pointer;
 }
 
@@ -7075,7 +7182,7 @@ label.iOSCheckLabelOff span {
 .MB-user-menu-open {
   position: absolute;
   top: -180px;
-  background: #384047;
+  background: #3b3a3f;
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px;
   box-shadow: 0px 0px 2px #777;
@@ -7103,7 +7210,7 @@ label.iOSCheckLabelOff span {
 }
 /* line 88, ../js/app/templates/scss/userAppMenu.scss */
 .MB-user-menu-open li:hover {
-  background: #2d3339;
+  background: #353439;
 }
 /* line 92, ../js/app/templates/scss/userAppMenu.scss */
 .MB-user-menu-open li i {
@@ -7125,9 +7232,10 @@ label.iOSCheckLabelOff span {
   -webkit-transition-duration: 0.2s;
   position: relative;
   left: 0;
+  overflow-y: scroll;
 }
 
-/* line 14, ../js/app/templates/scss/dashboard.scss */
+/* line 15, ../js/app/templates/scss/dashboard.scss */
 .dashboard-calendar-view {
   width: 300px;
   height: 300px;
@@ -7136,18 +7244,18 @@ label.iOSCheckLabelOff span {
   margin-top: 30px;
   text-align: right;
 }
-/* line 22, ../js/app/templates/scss/dashboard.scss */
+/* line 23, ../js/app/templates/scss/dashboard.scss */
 .dashboard-calendar-view h2 {
   font-size: 3em;
   font-weight: 100;
   cursor: default;
 }
-/* line 28, ../js/app/templates/scss/dashboard.scss */
+/* line 29, ../js/app/templates/scss/dashboard.scss */
 .dashboard-calendar-view .menu {
   position: relative;
   left: 8px;
 }
-/* line 31, ../js/app/templates/scss/dashboard.scss */
+/* line 32, ../js/app/templates/scss/dashboard.scss */
 .dashboard-calendar-view .menu li {
   display: inline-block;
   padding: 15px 10px;
@@ -7156,16 +7264,16 @@ label.iOSCheckLabelOff span {
   color: #999;
   cursor: pointer;
 }
-/* line 39, ../js/app/templates/scss/dashboard.scss */
+/* line 40, ../js/app/templates/scss/dashboard.scss */
 .dashboard-calendar-view .menu li.active {
   color: black;
 }
-/* line 43, ../js/app/templates/scss/dashboard.scss */
+/* line 44, ../js/app/templates/scss/dashboard.scss */
 .dashboard-calendar-view .menu li:hover {
   color: black;
 }
 
-/* line 51, ../js/app/templates/scss/dashboard.scss */
+/* line 52, ../js/app/templates/scss/dashboard.scss */
 .calendar-today .calendar-item {
   position: relative;
   background: #fff;
@@ -7174,14 +7282,14 @@ label.iOSCheckLabelOff span {
   margin-bottom: 15px;
   cursor: pointer;
 }
-/* line 59, ../js/app/templates/scss/dashboard.scss */
+/* line 60, ../js/app/templates/scss/dashboard.scss */
 .calendar-today .calendar-item li {
   display: inline-block;
   position: absolute;
   line-height: 3em;
   font-weight: 100;
 }
-/* line 65, ../js/app/templates/scss/dashboard.scss */
+/* line 66, ../js/app/templates/scss/dashboard.scss */
 .calendar-today .calendar-item li.icon {
   position: absolute;
   left: -15px;
@@ -7195,11 +7303,11 @@ label.iOSCheckLabelOff span {
   top: 3px;
   box-shadow: 0px 0px 1px #ddd;
 }
-/* line 79, ../js/app/templates/scss/dashboard.scss */
+/* line 80, ../js/app/templates/scss/dashboard.scss */
 .calendar-today .calendar-item li.description {
   left: 35px;
 }
-/* line 83, ../js/app/templates/scss/dashboard.scss */
+/* line 84, ../js/app/templates/scss/dashboard.scss */
 .calendar-today .calendar-item li.close {
   right: 10px;
   bottom: -10px;
@@ -7217,7 +7325,7 @@ label.iOSCheckLabelOff span {
   margin-top: 30px;
   overflow: hidden;
   background: black;
-  margin-left: 200px;
+  margin-left: 225px;
   position: relative;
 }
 /* line 14, ../js/app/templates/scss/interview.scss */
@@ -7231,7 +7339,7 @@ label.iOSCheckLabelOff span {
 #interview-video #localVideo {
   float: right;
   position: absolute;
-  width: 250px;
+  width: 275px;
   height: 190px;
   background: black;
   border: 1px solid #666666;
@@ -7246,10 +7354,9 @@ label.iOSCheckLabelOff span {
   top: 90px;
   right: 60px;
   overflow: hidden;
-  box-shadow: 0px 0px 0px 8px rgba(0, 0, 0, 0.3), 0px 2px 3px 0px rgba(0, 0, 0, 0.6);
 }
 
-/* line 44, ../js/app/templates/scss/interview.scss */
+/* line 43, ../js/app/templates/scss/interview.scss */
 .MB-interview-wait {
   color: #999;
   top: 170px;
@@ -7258,7 +7365,7 @@ label.iOSCheckLabelOff span {
   left: 340px;
 }
 
-/* line 52, ../js/app/templates/scss/interview.scss */
+/* line 51, ../js/app/templates/scss/interview.scss */
 .MBinterview-wait-text {
   position: relative;
   top: 210px;
@@ -7267,7 +7374,7 @@ label.iOSCheckLabelOff span {
   font-weight: 100;
 }
 
-/* line 60, ../js/app/templates/scss/interview.scss */
+/* line 59, ../js/app/templates/scss/interview.scss */
 #interview-video-toolbar {
   font-size: 1em;
   float: right;
@@ -7280,43 +7387,43 @@ label.iOSCheckLabelOff span {
   text-align: center;
   margin-right: 10px;
 }
-/* line 72, ../js/app/templates/scss/interview.scss */
+/* line 71, ../js/app/templates/scss/interview.scss */
 #interview-video-toolbar .reduce-size {
   font-size: 0.5em;
   cursor: pointer;
   opacity: 0.7;
   margin-bottom: 12px;
 }
-/* line 77, ../js/app/templates/scss/interview.scss */
+/* line 76, ../js/app/templates/scss/interview.scss */
 #interview-video-toolbar .reduce-size:hover {
   opacity: 1;
 }
-/* line 82, ../js/app/templates/scss/interview.scss */
+/* line 81, ../js/app/templates/scss/interview.scss */
 #interview-video-toolbar .interview-unmute {
   display: none;
   margin-bottom: 13px;
 }
-/* line 87, ../js/app/templates/scss/interview.scss */
+/* line 86, ../js/app/templates/scss/interview.scss */
 #interview-video-toolbar li {
   margin-bottom: 15px;
   display: block;
   cursor: pointer;
 }
-/* line 92, ../js/app/templates/scss/interview.scss */
+/* line 91, ../js/app/templates/scss/interview.scss */
 #interview-video-toolbar li:hover {
   opacity: 1;
   font-size: 1em;
 }
-/* line 98, ../js/app/templates/scss/interview.scss */
+/* line 97, ../js/app/templates/scss/interview.scss */
 #interview-video-toolbar .interview-off, #interview-video-toolbar .interview-switch, #interview-video-toolbar .interview-mute, #interview-video-toolbar .interview-share, #interview-video-toolbar .interview-pause, #interview-video-toolbar .interview-play {
   opacity: 0.7;
 }
-/* line 102, ../js/app/templates/scss/interview.scss */
+/* line 101, ../js/app/templates/scss/interview.scss */
 #interview-video-toolbar .interview-play {
   display: none;
 }
 
-/* line 106, ../js/app/templates/scss/interview.scss */
+/* line 105, ../js/app/templates/scss/interview.scss */
 .interview-chat-window {
   width: 380px;
   height: 408px;
@@ -7331,14 +7438,14 @@ label.iOSCheckLabelOff span {
   padding-bottom: 25px;
 }
 
-/* line 121, ../js/app/templates/scss/interview.scss */
+/* line 120, ../js/app/templates/scss/interview.scss */
 .interview-chat-type {
   width: 100%;
   height: 207px;
   text-align: center;
 }
 
-/* line 127, ../js/app/templates/scss/interview.scss */
+/* line 126, ../js/app/templates/scss/interview.scss */
 .interview-chat-type-window {
   width: 350px;
   border-radius: 0;
@@ -7349,14 +7456,14 @@ label.iOSCheckLabelOff span {
   margin-top: 10px;
 }
 
-/* line 137, ../js/app/templates/scss/interview.scss */
+/* line 136, ../js/app/templates/scss/interview.scss */
 .interview-chat-type-window:focus {
   outline: none;
   border: 1px solid #ccc;
   box-shadow: 0px 0px 2px #ccc;
 }
 
-/* line 143, ../js/app/templates/scss/interview.scss */
+/* line 142, ../js/app/templates/scss/interview.scss */
 .interview-chat-send-button {
   border: 0;
   right: 0;
@@ -7365,26 +7472,26 @@ label.iOSCheckLabelOff span {
   right: 4px;
 }
 
-/* line 151, ../js/app/templates/scss/interview.scss */
+/* line 150, ../js/app/templates/scss/interview.scss */
 #tempVideo {
   display: none;
 }
 
-/* line 155, ../js/app/templates/scss/interview.scss */
+/* line 154, ../js/app/templates/scss/interview.scss */
 .chatBubble-left {
   padding: 15px;
   float: left;
   width: 90%;
   position: relative;
 }
-/* line 160, ../js/app/templates/scss/interview.scss */
+/* line 159, ../js/app/templates/scss/interview.scss */
 .chatBubble-left .chatBubbleDate {
   position: absolute;
   font-size: 0.7em;
   bottom: -4px;
   left: 10px;
 }
-/* line 167, ../js/app/templates/scss/interview.scss */
+/* line 166, ../js/app/templates/scss/interview.scss */
 .chatBubble-left .chatBubble-bubble {
   float: left;
   width: auto;
@@ -7397,7 +7504,7 @@ label.iOSCheckLabelOff span {
   font-weight: 100;
   font-size: 0.9em;
 }
-/* line 179, ../js/app/templates/scss/interview.scss */
+/* line 178, ../js/app/templates/scss/interview.scss */
 .chatBubble-left .chatBubble-bubble .chatBubble-caret {
   position: absolute;
   left: -10px;
@@ -7406,21 +7513,21 @@ label.iOSCheckLabelOff span {
   color: #eee;
 }
 
-/* line 188, ../js/app/templates/scss/interview.scss */
+/* line 187, ../js/app/templates/scss/interview.scss */
 .chatBubble-right {
   padding: 15px;
   float: right;
   width: 90%;
   position: relative;
 }
-/* line 193, ../js/app/templates/scss/interview.scss */
+/* line 192, ../js/app/templates/scss/interview.scss */
 .chatBubble-right .chatBubbleDate {
   position: absolute;
   font-size: 0.7em;
   bottom: -4px;
   right: 10px;
 }
-/* line 200, ../js/app/templates/scss/interview.scss */
+/* line 199, ../js/app/templates/scss/interview.scss */
 .chatBubble-right .chatBubble-bubble {
   float: right;
   width: auto;
@@ -7434,7 +7541,7 @@ label.iOSCheckLabelOff span {
   font-weight: 100;
   font-size: 0.9em;
 }
-/* line 213, ../js/app/templates/scss/interview.scss */
+/* line 212, ../js/app/templates/scss/interview.scss */
 .chatBubble-right .chatBubble-bubble .chatBubble-caret {
   position: absolute;
   right: -8px;
@@ -7443,7 +7550,7 @@ label.iOSCheckLabelOff span {
   color: #2bbbff;
 }
 
-/* line 224, ../js/app/templates/scss/interview.scss */
+/* line 223, ../js/app/templates/scss/interview.scss */
 .interview-user-entered {
   padding: 15px;
   font-size: 0.8em;
@@ -7453,7 +7560,7 @@ label.iOSCheckLabelOff span {
   display: inline-block;
 }
 
-/* line 232, ../js/app/templates/scss/interview.scss */
+/* line 231, ../js/app/templates/scss/interview.scss */
 .localVid {
   float: right;
   position: relative;
@@ -7469,7 +7576,7 @@ label.iOSCheckLabelOff span {
   /* Styles */
   /* line 12, ../js/app/templates/scss/responsive.scss */
   .MB-left-app-menu {
-    left: -60px;
+    left: -180px;
   }
 
   /* line 15, ../js/app/templates/scss/responsive.scss */
@@ -7486,7 +7593,7 @@ label.iOSCheckLabelOff span {
   /* Styles */
   /* line 30, ../js/app/templates/scss/responsive.scss */
   .MB-left-app-menu {
-    left: -60px;
+    left: -180px;
   }
 
   /* line 33, ../js/app/templates/scss/responsive.scss */
@@ -7519,7 +7626,7 @@ label.iOSCheckLabelOff span {
   /* Styles */
   /* line 78, ../js/app/templates/scss/responsive.scss */
   .MB-left-app-menu {
-    left: -60px;
+    left: -180px;
   }
 
   /* line 81, ../js/app/templates/scss/responsive.scss */
@@ -7527,24 +7634,63 @@ label.iOSCheckLabelOff span {
     left: 0;
   }
 }
+/* line 1, ../js/app/templates/scss/tasks.scss */
+#tasks-view {
+  width: 100%;
+  height: 100%;
+  margin-left: 260px;
+}
+/* line 6, ../js/app/templates/scss/tasks.scss */
+#tasks-view h1 {
+  font-size: 2em;
+  font-weight: 100;
+  padding: 15px 0;
+}
+
+/* line 13, ../js/app/templates/scss/tasks.scss */
+#MB-task-box {
+  background: #fafafb;
+  width: 70%;
+  margin: 10px 0;
+}
+/* line 18, ../js/app/templates/scss/tasks.scss */
+#MB-task-box tr {
+  font-size: 0.8em;
+}
+/* line 21, ../js/app/templates/scss/tasks.scss */
+#MB-task-box th {
+  background: #4d4c50;
+  padding: 15px;
+  color: white;
+  font-weight: 100;
+  border: 1px solid #4d4c50;
+}
+/* line 28, ../js/app/templates/scss/tasks.scss */
+#MB-task-box td {
+  padding: 5px 15px;
+  border: 1px solid #d7d7d9;
+  text-transform: capitalize;
+}
+
 /* line 10, ../scss/desktop.scss */
 html, body, #page, #left-header, #dashboard {
   height: 100%;
   font-family: "Open Sans";
+  overflow: hidden;
 }
 
-/* line 15, ../scss/desktop.scss */
+/* line 16, ../scss/desktop.scss */
 #left-header {
   float: left;
 }
 
-/* line 16, ../scss/desktop.scss */
+/* line 17, ../scss/desktop.scss */
 #dashboard {
   display: none;
   background: #edeff0;
 }
 
-/* line 18, ../scss/desktop.scss */
+/* line 19, ../scss/desktop.scss */
 a {
   color: #2bbbff;
 }

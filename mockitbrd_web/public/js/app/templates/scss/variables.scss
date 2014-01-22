@@ -11,16 +11,23 @@ $primary_light_grey: #F4F4F4;
 $primary_darker_light_grey: darken($primary_light_grey, 10%);
 $primary_green: #629A40;
 $primary_red: #CD0000;
-$app_menu_grey: #384047;
+$app_menu_grey: #3B3A3F;
 $dashboard_bg: #EDEFF0;
 $dashboard_offset: #D9DDE0;
 $light_grey: #ccc;
 $top_app_menu_bg: #EFF0F0;
 $devil_grey: #666;
-$app_menu_hover_active: #2D3339;
-$app_menu_font: #545B62;
+$app_menu_hover_active: #353439;
+$app_menu_font: #848488;
 $darker_grey: #333;
 $app_menu_hover_font: #f4f4f4;
+$task_table_bg: #FAFAFB;
+$task_table_header_bg: #4D4C50;
+$tasks_table_td_bg: #D7D7D9;
+
+.glass-effect {
+	box-shadow: 0px 0px 0px 8px rgba(0, 0, 0, 0.3), 0px 2px 3px 0px rgba(0, 0, 0, 0.6);
+}
 
 $primary_blue_rgb: rgb(43, 187, 255);
 $primary_yellow_rgb: rgb(255, 228, 43);

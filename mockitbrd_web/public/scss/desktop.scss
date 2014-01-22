@@ -10,6 +10,7 @@
 html, body, #page, #left-header, #dashboard {
 	height: 100%;
 	font-family: $primary_font;
+	overflow: hidden;
 }
 
 #left-header {float: left;}

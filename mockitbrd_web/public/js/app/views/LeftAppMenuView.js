@@ -5,7 +5,6 @@ define(['jquery', 'hbs!templates/leftAppMenu', 'backbone', 'marionette'],
           template:template,
 
           events: {
-            'hover li': 'onLeftMenuHover',
             'click .left-menu-item': 'onLeftMenuClick',
             'click .MB-left-app-menu-button': 'onLeftAppMenuButtonClick'
           },
@@ -16,19 +15,6 @@ define(['jquery', 'hbs!templates/leftAppMenu', 'backbone', 'marionette'],
             this.$el = this.$el.children();
             this.setElement(this.$el);
           },
-
-          onLeftMenuHover: function(e) {
-            e.preventDefault();
-
-            var currentButton = e.currentTarget;
-            var string = $(e.currentTarget).data('menuitem');
-            var title = string.charAt(0).toUpperCase() + string.slice(1);
-
-            if(string !== 'home') {
-              $(e.currentTarget).tooltip({'title': title, 'placement': 'right', 'trigger': 'hover'});
-            }
-          },
-
           onLeftMenuClick: function(e) {
             e.preventDefault();
 
@@ -40,13 +26,11 @@ define(['jquery', 'hbs!templates/leftAppMenu', 'backbone', 'marionette'],
             e.preventDefault();
 
             if ($('.MB-left-app-menu').css('left') === '0px') {
-              $('.MB-left-app-menu').css('left', '-60px');
-              $('#dashboard-content').css('left', '-60px');
+              $('.MB-left-app-menu').css('left', '-180px');
               $('.MB-left-app-menu-button').css('left', '0px');
             } else {
               $('.MB-left-app-menu').css('left', '0px');
-              $('#dashboard-content').css('left', '60px');
-              $('.MB-left-app-menu-button').css('left', '60px');
+              $('.MB-left-app-menu-button').css('left', '180px');
             }
           }
       });

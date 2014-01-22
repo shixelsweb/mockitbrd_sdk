@@ -26,7 +26,8 @@ define(['backbone', 'marionette'], function(Backbone, Marionette) {
            //Application Pages
            "dashboard": "dashboard",
            // "app/user": "user",
-           "dashboard/user/account": "account",
+           "tasks": "tasks",
+           "user/account": "account",
            "interview/:id": "interview"
        }
    });

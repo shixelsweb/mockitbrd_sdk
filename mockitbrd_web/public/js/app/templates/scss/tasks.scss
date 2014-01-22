@@ -1,0 +1,33 @@
+#tasks-view {
+width: 100%;
+height: 100%;
+margin-left: 260px;
+
+h1 {
+font-size: 2em;
+font-weight: 100;
+padding: 15px 0;
+}
+}
+
+#MB-task-box {
+	background: $task_table_bg;
+	width: 70%;
+	margin: 10px 0;
+
+	tr {
+		font-size: 0.8em;
+	}
+	th {
+		background: $task_table_header_bg;
+		padding: 15px;
+		color: $primary_white;
+		font-weight: 100;
+		border: 1px solid $task_table_header_bg;
+	}
+	td {
+		padding: 5px 15px;
+		border: 1px solid $tasks_table_td_bg;
+		text-transform: capitalize;
+	}
+}

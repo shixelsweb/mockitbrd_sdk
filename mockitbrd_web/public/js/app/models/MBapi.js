@@ -60,6 +60,78 @@ define(["jquery", "underscore", "backbone"],
                     }
                 });
             },
+            getUserTasks: function(user_id) {
+                var send = null;
+                $.ajax({
+                    type: "GET",
+                    url: this.get('url') + "v1/user/tasks/" + user_id,
+                    dataType: 'json',
+                    success: function (response) {
+                        send = response.data.userTasks;
+                    },
+                    error: function(response) {
+                        alert("error! ", response.data.error); //TODO-(Fara): add to Error Modal
+                    },
+                    async: false,
+                });
+
+                return send;
+            },
+            getUserTasksFull: function(user_id) {
+                var self = this;
+                var send = null;
+                var tasks = [];
+                $.ajax({
+                    type: "GET",
+                    url: this.get('url') + "v1/user/tasks/" + user_id,
+                    dataType: 'json',
+                    success: function (response) {
+                        for(var i = 0; i < response.data.userTasks.length; i++) {
+                            tasks.push(self.task(response.data.userTasks[i].task_id));
+                        }
+                    },
+                    error: function(response) {
+                        alert("error! ", response.data.error); //TODO-(Fara): add to Error Modal
+                    },
+                    async: false,
+                });
+
+                return tasks;
+            },
+            user: function(user_id) {
+                var send = null;
+                $.ajax({
+                    type: "GET",
+                    url: this.get('url') + "v1/user/" + user_id,
+                    dataType: 'json',
+                    success: function (response) {
+                        send = response.data.user;
+                    },
+                    error: function(response) {
+                        alert("error! ", response.data.error); //TODO-(Fara): add to Error Modal
+                    },
+                    async: false,
+                });
+
+                return send;
+            },
+            task: function(task_id) {
+                var send = null;
+                $.ajax({
+                    type: "GET",
+                    url: this.get('url') + "v1/tasks/" + task_id,
+                    dataType: 'json',
+                    success: function (response) {
+                        send = response.data.task;
+                    },
+                    error: function(response) {
+                        alert("error! ", response.data.error); //TODO-(Fara): add to Error Modal
+                    },
+                    async: false,
+                });
+
+                return send;
+            },
             update: function(param) {
 
             },

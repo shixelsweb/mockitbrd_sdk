@@ -10,7 +10,7 @@ and (max-device-width : 480px) {
 /* Styles */
 
 	.MB-left-app-menu {
-		left: -60px;
+		left: -180px;
 	}
 	.MB-left-app-menu-button {
 		left: 0;
@@ -28,7 +28,7 @@ and (min-width : 321px) {
 and (max-width : 320px) {
 /* Styles */
 	.MB-left-app-menu {
-		left: -60px;
+		left: -180px;
 	}
 	.MB-left-app-menu-button {
 		left: 0;
@@ -76,7 +76,7 @@ only screen and (-webkit-min-device-pixel-ratio : 1.5),
 only screen and (min-device-pixel-ratio : 1.5) {
 /* Styles */
 	.MB-left-app-menu {
-		left: -60px;
+		left: -180px;
 	}
 	.MB-left-app-menu-button {
 		left: 0;

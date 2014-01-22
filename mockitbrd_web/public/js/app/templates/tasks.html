@@ -1,0 +1,36 @@
+<div id="tasks-view">
+	<h1>Active Tasks</h1>
+	<table id="MB-task-box" class="glass-effect">
+		<thead>
+			<th><input type="checkbox" class="MB-task-checkbox-selectAll"></th>
+			<th>Title</th>
+			<th>Date</th>
+			<th>Type</th>
+			<th>Join</th>
+			<th>View</th>
+		</thead>
+		<tbody>
+			{{#each tasks}}
+			{{#if  isInterview}}
+			<tr>
+				<td><input type="checkbox" class="MB-task-checkbox" data-taskId="{{_id}}"></td>
+				<td>{{title}} interview w/ <a href="#user/{{taskUser._id}}">{{taskUser.fname}} {{taskUser.lname}}</a></td>
+				<td>{{date}}</td>
+				<td>{{type}}</td>
+				<td><a href="#interview/{{_id}}"><button disabled class="MB-button small" data-interviewid="{{_id}}">Launch</button></a></td>
+				<td><a href="#interview/{{_id}}/edit"><button class="MB-button secondary small" data-interviewid="{{_id}}">View/Edit</button></a></td>
+			</tr>
+			{{else}}
+			<tr>
+				<td><input type="checkbox" class="MB-task-checkbox" data-taskId="{{task_id}}"></td>
+				<td>{{title}}</td>
+				<td>{{date}}</td>
+				<td>{{type}}</td>
+				<td><a href="#task/{{_id}}"><button class="MB-button primary small" data-taskid="{{_id}}">Launch</button></a></td>
+				<td><a href="#task/{{_id}}/edit"><button class="MB-button secondary small" data-taskid="{{_id}}">View/Edit</button></a></td>
+			</tr>
+			{{/if}}
+			{{/each}}
+		</tbody>
+	</table>
+</div>

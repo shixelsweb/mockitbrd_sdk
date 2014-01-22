@@ -28,6 +28,7 @@ define([ //VIEWS
     //Application Views
     'views/DashboardView',
     'views/AccountView',
+    'views/TaskView',
     //Application UI
     'views/LeftAppMenuView',
     'views/TopAppMenuView',
@@ -68,6 +69,7 @@ function (
     //Application Views
     DashboardView,
     AccountView,
+    TaskView,
     //Application UI
     LeftAppMenuView,
     TopAppMenuView,
@@ -245,6 +247,13 @@ function (
             this.launchApp();
 
             $('#dashboard-view').append(interviewView.render().el);
+        },
+        tasks: function() {
+            var taskView = new TaskView();
+
+            this.launchApp();
+
+            $('#dashboard-view').append(taskView.render().el);
         }
     });
 });
