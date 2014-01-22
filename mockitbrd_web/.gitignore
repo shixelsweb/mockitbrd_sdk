@@ -3,4 +3,6 @@ temp
 dist
 .sass-cache
 .tmp
+.min.css
+.min.js
 app/bower_components
