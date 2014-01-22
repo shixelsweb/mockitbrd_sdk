@@ -7011,8 +7011,6 @@ label.iOSCheckLabelOff span {
   float: left;
   border-right: 1px groove #777;
   overflow-y: scroll;
-  -webkit-transition-property: left;
-  -webkit-transition-duration: 0.2s;
   left: 0;
   z-index: 99;
   position: absolute;
@@ -7042,39 +7040,40 @@ label.iOSCheckLabelOff span {
   position: fixed;
   background: #3b3a3f;
   width: 140px;
+  z-index: 1000;
 }
-/* line 35, ../js/app/templates/scss/leftAppMenu.scss */
+/* line 36, ../js/app/templates/scss/leftAppMenu.scss */
 .MB-left-app-menu li.half-word-logo img {
   width: 160px;
   position: relative;
   left: -10px;
 }
-/* line 41, ../js/app/templates/scss/leftAppMenu.scss */
+/* line 42, ../js/app/templates/scss/leftAppMenu.scss */
 .MB-left-app-menu li.half-word-logo:hover {
   background: none;
   cursor: default;
   border: none;
 }
-/* line 48, ../js/app/templates/scss/leftAppMenu.scss */
+/* line 49, ../js/app/templates/scss/leftAppMenu.scss */
 .MB-left-app-menu li:hover {
   background: #353439;
   color: #f4f4f4;
   border-right: 8px solid #ffe42b;
 }
-/* line 54, ../js/app/templates/scss/leftAppMenu.scss */
+/* line 55, ../js/app/templates/scss/leftAppMenu.scss */
 .MB-left-app-menu li.active {
   background: #353439;
   color: #f4f4f4;
   border-right: 8px solid #2bbbff;
 }
-/* line 61, ../js/app/templates/scss/leftAppMenu.scss */
+/* line 62, ../js/app/templates/scss/leftAppMenu.scss */
 .MB-left-app-menu .tooltip-inner {
   padding: 10px;
   font-size: 1.5em;
   font-weight: 100;
 }
 
-/* line 68, ../js/app/templates/scss/leftAppMenu.scss */
+/* line 69, ../js/app/templates/scss/leftAppMenu.scss */
 .MB-left-app-menu-button {
   width: 45px;
   height: 45px;
@@ -7095,7 +7094,7 @@ label.iOSCheckLabelOff span {
   -webkit-transition-duration: 0.2s;
 }
 
-/* line 88, ../js/app/templates/scss/leftAppMenu.scss */
+/* line 89, ../js/app/templates/scss/leftAppMenu.scss */
 .scroll-left-menu {
   overflow-y: scroll;
   margin-top: 60px;

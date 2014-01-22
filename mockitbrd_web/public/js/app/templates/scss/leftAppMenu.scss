@@ -5,8 +5,8 @@
 	float: left;
 	border-right: 1px groove #777;
 	overflow-y: scroll;
-	-webkit-transition-property: left;
-	-webkit-transition-duration: 0.2s;
+	// -webkit-transition-property: left;
+	// -webkit-transition-duration: 0.2s;
 	left: 0;
 	z-index: 99;
 	position: absolute;
@@ -32,6 +32,7 @@
 			position: fixed;
 			background: $app_menu_grey;
 			width: 140px;
+			z-index: 1000;
 			img {
 				width: 160px;
 				position: relative;
@@ -81,8 +82,8 @@
 	border-left: none;
 	border-top: none;
 	cursor: pointer;
-	-webkit-transition-property: left;
-    -webkit-transition-duration: 0.2s;
+	// -webkit-transition-property: left;
+ //    -webkit-transition-duration: 0.2s;
 }
 
 .scroll-left-menu {
