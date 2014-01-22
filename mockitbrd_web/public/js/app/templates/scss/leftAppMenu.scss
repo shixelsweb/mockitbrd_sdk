@@ -4,7 +4,7 @@
 	height: 100%;
 	float: left;
 	border-right: 1px groove #777;
-	overflow-y: scroll;
+	overflow-y: hidden;
 	// -webkit-transition-property: left;
 	// -webkit-transition-duration: 0.2s;
 	left: 0;
@@ -85,7 +85,6 @@
 }
 
 .scroll-left-menu {
-overflow-y: scroll;
 margin-top: 60px;
 height: 100%;
 position: relative;
