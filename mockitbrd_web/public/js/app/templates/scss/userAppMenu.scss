@@ -1,10 +1,9 @@
 #user-app-menu-view {
-	width: 280px;
 	height: 100%;
 	float: right;
-	margin-right: 145px;
-	position: relative;
 	top: -10px;
+	position: absolute;
+	right: 30px;
 }
 
 .MB-notification-icon {
@@ -61,23 +60,18 @@
 .MB-user-menu-open {
 	position: absolute;
 	top: -180px;
-	background: $app_menu_grey;
-	border-bottom-right-radius: 5px;
-	border-bottom-left-radius: 5px;
+	background: $primary_white;
 	box-shadow: 0px 0px 2px #777;
-	color: $app_menu_hover_font;
+	color: $devil_grey;
 	font-weight: 100;
-	right: 170px;
+	right: 80px;
 	-webkit-transition-property: top;
-    -webkit-transition-duration: 0.5s;
-    z-index: 1;
+	-webkit-transition-duration: 0.5s;
+	z-index: 1;
 
-    a {
-		color: $app_menu_hover_font;
-	}
 	li {
 		padding: 15px;
-		border-bottom: 1px solid $darker_grey;
+		color: $devil_grey;
 		cursor: pointer;
 		font-size: 0.9em;
 
@@ -86,7 +80,8 @@
 		}
 
 		&:hover {
-			background: $app_menu_hover_active;
+			background: $app_menu_hover_font;
+			color: $primary_blue;
 		}
 
 		i {

@@ -34,10 +34,10 @@ define(['MB', 'jquery', 'hbs!templates/login', 'backbone', 'marionette', 'toggle
                 var password = $('.MB-login-password').val();
                 //var stayLoggedIn = value;
                 //if user hasnt entered email or password do a validation before sending to API
-                var data = {'email': email, 'password': password};
-
-
-                MB.api.login(data);
+                if (email && password) {
+                    var data = {'email': email, 'password': password};
+                    var loginStatus = MB.api.login(data);
+                }
             },
 
             hideModal: function(e) {

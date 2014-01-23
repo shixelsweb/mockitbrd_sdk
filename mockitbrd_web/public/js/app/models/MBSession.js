@@ -35,7 +35,7 @@ define(["jquery", "backbone", "cookie"],
                     this.set ({
                         'user':  MB.cookie.set('MB-session-user', JSON.stringify(user)),
                         'token': MB.cookie.set('MB-session-auth-token', auth_token),
-                        'user_type': MB.cookie.set('MB-session-user-type', user.user_type)
+                        'user_type': MB.cookie.set('MB-session-user-type', user.user_type),
                     });
 
                     //this.load(user.user_type, user.status);

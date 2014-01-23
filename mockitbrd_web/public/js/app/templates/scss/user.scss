@@ -1,41 +1,165 @@
 #user-view {
-	margin-left: 280px;
+	margin-left: 180px;
+	margin-top: -15px;
 }
 
 .MB-user-profile-top {
-	width: 85%;
-	min-height: 250px;
+	width: 100%;
+	min-height: 180px;
+	margin-top: 15px;
 	background: #fff;
-	border-radius: 4px;
 	box-shadow: 0px 0px 2px #999;
+	position: relative;
+
+	.top {
+		height: 90px;
+		position: absolute;
+		width: 100%;
+		box-shadow: 0px 1px 2px $devil_grey;
+
+		.edit-profile-button {
+			font-size: 0.8em;
+			right: 10px;
+			top: 30px;
+			width: 122px;
+			height: 35px;
+			line-height: 2.9em;
+			background: rgba(0,0,0,0.2);
+			color: #fff;
+			font-weight: 100;
+			border-radius: 5px;
+			position: absolute;
+			padding-right: 5px;
+			padding-left: 5px;
+			cursor: pointer;
+			text-align: center;
+
+			&:hover {
+				font-weight: bold;
+			}
+
+			i {
+				padding-right: 10px;
+			}
+		}
+	}
 }
 
 .MB-user-profile-photo {
-	width: 20%;
-	height: 100%;
+	width: 140px;
+	height: 140px;
 	border-radius: 100px;
 	overflow: hidden;
 	float: left;
 	margin: 20px 30px;
 	display: inline-block;
+	position: absolute;
+	top: 0;
 }
 
 .MB-user-profile-top-info {
-	float: left;
-	min-height: 250px;
 	display: inline-block;
-	width: 40%;
+	width: 50%;
+	position: absolute;
+	left: 200px;
+	top: -45px;
+
 
 	h1 {
-		padding: 50px 0;
-		font-size: 2em;
-		color: #2bbbff;
+		padding-top: 60px;
+		font-size: 3em;
+		color: $primary_white;
 		font-weight: 100;
+		text-shadow: 0px 0px 2px #000;
+		font-family: $cursive_font;
+	}
+
+	h2 {
+		padding-left: 4px;
+		padding-bottom: 20px;
+		color: #fff;
+		text-shadow: 0px 0px 2px #000;
 	}
 }
 
 .MB-user-profile-quick-links {
-	width: 30%;
-	min-height: 250px;
+	width: 207px;;
 	display: inline-block;
+
+	.MB-user-profile-quick-link {
+		display: inline-block;
+		height: 42px;
+		width: 100%;
+		padding-left: 30px;
+		border-bottom: 1px solid $dashboard_bg;
+		line-height: 3em;
+		font-size: 0.9em;
+		font-weight: 100;
+		color: $devil_grey;
+		border-top: none;
+		border-right: none;
+		border-left: 2px solid $primary_blue;
+		cursor: pointer;
+
+		i {
+			font-size: 1em;
+			padding-right: 15px;
+		}
+
+		&:hover {
+			border-left: 2px solid $primary_yellow;
+
+			i {
+				color: $primary_yellow;
+			}
+		}
+
+		&.last {
+			border-bottom: none;
+		}
+
+	}
 }
+
+.MB-user-profile-top-social-links {
+	position: absolute;
+	bottom: -38px;
+	top: 75px;
+	z-index: 1;
+	right: 30px;
+
+	li {
+		width: 35px;
+		height: 35px;
+		background: rgba(0,0,0,0.3);
+		display: inline-block;
+		text-align: center;
+		line-height: 35px;
+		color: $primary_white;
+		font-size: 1em;
+		cursor: pointer;
+		border-radius: 5px;
+
+
+		&:hover {
+			color: $primary_white;
+			font-size: 1.1em;
+			position: relative;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -54,7 +54,6 @@ define(['jquery', 'hbs!templates/register', 'backbone', 'marionette'],
 
             on_keyup: function(e) {
                 var email_data = {title: "You're almost there!", email: 'me@faraashiru.com', message: 'HELLO!!!!', type: 'general'};
-                MB.email.start(email_data);
                 if (e.keyCode === 27) {
                     $(document).unbind('keyup', this.on_keyup);
                     this.closeModal();
