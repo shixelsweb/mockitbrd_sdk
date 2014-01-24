@@ -12,6 +12,7 @@ $primary_darker_light_grey: darken($primary_light_grey, 10%);
 $primary_green: #629A40;
 $primary_red: #CD0000;
 $app_menu_grey: #3B3A3F;
+$app_menu_settings: #5a5961;
 $dashboard_bg: #EDEFF0;
 $dashboard_offset: #D9DDE0;
 $light_grey: #ccc;
@@ -117,6 +118,14 @@ $ethon_roman: "Ethon Roman";
 .noShadow {
 	box-shadow: none;
 	text-shadow:none;
+}
+
+.pull-left {
+	float: left;
+}
+
+.pull-right {
+	float: right;
 }
 
 .plus150 {
