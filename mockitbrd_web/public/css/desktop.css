@@ -67,7 +67,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
 }
 
-/* line 28, ../js/app/templates/scss/variables.scss */
+/* line 29, ../js/app/templates/scss/variables.scss */
 .glass-effect {
   box-shadow: 0px 0px 0px 8px rgba(0, 0, 0, 0.3), 0px 2px 3px 0px rgba(0, 0, 0, 0.6);
 }
@@ -97,7 +97,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   src: url('fonts/../../fonts/ethon/ethon_roman.ttf') format('truetype');
 }
 
-/* line 47, ../js/app/templates/scss/variables.scss */
+/* line 48, ../js/app/templates/scss/variables.scss */
 .unselectable {
   -moz-user-select: none;
   -khtml-user-select: none;
@@ -105,12 +105,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   -o-user-select: none;
 }
 
-/* line 54, ../js/app/templates/scss/variables.scss */
+/* line 55, ../js/app/templates/scss/variables.scss */
 .placeholderHIW {
   margin-top: 30px;
 }
 
-/* line 58, ../js/app/templates/scss/variables.scss */
+/* line 59, ../js/app/templates/scss/variables.scss */
 .MB-boardroom-bg {
   background: url("../../img/login_bg.jpg") no-repeat;
   background-position: center;
@@ -118,7 +118,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   -moz-background-size: cover;
 }
 
-/* line 65, ../js/app/templates/scss/variables.scss */
+/* line 66, ../js/app/templates/scss/variables.scss */
 .MB-office-bg {
   background: url("../../img/office_bg.jpg") no-repeat;
   background-position: center;
@@ -126,7 +126,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   -moz-background-size: cover;
 }
 
-/* line 72, ../js/app/templates/scss/variables.scss */
+/* line 73, ../js/app/templates/scss/variables.scss */
 .MB-mail-bg {
   background: url("../../img/mail_bg.jpg") no-repeat;
   background-position: center;
@@ -134,7 +134,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   -moz-background-size: cover;
 }
 
-/* line 79, ../js/app/templates/scss/variables.scss */
+/* line 80, ../js/app/templates/scss/variables.scss */
 .MB-waiting-bg {
   background: url("../../img/waiting.jpg") no-repeat;
   background-position: top;
@@ -142,55 +142,65 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   -moz-background-size: cover;
 }
 
-/* line 86, ../js/app/templates/scss/variables.scss */
+/* line 87, ../js/app/templates/scss/variables.scss */
 .MB-lightGrey-bg {
   background-color: #f4f4f4;
 }
 
-/* line 89, ../js/app/templates/scss/variables.scss */
+/* line 90, ../js/app/templates/scss/variables.scss */
 .MB-white-bg {
   background-color: white;
   box-shadow: 0px 0px 2px #525252;
 }
 
-/* line 94, ../js/app/templates/scss/variables.scss */
+/* line 95, ../js/app/templates/scss/variables.scss */
 .MB-geom-bg {
   background: url("../../img/geometry.png");
   box-shadow: 0px 0px 2px #525252;
 }
 
-/* line 98, ../js/app/templates/scss/variables.scss */
+/* line 99, ../js/app/templates/scss/variables.scss */
 .clear-left {
   clear: left;
 }
 
-/* line 102, ../js/app/templates/scss/variables.scss */
+/* line 103, ../js/app/templates/scss/variables.scss */
 .clear-right {
   clear: right;
 }
 
-/* line 106, ../js/app/templates/scss/variables.scss */
+/* line 107, ../js/app/templates/scss/variables.scss */
 .clear-both {
   clear: both;
 }
 
-/* line 110, ../js/app/templates/scss/variables.scss */
+/* line 111, ../js/app/templates/scss/variables.scss */
 .noShadow {
   box-shadow: none;
   text-shadow: none;
 }
 
-/* line 115, ../js/app/templates/scss/variables.scss */
+/* line 116, ../js/app/templates/scss/variables.scss */
+.pull-left {
+  float: left;
+}
+
+/* line 120, ../js/app/templates/scss/variables.scss */
+.pull-right {
+  float: right;
+}
+
+/* line 124, ../js/app/templates/scss/variables.scss */
 .plus150 {
   padding-top: 150px;
 }
 
-/* line 119, ../js/app/templates/scss/variables.scss */
+/* line 128, ../js/app/templates/scss/variables.scss */
 .top52 {
   margin-top: 52px;
 }
 
-/* line 123, ../js/app/templates/scss/variables.scss */
+/* line 132, ../js/app/templates/scss/variables.scss */
 .plus100 {
   padding-top: 100px;
 }
@@ -497,7 +507,6 @@ a:hover {
   margin-left: auto;
   margin-right: auto;
   /*  LOGIN SWITCH */
-  /* DEMO 3 */
 }
 /* line 61, ../js/app/templates/scss/login.scss */
 #MB-login-form input {
@@ -7003,29 +7012,22 @@ label.iOSCheckLabelOff span {
   background: url("../../../img/ios-style-checkboxes/slider_center.png?1284697268");
 }
 
-/* line 1, ../js/app/templates/scss/account.scss */
-html, body {
-  height: 100%;
-  overflow: hidden;
-}
-
-/* line 6, ../js/app/templates/scss/account.scss */
-#account-view {
-  height: 100%;
+/* line 3, ../js/app/templates/scss/account.scss */
+.Account-bg-head {
+  color: white;
+  background: url(../../../../img/login_bg_grid.jpg) no-repeat;
+  width: 100%;
+  height: 150px;
 }
 
 /* line 10, ../js/app/templates/scss/account.scss */
-#general-head {
-  font-size: 23px;
-  margin-bottom: 5px;
+.account-head {
+  color: #525252;
+  font-size: 35px;
+  margin-bottom: 20px;
 }
 
-/* line 15, ../js/app/templates/scss/account.scss */
-#account-head {
-  font-size: 25px;
-}
-
-/* line 19, ../js/app/templates/scss/account.scss */
+/* line 16, ../js/app/templates/scss/account.scss */
 #profile-pic-head {
   font-size: 17px;
   margin-bottom: 15px;
@@ -7033,90 +7035,66 @@ html, body {
   text-align: left;
 }
 
-/* line 26, ../js/app/templates/scss/account.scss */
+/* line 23, ../js/app/templates/scss/account.scss */
 .MB-row-space {
   margin-top: 5%;
 }
 
-/* line 31, ../js/app/templates/scss/account.scss */
+/* line 28, ../js/app/templates/scss/account.scss */
 .MB-modal-body {
   width: 950px;
   margin-right: auto;
   margin-left: auto;
   background: #f4f4f4;
   padding: 25px;
-  height: 100%;
 }
 
-/* line 40, ../js/app/templates/scss/account.scss */
+/* line 37, ../js/app/templates/scss/account.scss */
 .MB-account-desc {
   margin-left: 30px;
 }
 
-/* line 44, ../js/app/templates/scss/account.scss */
+/* line 41, ../js/app/templates/scss/account.scss */
 .MB-account-nav {
   border-right: 1px white solid;
   text-align: center;
   width: 200px;
 }
 
-/* line 50, ../js/app/templates/scss/account.scss */
+/* line 47, ../js/app/templates/scss/account.scss */
 .MB-account-container {
   width: 100%;
 }
 
-/* line 55, ../js/app/templates/scss/account.scss */
-.MB-account-nav-links a {
-  color: #525252;
-}
-/* line 59, ../js/app/templates/scss/account.scss */
-.MB-account-nav-links li {
-  text-align: center;
-  padding-top: 50px;
-}
-/* line 64, ../js/app/templates/scss/account.scss */
-.MB-account-nav-links li:hover {
-  background-color: red;
-  width: 100%;
-  height: 100%;
-  color: green;
-}
-/* line 71, ../js/app/templates/scss/account.scss */
-.MB-account-nav-links li:active {
-  background: white;
-  color: #2bbbff;
-  width: 100%;
-}
-
-/* line 78, ../js/app/templates/scss/account.scss */
+/* line 51, ../js/app/templates/scss/account.scss */
 .MB-account-window {
   padding: 15px;
-  width: 98%;
+  width: 100%;
   height: 100%;
   background: white;
   border-radius: 3px;
   border: #6c6c6c 1px solid;
 }
 
-/* line 88, ../js/app/templates/scss/account.scss */
-.Photo-user-name {
+/* line 61, ../js/app/templates/scss/account.scss */
+#photo-username {
   text-align: center;
   margin-bottom: 2px;
 }
 
-/* line 97, ../js/app/templates/scss/account.scss */
+/* line 70, ../js/app/templates/scss/account.scss */
 .photo-section-align {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
 }
 
-/* line 103, ../js/app/templates/scss/account.scss */
+/* line 76, ../js/app/templates/scss/account.scss */
 .MB-user-align {
   text-align: center;
 }
 
-/* line 107, ../js/app/templates/scss/account.scss */
+/* line 80, ../js/app/templates/scss/account.scss */
 .MB-name-info > div > div > input {
   margin-top: 10px;
   margin-bottom: 15px;
@@ -7124,40 +7102,42 @@ html, body {
   width: 90%;
 }
 
-/* line 114, ../js/app/templates/scss/account.scss */
+/* line 87, ../js/app/templates/scss/account.scss */
 .MB-button-upload {
+  margin-left: 14px;
+  text-align: center;
   margin-top: 15px;
   border: none;
   color: #6c6c6c;
 }
-/* line 119, ../js/app/templates/scss/account.scss */
+/* line 94, ../js/app/templates/scss/account.scss */
 .MB-button-upload a {
   color: #6c6c6c !important;
 }
-/* line 123, ../js/app/templates/scss/account.scss */
+/* line 98, ../js/app/templates/scss/account.scss */
 .MB-button-upload a:hover {
   color: #0085c4 !important;
   cursor: pointer;
 }
 
-/* line 130, ../js/app/templates/scss/account.scss */
+/* line 105, ../js/app/templates/scss/account.scss */
 .MB-user-photo-frame {
   border: 1px solid #f4f4f4;
   border-width: 0px 1px 3px 1px;
-  height: 325px;
-  width: 300px;
+  height: 125px;
+  width: 125px;
   text-align: center;
   margin-right: auto;
-  margin-left: auto;
+  margin-left: 15px;
   background: -webkit-gradient(linear, left top, left bottom, from(white), to(#faf4f4));
   vertical-align: middle;
-  border-radius: 2px;
+  border-radius: 50%;
 }
 
-/* line 143, ../js/app/templates/scss/account.scss */
+/* line 118, ../js/app/templates/scss/account.scss */
 .MB-user-photo-frame:before {
   content: '';
-  border-radius: 2px;
+  border-radius: 50%;
   display: inline-block;
   height: 100%;
   vertical-align: middle;
@@ -7165,14 +7145,14 @@ html, body {
   /* Adjusts for spacing */
 }
 
-/* line 152, ../js/app/templates/scss/account.scss */
+/* line 127, ../js/app/templates/scss/account.scss */
 .MB-user-photo {
   margin-left: auto;
   margin-right: auto;
-  width: 250px;
-  height: 250px;
+  width: 100px;
+  height: 100px;
   border: 2px solid #2bbbff;
-  border-radius: 2px;
+  border-radius: 50%;
   border-color: black;
   background-color: #f4f4f4;
   display: inline-block;
@@ -7180,22 +7160,110 @@ html, body {
   position: relative;
 }
 
-/* line 166, ../js/app/templates/scss/account.scss */
+/* line 141, ../js/app/templates/scss/account.scss */
 .MB-user-photo > img {
   margin-bottom: 15px;
-  border-radius: 2px;
+  border-radius: 50%;
 }
 
-/* line 171, ../js/app/templates/scss/account.scss */
+/* line 146, ../js/app/templates/scss/account.scss */
 .shadow {
   -webkit-box-shadow: 0 8px 6px -6px red;
   -moz-box-shadow: 0 8px 6px -6px black;
   box-shadow: 0 8px 6px -6px #6c6c6c;
 }
 
-/* line 178, ../js/app/templates/scss/account.scss */
-#notContent, #payContent, #supContent {
-  display: none;
+/* line 154, ../js/app/templates/scss/account.scss */
+.Account-ul-style {
+  margin-left: -10px;
+}
+
+/* line 158, ../js/app/templates/scss/account.scss */
+.MB-account-nav-links {
+  width: 160px;
+}
+/* line 162, ../js/app/templates/scss/account.scss */
+.MB-account-nav-links li:nth-child(1) {
+  margin-top: 50px;
+}
+/* line 166, ../js/app/templates/scss/account.scss */
+.MB-account-nav-links li {
+  color: #848488;
+  text-align: left;
+  padding: 20px;
+  font-size: 0.8em;
+}
+/* line 174, ../js/app/templates/scss/account.scss */
+.MB-account-nav-links li:hover {
+  background: white;
+  color: #525252;
+  border-right: 8px solid #ffe42b;
+}
+/* line 180, ../js/app/templates/scss/account.scss */
+.MB-account-nav-links li.active {
+  background: white;
+  color: #2bbbff;
+  border-right: 8px solid #2bbbff;
+  position: relative;
+}
+/* line 187, ../js/app/templates/scss/account.scss */
+.MB-account-nav-links li.active:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 105%;
+  width: 0;
+  height: 0;
+  margin-top: -10px;
+  /* Build the triangle */
+  border-left: 8px solid #2bbbff;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+}
+/* line 203, ../js/app/templates/scss/account.scss */
+.MB-account-nav-links i {
+  padding-right: 15px;
+}
+
+/* line 210, ../js/app/templates/scss/account.scss */
+.save-bar {
+  width: 100%;
+  background: #3b3a3f;
+  margin-bottom: 10px;
+  padding: 6px;
+  border-radius: 2px;
+}
+/* line 217, ../js/app/templates/scss/account.scss */
+.save-bar button {
+  margin-right: 0px;
+}
+
+/* line 225, ../js/app/templates/scss/account.scss */
+.notify-option {
+  float: left;
+  margin-top: 10px;
+}
+
+/* line 230, ../js/app/templates/scss/account.scss */
+#option-specify {
+  float: right;
+  margin-right: 25px;
+}
+/* line 234, ../js/app/templates/scss/account.scss */
+#option-specify #email-head {
+  margin-right: 20px;
+}
+
+/* line 239, ../js/app/templates/scss/account.scss */
+.Not-check-option {
+  float: right;
+  margin-right: 25px;
+}
+/* line 243, ../js/app/templates/scss/account.scss */
+.Not-check-option input[type="checkbox"] {
+  margin-left: 20px;
+  height: 30px;
+  width: 30px;
 }
 
 /* line 1, ../js/app/templates/scss/leftAppMenu.scss */

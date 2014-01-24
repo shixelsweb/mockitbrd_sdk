@@ -11,7 +11,8 @@ define(['jquery', 'models/Model', 'hbs!templates/account', 'backbone', 'marionet
           genView: null,
 
           events:{
-            'click .nav-tabs li': 'handleTabClick'
+            'click .nav-tabs li': 'handleTabClick',
+            'click .Account-menu-item': 'onAccMenuClick'
           },
           
 
@@ -30,10 +31,14 @@ define(['jquery', 'models/Model', 'hbs!templates/account', 'backbone', 'marionet
             this.setElement(this.$el);
 
             var user = this.user;
-
-            
-
           },
+
+          onAccMenuClick: function(e) {
+            
+            $('.Account-menu-item').removeClass('active');
+            $(e.currentTarget).addClass('active');
+          },
+
           handleTabClick: function(e) {
             var view = $(e.currentTarget).data('navigate');
 
