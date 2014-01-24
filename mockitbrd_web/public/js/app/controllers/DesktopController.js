@@ -132,8 +132,8 @@ function (
             var leftAppMenu = new LeftAppMenuView();
 
             this.hideModal();
+            //this.showFooter();
             this.hideHeader();
-            MB.mainRegion.show(dashboard);
             MB.leftAppNavRegion.show(leftAppMenu);
             MB.dashboardRegion.show(dashboard);
             MB.dashboardRegion.$el.prepend(topAppMenu.render().el);
@@ -258,13 +258,10 @@ function (
             $("#accountViewRegion").html(generalView.render().el);
         },
         dashboard: function () {
-            //var dashboardMainView = new DashboardMainView();
-
-            this.hideHeader();
-            MB.mainRegion.show(new DashboardMainView());
+            var dashboardMainView = new DashboardMainView();
 
             this.launchApp();
-            //$('#dashboard-view').append(dashboardMainView.render().el);
+            $('#dashboard-view').append(dashboardMainView.render().el);
         },
         interview: function(id) {
             var interviewView = new InterviewView({'interview_id': id, 'webrtc': SimpleWebRTC, 'confirm': MBConfirm});

@@ -145,7 +145,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 /* line 86, ../js/app/templates/scss/variables.scss */
 .MB-waiting-two-bg {
   background: url("../../img/waiting2.jpg") no-repeat;
-  background-position: 0 -120px;
+  background-position: 100px -120px;
   background-size: cover;
   -moz-background-size: cover;
 }
@@ -7421,12 +7421,11 @@ html, body {
   width: 100%;
   height: 250px;
   position: absolute;
-  left: 100px;
   border-top: 10px solid rgba(0, 0, 0, 0.3);
-  box-shadow: 0px 1px 4px black;
+  box-shadow: 0px 1px 1px #ddd;
 }
 
-/* line 13, ../js/app/templates/scss/dashboard.scss */
+/* line 12, ../js/app/templates/scss/dashboard.scss */
 #dashboard-content {
   width: 100%;
   height: 100%;
@@ -7438,7 +7437,7 @@ html, body {
   overflow-y: scroll;
 }
 
-/* line 24, ../js/app/templates/scss/dashboard.scss */
+/* line 23, ../js/app/templates/scss/dashboard.scss */
 .dashboard-calendar {
   width: 300px;
   height: 300px;
@@ -7447,18 +7446,18 @@ html, body {
   margin-top: 30px;
   text-align: right;
 }
-/* line 32, ../js/app/templates/scss/dashboard.scss */
+/* line 31, ../js/app/templates/scss/dashboard.scss */
 .dashboard-calendar h2 {
   font-size: 3em;
   font-weight: 100;
   cursor: default;
 }
-/* line 38, ../js/app/templates/scss/dashboard.scss */
+/* line 37, ../js/app/templates/scss/dashboard.scss */
 .dashboard-calendar .menu {
   position: relative;
   left: 8px;
 }
-/* line 41, ../js/app/templates/scss/dashboard.scss */
+/* line 40, ../js/app/templates/scss/dashboard.scss */
 .dashboard-calendar .menu li {
   display: inline-block;
   padding: 15px 10px;
@@ -7467,16 +7466,16 @@ html, body {
   color: #999;
   cursor: pointer;
 }
-/* line 49, ../js/app/templates/scss/dashboard.scss */
+/* line 48, ../js/app/templates/scss/dashboard.scss */
 .dashboard-calendar .menu li.active {
   color: black;
 }
-/* line 53, ../js/app/templates/scss/dashboard.scss */
+/* line 52, ../js/app/templates/scss/dashboard.scss */
 .dashboard-calendar .menu li:hover {
   color: black;
 }
 
-/* line 61, ../js/app/templates/scss/dashboard.scss */
+/* line 60, ../js/app/templates/scss/dashboard.scss */
 .calendar-today .calendar-item {
   position: relative;
   background: #fff;
@@ -7485,14 +7484,14 @@ html, body {
   margin-bottom: 15px;
   cursor: pointer;
 }
-/* line 69, ../js/app/templates/scss/dashboard.scss */
+/* line 68, ../js/app/templates/scss/dashboard.scss */
 .calendar-today .calendar-item li {
   display: inline-block;
   position: absolute;
   line-height: 3em;
   font-weight: 100;
 }
-/* line 75, ../js/app/templates/scss/dashboard.scss */
+/* line 74, ../js/app/templates/scss/dashboard.scss */
 .calendar-today .calendar-item li.icon {
   position: absolute;
   left: -15px;
@@ -7506,11 +7505,11 @@ html, body {
   top: 3px;
   box-shadow: 0px 0px 1px #ddd;
 }
-/* line 89, ../js/app/templates/scss/dashboard.scss */
+/* line 88, ../js/app/templates/scss/dashboard.scss */
 .calendar-today .calendar-item li.description {
   left: 35px;
 }
-/* line 93, ../js/app/templates/scss/dashboard.scss */
+/* line 92, ../js/app/templates/scss/dashboard.scss */
 .calendar-today .calendar-item li.close {
   right: 10px;
   bottom: -10px;
