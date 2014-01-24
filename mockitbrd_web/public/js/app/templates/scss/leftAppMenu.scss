@@ -14,6 +14,7 @@
     	position: absolute;
     	z-index: 10000;
     }
+
 	li {
 		height: 60px;
 		color: $app_menu_font;
@@ -29,7 +30,6 @@
 		}
 
 		&.half-word-logo {
-			position: fixed;
 			background: $app_menu_grey;
 			width: 140px;
 			z-index: 1000;
@@ -67,6 +67,7 @@
 }
 
 .MB-left-app-menu-button {
+	visibility: hidden;
 	width: 45px;
 	height: 45px;
 	color: $primary_white;

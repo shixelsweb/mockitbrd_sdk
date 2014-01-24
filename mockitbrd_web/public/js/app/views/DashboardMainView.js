@@ -1,4 +1,4 @@
-define(['jquery', 'hbs!templates/dashboardCalendar', 'backbone', 'marionette', 'moment', 'models/Model'],
+define(['jquery', 'hbs!templates/dashboardMain', 'backbone', 'marionette', 'moment', 'models/Model'],
     function ($, template, Backbone, Model) {
       //ItemView provides some default rendering logic
       return Backbone.Marionette.ItemView.extend({

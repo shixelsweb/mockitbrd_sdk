@@ -40,6 +40,7 @@ define(["jquery", "underscore", "backbone"],
 
             //TODO: remember email, stay logged in (increase session time), only login if status is active
             login: function(params) {
+                var send = null;
                 $.ajax({
                     type: "POST",
                     url: this.get('url') + "v1/user/verify_user",
@@ -51,14 +52,24 @@ define(["jquery", "underscore", "backbone"],
                             $('.MB-login-alert').css('display', 'table');
                         } else {
                             MB.session.start(response.data.user); //add  ", params.stayLoggedIn"
-                          //TODO-(Earl) - Create BLANK Landing views with words (interviewer, candidate, or verify) - DO THIS IN MB.session
-                          //TODO FIGURE OUT DUPLILCATE SESSIONS AND CLOSE ON SUCCESS
+                            MB.appRouter.navigate('dashboard', {trigger: true});
                         }
+                        send = response.data.success;
                     },
                     error: function(response) {
-                        alert("error! ", response.data.error); //TODO-(Fara): add to Error Modal
-                    }
+                        alert("error! ", response); //TODO-(Fara): add to Error Modal
+                    },
+                    async: false
                 });
+
+                return send;
+            },
+            logout: function() {
+                MB.cookie.clear('MB-session-user');
+                MB.cookie.clear('MB-session-auth-token');
+                MB.cookie.clear('MB-session-user-type');
+
+                MB.appRouter.navigate('', {trigger: true});
             },
             getUserTasks: function(user_id) {
                 var send = null;
@@ -86,8 +97,10 @@ define(["jquery", "underscore", "backbone"],
                     url: this.get('url') + "v1/user/tasks/" + user_id,
                     dataType: 'json',
                     success: function (response) {
-                        for(var i = 0; i < response.data.userTasks.length; i++) {
-                            tasks.push(self.task(response.data.userTasks[i].task_id));
+                        if (response.data.userTasks) {
+                            for(var i = 0; i < response.data.userTasks.length; i++) {
+                                tasks.push(self.task(response.data.userTasks[i].task_id));
+                            }
                         }
                     },
                     error: function(response) {
@@ -162,6 +175,10 @@ define(["jquery", "underscore", "backbone"],
                         alert("error: ", response.data.error); //TODO-(Fara) : add to Error Modal
                     }
                 });
+            },
+            star: function(params) {
+                var send = null;
+                return send;
             }
         });
 

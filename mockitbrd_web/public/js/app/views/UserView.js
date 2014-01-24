@@ -8,6 +8,7 @@ define(['jquery', 'models/Model', 'hbs!templates/user', 'backbone', 'marionette'
           user: null,
           currentUser: null,
           isOwner: null,
+          user_pic: null,
 
           initialize:function(options) {
 
@@ -15,10 +16,12 @@ define(['jquery', 'models/Model', 'hbs!templates/user', 'backbone', 'marionette'
             this.currentUser = $.parseJSON(MB.session.get('user'));
             if(this.user._id === this.currentUser._id) {
               this.isOwner = true;
+              this.user_pic = 'https://s3-us-west-2.amazonaws.com/mockitbrd/users/' + this.currentUser._id + '/user_pic.jpg';
             } else {
               this.isOwner = false;
+              this.user_pic = 'https://s3-us-west-2.amazonaws.com/mockitbrd/users/' + this.user._id + '/user_pic.jpg';
             }
-            this.model = new Model ({user: this.user, isOwner: this.isOwner});
+            this.model = new Model ({user: this.user, isOwner: this.isOwner, user_pic: this.user_pic});
           },
           onRender: function () {
             // get rid of that pesky wrapping-div

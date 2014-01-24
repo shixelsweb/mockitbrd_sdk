@@ -143,64 +143,72 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 
 /* line 87, ../js/app/templates/scss/variables.scss */
+.MB-waiting-two-bg {
+  background: url("../../img/waiting2.jpg") no-repeat;
+  background-position: 0 -120px;
+  background-size: cover;
+  -moz-background-size: cover;
+}
+
+/* line 94, ../js/app/templates/scss/variables.scss */
 .MB-lightGrey-bg {
   background-color: #f4f4f4;
 }
 
-/* line 90, ../js/app/templates/scss/variables.scss */
+/* line 97, ../js/app/templates/scss/variables.scss */
 .MB-white-bg {
   background-color: white;
   box-shadow: 0px 0px 2px #525252;
 }
 
-/* line 95, ../js/app/templates/scss/variables.scss */
+/* line 102, ../js/app/templates/scss/variables.scss */
 .MB-geom-bg {
   background: url("../../img/geometry.png");
   box-shadow: 0px 0px 2px #525252;
 }
 
-/* line 99, ../js/app/templates/scss/variables.scss */
+/* line 106, ../js/app/templates/scss/variables.scss */
 .clear-left {
   clear: left;
 }
 
-/* line 103, ../js/app/templates/scss/variables.scss */
+/* line 110, ../js/app/templates/scss/variables.scss */
 .clear-right {
   clear: right;
 }
 
-/* line 107, ../js/app/templates/scss/variables.scss */
+/* line 114, ../js/app/templates/scss/variables.scss */
 .clear-both {
   clear: both;
 }
 
-/* line 111, ../js/app/templates/scss/variables.scss */
+/* line 118, ../js/app/templates/scss/variables.scss */
 .noShadow {
   box-shadow: none;
   text-shadow: none;
 }
 
-/* line 116, ../js/app/templates/scss/variables.scss */
+/* line 123, ../js/app/templates/scss/variables.scss */
 .pull-left {
   float: left;
 }
 
-/* line 120, ../js/app/templates/scss/variables.scss */
+/* line 127, ../js/app/templates/scss/variables.scss */
 .pull-right {
   float: right;
 }
 
-/* line 124, ../js/app/templates/scss/variables.scss */
+/* line 131, ../js/app/templates/scss/variables.scss */
 .plus150 {
   padding-top: 150px;
 }
 
-/* line 128, ../js/app/templates/scss/variables.scss */
+/* line 135, ../js/app/templates/scss/variables.scss */
 .top52 {
   margin-top: 52px;
 }
 
-/* line 132, ../js/app/templates/scss/variables.scss */
+/* line 139, ../js/app/templates/scss/variables.scss */
 .plus100 {
   padding-top: 100px;
 }
@@ -7283,7 +7291,7 @@ label.iOSCheckLabelOff span {
   position: absolute;
   z-index: 10000;
 }
-/* line 17, ../js/app/templates/scss/leftAppMenu.scss */
+/* line 18, ../js/app/templates/scss/leftAppMenu.scss */
 .MB-left-app-menu li {
   height: 60px;
   color: #848488;
@@ -7293,14 +7301,13 @@ label.iOSCheckLabelOff span {
   cursor: pointer;
   padding: 0 20px;
 }
-/* line 26, ../js/app/templates/scss/leftAppMenu.scss */
+/* line 27, ../js/app/templates/scss/leftAppMenu.scss */
 .MB-left-app-menu li i {
   font-size: 1.5em;
   padding-right: 15px;
 }
-/* line 31, ../js/app/templates/scss/leftAppMenu.scss */
+/* line 32, ../js/app/templates/scss/leftAppMenu.scss */
 .MB-left-app-menu li.half-word-logo {
-  position: fixed;
   background: #3b3a3f;
   width: 140px;
   z-index: 1000;
@@ -7338,6 +7345,7 @@ label.iOSCheckLabelOff span {
 
 /* line 69, ../js/app/templates/scss/leftAppMenu.scss */
 .MB-left-app-menu-button {
+  visibility: hidden;
   width: 45px;
   height: 45px;
   color: white;
@@ -7355,7 +7363,7 @@ label.iOSCheckLabelOff span {
   cursor: pointer;
 }
 
-/* line 87, ../js/app/templates/scss/leftAppMenu.scss */
+/* line 88, ../js/app/templates/scss/leftAppMenu.scss */
 .scroll-left-menu {
   margin-top: 60px;
   height: 100%;
@@ -7371,19 +7379,19 @@ label.iOSCheckLabelOff span {
   position: absolute;
   z-index: 10;
   margin-left: 1px;
+  box-shadow: 0px 0px 2px black;
 }
 
 /* line 1, ../js/app/templates/scss/userAppMenu.scss */
 #user-app-menu-view {
-  width: 280px;
   height: 100%;
   float: right;
-  margin-right: 145px;
-  position: relative;
   top: -10px;
+  position: absolute;
+  right: 30px;
 }
 
-/* line 10, ../js/app/templates/scss/userAppMenu.scss */
+/* line 9, ../js/app/templates/scss/userAppMenu.scss */
 .MB-notification-icon {
   width: 40px;
   height: 100%;
@@ -7393,12 +7401,12 @@ label.iOSCheckLabelOff span {
   cursor: pointer;
   margin-left: 15px;
 }
-/* line 19, ../js/app/templates/scss/userAppMenu.scss */
+/* line 18, ../js/app/templates/scss/userAppMenu.scss */
 .MB-notification-icon:hover {
   color: #cccccc;
 }
 
-/* line 24, ../js/app/templates/scss/userAppMenu.scss */
+/* line 23, ../js/app/templates/scss/userAppMenu.scss */
 .MB-user-menu {
   height: 60px;
   float: left;
@@ -7408,14 +7416,14 @@ label.iOSCheckLabelOff span {
   font-weight: 100;
   top: 17px;
 }
-/* line 34, ../js/app/templates/scss/userAppMenu.scss */
+/* line 33, ../js/app/templates/scss/userAppMenu.scss */
 .MB-user-menu li {
   display: inline-block;
   margin-right: 15px;
   vertical-align: middle;
 }
 
-/* line 41, ../js/app/templates/scss/userAppMenu.scss */
+/* line 40, ../js/app/templates/scss/userAppMenu.scss */
 .MB-user-menu-image {
   border-radius: 100px;
   overflow: hidden;
@@ -7425,53 +7433,48 @@ label.iOSCheckLabelOff span {
   cursor: pointer;
 }
 
-/* line 50, ../js/app/templates/scss/userAppMenu.scss */
+/* line 49, ../js/app/templates/scss/userAppMenu.scss */
 .MB-user-menu-menu {
   cursor: pointer;
   font-size: 1.8em;
   position: relative;
   top: 2px;
 }
-/* line 56, ../js/app/templates/scss/userAppMenu.scss */
+/* line 55, ../js/app/templates/scss/userAppMenu.scss */
 .MB-user-menu-menu:hover {
   color: #666666;
 }
 
-/* line 61, ../js/app/templates/scss/userAppMenu.scss */
+/* line 60, ../js/app/templates/scss/userAppMenu.scss */
 .MB-user-menu-open {
   position: absolute;
   top: -180px;
-  background: #3b3a3f;
-  border-bottom-right-radius: 5px;
-  border-bottom-left-radius: 5px;
+  background: white;
   box-shadow: 0px 0px 2px #777;
-  color: #f4f4f4;
+  color: #666666;
   font-weight: 100;
-  right: 170px;
+  right: 80px;
   -webkit-transition-property: top;
   -webkit-transition-duration: 0.5s;
   z-index: 1;
 }
-/* line 75, ../js/app/templates/scss/userAppMenu.scss */
-.MB-user-menu-open a {
-  color: #f4f4f4;
-}
-/* line 78, ../js/app/templates/scss/userAppMenu.scss */
+/* line 72, ../js/app/templates/scss/userAppMenu.scss */
 .MB-user-menu-open li {
   padding: 15px;
-  border-bottom: 1px solid #333333;
+  color: #666666;
   cursor: pointer;
   font-size: 0.9em;
 }
-/* line 84, ../js/app/templates/scss/userAppMenu.scss */
+/* line 78, ../js/app/templates/scss/userAppMenu.scss */
 .MB-user-menu-open li.last {
   border-bottom: 0;
 }
-/* line 88, ../js/app/templates/scss/userAppMenu.scss */
+/* line 82, ../js/app/templates/scss/userAppMenu.scss */
 .MB-user-menu-open li:hover {
-  background: #353439;
+  background: #f4f4f4;
+  color: #2bbbff;
 }
-/* line 92, ../js/app/templates/scss/userAppMenu.scss */
+/* line 87, ../js/app/templates/scss/userAppMenu.scss */
 .MB-user-menu-open li i {
   padding-right: 15px;
   font-size: 1.2em;
@@ -7481,8 +7484,17 @@ label.iOSCheckLabelOff span {
 #dashboard-view {
   padding-top: 60px;
 }
-
 /* line 4, ../js/app/templates/scss/dashboard.scss */
+#dashboard-view .dashboard-top {
+  width: 100%;
+  height: 250px;
+  position: absolute;
+  left: 100px;
+  border-top: 10px solid rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 1px 4px black;
+}
+
+/* line 13, ../js/app/templates/scss/dashboard.scss */
 #dashboard-content {
   width: 100%;
   height: 100%;
@@ -7494,8 +7506,8 @@ label.iOSCheckLabelOff span {
   overflow-y: scroll;
 }
 
-/* line 15, ../js/app/templates/scss/dashboard.scss */
-.dashboard-calendar-view {
+/* line 24, ../js/app/templates/scss/dashboard.scss */
+.dashboard-calendar {
   width: 300px;
   height: 300px;
   float: right;
@@ -7503,19 +7515,19 @@ label.iOSCheckLabelOff span {
   margin-top: 30px;
   text-align: right;
 }
-/* line 23, ../js/app/templates/scss/dashboard.scss */
-.dashboard-calendar-view h2 {
+/* line 32, ../js/app/templates/scss/dashboard.scss */
+.dashboard-calendar h2 {
   font-size: 3em;
   font-weight: 100;
   cursor: default;
 }
-/* line 29, ../js/app/templates/scss/dashboard.scss */
-.dashboard-calendar-view .menu {
+/* line 38, ../js/app/templates/scss/dashboard.scss */
+.dashboard-calendar .menu {
   position: relative;
   left: 8px;
 }
-/* line 32, ../js/app/templates/scss/dashboard.scss */
-.dashboard-calendar-view .menu li {
+/* line 41, ../js/app/templates/scss/dashboard.scss */
+.dashboard-calendar .menu li {
   display: inline-block;
   padding: 15px 10px;
   font-size: 1.3em;
@@ -7523,16 +7535,16 @@ label.iOSCheckLabelOff span {
   color: #999;
   cursor: pointer;
 }
-/* line 40, ../js/app/templates/scss/dashboard.scss */
-.dashboard-calendar-view .menu li.active {
+/* line 49, ../js/app/templates/scss/dashboard.scss */
+.dashboard-calendar .menu li.active {
   color: black;
 }
-/* line 44, ../js/app/templates/scss/dashboard.scss */
-.dashboard-calendar-view .menu li:hover {
+/* line 53, ../js/app/templates/scss/dashboard.scss */
+.dashboard-calendar .menu li:hover {
   color: black;
 }
 
-/* line 52, ../js/app/templates/scss/dashboard.scss */
+/* line 61, ../js/app/templates/scss/dashboard.scss */
 .calendar-today .calendar-item {
   position: relative;
   background: #fff;
@@ -7541,14 +7553,14 @@ label.iOSCheckLabelOff span {
   margin-bottom: 15px;
   cursor: pointer;
 }
-/* line 60, ../js/app/templates/scss/dashboard.scss */
+/* line 69, ../js/app/templates/scss/dashboard.scss */
 .calendar-today .calendar-item li {
   display: inline-block;
   position: absolute;
   line-height: 3em;
   font-weight: 100;
 }
-/* line 66, ../js/app/templates/scss/dashboard.scss */
+/* line 75, ../js/app/templates/scss/dashboard.scss */
 .calendar-today .calendar-item li.icon {
   position: absolute;
   left: -15px;
@@ -7562,11 +7574,11 @@ label.iOSCheckLabelOff span {
   top: 3px;
   box-shadow: 0px 0px 1px #ddd;
 }
-/* line 80, ../js/app/templates/scss/dashboard.scss */
+/* line 89, ../js/app/templates/scss/dashboard.scss */
 .calendar-today .calendar-item li.description {
   left: 35px;
 }
-/* line 84, ../js/app/templates/scss/dashboard.scss */
+/* line 93, ../js/app/templates/scss/dashboard.scss */
 .calendar-today .calendar-item li.close {
   right: 10px;
   bottom: -10px;
@@ -7933,49 +7945,156 @@ label.iOSCheckLabelOff span {
 
 /* line 1, ../js/app/templates/scss/user.scss */
 #user-view {
-  margin-left: 280px;
+  margin-left: 180px;
+  margin-top: -15px;
 }
 
-/* line 5, ../js/app/templates/scss/user.scss */
+/* line 6, ../js/app/templates/scss/user.scss */
 .MB-user-profile-top {
-  width: 85%;
-  min-height: 250px;
+  width: 100%;
+  min-height: 180px;
+  margin-top: 15px;
   background: #fff;
-  border-radius: 4px;
   box-shadow: 0px 0px 2px #999;
+  position: relative;
+}
+/* line 14, ../js/app/templates/scss/user.scss */
+.MB-user-profile-top .top {
+  height: 90px;
+  position: absolute;
+  width: 100%;
+  box-shadow: 0px 1px 2px #666666;
+}
+/* line 20, ../js/app/templates/scss/user.scss */
+.MB-user-profile-top .top .edit-profile-button {
+  font-size: 0.8em;
+  right: 10px;
+  top: 30px;
+  width: 122px;
+  height: 35px;
+  line-height: 2.9em;
+  background: rgba(0, 0, 0, 0.2);
+  color: #fff;
+  font-weight: 100;
+  border-radius: 5px;
+  position: absolute;
+  padding-right: 5px;
+  padding-left: 5px;
+  cursor: pointer;
+  text-align: center;
+}
+/* line 37, ../js/app/templates/scss/user.scss */
+.MB-user-profile-top .top .edit-profile-button:hover {
+  font-weight: bold;
+}
+/* line 41, ../js/app/templates/scss/user.scss */
+.MB-user-profile-top .top .edit-profile-button i {
+  padding-right: 10px;
 }
 
-/* line 13, ../js/app/templates/scss/user.scss */
+/* line 48, ../js/app/templates/scss/user.scss */
 .MB-user-profile-photo {
-  width: 20%;
-  height: 100%;
+  width: 140px;
+  height: 140px;
   border-radius: 100px;
   overflow: hidden;
   float: left;
   margin: 20px 30px;
   display: inline-block;
+  position: absolute;
+  top: 0;
 }
 
-/* line 23, ../js/app/templates/scss/user.scss */
+/* line 60, ../js/app/templates/scss/user.scss */
 .MB-user-profile-top-info {
-  float: left;
-  min-height: 250px;
   display: inline-block;
-  width: 40%;
+  width: 50%;
+  position: absolute;
+  left: 200px;
+  top: -45px;
 }
-/* line 29, ../js/app/templates/scss/user.scss */
+/* line 68, ../js/app/templates/scss/user.scss */
 .MB-user-profile-top-info h1 {
-  padding: 50px 0;
-  font-size: 2em;
-  color: #2bbbff;
+  padding-top: 60px;
+  font-size: 3em;
+  color: white;
   font-weight: 100;
+  text-shadow: 0px 0px 2px #000;
+  font-family: "Desyrel";
+}
+/* line 77, ../js/app/templates/scss/user.scss */
+.MB-user-profile-top-info h2 {
+  padding-left: 4px;
+  padding-bottom: 20px;
+  color: #fff;
+  text-shadow: 0px 0px 2px #000;
 }
 
-/* line 37, ../js/app/templates/scss/user.scss */
+/* line 85, ../js/app/templates/scss/user.scss */
 .MB-user-profile-quick-links {
-  width: 30%;
-  min-height: 250px;
+  width: 207px;
   display: inline-block;
+}
+/* line 89, ../js/app/templates/scss/user.scss */
+.MB-user-profile-quick-links .MB-user-profile-quick-link {
+  display: inline-block;
+  height: 42px;
+  width: 100%;
+  padding-left: 30px;
+  border-bottom: 1px solid #edeff0;
+  line-height: 3em;
+  font-size: 0.9em;
+  font-weight: 100;
+  color: #666666;
+  border-top: none;
+  border-right: none;
+  border-left: 2px solid #2bbbff;
+  cursor: pointer;
+}
+/* line 104, ../js/app/templates/scss/user.scss */
+.MB-user-profile-quick-links .MB-user-profile-quick-link i {
+  font-size: 1em;
+  padding-right: 15px;
+}
+/* line 109, ../js/app/templates/scss/user.scss */
+.MB-user-profile-quick-links .MB-user-profile-quick-link:hover {
+  border-left: 2px solid #ffe42b;
+}
+/* line 112, ../js/app/templates/scss/user.scss */
+.MB-user-profile-quick-links .MB-user-profile-quick-link:hover i {
+  color: #ffe42b;
+}
+/* line 117, ../js/app/templates/scss/user.scss */
+.MB-user-profile-quick-links .MB-user-profile-quick-link.last {
+  border-bottom: none;
+}
+
+/* line 124, ../js/app/templates/scss/user.scss */
+.MB-user-profile-top-social-links {
+  position: absolute;
+  bottom: -38px;
+  top: 75px;
+  z-index: 1;
+  right: 30px;
+}
+/* line 131, ../js/app/templates/scss/user.scss */
+.MB-user-profile-top-social-links li {
+  width: 35px;
+  height: 35px;
+  background: rgba(0, 0, 0, 0.3);
+  display: inline-block;
+  text-align: center;
+  line-height: 35px;
+  color: white;
+  font-size: 1em;
+  cursor: pointer;
+  border-radius: 5px;
+}
+/* line 144, ../js/app/templates/scss/user.scss */
+.MB-user-profile-top-social-links li:hover {
+  color: white;
+  font-size: 1.1em;
+  position: relative;
 }
 
 /* line 10, ../scss/desktop.scss */

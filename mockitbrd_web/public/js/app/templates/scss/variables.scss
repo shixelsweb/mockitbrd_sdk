@@ -84,6 +84,13 @@ $ethon_roman: "Ethon Roman";
     -moz-background-size: cover;
 }
 
+.MB-waiting-two-bg {
+	background: url('../../img/waiting2.jpg') no-repeat;
+	background-position: 0 -120px;
+	background-size: cover;
+    -moz-background-size: cover;
+}
+
 .MB-lightGrey-bg {
 	background-color: $primary_light_grey;
 }
