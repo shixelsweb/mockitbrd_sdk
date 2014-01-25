@@ -5,4 +5,5 @@ dist
 .tmp
 .min.css
 .min.js
+.min
 app/bower_components

@@ -25,7 +25,7 @@ define(['jquery', 'models/Model', 'hbs!templates/user', 'backbone', 'marionette'
             this.isStarred = this.checkIfStarred(this.currentUser.interactions.starred, this.user._id);
             this.isConnectedActive = this.checkIfConnected(this.currentUser.connections, this.user._id);
 
-            if(this.user._id === this.currentUser._id) {;
+            if(this.user._id === this.currentUser._id) {
               this.isOwner = true;
               this.user_pic = this.currentUser.user_pic.file_path  + '/' + this.currentUser.user_pic.file_name;
             } else {
@@ -97,7 +97,7 @@ define(['jquery', 'models/Model', 'hbs!templates/user', 'backbone', 'marionette'
             var params = {
               'user': this.currentUser._id,
               'user_toStar': this.user._id
-            }
+            };
 
             if (starEvent === 'star') {
               MB.api.star(params);

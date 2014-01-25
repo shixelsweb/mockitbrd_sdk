@@ -6,32 +6,124 @@
 <hr>
 <div class="MB-name-info">
 	<div class="row">
-		<div class="span4 name-info-input">
-			<label>First Name:</label>
-			<input type="text" value="{{user.fname}}"><br>
-			<label>Last Name:</label>
-			<input type="text" value="{{user.lname}}"><br>
-			<label>Telephone Number:</label>
-			<input type="text" value="{{user.phone}}"><br>
-			<label>Email:</label>
-			<input type="email" value="{{user.email}}"><br>
-			<label>Change Password:</label>
-			<input type="password" placeholder=""><br>
-			<label>Confirm Password:</label>
-			<input type="password" placeholder=""><br> 
-		</div>
-		<div class="span6 photo-section-align">
-			<h1 id="profile-pic-head">Profile Picture:</h1>
+		<div class="span6 offset1 name-info-input">
 
-			<div class="MB-user-photo-frame shadow">
-				<div class="MB-user-photo">
-					<img src="../../../img/earl.jpg">
-					<span id="photo-username">{{user.fname}} {{user.lname}}</span>
-				</div>		
+			<div class="row">
+				<div class="span2">
+					<label id="usertypetext">User Type :</label>
+					<input type="text" value="{{user.user_type}}" id="usertype" disabled="disabled">
+				</div>
+				<div class="span2 offset1">
+					<label id=""></label>
+				</div>
 			</div>
 
+			<label>Email:</label>
+			<input type="email" value="{{user.email}}"><br>
 			
+			<div class="row">
+				<div class="span2">
+					<label class="inline" id="fnametext">First Name :</label>
+					<input type="text" value="{{user.fname}}" id="fname"><br>	
+				</div>
+				<div class="span2 offset1">
+					<label class="inilne" id="lnametext">Last Name :</label>
+					<input type="text" value="{{user.lname}}" id="lname"><br>
+				</div>
+			</div>	
+
+
+			<div class="row">
+				<div class="span2">
+					<label class="inline" id="telephonenotext">Telephone No :</label>
+					<input type="text" value="{{user.phone}}" id="telephoneno"><br>
+				</div>
+				<div class="span2 offset1">
+					<label class="inline" id="locationtext">Location :</label>
+						<select name="state" id="selectstate">
+							<option value="AL">Alabama</option>
+							<option value="AK">Alaska</option>
+							<option value="AZ">Arizona</option>
+							<option value="AR">Arkansas</option>
+							<option value="CA">California</option>
+							<option value="CO">Colorado</option>
+							<option value="CT">Connecticut</option>
+							<option value="DE">Delaware</option>
+							<option value="DC">District of Columbia</option>
+							<option value="FL">Florida</option>
+							<option value="GA">Georgia</option>
+							<option value="HI">Hawaii</option>
+							<option value="ID">Idaho</option>
+							<option value="IL">Illinois</option>
+							<option value="IN">Indiana</option>
+							<option value="IA">Iowa</option>
+							<option value="KS">Kansas</option>
+							<option value="KY">Kentucky</option>
+							<option value="LA">Louisiana</option>
+							<option value="ME">Maine</option>
+							<option value="MD">Maryland</option>
+							<option value="MA">Massachusetts</option>
+							<option value="MI">Michigan</option>
+							<option value="MN">Minnesota</option>
+							<option value="MS">Mississippi</option>
+							<option value="MO">Missouri</option>
+							<option value="MT">Montana</option>
+							<option value="NE">Nebraska</option>
+							<option value="NV">Nevada</option>
+							<option value="NH">New Hampshire</option>
+							<option value="NJ">New Jersey</option>
+							<option value="NM">New Mexico</option>
+							<option value="NY">New York</option>
+							<option value="NC">North Carolina</option>
+							<option value="ND">North Dakota</option>
+							<option value="OH">Ohio</option>
+							<option value="OK">Oklahoma</option>
+							<option value="OR">Oregon</option>
+							<option value="PA">Pennsylvania</option>
+							<option value="RI">Rhode Island</option>
+							<option value="SC">South Carolina</option>
+							<option value="SD">South Dakota</option>
+							<option value="TN">Tennessee</option>
+							<option value="TX">Texas</option>
+							<option value="UT">Utah</option>
+							<option value="VT">Vermont</option>
+							<option value="VA">Virginia</option>
+							<option value="WA">Washington</option>
+							<option value="WV">West Virginia</option>
+							<option value="WI">Wisconsin</option>
+							<option value="WY">Wyoming</option>
+						</select>
+
+				</div>
+			</div>
+			<hr>
+
+			<label id="jobstatustext">Job Status :</label>
+			<select>
+				<option>Actively Seeking Employment</option>
+				<option>Currently Employed</option>
+			</select>
+			
+			<label>Highest Level of Education :</label>
+			<input type="text" id="edulevel">
+
+			<label>Job Title :</label>
+			<input type="text" id="jobtitle" value="{{user.job_title}}">
+
+			<label>Company Name :</label>
+			<input type="text" id="companyname">
+
+			<label>Mockitbrd Profile :</label>
+			<input type="text" id="userprofile" disabled="disabled" value="http:test/{{user._id}}/account">
+		
+
+			
+			<hr>
+			
+			</div>		
+
 		</div>
+		
 	</div>
 </div>			
 </div>

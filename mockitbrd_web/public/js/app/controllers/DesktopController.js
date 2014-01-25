@@ -42,7 +42,9 @@ define([ //VIEWS
     'views/AccountNotificationsView',
     'views/AccountPaymentView',
     'views/AccountSupportView',
-    'views/AccountGeneralView'
+    'views/AccountGeneralView',
+    'views/AccountSecurityView',
+    'views/AccountMediaView'
 ],
 function (
 //IDS
@@ -89,7 +91,9 @@ function (
     AccountNotificationsView,
     AccountPaymentView,
     AccountSupportView,
-    AccountGeneralView
+    AccountGeneralView,
+    AccountSecurityView,
+    AccountMediaView
 ){
     return Backbone.Marionette.Controller.extend({
         initialize: function (options) {
@@ -130,10 +134,12 @@ function (
             var userAppMenu = new UserAppMenuView();
             var dashboard = new DashboardView();
             var paymentView = new AccountPaymentView();
+            var securityView = new AccountSecurityView();
             var notificationView = new AccountNotificationsView();
             var supportView = new AccountSupportView();
             var generalView = new AccountGeneralView();
-            var leftAppMenu = new LeftAppMenuView({'paymentView': paymentView, 'notificationView': notificationView, 'supportView': supportView, 'generalView': generalView});
+            var mediaView = new AccountMediaView();
+            var leftAppMenu = new LeftAppMenuView({'mediaView': mediaView, 'securityView': securityView, 'paymentView': paymentView, 'notificationView': notificationView, 'supportView': supportView, 'generalView': generalView});
 
             this.hideModal();
             //this.showFooter();

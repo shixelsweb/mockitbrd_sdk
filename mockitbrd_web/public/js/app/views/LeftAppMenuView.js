@@ -9,6 +9,9 @@ define(['jquery','models/Model', 'hbs!templates/leftAppMenu', 'backbone', 'mario
           payView: null,
           supView: null,
           genView: null,
+          secView: null,
+          medView: null,
+
 
           events: {
             'click .left-menu-item': 'onLeftMenuClick',
@@ -23,6 +26,8 @@ define(['jquery','models/Model', 'hbs!templates/leftAppMenu', 'backbone', 'mario
             this.payView = options.paymentView;
             this.supView = options.supportView;
             this.genView = options.generalView;
+            this.secView = options.securityView;
+            this.medView = options.mediaView;
 
             this.model = new Model({user: this.user});
           },
@@ -36,7 +41,6 @@ define(['jquery','models/Model', 'hbs!templates/leftAppMenu', 'backbone', 'mario
             $('.left-menu-item').removeClass('active');
             $(e.currentTarget).addClass('active');
           },
-
           onLeftAppMenuButtonClick: function(e) {
             e.preventDefault();
 
@@ -70,7 +74,11 @@ define(['jquery','models/Model', 'hbs!templates/leftAppMenu', 'backbone', 'mario
               $("#accountViewRegion").html(this.payView.render().el);
             } else if (view === "support") {
               $("#accountViewRegion").html(this.supView.render().el);
-            }
+            } else if (view === "security") {
+              $("#accountViewRegion").html(this.secView.render().el);
+            } else if (view === "media") {
+              $("#accountViewRegion").html(this.medView.render().el);
+            } 
 
           }
       });
