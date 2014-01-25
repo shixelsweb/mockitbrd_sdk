@@ -1,11 +1,12 @@
-define(['jquery', 'models/Model', 'hbs!templates/user', 'backbone', 'marionette'],
-    function ($, Model, template, Backbone) {
+define(['jquery', 'models/Model', 'hbs!templates/user', 'backbone', 'marionette' ,'edit'],
+    function ($, Model, template, Backbone, editable) {
       //ItemView provides some default rendering logic
       return Backbone.Marionette.ItemView.extend({
           template:template,
 
           events: {
-            'click .MB-user-star': 'handleStarring'
+            'click .MB-user-star': 'handleStarring',
+            'click .MB-edit-profile': 'profileEditMode'
           },
 
           model: null,
@@ -104,6 +105,16 @@ define(['jquery', 'models/Model', 'hbs!templates/user', 'backbone', 'marionette'
             } else if (starEvent === 'unstar') {
               MB.api.unstar(params);
             }
+          },
+          profileEditMode: function() {
+            $.fn.editable.defaults.mode = 'inline';
+
+            $('.job_status').editable({
+                type: 'text',
+                pk: 1,
+                url: '/post',
+                title: 'Job Status'
+            });
           }
     });
 });

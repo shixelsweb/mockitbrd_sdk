@@ -16,7 +16,7 @@
 			{{#if user.location}}
 			<h2><i class="fa fa-thumb-tack"> {{user.location}}</i></h2>
 			{{/if}}
-			{{if user.job_title}}
+			{{#if user.job_title}}
 		<h3>{{user.job_title}} and <span class="job_status">{{user.job_status}}</span></h3>
 		{{/if}}
 			<ul class="MB-user-profile-top-social-links">
@@ -27,7 +27,7 @@
 		</div>
 		{{#if isOwner}}
 		<ul class="MB-user-profile-quick-links">
-			<li class="MB-user-profile-quick-link"><i class="fa fa-pencil"></i>Edit Profile</li>
+			<li class="MB-user-profile-quick-link MB-edit-profile"><i class="fa fa-pencil"></i>Edit Profile</li>
 			<li  class="MB-user-profile-quick-link"><i class="fa fa-share-square-o"></i>Share</li>
 		</ul>
 		{{else}}
