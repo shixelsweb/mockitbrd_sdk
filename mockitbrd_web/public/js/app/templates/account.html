@@ -3,58 +3,24 @@
 	<div class="MB-modal-body">
 	<div class="container">
 
-		<div class="Account-bg-head">
-		<div class="headspace">
-			<div class="row greyheader">
-				<div class="span12">
-				</div>
-			</div>
-		</div>
-		<div class="row MB-row-space">
-			<div class="span1 MB-user-align">
-				<span class="fa-stack fa-lg">
-				<i class="fa fa-square-o fa-stack-2x"></i>	
-				<i class="fa fa-user fa-stack-1x"></i>
-
-				</span>
-			</div>
-			<div class="span11">
-				<h1 id="account-head">Account</h1>
-				<h4>Update account details, email notification, preferred date format etc.</h4>
-			</div>
-		</div>
-		</div>
 		<hr>
 		<div class="row">
-			<div class="span2 Account-ul-style">
+		<div class="span12 MB-window-bg"> 			
+				<div class="span9 MB-db0">
 
-				<div class="MB-user-photo-frame shadow">
-				<div class="MB-user-photo">
-					<img src="../../../img/earl.jpg">
-					<span id="photo-username">{{user.fname}} {{user.lname}}</span>
-				</div>		
+					<div class="MB-account-window content" id="accountViewRegion"></div>
 				</div>
+				<div class="span2 Account-ul-style">
 
-				<div class="MB-button-upload MB-button primary"><a><i class="fa fa-picture-o"></i> Upload Photo</a></div>
+					<div class="MB-user-photo-frame">
+					<div class="MB-user-photo">
+						<img src="../../../img/earl.jpg">
+						<span id="photo-username">{{user.fname}} {{user.lname}}</span>
+					</div>		
+					</div>
 
-				<ul class="MB-account-nav-links nav nav-tabs nav-stacked" id="accountNav"> <!-- Inserted nav-tabs -->
-					<li data-navigate="general" class="active Account-menu-item"><i class="fa fa-cog"></i>General</li>
-					<li data-navigate="password" class="Account-menu-item"><i class="fa fa-lock"></i>Password</li>
-					<li data-navigate="nots" class="Account-menu-item"><i class="fa fa-bell"></i>Notifications</li>			
-					<li data-navigate="pay" class="Account-menu-item"><i class="fa fa-money"></i>Billing</li>				
-					<li data-navigate="support" class="Account-menu-item"><i class="fa fa-wrench"></i>Support</li>
-				</ul>
-			</div>
-			<div class="span10">
-				<div class="row">
-				<div class="span10 save-bar">
-					<button class="MB-button primary pull-right">Save</button>
-				</div>
-				</div>
-
-				<div class="MB-account-window content" id="accountViewRegion"></div>
-			</div>
-			</div>
+							</div>	
+		 </div> 
 		</div>
 		</div>
 	</div>

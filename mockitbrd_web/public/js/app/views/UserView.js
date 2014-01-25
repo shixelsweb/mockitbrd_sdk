@@ -21,7 +21,7 @@ define(['jquery', 'models/Model', 'hbs!templates/user', 'backbone', 'marionette'
             this.currentUser = MB.api.user($.parseJSON(MB.session.get('user')));
             this.isStarred = this.checkIfStarred(this.currentUser.interactions.starred, this.user._id);
 
-            if(this.user._id === this.currentUser._id) {;
+            if(this.user._id === this.currentUser._id) {
               this.isOwner = true;
               this.user_pic = 'https://s3-us-west-2.amazonaws.com/mockitbrd/users/' + this.currentUser._id + '/user_pic.jpg';
             } else {
@@ -69,7 +69,7 @@ define(['jquery', 'models/Model', 'hbs!templates/user', 'backbone', 'marionette'
             var params = {
               'user': this.currentUser._id,
               'user_toStar': this.user._id
-            }
+            };
 
             if (starEvent === 'star') {
               MB.api.star(params);

@@ -2,7 +2,7 @@
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-/* line 17, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 17, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -24,45 +24,45 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 22, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 24, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 26, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 28, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 30, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 103, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 32, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 116, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
   display: block;
 }
@@ -7029,13 +7029,19 @@ label.iOSCheckLabelOff span {
 }
 
 /* line 10, ../js/app/templates/scss/account.scss */
+.MB-db0 {
+  margin-left: 0;
+}
+
+/* line 14, ../js/app/templates/scss/account.scss */
 .account-head {
+  font-family: "Ethon Roman";
   color: #525252;
   font-size: 35px;
   margin-bottom: 20px;
 }
 
-/* line 16, ../js/app/templates/scss/account.scss */
+/* line 21, ../js/app/templates/scss/account.scss */
 #profile-pic-head {
   font-size: 17px;
   margin-bottom: 15px;
@@ -7043,66 +7049,69 @@ label.iOSCheckLabelOff span {
   text-align: left;
 }
 
-/* line 23, ../js/app/templates/scss/account.scss */
+/* line 28, ../js/app/templates/scss/account.scss */
 .MB-row-space {
   margin-top: 5%;
 }
 
-/* line 28, ../js/app/templates/scss/account.scss */
+/* line 32, ../js/app/templates/scss/account.scss */
+.MB-window-bg {
+  background: black;
+}
+
+/* line 36, ../js/app/templates/scss/account.scss */
 .MB-modal-body {
-  width: 950px;
+  width: 1100px;
   margin-right: auto;
   margin-left: auto;
   background: #f4f4f4;
   padding: 25px;
 }
 
-/* line 37, ../js/app/templates/scss/account.scss */
+/* line 45, ../js/app/templates/scss/account.scss */
 .MB-account-desc {
   margin-left: 30px;
 }
 
-/* line 41, ../js/app/templates/scss/account.scss */
+/* line 49, ../js/app/templates/scss/account.scss */
 .MB-account-nav {
   border-right: 1px white solid;
   text-align: center;
   width: 200px;
 }
 
-/* line 47, ../js/app/templates/scss/account.scss */
+/* line 55, ../js/app/templates/scss/account.scss */
 .MB-account-container {
   width: 100%;
 }
 
-/* line 51, ../js/app/templates/scss/account.scss */
+/* line 59, ../js/app/templates/scss/account.scss */
 .MB-account-window {
   padding: 15px;
-  width: 100%;
   height: 100%;
   background: white;
-  border-radius: 3px;
   border: #6c6c6c 1px solid;
 }
 
-/* line 61, ../js/app/templates/scss/account.scss */
+/* line 67, ../js/app/templates/scss/account.scss */
 #photo-username {
   text-align: center;
   margin-bottom: 2px;
 }
 
-/* line 70, ../js/app/templates/scss/account.scss */
+/* line 76, ../js/app/templates/scss/account.scss */
 .photo-section-align {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
 }
 
-/* line 76, ../js/app/templates/scss/account.scss */
+/* line 82, ../js/app/templates/scss/account.scss */
 .MB-user-align {
   text-align: center;
 }
 
-/* line 80, ../js/app/templates/scss/account.scss */
+/* line 86, ../js/app/templates/scss/account.scss */
 .MB-name-info > div > div > input {
   margin-top: 10px;
   margin-bottom: 15px;
@@ -7110,39 +7119,37 @@ label.iOSCheckLabelOff span {
   width: 90%;
 }
 
-/* line 87, ../js/app/templates/scss/account.scss */
+/* line 93, ../js/app/templates/scss/account.scss */
 .MB-button-upload {
-  margin-left: 14px;
   text-align: center;
   margin-top: 15px;
   border: none;
   color: #6c6c6c;
 }
-/* line 94, ../js/app/templates/scss/account.scss */
+/* line 99, ../js/app/templates/scss/account.scss */
 .MB-button-upload a {
   color: #6c6c6c !important;
 }
-/* line 98, ../js/app/templates/scss/account.scss */
+/* line 103, ../js/app/templates/scss/account.scss */
 .MB-button-upload a:hover {
   color: #0085c4 !important;
   cursor: pointer;
 }
 
-/* line 105, ../js/app/templates/scss/account.scss */
+/* line 110, ../js/app/templates/scss/account.scss */
 .MB-user-photo-frame {
-  border: 1px solid #f4f4f4;
   border-width: 0px 1px 3px 1px;
-  height: 125px;
-  width: 125px;
+  height: 200px;
+  width: 200px;
   text-align: center;
-  margin-right: auto;
-  margin-left: 15px;
-  background: -webkit-gradient(linear, left top, left bottom, from(white), to(#faf4f4));
+  margin-left: 0px;
+  margin-top: -60px;
+  background: black;
   vertical-align: middle;
   border-radius: 50%;
 }
 
-/* line 118, ../js/app/templates/scss/account.scss */
+/* line 122, ../js/app/templates/scss/account.scss */
 .MB-user-photo-frame:before {
   content: '';
   border-radius: 50%;
@@ -7153,12 +7160,12 @@ label.iOSCheckLabelOff span {
   /* Adjusts for spacing */
 }
 
-/* line 127, ../js/app/templates/scss/account.scss */
+/* line 131, ../js/app/templates/scss/account.scss */
 .MB-user-photo {
   margin-left: auto;
   margin-right: auto;
-  width: 100px;
-  height: 100px;
+  width: 185px;
+  height: 185px;
   border: 2px solid #2bbbff;
   border-radius: 50%;
   border-color: black;
@@ -7168,28 +7175,19 @@ label.iOSCheckLabelOff span {
   position: relative;
 }
 
-/* line 141, ../js/app/templates/scss/account.scss */
+/* line 145, ../js/app/templates/scss/account.scss */
 .MB-user-photo > img {
   margin-bottom: 15px;
   border-radius: 50%;
 }
 
-/* line 146, ../js/app/templates/scss/account.scss */
+/* line 150, ../js/app/templates/scss/account.scss */
 .shadow {
   -webkit-box-shadow: 0 8px 6px -6px red;
   -moz-box-shadow: 0 8px 6px -6px black;
   box-shadow: 0 8px 6px -6px #6c6c6c;
 }
 
-/* line 154, ../js/app/templates/scss/account.scss */
-.Account-ul-style {
-  margin-left: -10px;
-}
-
-/* line 158, ../js/app/templates/scss/account.scss */
-.MB-account-nav-links {
-  width: 160px;
-}
 /* line 162, ../js/app/templates/scss/account.scss */
 .MB-account-nav-links li:nth-child(1) {
   margin-top: 50px;
@@ -7205,13 +7203,13 @@ label.iOSCheckLabelOff span {
 .MB-account-nav-links li:hover {
   background: white;
   color: #525252;
-  border-right: 8px solid #ffe42b;
+  border-left: 8px solid #ffe42b;
 }
 /* line 180, ../js/app/templates/scss/account.scss */
 .MB-account-nav-links li.active {
   background: white;
   color: #2bbbff;
-  border-right: 8px solid #2bbbff;
+  border-left: 8px solid #2bbbff;
   position: relative;
 }
 /* line 187, ../js/app/templates/scss/account.scss */
@@ -7219,12 +7217,12 @@ label.iOSCheckLabelOff span {
   content: "";
   position: absolute;
   top: 50%;
-  left: 105%;
+  left: -16px;
   width: 0;
   height: 0;
   margin-top: -10px;
   /* Build the triangle */
-  border-left: 8px solid #2bbbff;
+  border-right: 8px solid #2bbbff;
   border-top: 8px solid transparent;
   border-bottom: 8px solid transparent;
 }
@@ -7247,31 +7245,57 @@ label.iOSCheckLabelOff span {
 }
 
 /* line 225, ../js/app/templates/scss/account.scss */
+#location {
+  width: 100%;
+}
+
+/* line 229, ../js/app/templates/scss/account.scss */
+#locationtext, #telephonenotext, #jobstatustext, #usertypetext, #fnametext, #lnametext {
+  margin-bottom: 10px;
+}
+
+/* line 233, ../js/app/templates/scss/account.scss */
+#selectstate {
+  width: 187px;
+}
+
+/* line 237, ../js/app/templates/scss/account.scss */
+#telephoneno, #fname, #lname, #usertype {
+  width: 173px;
+  border-radius: 0px;
+}
+
+/* line 247, ../js/app/templates/scss/account.scss */
 .notify-option {
   float: left;
   margin-top: 10px;
 }
 
-/* line 230, ../js/app/templates/scss/account.scss */
+/* line 252, ../js/app/templates/scss/account.scss */
 #option-specify {
   float: right;
   margin-right: 25px;
 }
-/* line 234, ../js/app/templates/scss/account.scss */
+/* line 256, ../js/app/templates/scss/account.scss */
 #option-specify #email-head {
   margin-right: 20px;
 }
 
-/* line 239, ../js/app/templates/scss/account.scss */
+/* line 261, ../js/app/templates/scss/account.scss */
 .Not-check-option {
   float: right;
   margin-right: 25px;
 }
-/* line 243, ../js/app/templates/scss/account.scss */
+/* line 265, ../js/app/templates/scss/account.scss */
 .Not-check-option input[type="checkbox"] {
   margin-left: 20px;
   height: 30px;
   width: 30px;
+}
+
+/* line 277, ../js/app/templates/scss/account.scss */
+.passlength {
+  width: 100%;
 }
 
 /* line 1, ../js/app/templates/scss/leftAppMenu.scss */
@@ -7406,7 +7430,7 @@ label.iOSCheckLabelOff span {
   background: #eff0f0;
   width: 100%;
   height: 60px;
-  position: absolute;
+  position: fixed;
   z-index: 10;
   margin-left: 1px;
   box-shadow: 0px 0px 2px black;
