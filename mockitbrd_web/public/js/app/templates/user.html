@@ -1,13 +1,18 @@
 <div id="user-view">
 	<div class="MB-user-profile-top">
 		<div class="top MB-boardroom-bg">
-			{{#if isOwner}}
-				<div class="edit-profile-button"><i class="fa fa-pencil"></i>Edit Profile</div>
-			{{/if}}
 		</div>
 		<div class="MB-user-profile-photo glass-effect"><img src="{{user_pic}}"></div>
 		<div class="MB-user-profile-top-info">
 			<h1>{{user.fname}} {{user.lname}}</h1>
+			{{#if isOwner}}
+			{{else}}
+				{{#if isStarred}}
+				<div class="MB-user-star" data-starEvent="unstar"><i class="fa fa-star"></i></div>
+				{{else}}div
+				<div class="MB-user-star" data-starEvent="star"><i class="fa fa-star-o"></i></div>
+				{{/if}}
+			{{/if}}
 			<h2><i class="fa fa-thumb-tack"> {{user.location}}</i></h2>
 			<h3>{{user.job_title}} and <span class="job_status">{{user.job_status}}</span></h3>
 			<ul class="MB-user-profile-top-social-links">
@@ -24,9 +29,8 @@
 		{{else}}
 		<ul class="MB-user-profile-quick-links">
 			<li class="MB-user-profile-quick-link"><i class="fa fa-plus"></i>Connect</li>
-			<li class="MB-user-profile-quick-link"><i class="fa fa-envelope"></i>Message</li>
-			<li class="MB-user-profile-quick-link"><i class="fa fa-star-o"></i>Favorite <span class="muted">(private)</span></li>
-			<li  class="MB-user-profile-quick-link last"><i class="fa fa-share-square-o"></i>Share</li>
+<!-- 			<li class="MB-user-profile-quick-link"><i class="fa fa-envelope"></i>Message</li> //No messaging feature for now
+ -->			<li  class="MB-user-profile-quick-link last"><i class="fa fa-share-square-o"></i>Share</li>
 		</ul>
 		{{/if}}
 	</div>

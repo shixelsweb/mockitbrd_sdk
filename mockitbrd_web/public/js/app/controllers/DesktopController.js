@@ -129,7 +129,11 @@ function (
             var topAppMenu = new TopAppMenuView();
             var userAppMenu = new UserAppMenuView();
             var dashboard = new DashboardView();
-            var leftAppMenu = new LeftAppMenuView();
+            var paymentView = new AccountPaymentView();
+            var notificationView = new AccountNotificationsView();
+            var supportView = new AccountSupportView();
+            var generalView = new AccountGeneralView();
+            var leftAppMenu = new LeftAppMenuView({'paymentView': paymentView, 'notificationView': notificationView, 'supportView': supportView, 'generalView': generalView});
 
             this.hideModal();
             //this.showFooter();
@@ -247,14 +251,12 @@ function (
 
         },
         account: function () {
-            var paymentView = new AccountPaymentView();
-            var notificationView = new AccountNotificationsView();
-            var supportView = new AccountSupportView();
+            var accountView = new AccountView();
             var generalView = new AccountGeneralView();
 
-            this.hideModal();
-            this.hideHeader();
-            MB.mainRegion.show(new AccountView({'paymentView': paymentView, 'notificationView': notificationView, 'supportView': supportView, 'generalView': generalView}));
+            this.launchApp();
+            
+            $('#dashboard-view').append(accountView.render().el);
             $("#accountViewRegion").html(generalView.render().el);
         },
         dashboard: function () {

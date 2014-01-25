@@ -172,13 +172,44 @@ define(["jquery", "underscore", "backbone"],
                         //MB.appRouter.navigate('#register', { trigger: true });
                     },
                     error: function (response) {
-                        alert("error: ", response.data.error); //TODO-(Fara) : add to Error Modal
+                        alert("error: ", response); //TODO-(Fara) : add to Error Modal
                     }
                 });
             },
             star: function(params) {
-                var send = null;
-                return send;
+                $.ajax({
+                    type: 'PUT',
+                    url: this.get('url') + 'v1/user/star',
+                    data: params,
+                    dataType: 'json',
+                    success: function(response) {
+                        if (response.success === 0) {
+                            $('MB-user-star').removeClass('fa-star-o').addClass('fa-star');
+                        } else {
+                            alert('error: ', response.data.error);
+                        }
+                    },
+                    error: function(response) {
+                            alert('error: ', response);
+                    }
+                });
+            },
+            unstar: function(params) {
+                $.ajax({
+                    type: 'PUT',
+                    url: this.get('url') + 'v1/user/unstar',
+                    data: params,
+                    dataType: 'json',
+                    success: function(response) {
+                        if (response.success === 0) {
+
+                        } else {
+                        }
+                    },
+                    error: function(response) {
+
+                    }
+                });
             }
         });
 

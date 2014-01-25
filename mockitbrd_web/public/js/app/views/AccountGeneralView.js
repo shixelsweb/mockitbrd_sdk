@@ -6,13 +6,11 @@ define(['jquery', 'models/Model', 'hbs!templates/accountGeneral', 'backbone', 'm
 
           user: null,
           model: null,
-          accountUser: null,
 
           initialize: function() {
-            this.user = $.parseJSON(MB.session.get('user')) || null;
-            this.accountUser = MB.api.user(this.user._id);
+            this.user = MB.api.user($.parseJSON(MB.session.get('user'))) || null;
             this.model = new Model({
-              user: this.accountUser
+              user: this.user
             });
           },
           onRender: function () {

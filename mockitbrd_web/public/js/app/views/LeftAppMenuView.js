@@ -5,13 +5,24 @@ define(['jquery','models/Model', 'hbs!templates/leftAppMenu', 'backbone', 'mario
           template:template,
 
           user: null,
+          notView: null,
+          payView: null,
+          supView: null,
+          genView: null,
 
           events: {
             'click .left-menu-item': 'onLeftMenuClick',
-            'click .MB-left-app-menu-button': 'onLeftAppMenuButtonClick'
+            'click .MB-left-app-menu-button': 'onLeftAppMenuButtonClick',
+            'click .MB-account-settings': 'showAccountSettingSubMenu',
+            'click .MB-account-settings-submenu li': 'handleTabClick',
+            'click .MB-account-settings.active': 'hideAccountSettingSubMenu'
           },
-          initialize: function() {
-            this.user = $.parseJSON(MB.session.get('user'));
+          initialize: function(options) {
+            this.user = MB.api.user($.parseJSON(MB.session.get('user')));
+            this.notView = options.notificationView;
+            this.payView = options.paymentView;
+            this.supView = options.supportView;
+            this.genView = options.generalView;
 
             this.model = new Model({user: this.user});
           },
@@ -36,6 +47,30 @@ define(['jquery','models/Model', 'hbs!templates/leftAppMenu', 'backbone', 'mario
               $('.MB-left-app-menu').css('left', '0px');
               $('.MB-left-app-menu-button').css('left', '180px');
             }
+          },
+          showAccountSettingSubMenu: function() {
+            $('.MB-account-settings-submenu').slideDown();
+          },
+          hideAccountSettingSubMenu: function(e) {
+            $(e.currentTarget).removeClass('active');
+            $('.MB-account-settings-submenu').slideUp();
+          },
+          handleTabClick: function(e) {
+            var view = $(e.currentTarget).data('navigate');
+
+            $('.Account-menu-item').removeClass('active');
+            $(e.currentTarget).addClass('active');
+
+            if (view === "nots") {
+              $("#accountViewRegion").html(this.notView.render().el);
+            } else if (view === "general") {
+              $("#accountViewRegion").html(this.genView.render().el);
+            } else if (view === "pay") {
+              $("#accountViewRegion").html(this.payView.render().el);
+            } else if (view === "support") {
+              $("#accountViewRegion").html(this.supView.render().el);
+            }
+
           }
       });
 });

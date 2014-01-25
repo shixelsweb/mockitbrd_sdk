@@ -33,7 +33,7 @@ define(["jquery", "backbone", "cookie"],
                 if (!this.get('user') && !this.get('token')) { //only create a session if one doesn't already exsist
 
                     this.set ({
-                        'user':  MB.cookie.set('MB-session-user', JSON.stringify(user)),
+                        'user':  MB.cookie.set('MB-session-user', JSON.stringify(user.user_id)),
                         'token': MB.cookie.set('MB-session-auth-token', auth_token),
                         'user_type': MB.cookie.set('MB-session-user-type', user.user_type),
                     });

@@ -10,7 +10,7 @@ define(['jquery', 'models/Model', 'hbs!templates/tasks', 'backbone', 'marionette
 
           initialize: function() {
 
-            this.user = $.parseJSON(MB.session.get('user'));
+            this.user = MB.api.user($.parseJSON(MB.session.get('user')));
             this.tasks = MB.api.getUserTasksFull(this.user._id);
 
             if((MB.session.get('user_type')) === "candidate") {

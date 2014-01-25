@@ -13,8 +13,8 @@ define(['jquery', 'models/Model', 'hbs!templates/userAppMenu', 'backbone', 'mari
           },
 
           initialize: function() {
-            this.user = $.parseJSON(MB.session.get('user'));
-            this.user_pic ='https://s3-us-west-2.amazonaws.com/mockitbrd/users/' + this.user._id + '/user_pic.jpg';
+            this.user = MB.api.user($.parseJSON(MB.session.get('user')));
+            this.user_pic = this.user.user_pic.file_path  + '/' + this.user.user_pic.file_name;
 
             this.model = new Model({user: this.user, user_pic: this.user_pic});
           },

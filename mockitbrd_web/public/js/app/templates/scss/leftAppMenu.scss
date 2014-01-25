@@ -91,3 +91,33 @@ height: 100%;
 position: relative;
 z-index: -100;
 }
+
+.MB-account-settings-submenu {
+
+	display: none;
+
+	li {
+	height: 40px;
+	line-height: 4em;
+	text-align: left;
+	display: block;
+	padding-left: 50px;
+	border-right: 8px solid $primary_yellow;
+	font-size: 0.7em;
+	padding: 0 15px;
+	background: $app_menu_hover_active;
+
+		&:hover {
+			background: #353439;
+			color: #f4f4f4;
+			border-right: 8px solid $primary_yellow;
+			border-left: 2px solid $primary_blue;
+		}
+
+		&.active {
+			border-left: 2px solid $primary_blue;
+			color: $primary_white;
+			border-right: 8px solid $primary_yellow;		
+		}
+	}
+}

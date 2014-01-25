@@ -5,22 +5,12 @@ define(['jquery', 'models/Model', 'hbs!templates/account', 'backbone', 'marionet
           template:template,
 
           model: null,
-          notView: null,
-          payView: null,
-          supView: null,
-          genView: null,
 
           events:{
-            'click .nav-tabs li': 'handleTabClick',
-            'click .Account-menu-item': 'onAccMenuClick'
           },
           
 
           initialize: function(options) {
-            this.notView = options.notificationView;
-            this.payView = options.paymentView;
-            this.supView = options.supportView;
-            this.genView = options.generalView;
 
           },
 
@@ -31,27 +21,6 @@ define(['jquery', 'models/Model', 'hbs!templates/account', 'backbone', 'marionet
             this.setElement(this.$el);
 
             var user = this.user;
-          },
-
-          onAccMenuClick: function(e) {
-            
-            $('.Account-menu-item').removeClass('active');
-            $(e.currentTarget).addClass('active');
-          },
-
-          handleTabClick: function(e) {
-            var view = $(e.currentTarget).data('navigate');
-
-            if (view === "nots") {
-              $("#accountViewRegion").html(this.notView.render().el);
-            } else if (view === "general") {
-              $("#accountViewRegion").html(this.genView.render().el);
-            } else if (view === "pay") {
-              $("#accountViewRegion").html(this.payView.render().el);
-            } else if (view === "support") {
-              $("#accountViewRegion").html(this.supView.render().el);
-            }
-
           }
 
           

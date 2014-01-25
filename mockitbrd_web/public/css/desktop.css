@@ -2,7 +2,7 @@
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-/* line 17, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 17, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -24,45 +24,45 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 22, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 24, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 26, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 28, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 30, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 103, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 32, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 116, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
   display: block;
 }
@@ -7371,6 +7371,36 @@ label.iOSCheckLabelOff span {
   z-index: -100;
 }
 
+/* line 95, ../js/app/templates/scss/leftAppMenu.scss */
+.MB-account-settings-submenu {
+  display: none;
+}
+/* line 99, ../js/app/templates/scss/leftAppMenu.scss */
+.MB-account-settings-submenu li {
+  height: 40px;
+  line-height: 4em;
+  text-align: left;
+  display: block;
+  padding-left: 50px;
+  border-right: 8px solid #ffe42b;
+  font-size: 0.7em;
+  padding: 0 15px;
+  background: #353439;
+}
+/* line 110, ../js/app/templates/scss/leftAppMenu.scss */
+.MB-account-settings-submenu li:hover {
+  background: #353439;
+  color: #f4f4f4;
+  border-right: 8px solid #ffe42b;
+  border-left: 2px solid #2bbbff;
+}
+/* line 117, ../js/app/templates/scss/leftAppMenu.scss */
+.MB-account-settings-submenu li.active {
+  border-left: 2px solid #2bbbff;
+  color: white;
+  border-right: 8px solid #ffe42b;
+}
+
 /* line 1, ../js/app/templates/scss/topAppMenu.scss */
 #top-app-menu-view {
   background: #eff0f0;
@@ -8020,8 +8050,9 @@ label.iOSCheckLabelOff span {
   font-weight: 100;
   text-shadow: 0px 0px 2px #000;
   font-family: "Desyrel";
+  display: inline-block;
 }
-/* line 77, ../js/app/templates/scss/user.scss */
+/* line 78, ../js/app/templates/scss/user.scss */
 .MB-user-profile-top-info h2 {
   padding-left: 4px;
   padding-bottom: 20px;
@@ -8029,46 +8060,47 @@ label.iOSCheckLabelOff span {
   text-shadow: 0px 0px 2px #000;
 }
 
-/* line 85, ../js/app/templates/scss/user.scss */
+/* line 86, ../js/app/templates/scss/user.scss */
 .MB-user-profile-quick-links {
-  width: 207px;
   display: inline-block;
+  right: 30px;
+  position: absolute;
+  top: 30px;
 }
-/* line 89, ../js/app/templates/scss/user.scss */
+/* line 92, ../js/app/templates/scss/user.scss */
 .MB-user-profile-quick-links .MB-user-profile-quick-link {
-  display: inline-block;
-  height: 42px;
+  display: inline;
   width: 100%;
-  padding-left: 30px;
-  border-bottom: 1px solid #edeff0;
+  padding: 10px;
   line-height: 3em;
-  font-size: 0.9em;
+  font-size: 0.8em;
   font-weight: 100;
-  color: #666666;
+  color: #fff;
   border-top: none;
   border-right: none;
-  border-left: 2px solid #2bbbff;
   cursor: pointer;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
 }
-/* line 104, ../js/app/templates/scss/user.scss */
+/* line 106, ../js/app/templates/scss/user.scss */
 .MB-user-profile-quick-links .MB-user-profile-quick-link i {
   font-size: 1em;
   padding-right: 15px;
 }
-/* line 109, ../js/app/templates/scss/user.scss */
+/* line 111, ../js/app/templates/scss/user.scss */
 .MB-user-profile-quick-links .MB-user-profile-quick-link:hover {
-  border-left: 2px solid #ffe42b;
+  color: #ffe42b;
 }
-/* line 112, ../js/app/templates/scss/user.scss */
+/* line 114, ../js/app/templates/scss/user.scss */
 .MB-user-profile-quick-links .MB-user-profile-quick-link:hover i {
   color: #ffe42b;
 }
-/* line 117, ../js/app/templates/scss/user.scss */
+/* line 119, ../js/app/templates/scss/user.scss */
 .MB-user-profile-quick-links .MB-user-profile-quick-link.last {
   border-bottom: none;
 }
 
-/* line 124, ../js/app/templates/scss/user.scss */
+/* line 126, ../js/app/templates/scss/user.scss */
 .MB-user-profile-top-social-links {
   position: absolute;
   bottom: -38px;
@@ -8076,7 +8108,7 @@ label.iOSCheckLabelOff span {
   z-index: 1;
   right: 30px;
 }
-/* line 131, ../js/app/templates/scss/user.scss */
+/* line 133, ../js/app/templates/scss/user.scss */
 .MB-user-profile-top-social-links li {
   width: 35px;
   height: 35px;
@@ -8089,11 +8121,19 @@ label.iOSCheckLabelOff span {
   cursor: pointer;
   border-radius: 5px;
 }
-/* line 144, ../js/app/templates/scss/user.scss */
+/* line 146, ../js/app/templates/scss/user.scss */
 .MB-user-profile-top-social-links li:hover {
   color: white;
   font-size: 1.1em;
   position: relative;
+}
+
+/* line 155, ../js/app/templates/scss/user.scss */
+.MB-user-star {
+  display: inline-block;
+  color: #ffe42b;
+  font-size: 2em;
+  cursor: pointer;
 }
 
 /* line 10, ../scss/desktop.scss */
