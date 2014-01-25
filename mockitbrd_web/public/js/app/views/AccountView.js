@@ -19,6 +19,9 @@ define(['jquery', 'models/Model', 'hbs!templates/account', 'backbone', 'marionet
             // assumes 1 child element.
             this.$el = this.$el.children();
             this.setElement(this.$el);
+            $('.left-menu-item').removeClass('active');
+            $('.MB-account-settings').addClass('active');
+            $('.MB-account-settings-submenu').slideDown();
 
             var user = this.user;
           }

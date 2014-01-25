@@ -103,6 +103,15 @@
 		background: rgba(0,0,0,0.2);
 		border-radius: 4px;
 
+		&.disabled {
+			color: $devil_grey;
+			cursor: not-allowed;
+
+			&:hover {
+				color: $devil_grey;
+			}
+		}
+
 		i {
 			font-size: 1em;
 			padding-right: 15px;
@@ -155,7 +164,7 @@
 .MB-user-star {
 	display: inline-block;
 	color: $primary_yellow;
-	font-size: 2em;
+	font-size: 1.5em;
 	cursor: pointer;
 }
 

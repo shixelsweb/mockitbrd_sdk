@@ -14,25 +14,32 @@ define(['jquery', 'models/Model', 'hbs!templates/user', 'backbone', 'marionette'
           isOwner: null,
           user_pic: null,
           isStarred: null,
+          isConnectedActive: null,
+          isConnectedPending: null,
+          notConnected: null,
 
           initialize:function(options) {
 
             this.user = options.user;
             this.currentUser = MB.api.user($.parseJSON(MB.session.get('user')));
             this.isStarred = this.checkIfStarred(this.currentUser.interactions.starred, this.user._id);
+            this.isConnectedActive = this.checkIfConnected(this.currentUser.connections, this.user._id);
 
             if(this.user._id === this.currentUser._id) {;
               this.isOwner = true;
-              this.user_pic = 'https://s3-us-west-2.amazonaws.com/mockitbrd/users/' + this.currentUser._id + '/user_pic.jpg';
+              this.user_pic = this.currentUser.user_pic.file_path  + '/' + this.currentUser.user_pic.file_name;
             } else {
               this.isOwner = false;
-              this.user_pic = this.user.user_pic.file_path  + '/' + this.user.user_pic.file_name;
+              this.user_pic = 'https://s3-us-west-2.amazonaws.com/mockitbrd/users/' + this.user._id + '/user_pic.jpg';
             }
             this.model = new Model ({
               user: this.user, 
               isOwner: this.isOwner, 
               user_pic: this.user_pic,
-              isStarred: this.isStarred
+              isStarred: this.isStarred,
+              isConnectedPending: this.isConnectedPending,
+              isConnectedActive: this.isConnectedActive,
+              notConnected: this.notConnected
             });
           },
           onRender: function () {
@@ -47,6 +54,27 @@ define(['jquery', 'models/Model', 'hbs!templates/user', 'backbone', 'marionette'
             } else {
                $('.MB-connections').addClass('active');
             }
+          },
+          checkIfConnected: function(connections, profile_viewing) {
+            var connectionCheck = false;
+
+            if (connections) {
+              for (var i = 0; i < connections.length; i++) {
+                if(connections[i].user_id === profile_viewing) {
+                    if (connections[i].status === 'pending') {
+                      this.isConnectedPending = true;
+                    } else if (connections[i].status === 'active'){
+                      connectionCheck = true;
+                    }
+                }
+              }
+            } else {
+              connectionCheck = false;
+              this.notConnected = true;
+            }
+            console.log(connectionCheck, this.isConnectedPending);
+            return connectionCheck;
+
           },
           checkIfStarred: function(stars, profile_viewing) { //check to see if user is favorited (starred) by the current session user 
             var starCheck = false;

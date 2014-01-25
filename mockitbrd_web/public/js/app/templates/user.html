@@ -13,8 +13,12 @@
 				<div class="MB-user-star" data-starEvent="star"><i class="fa fa-star-o"></i></div>
 				{{/if}}
 			{{/if}}
+			{{#if user.location}}
 			<h2><i class="fa fa-thumb-tack"> {{user.location}}</i></h2>
-			<h3>{{user.job_title}} and <span class="job_status">{{user.job_status}}</span></h3>
+			{{/if}}
+			{{if user.job_title}}
+		<h3>{{user.job_title}} and <span class="job_status">{{user.job_status}}</span></h3>
+		{{/if}}
 			<ul class="MB-user-profile-top-social-links">
 				{{#each user.social_links}}
 					<a href="{{url}}" target="_blank"><li class="fa fa-{{type}}"></li></a>
@@ -28,7 +32,17 @@
 		</ul>
 		{{else}}
 		<ul class="MB-user-profile-quick-links">
+			{{#if isConnectedActive}}
+			<li class="MB-user-profile-quick-link connected"><i class="fa fa-check"></i>Connected</li>
+			{{/if}}
+			{{#if notConnected}}
 			<li class="MB-user-profile-quick-link"><i class="fa fa-plus"></i>Connect</li>
+			{{/if}}
+			
+			{{#if isConnectedPending}}
+			<li class="MB-user-profile-quick-link disabled">Pending</li>
+			{{/if}}			
+			
 <!-- 			<li class="MB-user-profile-quick-link"><i class="fa fa-envelope"></i>Message</li> //No messaging feature for now
  -->			<li  class="MB-user-profile-quick-link last"><i class="fa fa-share-square-o"></i>Share</li>
 		</ul>

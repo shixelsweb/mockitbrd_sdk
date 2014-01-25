@@ -48,7 +48,8 @@ define(['jquery','models/Model', 'hbs!templates/leftAppMenu', 'backbone', 'mario
               $('.MB-left-app-menu-button').css('left', '180px');
             }
           },
-          showAccountSettingSubMenu: function() {
+          showAccountSettingSubMenu: function(e) {
+            $(e.currentTarget).addClass('active');
             $('.MB-account-settings-submenu').slideDown();
           },
           hideAccountSettingSubMenu: function(e) {
