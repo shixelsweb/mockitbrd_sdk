@@ -34,6 +34,11 @@
 		padding: 10px 20px;
 	}
 
+	&.smallest {
+		font-size: 10px !important;
+		padding: 5px 10px;
+	}
+
 	&.login {
 		padding: 10px 140px;
 		border-radius: 0;

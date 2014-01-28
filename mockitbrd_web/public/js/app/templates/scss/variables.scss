@@ -25,6 +25,13 @@ $app_menu_hover_font: #f4f4f4;
 $task_table_bg: #FAFAFB;
 $task_table_header_bg: #4D4C50;
 $tasks_table_td_bg: #D7D7D9;
+$d_grey: #ddd;
+$lightest_grey: #fafafa;
+$fb_lightest_grey: #F6F7F8;
+$user_bg: #e9eaed;
+$user_type_active: #6B7886;
+$user_type: #d3d6db;
+$post_color: #37404e;
 
 .glass-effect {
 	box-shadow: 0px 0px 0px 8px rgba(0, 0, 0, 0.3), 0px 2px 3px 0px rgba(0, 0, 0, 0.6);
@@ -77,6 +84,10 @@ $ethon_roman: "Ethon Roman";
     -moz-background-size: cover;
 }
 
+.MB-user-bg {
+	background: url('../../img/squairy.png');
+}
+
 .MB-waiting-bg {
 	background: url('../../img/waiting.jpg') no-repeat;
 	background-position: top;
@@ -86,7 +97,7 @@ $ethon_roman: "Ethon Roman";
 
 .MB-waiting-two-bg {
 	background: url('../../img/waiting2.jpg') no-repeat;
-	background-position: 100px -120px;
+	background-position: -80px -120px;
 	background-size: cover;
     -moz-background-size: cover;
 }

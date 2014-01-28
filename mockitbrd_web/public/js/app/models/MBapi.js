@@ -104,12 +104,29 @@ define(["jquery", "underscore", "backbone"],
                         }
                     },
                     error: function(response) {
-                        alert("error! ", response.data.error); //TODO-(Fara): add to Error Modal
+                        alert("error! ", $.parseJSON(response)); //TODO-(Fara): add to Error Modal
                     },
                     async: false
                 });
 
                 return tasks;
+            },
+            post: function(post_id) { //get a post by its id 
+                var send = null;
+                $.ajax({
+                    type: "GET",
+                    url: this.get('url') + 'v1/posts/' + post_id,
+                    dataType: 'json',
+                    success: function(response) {
+                        send = response.data.post;
+                    },
+                    error: function(response) {
+                        alert("error!", response.error);
+                    },
+                    async: false
+                });
+
+                return send;
             },
             user: function(user_id) {
                 var send = null;

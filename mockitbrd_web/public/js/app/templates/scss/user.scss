@@ -1,15 +1,17 @@
 #user-view {
-	margin-left: 180px;
 	margin-top: -15px;
+	width: 100%;
+	height: 100%;
 }
 
 .MB-user-profile-top {
 	width: 100%;
 	min-height: 180px;
-	margin-top: 15px;
-	background: #fff;
+	top: 60px;
+	background: $primary_white;
 	box-shadow: 0px 0px 2px #999;
-	position: relative;
+	position: absolute;
+	right: 0;
 
 	.top {
 		height: 90px;
@@ -25,7 +27,7 @@
 			height: 35px;
 			line-height: 2.9em;
 			background: rgba(0,0,0,0.2);
-			color: #fff;
+			color: $primary_white;
 			font-weight: 100;
 			border-radius: 5px;
 			position: absolute;
@@ -85,7 +87,7 @@
 
 .MB-user-profile-quick-links {
 	display: inline-block;
-	right: 30px;
+	right: 190px;
 	position: absolute;
 	top: 30px;
 
@@ -137,7 +139,7 @@
 	bottom: -38px;
 	top: 75px;
 	z-index: 1;
-	right: 30px;
+	right: 90px;
 
 	li {
 		width: 35px;
@@ -169,13 +171,211 @@
 }
 
 
+.MB-user-profile-bottom {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	right: 0;
+	top: 241px;
+	background: $user_bg;
+
+	.user-profile-left {
+		width: 30%;
+		height: 100%;
+		position: absolute;
+	}
+	.user-profile-right {
+		width: 70%;
+		height: 100%;
+
+		.user-profile-wall-poster {
+			width: 70%;
+			margin-left: 60px;
+			border: 1px solid $d_grey;
+			margin-top: 30px;
+			color: $d_grey;
+			font-weight: 100;
+			background: $primary_white;
+			position: relative;
+
+			.user-profile-wall-poster-top {
+				padding: 0 15px;
+
+				textarea {
+					width: 98%;
+					border-radius: 0;
+					border: 1px solid $d_grey;
+					height: 80px;
+					margin: 15px 0;
+					resize: none;
+				}
+			}
+
+			.user-profile-wall-poster-bottom {
+				background: $fb_lightest_grey;
+				text-align: right;
+				border-top: 1px solid $d_grey;
+
+				.right-button {
+					padding: 10px;
+				}
+
+				.user-post-type {
+					float: left;
+					height: 60px;
+					font-size: 1.5em;
+
+					li {
+						width: 60px;
+						border-right: 1px solid $d_grey;
+						height: 100%;
+						line-height: 2.5em;
+						text-align: center;
+						float: left;
+						color: $user_type;
+						cursor: pointer;
+
+						&:hover {
+							color: $user_type_active;
+						}
+
+						&.active {
+							background: $primary_white;
+							padding-top: 1px;
+							position: relative;
+							top: -1px;
+							color: $user_type_active;
+						}
+					}
+				}
+
+			}
+		}
+	}
+}
 
 
 
+.user-post {
+	width: 70%;
+	margin-left: 60px;
+	border: 1px solid $d_grey;
+	margin-top: 30px;
+	color: $d_grey;
+	font-weight: 100;
+	background: white;
+	position: relative;
+	border-top: 4px solid $primary_blue;
+	.top {
+		.user-post-pic {
+			width: 40px;
+			overflow: hidden;
+			margin-right: 15px;
+		}
+		.left {
+			padding: 15px;
+			padding-bottom: 0;
+
+			.user-post-details {
+				.user-post-details-bottom {
+					color: $user_type_active;
+					font-size: 0.8em;
+					padding-top: 4px;
+				}
+			}
+		}
+
+		.right {
+			.post-interactions {
+
+				li {
+					width: 30px;
+					height: 30px;
+					line-height: 2em;
+					text-align: center;
+					cursor: pointer;
+					color: $user_type_active;
+
+					&:hover {
+						color: $post_color;
+					}
+				}
+			}
+		}
+	}
+	.post {
+		padding: 15px;
+		color: $post_color;
+		font-size: 0.8em;
+	}
+	.bottom {
+		background: $fb_lightest_grey;
+		border-top: 1px solid $d_grey;
+
+		textarea {
+			width: 87%;
+			margin: 15px;
+			border-radius: 0;
+			resize: none;
+			box-shadow: none;
+			border: 1px solid $d_grey;
+
+		}
+	}
+}
 
 
+.user-post-comments {
+	.user-post-comment {
+		color: $user_type_active;
+		font-size: 0.8em;
+		padding: 15px;
+		.comment-right {
+			padding-left: 15px;
 
+			.comment-commenter {
+				padding-bottom: 4px;
 
+				.comment-comment {
+					color: $post_color;
+				}
+			}
+			.comment-date {
+				font-size: 0.8em;
+			}
+		}
+		.comment-pic {
+			width: 40px;
+			height: 40px;
+			overflow: hidden;
+		}
+	}
+}
 
+.comment-section {
+	.comment-pic {
+		position: relative;
+		top: 15px;
+		left: 15px;
+		width: 40px;
+	}
+}
 
+.user-profile-section {
+	background: $primary_white;
+	margin: 30px 15px;
+	border: 1px solid $d_grey;
 
+	h1 {
+		background: $fb_lightest_grey;
+		padding: 10px 15px;
+		border-bottom: 1px solid $d_grey;
+		font-weight: bold;
+	}
+
+	p {
+		font-size: 0.8em;
+		padding: 15px;
+		line-height: 2em;
+	}
+}

@@ -195,13 +195,13 @@ function (
             this.showModal(CleeView, 'white');
         },
         login: function () {
-            var isLoggedIn = MB.session.get('token');
+            //var isLoggedIn = MB.session.get('token');
             this.hideModal();
-            if (isLoggedIn) {
-                MB.appRouter.navigate('dashboard', {trigger: true});
-            } else {
-                this.showModal(LoginView, 'office_bg.jpg');
-            }
+            //if (isLoggedIn) {
+                //MB.appRouter.navigate('dashboard', {trigger: true});
+            //} else {
+            this.showModal(LoginView, 'office_bg.jpg');
+            //}
         },
         register: function () {
             this.hideModal();
