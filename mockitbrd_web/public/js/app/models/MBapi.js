@@ -148,7 +148,7 @@ define(["jquery", "underscore", "backbone"],
             update: function(param) {
 
             },
-            register: function(params) {
+            register: function(params, isRef) {
                 var self = this;
                 $.ajax({
                     type: "POST",
@@ -168,6 +168,10 @@ define(["jquery", "underscore", "backbone"],
                             $('.MB-reg-name').html(response.data.registeredUser.fname);
                             $('.MB-reg-email').html(response.data.registeredUser.email);
                             $('.MB-reg-success').addClass('hatch');
+
+                            if (isRef) {
+                                //self.referred(isRef, response.data.registeredUser._id, response.data.registeredUser.email);
+                            }
                         }
                         //MB.appRouter.navigate('#register', { trigger: true });
                     },

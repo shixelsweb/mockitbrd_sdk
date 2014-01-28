@@ -28,7 +28,8 @@ define(['backbone', 'marionette'], function(Backbone, Marionette) {
            "user/:id": "user",
            "tasks": "tasks",
            "user/:id/account": "account",
-           "interview/:id": "interview"
+           "interview/:id": "interview",
+           "register?referrel_code=:id": "register"
        }
    });
 });
