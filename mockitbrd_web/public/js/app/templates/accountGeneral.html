@@ -10,36 +10,36 @@
 
 			<div class="row">
 				<div class="span2">
-					<label id="usertypetext">User Type :</label>
-					<input type="text" value="{{user.user_type}}" id="usertype" disabled="disabled">
+					<label class="acclabstyle">User Type :</label>
+					<input type="text" value="{{user.user_type}}" id="usertype" class="inputbordernone geninputborderwidth" disabled="disabled">
 				</div>
 				<div class="span2 offset1">
 					<label id=""></label>
 				</div>
 			</div>
 
-			<label>Email:</label>
+			<label class="accfulllabstyle">Email:</label>
 			<input type="email" value="{{user.email}}"><br>
 			
 			<div class="row">
 				<div class="span2">
-					<label class="inline" id="fnametext">First Name :</label>
-					<input type="text" value="{{user.fname}}" id="fname"><br>	
+					<label class="inline acclabstyle">First Name :</label>
+					<input type="text" value="{{user.fname}}" id="fname" class="inputbordernone geninputborderwidth"><br>	
 				</div>
 				<div class="span2 offset1">
-					<label class="inilne" id="lnametext">Last Name :</label>
-					<input type="text" value="{{user.lname}}" id="lname"><br>
+					<label class="inilne acclabstyle">Last Name :</label>
+					<input type="text" value="{{user.lname}}" id="lname" class="inputbordernone geninputborderwidth"><br>
 				</div>
 			</div>	
 
 
 			<div class="row">
 				<div class="span2">
-					<label class="inline" id="telephonenotext">Telephone No :</label>
-					<input type="text" value="{{user.phone}}" id="telephoneno"><br>
+					<label class="inline acclabstyle">Telephone No :</label>
+					<input type="text" value="{{user.phone}}" id="telephoneno" class="inputbordernone geninputborderwidth"><br>
 				</div>
 				<div class="span2 offset1">
-					<label class="inline" id="locationtext">Location :</label>
+					<label class="inline acclabstyle">Location :</label>
 						<select name="state" id="selectstate">
 							<option value="AL">Alabama</option>
 							<option value="AK">Alaska</option>
@@ -98,23 +98,25 @@
 			</div>
 			<hr>
 
-			<label id="jobstatustext">Job Status :</label>
+			<label class="acclabstyle">Job Status :</label>
 			<select>
 				<option>Actively Seeking Employment</option>
 				<option>Currently Employed</option>
 			</select>
 			
-			<label>Highest Level of Education :</label>
+			<label class="accfulllabstyle">Highest Level of Education :</label>
 			<input type="text" id="edulevel">
 
-			<label>Job Title :</label>
+			<label class="accfulllabstyle">Job Title :</label>
 			<input type="text" id="jobtitle" value="{{user.job_title}}">
 
-			<label>Company Name :</label>
+			<label class="accfulllabstyle">Company Name :</label>
 			<input type="text" id="companyname">
 
-			<label>Mockitbrd Profile :</label>
+			<label class="accfulllabstyle">Mockitbrd Profile :</label>
 			<input type="text" id="userprofile" disabled="disabled" value="http:test/{{user._id}}/account">
+
+			<button class="MB-button noire">Save</button>
 		
 
 			

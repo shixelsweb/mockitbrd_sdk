@@ -79,6 +79,19 @@
 			text-decoration: none;
 		}
 	}
+	&.night {
+		background: transparent;
+		border: 2px solid rgba(0, 0, 0, 0.4);
+		color: $primary_grey !important;
+		text-shadow: none !important;
+		height: 15px;
+		line-height: 15px;
+		&:hover {
+			border: 2px solid $primary_black;
+			color: $primary_black;
+			text-decoration: none;
+		}
+	}
 	&.fog {
 		background: rgba(255, 255, 255, 0.2);
 		border: none;
@@ -88,6 +101,17 @@
 
 		&:hover {
 			background-color: rgba(255,255,255,0.4) !important;
+			text-decoration: none;
+		}
+	}
+	&.noire {
+		background: rgba(0, 0, 0, 0.9);
+		border: none;
+		text-shadow: none !important;
+		color: $primary_white !important;
+		border: 3px solid transparent;
+		&:hover {
+			background-color: rgba(0, 0, 0, 0.4) !important;
 			text-decoration: none;
 		}
 	}

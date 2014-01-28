@@ -222,6 +222,14 @@ margin-bottom: 2px;
 
 // General Panel
 
+.acclabstyle {
+	margin-bottom: 3px;
+}
+
+.accfulllabstyle {
+	margin-bottom: -5px;
+}
+
 #location {
 	width: 100%;
 }
@@ -234,12 +242,13 @@ margin-bottom: 2px;
 	width: 187px;
 }
 
-#telephoneno, #fname, #lname, #usertype {
-	width: 173px;
-	border-radius: 0px;
+.inputbordernone {
+	border-radius: 0px !important;
 }
 
-
+.geninputborderwidth {
+	width: 173px;
+}
 
 // Notifications Panel
 
@@ -273,6 +282,20 @@ margin-bottom: 2px;
 
 // Security Panel
 
-.passlength {
-	width: 100%;
+.inputlength {
+	width: 90%;
+}
+
+// Support Panel
+
+#supportmessage {
+	resize: none;
+}
+
+#helptext {
+	font-size: 12px;
+}
+
+#helpemail {
+	margin-top: 15px;
 }
