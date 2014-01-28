@@ -1,15 +1,26 @@
-define(['jquery', 'hbs!templates/dashboardMain', 'backbone', 'marionette', 'moment', 'models/Model'],
-    function ($, template, Backbone, Model) {
+define(['jquery', 'models/Model', 'moment', 'hbs!templates/dashboardMain', 'backbone', 'marionette'],
+    function ($, Model, moment, template, Backbone) {
       //ItemView provides some default rendering logic
       return Backbone.Marionette.ItemView.extend({
           template:template,
+
+          tasks: null,
+          model: null,
 
           events: {
             'click .menu-item': 'onMenuItemClick',
             'mouseover .calendar-item': 'onMenuItemHover',
             'mouseout .calendar-item': 'oneMenuItemOut'
           },
+          initialize: function() {
+            this.tasks = MB.api.getUserTasksFull($.parseJSON(MB.session.get('user')));
 
+            this.tasks = this.checkIfInterview(this.tasks);
+
+            this.model = new Model({
+              tasks: this.tasks
+            });
+          },
           onRender: function () {
             // get rid of that pesky wrapping-div
             // assumes 1 child element.
@@ -51,6 +62,17 @@ define(['jquery', 'hbs!templates/dashboardMain', 'backbone', 'marionette', 'mome
           },
           oneMenuItemOut: function(e){
             $(e.currentTarget).children('.close').hide();
+          },
+          checkIfInterview: function(tasks) {
+            for (var i = 0; i < tasks.length; i++) {
+              if (tasks[i].type === 'interview') {
+                tasks[i].isInterview = true;
+              } else {
+                tasks[i].isInterview = false;
+              }
+            }
+
+            return tasks;
           }
       });
 });

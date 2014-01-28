@@ -1,5 +1,7 @@
 #dashboard-view {
 	padding-top: 60px;
+	width: 100%;
+	height: 100%;
 
 	.dashboard-top {
 		width: 100%;
@@ -9,6 +11,31 @@
 		box-shadow: 0px 1px 1px #ddd;
 	}
 }
+
+#dashboard-main-view {
+	height: 100%;
+	width: 100%;
+}
+
+.dashboard-bottom {
+	width: 100%;
+	height: 100%;
+	top: 260px;
+	right: 180px;
+	position: relative;
+}
+
+.dashboard-bottom-left {
+	width: 70%;
+	height: 100%;
+	display: block;
+	background: $primary_white;
+}
+.dashboard-bottom-bottom-right {
+	width: 30%;
+	height: 100%;
+	box-shadow: 0px 0px 1px $devil_grey;
+}
 #dashboard-content {
 	width: 100%;
 	height: 100%;
@@ -16,20 +43,20 @@
 	-webkit-transition-property: left;
     -webkit-transition-duration: 0.2s;
     position: relative;
-    left: 0;
+    left: 180px;
     overflow-y: scroll;
 }
 
 .dashboard-calendar {
-	width: 300px;
+	width: 80%;
 	height: 300px;
 	float: right;
-	margin-right: 170px;
+	margin-right: 40px;
 	margin-top: 30px;
 	text-align: right;
 
 	h2 {
-		font-size: 3em;
+		font-size: 1.5em;
 		font-weight: 100;
 		cursor: default;
 	}
@@ -40,7 +67,7 @@
 		li {
 			display: inline-block;
 			padding: 15px 10px;
-			font-size: 1.3em;
+			font-size: 1em;
 			font-weight: 100;
 			color: #999;
 			cursor: pointer;

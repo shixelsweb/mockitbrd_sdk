@@ -1,35 +1,37 @@
 <div id="dashboard-main-view">
-	<div class="dashboard-top MB-waiting-two-bg">
-		
-	</div>
-	<div class="dashboard-calendar">
-		<h2><i class="title unselectable"></i>Quick View</h2>
-		<div class="today"></div>
-			<ul class="menu">
-				<li class="menu-item" data-sort="interview">Interviews</li>
-				<li class="menu-item" data-sort="task">Tasks</li>
-				<li class="menu-item active" data-sort="all">All</li>
-			</ul>
-		<div class="all-calendar">
-			<div class="calendar-today">
-				<ul>
-					<div class="calendar-item" data-type="task">
-						<li class="icon fa fa-check-square-o"></li>
-						<li class="description">C++ Qualifier</li>
-						<li class="close fa fa-times-circle-o"></li>
-					</div>
-					<div class="calendar-item" data-type="interview">
-						<li class="icon fa fa-calendar"></li>
-						<li class="description">Technical interview w/ <a href="#">Megan</a></li>
-						<li class="close fa fa-times-circle-o"></li>
-					</div>
-					<div class="calendar-item" data-type="interview">
-						<li class="icon fa fa-calendar"></li>
-						<li class="description">Interview Request from <a href="#">Steve</a></li>
-						<li class="close fa fa-times-circle-o"></li>
-					</div>
+	<div class="dashboard-top MB-waiting-two-bg"></div>
+	<div class="dashboard-bottom">
+		<div class="dashboard-bottom-left pull-left"></div>
+		<div class="dashboard-bottom-bottom-right pull-right">
+			<div class="dashboard-calendar">
+			<h2><i class="title unselectable"></i>Quick View</h2>
+			<div class="today"></div>
+				<ul class="menu">
+					<li class="menu-item" data-sort="interview">Interviews</li>
+					<li class="menu-item" data-sort="task">Tasks</li>
+					<li class="menu-item active" data-sort="all">All</li>
 				</ul>
+			<div class="all-calendar">
+				<div class="calendar-today">
+					<ul>
+						{{#each tasks}}
+						<div class="calendar-item" data-type="{{type}}">
+							{{#if isInterview}}
+							<li class="icon fa fa-calendar"></li>
+							<li class="description">{{title}} Interview</li>
+							{{else}}
+							<li class="icon fa fa-check-square-o"></li>
+							<li class="description">{{title}}</li>
+							{{/if}}
+							<li class="close fa fa-times-circle-o"></li>
+						</div>
+						{{/each}}
+					</ul>
+				</div>
 			</div>
 		</div>
+		</div>
+		<div class="clear-both"></div>
 	</div>
+	
 </div>

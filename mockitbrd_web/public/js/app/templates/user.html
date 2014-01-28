@@ -14,10 +14,10 @@
 				{{/if}}
 			{{/if}}
 			{{#if user.location}}
-			<h2><i class="fa fa-thumb-tack"> {{user.location}}</i></h2>
+			<h2><i class="fa fa-thumb-tack user_profile_location"> {{user.location}}</i></h2>
 			{{/if}}
 			{{#if user.job_title}}
-		<h3>{{user.job_title}} and <span class="job_status">{{user.job_status}}</span></h3>
+		<h3><span class="user_profile_job_title">{{user.job_title}}</span> and <span class="user_profile_job_status">{{user.job_status}}</span></h3>
 		{{/if}}
 			<ul class="MB-user-profile-top-social-links">
 				{{#each user.social_links}}
@@ -28,7 +28,7 @@
 		{{#if isOwner}}
 		<ul class="MB-user-profile-quick-links">
 			<li class="MB-user-profile-quick-link MB-edit-profile"><i class="fa fa-pencil"></i>Edit Profile</li>
-			<li  class="MB-user-profile-quick-link"><i class="fa fa-share-square-o"></i>Share</li>
+			<li  class="MB-user-profile-quick-link "><i class="fa fa-share-square-o"></i>Share</li>
 		</ul>
 		{{else}}
 		<ul class="MB-user-profile-quick-links">
@@ -42,10 +42,96 @@
 			{{#if isConnectedPending}}
 			<li class="MB-user-profile-quick-link disabled">Pending</li>
 			{{/if}}			
-			
-<!-- 			<li class="MB-user-profile-quick-link"><i class="fa fa-envelope"></i>Message</li> //No messaging feature for now
- -->			<li  class="MB-user-profile-quick-link last"><i class="fa fa-share-square-o"></i>Share</li>
+			<li  class="MB-user-profile-quick-link last"><i class="fa fa-share-square-o"></i>Share</li>
 		</ul>
 		{{/if}}
+	</div>
+	<div class="MB-user-profile-bottom MB-user-bg">
+		<div class="user-profile-left pull-left">
+			<div class="user-profile-section">
+				<h1>Bio</h1>
+				<p>{{user.bio}}</p>
+			</div>
+			<div class="user-profile-section">
+				<h1>Skills</h1>
+				{{#each skills}}
+					<h2>{{category}}</h2>
+					{{#each skills.skill}}
+						<div class="user-profile-skill">{{skill}}</div>
+					{{/each}}
+				{{/each}}
+			</div>
+		</div>
+		<div class="user-profile-right pull-right">
+			<div class="user-profile-wall-poster">
+				<div class="user-profile-wall-poster-top">
+					<textarea placeholder="Type your comment here..."></textarea>
+				</div>
+				<div class="user-profile-wall-poster-bottom">
+					<ul class="user-post-type">
+						<li class="fa fa-comments active"></li>
+						<!-- <li class="fa fa-link"></li>
+						<li class="fa fa-picture-o"></li> -->
+					</ul>
+					<div class="right-button">
+						<button class="MB-button primary small">POST</button>
+					</div>
+				</div>
+			</div>
+			<div class="user-posts">
+				{{#each posts}}
+					<div class="user-post">
+						<div class="top">
+							<div class="left pull-left">
+								<div class="user-post-pic pull-left"><img src="{{user_pic}}"></div>
+								<div class="user-post-details pull-right">
+									<div class="user-post-details-top">
+										<a href="#user/{{user_id}}">{{poster}}</a>
+									</div>
+									<div class="user-post-details-bottom">
+										{{date}}
+									</div>
+								</div>
+								<div class="clear-both"></div>
+							</div>
+							<div class="right pull-right">
+								<ul class="post-interactions">
+									<li class="fa fa-heart-o"></li>
+									<li class="fa fa-flag"></li>
+									<li class="fa fa-share"></li>
+									{{#if isOwner}}
+										<li class="fa fa-times delete-post"></li>
+									{{/if}}
+								</ul>
+							</div>
+							<div class="clear-both"></div>
+						</div>
+						<p class="post">{{{post}}}</p>
+							<div class="bottom">
+								<div class="user-post-comments">
+									{{#each comments}}
+										<div class="user-post-comment">
+											<div class="comment-left pull-left">
+												<div class="comment-pic"><img src="{{user_pic}}"></div>
+											</div>
+											<div class="comment-right pull-left">
+												<div class="comment-commenter"><a href="#user/{{user_id}}">{{commenter}}</a>&nbsp;&nbsp;<span class="comment-comment">{{{comment}}}</span></div>
+												<div class="comment-date">{{date}}</div>
+											</div>
+											<div class="clear-both"></div>
+										</div>
+									{{/each}}
+								</div>
+								<div class="comment-section">
+									<div class="comment-pic pull-left"><img src="{{commenter_pic}}"></div>
+									<textarea class="pull-right" placeholder="Type here to comment.."></textarea>
+									<div class="clear-both"></div>
+								</div>
+							</div>
+					</div>
+				{{/each}}
+			</div>
+		</div>
+		<div class="clear-both"></div>
 	</div>
 </div>

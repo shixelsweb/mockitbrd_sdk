@@ -2,7 +2,7 @@
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-/* line 17, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 17, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -24,50 +24,50 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 22, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 24, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 26, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 28, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 30, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 103, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 32, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 116, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
   display: block;
 }
 
-/* line 29, ../js/app/templates/scss/variables.scss */
+/* line 36, ../js/app/templates/scss/variables.scss */
 .glass-effect {
   box-shadow: 0px 0px 0px 8px rgba(0, 0, 0, 0.3), 0px 2px 3px 0px rgba(0, 0, 0, 0.6);
 }
@@ -97,7 +97,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   src: url('fonts/../../fonts/ethon/ethon_roman.ttf') format('truetype');
 }
 
-/* line 48, ../js/app/templates/scss/variables.scss */
+/* line 55, ../js/app/templates/scss/variables.scss */
 .unselectable {
   -moz-user-select: none;
   -khtml-user-select: none;
@@ -105,12 +105,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   -o-user-select: none;
 }
 
-/* line 55, ../js/app/templates/scss/variables.scss */
+/* line 62, ../js/app/templates/scss/variables.scss */
 .placeholderHIW {
   margin-top: 30px;
 }
 
-/* line 59, ../js/app/templates/scss/variables.scss */
+/* line 66, ../js/app/templates/scss/variables.scss */
 .MB-boardroom-bg {
   background: url("../../img/login_bg.jpg") no-repeat;
   background-position: center;
@@ -118,7 +118,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   -moz-background-size: cover;
 }
 
-/* line 66, ../js/app/templates/scss/variables.scss */
+/* line 73, ../js/app/templates/scss/variables.scss */
 .MB-office-bg {
   background: url("../../img/office_bg.jpg") no-repeat;
   background-position: center;
@@ -126,7 +126,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   -moz-background-size: cover;
 }
 
-/* line 73, ../js/app/templates/scss/variables.scss */
+/* line 80, ../js/app/templates/scss/variables.scss */
 .MB-mail-bg {
   background: url("../../img/mail_bg.jpg") no-repeat;
   background-position: center;
@@ -134,7 +134,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   -moz-background-size: cover;
 }
 
-/* line 80, ../js/app/templates/scss/variables.scss */
+/* line 87, ../js/app/templates/scss/variables.scss */
+.MB-user-bg {
+  background: url("../../img/squairy.png");
+}
+
+/* line 91, ../js/app/templates/scss/variables.scss */
 .MB-waiting-bg {
   background: url("../../img/waiting.jpg") no-repeat;
   background-position: top;
@@ -142,73 +147,73 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   -moz-background-size: cover;
 }
 
-/* line 87, ../js/app/templates/scss/variables.scss */
+/* line 98, ../js/app/templates/scss/variables.scss */
 .MB-waiting-two-bg {
   background: url("../../img/waiting2.jpg") no-repeat;
-  background-position: 100px -120px;
+  background-position: -80px -120px;
   background-size: cover;
   -moz-background-size: cover;
 }
 
-/* line 94, ../js/app/templates/scss/variables.scss */
+/* line 105, ../js/app/templates/scss/variables.scss */
 .MB-lightGrey-bg {
   background-color: #f4f4f4;
 }
 
-/* line 97, ../js/app/templates/scss/variables.scss */
+/* line 108, ../js/app/templates/scss/variables.scss */
 .MB-white-bg {
   background-color: white;
   box-shadow: 0px 0px 2px #525252;
 }
 
-/* line 102, ../js/app/templates/scss/variables.scss */
+/* line 113, ../js/app/templates/scss/variables.scss */
 .MB-geom-bg {
   background: url("../../img/geometry.png");
   box-shadow: 0px 0px 2px #525252;
 }
 
-/* line 106, ../js/app/templates/scss/variables.scss */
+/* line 117, ../js/app/templates/scss/variables.scss */
 .clear-left {
   clear: left;
 }
 
-/* line 110, ../js/app/templates/scss/variables.scss */
+/* line 121, ../js/app/templates/scss/variables.scss */
 .clear-right {
   clear: right;
 }
 
-/* line 114, ../js/app/templates/scss/variables.scss */
+/* line 125, ../js/app/templates/scss/variables.scss */
 .clear-both {
   clear: both;
 }
 
-/* line 118, ../js/app/templates/scss/variables.scss */
+/* line 129, ../js/app/templates/scss/variables.scss */
 .noShadow {
   box-shadow: none;
   text-shadow: none;
 }
 
-/* line 123, ../js/app/templates/scss/variables.scss */
+/* line 134, ../js/app/templates/scss/variables.scss */
 .pull-left {
   float: left;
 }
 
-/* line 127, ../js/app/templates/scss/variables.scss */
+/* line 138, ../js/app/templates/scss/variables.scss */
 .pull-right {
   float: right;
 }
 
-/* line 131, ../js/app/templates/scss/variables.scss */
+/* line 142, ../js/app/templates/scss/variables.scss */
 .plus150 {
   padding-top: 150px;
 }
 
-/* line 135, ../js/app/templates/scss/variables.scss */
+/* line 146, ../js/app/templates/scss/variables.scss */
 .top52 {
   margin-top: 52px;
 }
 
-/* line 139, ../js/app/templates/scss/variables.scss */
+/* line 150, ../js/app/templates/scss/variables.scss */
 .plus100 {
   padding-top: 100px;
 }
@@ -1012,42 +1017,47 @@ header.ghost .navbar-inner {
   padding: 10px 20px;
 }
 /* line 37, ../js/app/templates/scss/ui.scss */
+.MB-button.smallest {
+  font-size: 10px !important;
+  padding: 5px 10px;
+}
+/* line 42, ../js/app/templates/scss/ui.scss */
 .MB-button.login {
   padding: 10px 140px;
   border-radius: 0;
   top: 20px;
   position: relative;
 }
-/* line 43, ../js/app/templates/scss/ui.scss */
+/* line 48, ../js/app/templates/scss/ui.scss */
 .MB-button.facebook {
   background-color: #4c66a4 !important;
   border-radius: 0;
 }
-/* line 47, ../js/app/templates/scss/ui.scss */
+/* line 52, ../js/app/templates/scss/ui.scss */
 .MB-button.linkedin {
   background-color: #006699 !important;
   border-radius: 0;
 }
-/* line 51, ../js/app/templates/scss/ui.scss */
+/* line 56, ../js/app/templates/scss/ui.scss */
 .MB-button.primary {
   background-color: #2bbbff;
   color: white !important;
 }
-/* line 55, ../js/app/templates/scss/ui.scss */
+/* line 60, ../js/app/templates/scss/ui.scss */
 .MB-button.primary:disabled {
   background-color: #0085c4 !important;
 }
-/* line 58, ../js/app/templates/scss/ui.scss */
+/* line 63, ../js/app/templates/scss/ui.scss */
 .MB-button.primary:disabled:hover {
   background-color: #0085c4 !important;
   cursor: not-allowed;
 }
-/* line 64, ../js/app/templates/scss/ui.scss */
+/* line 69, ../js/app/templates/scss/ui.scss */
 .MB-button.primary:hover {
   background-color: #0085c4 !important;
   text-decoration: none;
 }
-/* line 69, ../js/app/templates/scss/ui.scss */
+/* line 74, ../js/app/templates/scss/ui.scss */
 .MB-button.ghost {
   background: transparent;
   border: 2px solid rgba(255, 255, 255, 0.4);
@@ -1056,13 +1066,13 @@ header.ghost .navbar-inner {
   height: 15px;
   line-height: 15px;
 }
-/* line 76, ../js/app/templates/scss/ui.scss */
+/* line 81, ../js/app/templates/scss/ui.scss */
 .MB-button.ghost:hover {
   border: 2px solid white;
   color: white;
   text-decoration: none;
 }
-/* line 82, ../js/app/templates/scss/ui.scss */
+/* line 87, ../js/app/templates/scss/ui.scss */
 .MB-button.night {
   background: transparent;
   border: 2px solid rgba(0, 0, 0, 0.4);
@@ -1071,13 +1081,13 @@ header.ghost .navbar-inner {
   height: 15px;
   line-height: 15px;
 }
-/* line 89, ../js/app/templates/scss/ui.scss */
+/* line 94, ../js/app/templates/scss/ui.scss */
 .MB-button.night:hover {
   border: 2px solid black;
   color: black;
   text-decoration: none;
 }
-/* line 95, ../js/app/templates/scss/ui.scss */
+/* line 100, ../js/app/templates/scss/ui.scss */
 .MB-button.fog {
   background: rgba(255, 255, 255, 0.2);
   border: none;
@@ -1085,12 +1095,12 @@ header.ghost .navbar-inner {
   color: white !important;
   border: 3px solid transparent;
 }
-/* line 102, ../js/app/templates/scss/ui.scss */
+/* line 107, ../js/app/templates/scss/ui.scss */
 .MB-button.fog:hover {
   background-color: rgba(255, 255, 255, 0.4) !important;
   text-decoration: none;
 }
-/* line 107, ../js/app/templates/scss/ui.scss */
+/* line 112, ../js/app/templates/scss/ui.scss */
 .MB-button.noire {
   background: rgba(0, 0, 0, 0.9);
   border: none;
@@ -1098,60 +1108,60 @@ header.ghost .navbar-inner {
   color: white !important;
   border: 3px solid transparent;
 }
-/* line 113, ../js/app/templates/scss/ui.scss */
+/* line 118, ../js/app/templates/scss/ui.scss */
 .MB-button.noire:hover {
   background-color: rgba(0, 0, 0, 0.4) !important;
   text-decoration: none;
 }
-/* line 118, ../js/app/templates/scss/ui.scss */
+/* line 123, ../js/app/templates/scss/ui.scss */
 .MB-button.secondary {
   background-color: #ffe42b;
   color: black !important;
 }
-/* line 122, ../js/app/templates/scss/ui.scss */
+/* line 127, ../js/app/templates/scss/ui.scss */
 .MB-button.secondary:disabled {
   background-color: #dec100 !important;
 }
-/* line 125, ../js/app/templates/scss/ui.scss */
+/* line 130, ../js/app/templates/scss/ui.scss */
 .MB-button.secondary:disabled:hover {
   background-color: #dec100 !important;
   cursor: not-allowed;
 }
-/* line 131, ../js/app/templates/scss/ui.scss */
+/* line 136, ../js/app/templates/scss/ui.scss */
 .MB-button.secondary:hover {
   background-color: #dec100 !important;
   text-decoration: none;
 }
-/* line 137, ../js/app/templates/scss/ui.scss */
+/* line 142, ../js/app/templates/scss/ui.scss */
 .MB-button.fullReg {
   width: 465px;
   border: 0;
   border-radius: 0;
 }
-/* line 143, ../js/app/templates/scss/ui.scss */
+/* line 148, ../js/app/templates/scss/ui.scss */
 .MB-button.loginFullreg {
   width: 400px;
   border: none;
   border-radius: 0;
   text-transform: uppercase;
 }
-/* line 150, ../js/app/templates/scss/ui.scss */
+/* line 155, ../js/app/templates/scss/ui.scss */
 .MB-button.fullLog {
   width: 350px;
   border: 0;
   border-radius: 0;
 }
-/* line 156, ../js/app/templates/scss/ui.scss */
+/* line 161, ../js/app/templates/scss/ui.scss */
 .MB-button.primary, .MB-button.secondary {
   text-shadow: none !important;
 }
 
-/* line 161, ../js/app/templates/scss/ui.scss */
+/* line 166, ../js/app/templates/scss/ui.scss */
 .MB-features {
   padding-top: 50px;
   text-align: center;
 }
-/* line 164, ../js/app/templates/scss/ui.scss */
+/* line 169, ../js/app/templates/scss/ui.scss */
 .MB-features .MB-feature {
   display: inline-block;
   font-family: "Open Sans";
@@ -1160,7 +1170,7 @@ header.ghost .navbar-inner {
   margin-bottom: 50px;
   position: relative;
 }
-/* line 172, ../js/app/templates/scss/ui.scss */
+/* line 177, ../js/app/templates/scss/ui.scss */
 .MB-features .MB-feature .bt-steps-link {
   background: url("../../img/steps-link.png") no-repeat left top transparent;
   width: 189px;
@@ -1169,29 +1179,29 @@ header.ghost .navbar-inner {
   right: -106px;
   top: 46px;
 }
-/* line 181, ../js/app/templates/scss/ui.scss */
+/* line 186, ../js/app/templates/scss/ui.scss */
 .MB-features .MB-feature .title {
   font-size: 1.5em;
   line-height: 2em;
 }
-/* line 185, ../js/app/templates/scss/ui.scss */
+/* line 190, ../js/app/templates/scss/ui.scss */
 .MB-features .MB-feature .title.bold {
   font-weight: bold;
   color: #525252;
 }
-/* line 190, ../js/app/templates/scss/ui.scss */
+/* line 195, ../js/app/templates/scss/ui.scss */
 .MB-features .MB-feature .subtitle {
   font-size: 1em;
   color: #2bbbff;
 }
-/* line 194, ../js/app/templates/scss/ui.scss */
+/* line 199, ../js/app/templates/scss/ui.scss */
 .MB-features .MB-feature .about {
   height: 80px;
   font-size: 0.9em;
   line-height: 2em;
 }
 
-/* line 202, ../js/app/templates/scss/ui.scss */
+/* line 207, ../js/app/templates/scss/ui.scss */
 .MB-benefits {
   width: 960px;
   margin-left: auto;
@@ -1199,22 +1209,22 @@ header.ghost .navbar-inner {
   margin-top: 30px;
 }
 
-/* line 209, ../js/app/templates/scss/ui.scss */
+/* line 214, ../js/app/templates/scss/ui.scss */
 .MB-benefit {
   margin-bottom: 30px;
 }
-/* line 212, ../js/app/templates/scss/ui.scss */
+/* line 217, ../js/app/templates/scss/ui.scss */
 .MB-benefit h4 {
   font-weight: bold;
   font-size: 1.2em;
   line-height: 2em;
 }
-/* line 217, ../js/app/templates/scss/ui.scss */
+/* line 222, ../js/app/templates/scss/ui.scss */
 .MB-benefit p {
   font-size: 0.9em;
 }
 
-/* line 222, ../js/app/templates/scss/ui.scss */
+/* line 227, ../js/app/templates/scss/ui.scss */
 .MB-icon {
   width: 90px;
   height: 90px;
@@ -1222,35 +1232,35 @@ header.ghost .navbar-inner {
   font-size: 80px;
   color: #2bbbff;
 }
-/* line 229, ../js/app/templates/scss/ui.scss */
+/* line 234, ../js/app/templates/scss/ui.scss */
 .MB-icon.small {
   font-size: 40px;
 }
-/* line 233, ../js/app/templates/scss/ui.scss */
+/* line 238, ../js/app/templates/scss/ui.scss */
 .MB-icon.smaller {
   font-size: 30px;
   line-height: 120px;
 }
 
-/* line 238, ../js/app/templates/scss/ui.scss */
+/* line 243, ../js/app/templates/scss/ui.scss */
 .modal-black-show #MB-modal-black, .modal-black-show #MB-confirm {
   visibility: visible;
   opacity: 1;
 }
 
-/* line 243, ../js/app/templates/scss/ui.scss */
+/* line 248, ../js/app/templates/scss/ui.scss */
 .modal-white-show #MB-modal-white {
   visibility: visible;
   opacity: 1;
 }
 
-/* line 248, ../js/app/templates/scss/ui.scss */
+/* line 253, ../js/app/templates/scss/ui.scss */
 .modal-bg-show #MB-modal-bg {
   visibility: visible;
   opacity: 1;
 }
 
-/* line 254, ../js/app/templates/scss/ui.scss */
+/* line 259, ../js/app/templates/scss/ui.scss */
 #MB-modal-white {
   position: fixed;
   top: 0;
@@ -1271,7 +1281,7 @@ header.ghost .navbar-inner {
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0.95) 255%, rgba(255, 255, 255, 0.95) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#d9ffffff', endColorstr='#d9ffffff',GradientType=0 );
 }
-/* line 274, ../js/app/templates/scss/ui.scss */
+/* line 279, ../js/app/templates/scss/ui.scss */
 #MB-modal-white .modal {
   width: 450px;
   margin: 0 auto;
@@ -1285,30 +1295,30 @@ header.ghost .navbar-inner {
   border-radius: 0;
   box-shadow: none;
 }
-/* line 287, ../js/app/templates/scss/ui.scss */
+/* line 292, ../js/app/templates/scss/ui.scss */
 #MB-modal-white .modal .body {
   text-align: center;
 }
-/* line 291, ../js/app/templates/scss/ui.scss */
+/* line 296, ../js/app/templates/scss/ui.scss */
 #MB-modal-white .modal .MB-modal-close {
   position: absolute;
   right: 0;
   top: 10px;
   cursor: pointer;
 }
-/* line 297, ../js/app/templates/scss/ui.scss */
+/* line 302, ../js/app/templates/scss/ui.scss */
 #MB-modal-white .modal .MB-modal-close .MB-icon {
   font-size: 4em;
   color: black;
   width: 100%;
   height: 100%;
 }
-/* line 303, ../js/app/templates/scss/ui.scss */
+/* line 308, ../js/app/templates/scss/ui.scss */
 #MB-modal-white .modal .MB-modal-close .MB-icon:hover {
   color: #2bbbff;
 }
 
-/* line 311, ../js/app/templates/scss/ui.scss */
+/* line 316, ../js/app/templates/scss/ui.scss */
 #MB-modal-black {
   position: fixed;
   top: 0;
@@ -1329,7 +1339,7 @@ header.ghost .navbar-inner {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 255%, rgba(0, 0, 0, 0.5) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#d9ffffff', endColorstr='#d9ffffff',GradientType=0 );
 }
-/* line 331, ../js/app/templates/scss/ui.scss */
+/* line 336, ../js/app/templates/scss/ui.scss */
 #MB-modal-black .modal {
   width: 60%;
   margin: 0 auto;
@@ -1343,30 +1353,30 @@ header.ghost .navbar-inner {
   border-radius: 0;
   box-shadow: none;
 }
-/* line 344, ../js/app/templates/scss/ui.scss */
+/* line 349, ../js/app/templates/scss/ui.scss */
 #MB-modal-black .modal .body {
   text-align: center;
 }
-/* line 348, ../js/app/templates/scss/ui.scss */
+/* line 353, ../js/app/templates/scss/ui.scss */
 #MB-modal-black .modal .MB-modal-close {
   position: absolute;
   right: 0;
   top: 10px;
   cursor: pointer;
 }
-/* line 354, ../js/app/templates/scss/ui.scss */
+/* line 359, ../js/app/templates/scss/ui.scss */
 #MB-modal-black .modal .MB-modal-close .MB-icon {
   font-size: 4em;
   color: white;
   width: 100%;
   height: 100%;
 }
-/* line 360, ../js/app/templates/scss/ui.scss */
+/* line 365, ../js/app/templates/scss/ui.scss */
 #MB-modal-black .modal .MB-modal-close .MB-icon:hover {
   color: #2bbbff;
 }
 
-/* line 368, ../js/app/templates/scss/ui.scss */
+/* line 373, ../js/app/templates/scss/ui.scss */
 #MB-modal-bg {
   position: fixed;
   top: 0;
@@ -1385,7 +1395,7 @@ header.ghost .navbar-inner {
   -moz-transition: all 0.4s;
   transition: all 0.4s;
 }
-/* line 386, ../js/app/templates/scss/ui.scss */
+/* line 391, ../js/app/templates/scss/ui.scss */
 #MB-modal-bg .modal {
   width: 60%;
   margin: 0 auto;
@@ -1399,30 +1409,30 @@ header.ghost .navbar-inner {
   border-radius: 0;
   box-shadow: none;
 }
-/* line 399, ../js/app/templates/scss/ui.scss */
+/* line 404, ../js/app/templates/scss/ui.scss */
 #MB-modal-bg .modal .body {
   text-align: center;
 }
-/* line 403, ../js/app/templates/scss/ui.scss */
+/* line 408, ../js/app/templates/scss/ui.scss */
 #MB-modal-bg .modal .MB-modal-close {
   position: absolute;
   right: 0;
   top: 10px;
   cursor: pointer;
 }
-/* line 409, ../js/app/templates/scss/ui.scss */
+/* line 414, ../js/app/templates/scss/ui.scss */
 #MB-modal-bg .modal .MB-modal-close .MB-icon {
   font-size: 4em;
   color: white;
   width: 100%;
   height: 100%;
 }
-/* line 415, ../js/app/templates/scss/ui.scss */
+/* line 420, ../js/app/templates/scss/ui.scss */
 #MB-modal-bg .modal .MB-modal-close .MB-icon:hover {
   color: #2bbbff;
 }
 
-/* line 423, ../js/app/templates/scss/ui.scss */
+/* line 428, ../js/app/templates/scss/ui.scss */
 #MB-confirm {
   position: fixed;
   top: 0;
@@ -1441,7 +1451,7 @@ header.ghost .navbar-inner {
   -moz-transition: all 0.4s;
   transition: all 0.4s;
 }
-/* line 441, ../js/app/templates/scss/ui.scss */
+/* line 446, ../js/app/templates/scss/ui.scss */
 #MB-confirm .modal {
   margin: 0 auto;
   top: 25%;
@@ -1453,40 +1463,40 @@ header.ghost .navbar-inner {
   border-radius: 0;
   box-shadow: none;
 }
-/* line 452, ../js/app/templates/scss/ui.scss */
+/* line 457, ../js/app/templates/scss/ui.scss */
 #MB-confirm .modal .confirm-body {
   line-height: 2em;
   font-weight: 100;
 }
-/* line 456, ../js/app/templates/scss/ui.scss */
+/* line 461, ../js/app/templates/scss/ui.scss */
 #MB-confirm .modal .body {
   text-align: center;
 }
-/* line 459, ../js/app/templates/scss/ui.scss */
+/* line 464, ../js/app/templates/scss/ui.scss */
 #MB-confirm .modal .confirm-header h3 {
   font-size: 1.2em;
   font-weight: bold;
 }
-/* line 464, ../js/app/templates/scss/ui.scss */
+/* line 469, ../js/app/templates/scss/ui.scss */
 #MB-confirm .modal .MB-modal-close {
   position: absolute;
   right: 0;
   top: 10px;
   cursor: pointer;
 }
-/* line 470, ../js/app/templates/scss/ui.scss */
+/* line 475, ../js/app/templates/scss/ui.scss */
 #MB-confirm .modal .MB-modal-close .MB-icon {
   font-size: 4em;
   color: white;
   width: 100%;
   height: 100%;
 }
-/* line 476, ../js/app/templates/scss/ui.scss */
+/* line 481, ../js/app/templates/scss/ui.scss */
 #MB-confirm .modal .MB-modal-close .MB-icon:hover {
   color: #2bbbff;
 }
 
-/* line 484, ../js/app/templates/scss/ui.scss */
+/* line 489, ../js/app/templates/scss/ui.scss */
 .MB-skillbar {
   width: 100%;
   height: 35px;
@@ -1495,7 +1505,7 @@ header.ghost .navbar-inner {
   margin-bottom: 10px;
   position: relative;
 }
-/* line 492, ../js/app/templates/scss/ui.scss */
+/* line 497, ../js/app/templates/scss/ui.scss */
 .MB-skillbar .skill-title {
   font-size: 12px;
   font-weight: 100;
@@ -1507,13 +1517,13 @@ header.ghost .navbar-inner {
   line-height: 25px;
   text-transform: uppercase;
 }
-/* line 504, ../js/app/templates/scss/ui.scss */
+/* line 509, ../js/app/templates/scss/ui.scss */
 .MB-skillbar .skill-percentage {
   background-color: #2bbbff;
   height: 35px;
 }
 
-/* line 510, ../js/app/templates/scss/ui.scss */
+/* line 515, ../js/app/templates/scss/ui.scss */
 .MB-scrollDown-indicator {
   font-size: 80px;
   position: absolute;
@@ -1523,7 +1533,7 @@ header.ghost .navbar-inner {
 }
 
 /* SQUARED ONE */
-/* line 519, ../js/app/templates/scss/ui.scss */
+/* line 524, ../js/app/templates/scss/ui.scss */
 .squaredOne {
   width: 28px;
   height: 28px;
@@ -1541,7 +1551,7 @@ header.ghost .navbar-inner {
   position: relative;
 }
 
-/* line 537, ../js/app/templates/scss/ui.scss */
+/* line 542, ../js/app/templates/scss/ui.scss */
 .squaredOne label {
   cursor: pointer;
   position: absolute;
@@ -1560,7 +1570,7 @@ header.ghost .navbar-inner {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#222', endColorstr='#45484d',GradientType=0 );
 }
 
-/* line 557, ../js/app/templates/scss/ui.scss */
+/* line 562, ../js/app/templates/scss/ui.scss */
 .squaredOne label:after {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
   filter: alpha(opacity=0);
@@ -1582,14 +1592,14 @@ header.ghost .navbar-inner {
   box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
-/* line 581, ../js/app/templates/scss/ui.scss */
+/* line 586, ../js/app/templates/scss/ui.scss */
 .squaredOne label:hover::after {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
   filter: alpha(opacity=30);
   opacity: 0.3;
 }
 
-/* line 587, ../js/app/templates/scss/ui.scss */
+/* line 592, ../js/app/templates/scss/ui.scss */
 .squaredOne input[type=checkbox]:checked + label:after {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
   filter: alpha(opacity=100);
@@ -7499,7 +7509,7 @@ label.iOSCheckLabelOff span {
   float: right;
   top: -10px;
   position: absolute;
-  right: 30px;
+  right: 190px;
 }
 
 /* line 9, ../js/app/templates/scss/userAppMenu.scss */
@@ -7594,8 +7604,10 @@ label.iOSCheckLabelOff span {
 /* line 1, ../js/app/templates/scss/dashboard.scss */
 #dashboard-view {
   padding-top: 60px;
+  width: 100%;
+  height: 100%;
 }
-/* line 4, ../js/app/templates/scss/dashboard.scss */
+/* line 6, ../js/app/templates/scss/dashboard.scss */
 #dashboard-view .dashboard-top {
   width: 100%;
   height: 250px;
@@ -7604,7 +7616,37 @@ label.iOSCheckLabelOff span {
   box-shadow: 0px 1px 1px #ddd;
 }
 
-/* line 12, ../js/app/templates/scss/dashboard.scss */
+/* line 15, ../js/app/templates/scss/dashboard.scss */
+#dashboard-main-view {
+  height: 100%;
+  width: 100%;
+}
+
+/* line 20, ../js/app/templates/scss/dashboard.scss */
+.dashboard-bottom {
+  width: 100%;
+  height: 100%;
+  top: 260px;
+  right: 180px;
+  position: relative;
+}
+
+/* line 28, ../js/app/templates/scss/dashboard.scss */
+.dashboard-bottom-left {
+  width: 70%;
+  height: 100%;
+  display: block;
+  background: white;
+}
+
+/* line 34, ../js/app/templates/scss/dashboard.scss */
+.dashboard-bottom-bottom-right {
+  width: 30%;
+  height: 100%;
+  box-shadow: 0px 0px 1px #666666;
+}
+
+/* line 39, ../js/app/templates/scss/dashboard.scss */
 #dashboard-content {
   width: 100%;
   height: 100%;
@@ -7612,49 +7654,49 @@ label.iOSCheckLabelOff span {
   -webkit-transition-property: left;
   -webkit-transition-duration: 0.2s;
   position: relative;
-  left: 0;
+  left: 180px;
   overflow-y: scroll;
 }
 
-/* line 23, ../js/app/templates/scss/dashboard.scss */
+/* line 50, ../js/app/templates/scss/dashboard.scss */
 .dashboard-calendar {
-  width: 300px;
+  width: 80%;
   height: 300px;
   float: right;
-  margin-right: 170px;
+  margin-right: 40px;
   margin-top: 30px;
   text-align: right;
 }
-/* line 31, ../js/app/templates/scss/dashboard.scss */
+/* line 58, ../js/app/templates/scss/dashboard.scss */
 .dashboard-calendar h2 {
-  font-size: 3em;
+  font-size: 1.5em;
   font-weight: 100;
   cursor: default;
 }
-/* line 37, ../js/app/templates/scss/dashboard.scss */
+/* line 64, ../js/app/templates/scss/dashboard.scss */
 .dashboard-calendar .menu {
   position: relative;
   left: 8px;
 }
-/* line 40, ../js/app/templates/scss/dashboard.scss */
+/* line 67, ../js/app/templates/scss/dashboard.scss */
 .dashboard-calendar .menu li {
   display: inline-block;
   padding: 15px 10px;
-  font-size: 1.3em;
+  font-size: 1em;
   font-weight: 100;
   color: #999;
   cursor: pointer;
 }
-/* line 48, ../js/app/templates/scss/dashboard.scss */
+/* line 75, ../js/app/templates/scss/dashboard.scss */
 .dashboard-calendar .menu li.active {
   color: black;
 }
-/* line 52, ../js/app/templates/scss/dashboard.scss */
+/* line 79, ../js/app/templates/scss/dashboard.scss */
 .dashboard-calendar .menu li:hover {
   color: black;
 }
 
-/* line 60, ../js/app/templates/scss/dashboard.scss */
+/* line 87, ../js/app/templates/scss/dashboard.scss */
 .calendar-today .calendar-item {
   position: relative;
   background: #fff;
@@ -7663,14 +7705,14 @@ label.iOSCheckLabelOff span {
   margin-bottom: 15px;
   cursor: pointer;
 }
-/* line 68, ../js/app/templates/scss/dashboard.scss */
+/* line 95, ../js/app/templates/scss/dashboard.scss */
 .calendar-today .calendar-item li {
   display: inline-block;
   position: absolute;
   line-height: 3em;
   font-weight: 100;
 }
-/* line 74, ../js/app/templates/scss/dashboard.scss */
+/* line 101, ../js/app/templates/scss/dashboard.scss */
 .calendar-today .calendar-item li.icon {
   position: absolute;
   left: -15px;
@@ -7684,11 +7726,11 @@ label.iOSCheckLabelOff span {
   top: 3px;
   box-shadow: 0px 0px 1px #ddd;
 }
-/* line 88, ../js/app/templates/scss/dashboard.scss */
+/* line 115, ../js/app/templates/scss/dashboard.scss */
 .calendar-today .calendar-item li.description {
   left: 35px;
 }
-/* line 92, ../js/app/templates/scss/dashboard.scss */
+/* line 119, ../js/app/templates/scss/dashboard.scss */
 .calendar-today .calendar-item li.close {
   right: 10px;
   bottom: -10px;
@@ -8019,26 +8061,27 @@ label.iOSCheckLabelOff span {
 #tasks-view {
   width: 100%;
   height: 100%;
-  margin-left: 260px;
+  position: relative;
+  left: 90px;
 }
-/* line 6, ../js/app/templates/scss/tasks.scss */
+/* line 7, ../js/app/templates/scss/tasks.scss */
 #tasks-view h1 {
   font-size: 2em;
   font-weight: 100;
   padding: 15px 0;
 }
 
-/* line 13, ../js/app/templates/scss/tasks.scss */
+/* line 14, ../js/app/templates/scss/tasks.scss */
 #MB-task-box {
   background: #fafafb;
   width: 70%;
   margin: 10px 0;
 }
-/* line 18, ../js/app/templates/scss/tasks.scss */
+/* line 19, ../js/app/templates/scss/tasks.scss */
 #MB-task-box tr {
   font-size: 0.8em;
 }
-/* line 21, ../js/app/templates/scss/tasks.scss */
+/* line 22, ../js/app/templates/scss/tasks.scss */
 #MB-task-box th {
   background: #4d4c50;
   padding: 15px;
@@ -8046,7 +8089,7 @@ label.iOSCheckLabelOff span {
   font-weight: 100;
   border: 1px solid #4d4c50;
 }
-/* line 28, ../js/app/templates/scss/tasks.scss */
+/* line 29, ../js/app/templates/scss/tasks.scss */
 #MB-task-box td {
   padding: 5px 15px;
   border: 1px solid #d7d7d9;
@@ -8055,27 +8098,29 @@ label.iOSCheckLabelOff span {
 
 /* line 1, ../js/app/templates/scss/user.scss */
 #user-view {
-  margin-left: 180px;
   margin-top: -15px;
+  width: 100%;
+  height: 100%;
 }
 
-/* line 6, ../js/app/templates/scss/user.scss */
+/* line 7, ../js/app/templates/scss/user.scss */
 .MB-user-profile-top {
   width: 100%;
   min-height: 180px;
-  margin-top: 15px;
-  background: #fff;
+  top: 60px;
+  background: white;
   box-shadow: 0px 0px 2px #999;
-  position: relative;
+  position: absolute;
+  right: 0;
 }
-/* line 14, ../js/app/templates/scss/user.scss */
+/* line 16, ../js/app/templates/scss/user.scss */
 .MB-user-profile-top .top {
   height: 90px;
   position: absolute;
   width: 100%;
   box-shadow: 0px 1px 2px #666666;
 }
-/* line 20, ../js/app/templates/scss/user.scss */
+/* line 22, ../js/app/templates/scss/user.scss */
 .MB-user-profile-top .top .edit-profile-button {
   font-size: 0.8em;
   right: 10px;
@@ -8084,7 +8129,7 @@ label.iOSCheckLabelOff span {
   height: 35px;
   line-height: 2.9em;
   background: rgba(0, 0, 0, 0.2);
-  color: #fff;
+  color: white;
   font-weight: 100;
   border-radius: 5px;
   position: absolute;
@@ -8093,16 +8138,16 @@ label.iOSCheckLabelOff span {
   cursor: pointer;
   text-align: center;
 }
-/* line 37, ../js/app/templates/scss/user.scss */
+/* line 39, ../js/app/templates/scss/user.scss */
 .MB-user-profile-top .top .edit-profile-button:hover {
   font-weight: bold;
 }
-/* line 41, ../js/app/templates/scss/user.scss */
+/* line 43, ../js/app/templates/scss/user.scss */
 .MB-user-profile-top .top .edit-profile-button i {
   padding-right: 10px;
 }
 
-/* line 48, ../js/app/templates/scss/user.scss */
+/* line 50, ../js/app/templates/scss/user.scss */
 .MB-user-profile-photo {
   width: 140px;
   height: 140px;
@@ -8115,7 +8160,7 @@ label.iOSCheckLabelOff span {
   top: 0;
 }
 
-/* line 60, ../js/app/templates/scss/user.scss */
+/* line 62, ../js/app/templates/scss/user.scss */
 .MB-user-profile-top-info {
   display: inline-block;
   width: 50%;
@@ -8123,7 +8168,7 @@ label.iOSCheckLabelOff span {
   left: 200px;
   top: -45px;
 }
-/* line 68, ../js/app/templates/scss/user.scss */
+/* line 70, ../js/app/templates/scss/user.scss */
 .MB-user-profile-top-info h1 {
   padding-top: 60px;
   font-size: 3em;
@@ -8133,7 +8178,7 @@ label.iOSCheckLabelOff span {
   font-family: "Desyrel";
   display: inline-block;
 }
-/* line 78, ../js/app/templates/scss/user.scss */
+/* line 80, ../js/app/templates/scss/user.scss */
 .MB-user-profile-top-info h2 {
   padding-left: 4px;
   padding-bottom: 20px;
@@ -8141,14 +8186,14 @@ label.iOSCheckLabelOff span {
   text-shadow: 0px 0px 2px #000;
 }
 
-/* line 86, ../js/app/templates/scss/user.scss */
+/* line 88, ../js/app/templates/scss/user.scss */
 .MB-user-profile-quick-links {
   display: inline-block;
-  right: 30px;
+  right: 190px;
   position: absolute;
   top: 30px;
 }
-/* line 92, ../js/app/templates/scss/user.scss */
+/* line 94, ../js/app/templates/scss/user.scss */
 .MB-user-profile-quick-links .MB-user-profile-quick-link {
   display: inline;
   width: 100%;
@@ -8163,42 +8208,42 @@ label.iOSCheckLabelOff span {
   background: rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 }
-/* line 106, ../js/app/templates/scss/user.scss */
+/* line 108, ../js/app/templates/scss/user.scss */
 .MB-user-profile-quick-links .MB-user-profile-quick-link.disabled {
   color: #666666;
   cursor: not-allowed;
 }
-/* line 110, ../js/app/templates/scss/user.scss */
+/* line 112, ../js/app/templates/scss/user.scss */
 .MB-user-profile-quick-links .MB-user-profile-quick-link.disabled:hover {
   color: #666666;
 }
-/* line 115, ../js/app/templates/scss/user.scss */
+/* line 117, ../js/app/templates/scss/user.scss */
 .MB-user-profile-quick-links .MB-user-profile-quick-link i {
   font-size: 1em;
   padding-right: 15px;
 }
-/* line 120, ../js/app/templates/scss/user.scss */
+/* line 122, ../js/app/templates/scss/user.scss */
 .MB-user-profile-quick-links .MB-user-profile-quick-link:hover {
   color: #ffe42b;
 }
-/* line 123, ../js/app/templates/scss/user.scss */
+/* line 125, ../js/app/templates/scss/user.scss */
 .MB-user-profile-quick-links .MB-user-profile-quick-link:hover i {
   color: #ffe42b;
 }
-/* line 128, ../js/app/templates/scss/user.scss */
+/* line 130, ../js/app/templates/scss/user.scss */
 .MB-user-profile-quick-links .MB-user-profile-quick-link.last {
   border-bottom: none;
 }
 
-/* line 135, ../js/app/templates/scss/user.scss */
+/* line 137, ../js/app/templates/scss/user.scss */
 .MB-user-profile-top-social-links {
   position: absolute;
   bottom: -38px;
   top: 75px;
   z-index: 1;
-  right: 30px;
+  right: 90px;
 }
-/* line 142, ../js/app/templates/scss/user.scss */
+/* line 144, ../js/app/templates/scss/user.scss */
 .MB-user-profile-top-social-links li {
   width: 35px;
   height: 35px;
@@ -8211,19 +8256,223 @@ label.iOSCheckLabelOff span {
   cursor: pointer;
   border-radius: 5px;
 }
-/* line 155, ../js/app/templates/scss/user.scss */
+/* line 157, ../js/app/templates/scss/user.scss */
 .MB-user-profile-top-social-links li:hover {
   color: white;
   font-size: 1.1em;
   position: relative;
 }
 
-/* line 164, ../js/app/templates/scss/user.scss */
+/* line 166, ../js/app/templates/scss/user.scss */
 .MB-user-star {
   display: inline-block;
   color: #ffe42b;
   font-size: 1.5em;
   cursor: pointer;
+}
+
+/* line 174, ../js/app/templates/scss/user.scss */
+.MB-user-profile-bottom {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 241px;
+  background: #e9eaed;
+}
+/* line 182, ../js/app/templates/scss/user.scss */
+.MB-user-profile-bottom .user-profile-left {
+  width: 30%;
+  height: 100%;
+  position: absolute;
+}
+/* line 187, ../js/app/templates/scss/user.scss */
+.MB-user-profile-bottom .user-profile-right {
+  width: 70%;
+  height: 100%;
+}
+/* line 191, ../js/app/templates/scss/user.scss */
+.MB-user-profile-bottom .user-profile-right .user-profile-wall-poster {
+  width: 70%;
+  margin-left: 60px;
+  border: 1px solid #dddddd;
+  margin-top: 30px;
+  color: #dddddd;
+  font-weight: 100;
+  background: white;
+  position: relative;
+}
+/* line 201, ../js/app/templates/scss/user.scss */
+.MB-user-profile-bottom .user-profile-right .user-profile-wall-poster .user-profile-wall-poster-top {
+  padding: 0 15px;
+}
+/* line 204, ../js/app/templates/scss/user.scss */
+.MB-user-profile-bottom .user-profile-right .user-profile-wall-poster .user-profile-wall-poster-top textarea {
+  width: 98%;
+  border-radius: 0;
+  border: 1px solid #dddddd;
+  height: 80px;
+  margin: 15px 0;
+  resize: none;
+}
+/* line 214, ../js/app/templates/scss/user.scss */
+.MB-user-profile-bottom .user-profile-right .user-profile-wall-poster .user-profile-wall-poster-bottom {
+  background: #f6f7f8;
+  text-align: right;
+  border-top: 1px solid #dddddd;
+}
+/* line 219, ../js/app/templates/scss/user.scss */
+.MB-user-profile-bottom .user-profile-right .user-profile-wall-poster .user-profile-wall-poster-bottom .right-button {
+  padding: 10px;
+}
+/* line 223, ../js/app/templates/scss/user.scss */
+.MB-user-profile-bottom .user-profile-right .user-profile-wall-poster .user-profile-wall-poster-bottom .user-post-type {
+  float: left;
+  height: 60px;
+  font-size: 1.5em;
+}
+/* line 228, ../js/app/templates/scss/user.scss */
+.MB-user-profile-bottom .user-profile-right .user-profile-wall-poster .user-profile-wall-poster-bottom .user-post-type li {
+  width: 60px;
+  border-right: 1px solid #dddddd;
+  height: 100%;
+  line-height: 2.5em;
+  text-align: center;
+  float: left;
+  color: #d3d6db;
+  cursor: pointer;
+}
+/* line 238, ../js/app/templates/scss/user.scss */
+.MB-user-profile-bottom .user-profile-right .user-profile-wall-poster .user-profile-wall-poster-bottom .user-post-type li:hover {
+  color: #6b7886;
+}
+/* line 242, ../js/app/templates/scss/user.scss */
+.MB-user-profile-bottom .user-profile-right .user-profile-wall-poster .user-profile-wall-poster-bottom .user-post-type li.active {
+  background: white;
+  padding-top: 1px;
+  position: relative;
+  top: -1px;
+  color: #6b7886;
+}
+
+/* line 259, ../js/app/templates/scss/user.scss */
+.user-post {
+  width: 70%;
+  margin-left: 60px;
+  border: 1px solid #dddddd;
+  margin-top: 30px;
+  color: #dddddd;
+  font-weight: 100;
+  background: white;
+  position: relative;
+  border-top: 4px solid #2bbbff;
+}
+/* line 270, ../js/app/templates/scss/user.scss */
+.user-post .top .user-post-pic {
+  width: 40px;
+  overflow: hidden;
+  margin-right: 15px;
+}
+/* line 275, ../js/app/templates/scss/user.scss */
+.user-post .top .left {
+  padding: 15px;
+  padding-bottom: 0;
+}
+/* line 280, ../js/app/templates/scss/user.scss */
+.user-post .top .left .user-post-details .user-post-details-bottom {
+  color: #6b7886;
+  font-size: 0.8em;
+  padding-top: 4px;
+}
+/* line 291, ../js/app/templates/scss/user.scss */
+.user-post .top .right .post-interactions li {
+  width: 30px;
+  height: 30px;
+  line-height: 2em;
+  text-align: center;
+  cursor: pointer;
+  color: #6b7886;
+}
+/* line 299, ../js/app/templates/scss/user.scss */
+.user-post .top .right .post-interactions li:hover {
+  color: #37404e;
+}
+/* line 306, ../js/app/templates/scss/user.scss */
+.user-post .post {
+  padding: 15px;
+  color: #37404e;
+  font-size: 0.8em;
+}
+/* line 311, ../js/app/templates/scss/user.scss */
+.user-post .bottom {
+  background: #f6f7f8;
+  border-top: 1px solid #dddddd;
+}
+/* line 315, ../js/app/templates/scss/user.scss */
+.user-post .bottom textarea {
+  width: 87%;
+  margin: 15px;
+  border-radius: 0;
+  resize: none;
+  box-shadow: none;
+  border: 1px solid #dddddd;
+}
+
+/* line 329, ../js/app/templates/scss/user.scss */
+.user-post-comments .user-post-comment {
+  color: #6b7886;
+  font-size: 0.8em;
+  padding: 15px;
+}
+/* line 333, ../js/app/templates/scss/user.scss */
+.user-post-comments .user-post-comment .comment-right {
+  padding-left: 15px;
+}
+/* line 336, ../js/app/templates/scss/user.scss */
+.user-post-comments .user-post-comment .comment-right .comment-commenter {
+  padding-bottom: 4px;
+}
+/* line 339, ../js/app/templates/scss/user.scss */
+.user-post-comments .user-post-comment .comment-right .comment-commenter .comment-comment {
+  color: #37404e;
+}
+/* line 343, ../js/app/templates/scss/user.scss */
+.user-post-comments .user-post-comment .comment-right .comment-date {
+  font-size: 0.8em;
+}
+/* line 347, ../js/app/templates/scss/user.scss */
+.user-post-comments .user-post-comment .comment-pic {
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+}
+
+/* line 356, ../js/app/templates/scss/user.scss */
+.comment-section .comment-pic {
+  position: relative;
+  top: 15px;
+  left: 15px;
+  width: 40px;
+}
+
+/* line 364, ../js/app/templates/scss/user.scss */
+.user-profile-section {
+  background: white;
+  margin: 30px 15px;
+  border: 1px solid #dddddd;
+}
+/* line 369, ../js/app/templates/scss/user.scss */
+.user-profile-section h1 {
+  background: #f6f7f8;
+  padding: 10px 15px;
+  border-bottom: 1px solid #dddddd;
+  font-weight: bold;
+}
+/* line 376, ../js/app/templates/scss/user.scss */
+.user-profile-section p {
+  font-size: 0.8em;
+  padding: 15px;
+  line-height: 2em;
 }
 
 /*! X-editable - v1.5.1 
@@ -8435,10 +8684,12 @@ label.iOSCheckLabelOff span {
 a.editable-click,
 a.editable-click:hover {
   text-decoration: none;
-  border-bottom: dashed 1px #0088cc;
+  border-bottom: dashed 1px #2bbbff;
+  color: #2bbbff;
+  cursor: pointer;
 }
 
-/* line 178, ../js/app/templates/scss/plugins/edit.scss */
+/* line 180, ../js/app/templates/scss/plugins/edit.scss */
 .editable-click.editable-disabled,
 a.editable-click.editable-disabled,
 a.editable-click.editable-disabled:hover {
@@ -8447,7 +8698,7 @@ a.editable-click.editable-disabled:hover {
   border-bottom: none;
 }
 
-/* line 184, ../js/app/templates/scss/plugins/edit.scss */
+/* line 186, ../js/app/templates/scss/plugins/edit.scss */
 .editable-empty, .editable-empty:hover, .editable-empty:focus {
   font-style: italic;
   color: #DD1144;
@@ -8455,17 +8706,17 @@ a.editable-click.editable-disabled:hover {
   text-decoration: none;
 }
 
-/* line 191, ../js/app/templates/scss/plugins/edit.scss */
+/* line 193, ../js/app/templates/scss/plugins/edit.scss */
 .editable-unsaved {
   font-weight: bold;
 }
 
-/* line 195, ../js/app/templates/scss/plugins/edit.scss */
+/* line 197, ../js/app/templates/scss/plugins/edit.scss */
 .editable-unsaved:after {
   /*    content: '*'*/
 }
 
-/* line 199, ../js/app/templates/scss/plugins/edit.scss */
+/* line 201, ../js/app/templates/scss/plugins/edit.scss */
 .editable-bg-transition {
   -webkit-transition: background-color 1400ms ease-out;
   -moz-transition: background-color 1400ms ease-out;
@@ -8475,7 +8726,7 @@ a.editable-click.editable-disabled:hover {
 }
 
 /*see https://github.com/vitalets/x-editable/issues/139 */
-/* line 209, ../js/app/templates/scss/plugins/edit.scss */
+/* line 211, ../js/app/templates/scss/plugins/edit.scss */
 .form-horizontal .editable {
   padding-top: 5px;
   display: inline-block;
@@ -8490,7 +8741,7 @@ a.editable-click.editable-disabled:hover {
  * http://www.apache.org/licenses/LICENSE-2.0
  *
  */
-/* line 224, ../js/app/templates/scss/plugins/edit.scss */
+/* line 226, ../js/app/templates/scss/plugins/edit.scss */
 .datepicker {
   padding: 4px;
   -webkit-border-radius: 4px;
@@ -8502,28 +8753,28 @@ a.editable-click.editable-disabled:hover {
 	}*/
 }
 
-/* line 235, ../js/app/templates/scss/plugins/edit.scss */
+/* line 237, ../js/app/templates/scss/plugins/edit.scss */
 .datepicker-inline {
   width: 220px;
 }
 
-/* line 238, ../js/app/templates/scss/plugins/edit.scss */
+/* line 240, ../js/app/templates/scss/plugins/edit.scss */
 .datepicker.datepicker-rtl {
   direction: rtl;
 }
 
-/* line 241, ../js/app/templates/scss/plugins/edit.scss */
+/* line 243, ../js/app/templates/scss/plugins/edit.scss */
 .datepicker.datepicker-rtl table tr td span {
   float: right;
 }
 
-/* line 244, ../js/app/templates/scss/plugins/edit.scss */
+/* line 246, ../js/app/templates/scss/plugins/edit.scss */
 .datepicker-dropdown {
   top: 0;
   left: 0;
 }
 
-/* line 248, ../js/app/templates/scss/plugins/edit.scss */
+/* line 250, ../js/app/templates/scss/plugins/edit.scss */
 .datepicker-dropdown:before {
   content: '';
   display: inline-block;
@@ -8536,7 +8787,7 @@ a.editable-click.editable-disabled:hover {
   left: 6px;
 }
 
-/* line 259, ../js/app/templates/scss/plugins/edit.scss */
+/* line 261, ../js/app/templates/scss/plugins/edit.scss */
 .datepicker-dropdown:after {
   content: '';
   display: inline-block;
@@ -8548,32 +8799,32 @@ a.editable-click.editable-disabled:hover {
   left: 7px;
 }
 
-/* line 269, ../js/app/templates/scss/plugins/edit.scss */
+/* line 271, ../js/app/templates/scss/plugins/edit.scss */
 .datepicker > div {
   display: none;
 }
 
-/* line 272, ../js/app/templates/scss/plugins/edit.scss */
+/* line 274, ../js/app/templates/scss/plugins/edit.scss */
 .datepicker.days div.datepicker-days {
   display: block;
 }
 
-/* line 275, ../js/app/templates/scss/plugins/edit.scss */
+/* line 277, ../js/app/templates/scss/plugins/edit.scss */
 .datepicker.months div.datepicker-months {
   display: block;
 }
 
-/* line 278, ../js/app/templates/scss/plugins/edit.scss */
+/* line 280, ../js/app/templates/scss/plugins/edit.scss */
 .datepicker.years div.datepicker-years {
   display: block;
 }
 
-/* line 281, ../js/app/templates/scss/plugins/edit.scss */
+/* line 283, ../js/app/templates/scss/plugins/edit.scss */
 .datepicker table {
   margin: 0;
 }
 
-/* line 285, ../js/app/templates/scss/plugins/edit.scss */
+/* line 287, ../js/app/templates/scss/plugins/edit.scss */
 .datepicker td,
 .datepicker th {
   text-align: center;
@@ -8585,25 +8836,25 @@ a.editable-click.editable-disabled:hover {
   border: none;
 }
 
-/* line 295, ../js/app/templates/scss/plugins/edit.scss */
+/* line 297, ../js/app/templates/scss/plugins/edit.scss */
 .table-striped .datepicker table tr td,
 .table-striped .datepicker table tr th {
   background-color: transparent;
 }
 
-/* line 298, ../js/app/templates/scss/plugins/edit.scss */
+/* line 300, ../js/app/templates/scss/plugins/edit.scss */
 .datepicker table tr td.day:hover {
   background: #eeeeee;
   cursor: pointer;
 }
 
-/* line 303, ../js/app/templates/scss/plugins/edit.scss */
+/* line 305, ../js/app/templates/scss/plugins/edit.scss */
 .datepicker table tr td.old,
 .datepicker table tr td.new {
   color: #999999;
 }
 
-/* line 307, ../js/app/templates/scss/plugins/edit.scss */
+/* line 309, ../js/app/templates/scss/plugins/edit.scss */
 .datepicker table tr td.disabled,
 .datepicker table tr td.disabled:hover {
   background: none;
@@ -8611,7 +8862,7 @@ a.editable-click.editable-disabled:hover {
   cursor: default;
 }
 
-/* line 315, ../js/app/templates/scss/plugins/edit.scss */
+/* line 317, ../js/app/templates/scss/plugins/edit.scss */
 .datepicker table tr td.today,
 .datepicker table tr td.today:hover,
 .datepicker table tr td.today.disabled,
@@ -8631,7 +8882,7 @@ a.editable-click.editable-disabled:hover {
   color: #000;
 }
 
-/* line 349, ../js/app/templates/scss/plugins/edit.scss */
+/* line 351, ../js/app/templates/scss/plugins/edit.scss */
 .datepicker table tr td.today:hover,
 .datepicker table tr td.today:hover:hover,
 .datepicker table tr td.today.disabled:hover,
@@ -8655,7 +8906,7 @@ a.editable-click.editable-disabled:hover {
   background-color: #fdf59a;
 }
 
-/* line 359, ../js/app/templates/scss/plugins/edit.scss */
+/* line 361, ../js/app/templates/scss/plugins/edit.scss */
 .datepicker table tr td.today:active,
 .datepicker table tr td.today:hover:active,
 .datepicker table tr td.today.disabled:active,
@@ -8667,17 +8918,17 @@ a.editable-click.editable-disabled:hover {
   background-color: #fbf069 \9;
 }
 
-/* line 362, ../js/app/templates/scss/plugins/edit.scss */
+/* line 364, ../js/app/templates/scss/plugins/edit.scss */
 .datepicker table tr td.today:hover:hover {
   color: #000;
 }
 
-/* line 365, ../js/app/templates/scss/plugins/edit.scss */
+/* line 367, ../js/app/templates/scss/plugins/edit.scss */
 .datepicker table tr td.today.active:hover {
   color: #fff;
 }
 
-/* line 371, ../js/app/templates/scss/plugins/edit.scss */
+/* line 373, ../js/app/templates/scss/plugins/edit.scss */
 .datepicker table tr td.range,
 .datepicker table tr td.range:hover,
 .datepicker table tr td.range.disabled,
@@ -8688,7 +8939,7 @@ a.editable-click.editable-disabled:hover {
   border-radius: 0;
 }
 
-/* line 380, ../js/app/templates/scss/plugins/edit.scss */
+/* line 382, ../js/app/templates/scss/plugins/edit.scss */
 .datepicker table tr td.range.today,
 .datepicker table tr td.range.today:hover,
 .datepicker table tr td.range.today.disabled,
@@ -8710,7 +8961,7 @@ a.editable-click.editable-disabled:hover {
   border-radius: 0;
 }
 
-/* line 416, ../js/app/templates/scss/plugins/edit.scss */
+/* line 418, ../js/app/templates/scss/plugins/edit.scss */
 .datepicker table tr td.range.today:hover,
 .datepicker table tr td.range.today:hover:hover,
 .datepicker table tr td.range.today.disabled:hover,
@@ -8734,7 +8985,7 @@ a.editable-click.editable-disabled:hover {
   background-color: #f3e97a;
 }
 
-/* line 426, ../js/app/templates/scss/plugins/edit.scss */
+/* line 428, ../js/app/templates/scss/plugins/edit.scss */
 .datepicker table tr td.range.today:active,
 .datepicker table tr td.range.today:hover:active,
 .datepicker table tr td.range.today.disabled:active,
@@ -8746,7 +8997,7 @@ a.editable-click.editable-disabled:hover {
   background-color: #efe24b \9;
 }
 
-/* line 432, ../js/app/templates/scss/plugins/edit.scss */
+/* line 434, ../js/app/templates/scss/plugins/edit.scss */
 .datepicker table tr td.selected,
 .datepicker table tr td.selected:hover,
 .datepicker table tr td.selected.disabled,
@@ -8767,7 +9018,7 @@ a.editable-click.editable-disabled:hover {
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
 }
 
-/* line 467, ../js/app/templates/scss/plugins/edit.scss */
+/* line 469, ../js/app/templates/scss/plugins/edit.scss */
 .datepicker table tr td.selected:hover,
 .datepicker table tr td.selected:hover:hover,
 .datepicker table tr td.selected.disabled:hover,
@@ -8791,7 +9042,7 @@ a.editable-click.editable-disabled:hover {
   background-color: #808080;
 }
 
-/* line 477, ../js/app/templates/scss/plugins/edit.scss */
+/* line 479, ../js/app/templates/scss/plugins/edit.scss */
 .datepicker table tr td.selected:active,
 .datepicker table tr td.selected:hover:active,
 .datepicker table tr td.selected.disabled:active,
@@ -8803,7 +9054,7 @@ a.editable-click.editable-disabled:hover {
   background-color: #666666 \9;
 }
 
-/* line 483, ../js/app/templates/scss/plugins/edit.scss */
+/* line 485, ../js/app/templates/scss/plugins/edit.scss */
 .datepicker table tr td.active,
 .datepicker table tr td.active:hover,
 .datepicker table tr td.active.disabled,
@@ -8824,7 +9075,7 @@ a.editable-click.editable-disabled:hover {
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
 }
 
-/* line 518, ../js/app/templates/scss/plugins/edit.scss */
+/* line 520, ../js/app/templates/scss/plugins/edit.scss */
 .datepicker table tr td.active:hover,
 .datepicker table tr td.active:hover:hover,
 .datepicker table tr td.active.disabled:hover,
@@ -8848,7 +9099,7 @@ a.editable-click.editable-disabled:hover {
   background-color: #0044cc;
 }
 
-/* line 528, ../js/app/templates/scss/plugins/edit.scss */
+/* line 530, ../js/app/templates/scss/plugins/edit.scss */
 .datepicker table tr td.active:active,
 .datepicker table tr td.active:hover:active,
 .datepicker table tr td.active.disabled:active,
@@ -8860,7 +9111,7 @@ a.editable-click.editable-disabled:hover {
   background-color: #003399 \9;
 }
 
-/* line 531, ../js/app/templates/scss/plugins/edit.scss */
+/* line 533, ../js/app/templates/scss/plugins/edit.scss */
 .datepicker table tr td span {
   display: block;
   width: 23%;
@@ -8874,12 +9125,12 @@ a.editable-click.editable-disabled:hover {
   border-radius: 4px;
 }
 
-/* line 543, ../js/app/templates/scss/plugins/edit.scss */
+/* line 545, ../js/app/templates/scss/plugins/edit.scss */
 .datepicker table tr td span:hover {
   background: #eeeeee;
 }
 
-/* line 547, ../js/app/templates/scss/plugins/edit.scss */
+/* line 549, ../js/app/templates/scss/plugins/edit.scss */
 .datepicker table tr td span.disabled,
 .datepicker table tr td span.disabled:hover {
   background: none;
@@ -8887,7 +9138,7 @@ a.editable-click.editable-disabled:hover {
   cursor: default;
 }
 
-/* line 555, ../js/app/templates/scss/plugins/edit.scss */
+/* line 557, ../js/app/templates/scss/plugins/edit.scss */
 .datepicker table tr td span.active,
 .datepicker table tr td span.active:hover,
 .datepicker table tr td span.active.disabled,
@@ -8908,7 +9159,7 @@ a.editable-click.editable-disabled:hover {
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
 }
 
-/* line 590, ../js/app/templates/scss/plugins/edit.scss */
+/* line 592, ../js/app/templates/scss/plugins/edit.scss */
 .datepicker table tr td span.active:hover,
 .datepicker table tr td span.active:hover:hover,
 .datepicker table tr td span.active.disabled:hover,
@@ -8932,7 +9183,7 @@ a.editable-click.editable-disabled:hover {
   background-color: #0044cc;
 }
 
-/* line 600, ../js/app/templates/scss/plugins/edit.scss */
+/* line 602, ../js/app/templates/scss/plugins/edit.scss */
 .datepicker table tr td span.active:active,
 .datepicker table tr td span.active:hover:active,
 .datepicker table tr td span.active.disabled:active,
@@ -8944,30 +9195,30 @@ a.editable-click.editable-disabled:hover {
   background-color: #003399 \9;
 }
 
-/* line 604, ../js/app/templates/scss/plugins/edit.scss */
+/* line 606, ../js/app/templates/scss/plugins/edit.scss */
 .datepicker table tr td span.old,
 .datepicker table tr td span.new {
   color: #999999;
 }
 
-/* line 607, ../js/app/templates/scss/plugins/edit.scss */
+/* line 609, ../js/app/templates/scss/plugins/edit.scss */
 .datepicker th.datepicker-switch {
   width: 145px;
 }
 
-/* line 611, ../js/app/templates/scss/plugins/edit.scss */
+/* line 613, ../js/app/templates/scss/plugins/edit.scss */
 .datepicker thead tr:first-child th,
 .datepicker tfoot tr th {
   cursor: pointer;
 }
 
-/* line 615, ../js/app/templates/scss/plugins/edit.scss */
+/* line 617, ../js/app/templates/scss/plugins/edit.scss */
 .datepicker thead tr:first-child th:hover,
 .datepicker tfoot tr th:hover {
   background: #eeeeee;
 }
 
-/* line 618, ../js/app/templates/scss/plugins/edit.scss */
+/* line 620, ../js/app/templates/scss/plugins/edit.scss */
 .datepicker .cw {
   font-size: 10px;
   width: 12px;
@@ -8975,13 +9226,13 @@ a.editable-click.editable-disabled:hover {
   vertical-align: middle;
 }
 
-/* line 624, ../js/app/templates/scss/plugins/edit.scss */
+/* line 626, ../js/app/templates/scss/plugins/edit.scss */
 .datepicker thead tr:first-child th.cw {
   cursor: default;
   background-color: transparent;
 }
 
-/* line 629, ../js/app/templates/scss/plugins/edit.scss */
+/* line 631, ../js/app/templates/scss/plugins/edit.scss */
 .input-append.date .add-on i,
 .input-prepend.date .add-on i {
   display: block;
@@ -8990,26 +9241,26 @@ a.editable-click.editable-disabled:hover {
   height: 16px;
 }
 
-/* line 635, ../js/app/templates/scss/plugins/edit.scss */
+/* line 637, ../js/app/templates/scss/plugins/edit.scss */
 .input-daterange input {
   text-align: center;
 }
 
-/* line 638, ../js/app/templates/scss/plugins/edit.scss */
+/* line 640, ../js/app/templates/scss/plugins/edit.scss */
 .input-daterange input:first-child {
   -webkit-border-radius: 3px 0 0 3px;
   -moz-border-radius: 3px 0 0 3px;
   border-radius: 3px 0 0 3px;
 }
 
-/* line 643, ../js/app/templates/scss/plugins/edit.scss */
+/* line 645, ../js/app/templates/scss/plugins/edit.scss */
 .input-daterange input:last-child {
   -webkit-border-radius: 0 3px 3px 0;
   -moz-border-radius: 0 3px 3px 0;
   border-radius: 0 3px 3px 0;
 }
 
-/* line 648, ../js/app/templates/scss/plugins/edit.scss */
+/* line 650, ../js/app/templates/scss/plugins/edit.scss */
 .input-daterange .add-on {
   display: inline-block;
   width: auto;
