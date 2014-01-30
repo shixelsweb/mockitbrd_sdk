@@ -13,6 +13,14 @@
 	position: absolute;
 	right: 0;
 
+	h2 {
+		font-size: 1em;
+		line-height: 0;
+		padding: 0;
+		margin: 0;
+		margin-top: -10px;
+	}
+
 	.top {
 		height: 90px;
 		position: absolute;
@@ -66,9 +74,16 @@
 	left: 200px;
 	top: -45px;
 
+	.user-profile-status {
+		font-size: 0.9em;
+		padding: 0;
+		margin: 0;
+		margin-top: -10px;
+	}
+
 
 	h1 {
-		padding-top: 60px;
+		padding-top: 55px;
 		font-size: 3em;
 		color: $primary_white;
 		font-weight: 100;
@@ -87,7 +102,7 @@
 
 .MB-user-profile-quick-links {
 	display: inline-block;
-	right: 190px;
+	right: 260px;
 	position: absolute;
 	top: 30px;
 
@@ -178,11 +193,13 @@
 	right: 0;
 	top: 241px;
 	background: $user_bg;
+	padding-bottom: 150px;
 
 	.user-profile-left {
 		width: 30%;
 		height: 100%;
 		position: absolute;
+		padding-left: 30px;
 	}
 	.user-profile-right {
 		width: 70%;
@@ -224,6 +241,7 @@
 					float: left;
 					height: 60px;
 					font-size: 1.5em;
+					margin: 0;
 
 					li {
 						width: 60px;
@@ -254,7 +272,9 @@
 	}
 }
 
-
+.user-posts {
+padding-bottom: 100px;
+}
 
 .user-post {
 	width: 70%;
@@ -288,6 +308,12 @@
 		.right {
 			.post-interactions {
 
+				.post_likes {
+					font-size: 0.8em;
+					margin-right: -5px;
+					color: $primary_blue;
+				}
+
 				li {
 					width: 30px;
 					height: 30px;
@@ -295,6 +321,10 @@
 					text-align: center;
 					cursor: pointer;
 					color: $user_type_active;
+
+					&.no_love {
+						color: $primary_blue;
+					}
 
 					&:hover {
 						color: $post_color;
@@ -307,6 +337,14 @@
 		padding: 15px;
 		color: $post_color;
 		font-size: 0.8em;
+
+		a {
+			color: $post_link;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
 	}
 	.bottom {
 		background: $fb_lightest_grey;
@@ -332,16 +370,49 @@
 		padding: 15px;
 		.comment-right {
 			padding-left: 15px;
+			width: 90%;
+			position: relative;
 
 			.comment-commenter {
 				padding-bottom: 4px;
-
+				.comment-likes {
+					font-size: 0.8em;
+				}
+				
 				.comment-comment {
 					color: $post_color;
+					line-height: 1.5em;
+
+					a {
+						color: $post_link;
+
+						&:hover {
+							text-decoration: underline;
+						}
+					}
 				}
 			}
 			.comment-date {
 				font-size: 0.8em;
+
+				.show_love {
+					cursor: pointer;
+					color: $user_type_active;
+					font-size: 1.5em;
+
+					&:hover {
+						color: $post_color;
+					}
+				}
+				.no_love {
+					cursor: pointer;
+					color: $primary_blue;
+					font-size: 1.5em;
+
+					&:hover {
+						color: $post_color;
+					}
+				}
 			}
 		}
 		.comment-pic {
@@ -365,17 +436,89 @@
 	background: $primary_white;
 	margin: 30px 15px;
 	border: 1px solid $d_grey;
+	cursor: default;
 
 	h1 {
-		background: $fb_lightest_grey;
-		padding: 10px 15px;
-		border-bottom: 1px solid $d_grey;
 		font-weight: bold;
+		float: left;
+		font-size: 1em;
+		line-height: 0;
 	}
 
 	p {
 		font-size: 0.8em;
-		padding: 15px;
 		line-height: 2em;
+	}
+	.top {
+		background: $fb_lightest_grey;
+		padding: 10px 15px;
+		border-bottom: 1px solid $d_grey;
+
+		.user-profile-edit-section {
+			font-size: 0.8em;
+			cursor: pointer;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+	.bottom {
+		padding: 15px;
+
+		h2 {
+			text-transform: capitalize;
+			font-weight: 100;
+			font-size: 0.8em;
+			padding: 20px 0;
+			line-height: 0;
+			margin: 0;
+		}
+	}
+}
+
+.user-profile-skill {
+	display: inline-block;
+	background: $primary_blue;
+	padding: 10px;
+	cursor: pointer;
+	color: $primary_white;
+	font-weight: 100;
+	font-size: 0.8em;
+	text-transform: capitalize;
+	border-radius: 20px;
+}
+
+.user-profile-stats {
+	position: absolute;
+	right: 200px;
+	bottom: 0;
+	width: 150px;
+	height: 90px;
+
+	.user-profile-connections-stats {
+		width: 90px;
+		height: 90px;
+		position: absolute;
+		cursor: pointer;
+
+		&:hover {
+			color: $primary_black;
+		}
+
+		.top {
+			box-shadow: none;
+			font-size: 3em;
+			text-align: center;
+			line-height: 1.5em;
+			color: $post_color;
+		}
+
+		.bottom {
+			position: absolute;
+			bottom: 10px;
+			text-align: center;
+			left: 5px;
+		}
 	}
 }

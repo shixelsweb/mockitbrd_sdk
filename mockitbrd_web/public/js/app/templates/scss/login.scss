@@ -20,6 +20,13 @@ a:hover{
 	font-family: $primary_font;
 }
 
+.MB-login-title h1 {
+	font-size: 1em;
+	padding: 0;
+	margin: 0;
+	line-height: 1em;
+}
+
 .MB-button-register:hover, {
 background: $primary_blue_hl;
 color: $primary_white;	
@@ -188,7 +195,7 @@ color: $primary_white;
 
 	.MB-switch-label{
 	position: absolute;
-	top: 0;
+	top: -4px;
 	left: 130px;	
 	}
 

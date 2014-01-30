@@ -14,6 +14,15 @@ header {
 		}
 	}
 }
+.nav.MB-nav a {
+color: $primary_white !important;
+font-weight: 100 !important;
+text-shadow: none !important;
+
+&:hover {
+	color: $primary_yellow !important;
+}
+}
 .nav {
 	.MB-nav {
 		font-family: $primary_font;
@@ -35,8 +44,8 @@ header {
 
 		li {
 			&.dropdown.open > .dropdown-toggle{
-				color:$primary_yellow;
-				background-color: transparent;
+				color:$primary_yellow !important; 
+				background-color: transparent !important;
 			}
 			a {
 				text-shadow: none;

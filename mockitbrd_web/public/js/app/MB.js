@@ -9,7 +9,6 @@ define([
     'models/MBModalBlack',
     'models/MBModalWhite',
     'models/MBModalBg',
-    'models/MBCookie',
     'models/MBEmail'
     ],
     function (
@@ -23,10 +22,11 @@ define([
     MBModalBlack,
     MBModalWhite,
     MBModalBg,
-    MBCookie,
     MBEmail
 ){
     var MB = window.MB = new Backbone.Marionette.Application();
+
+    MB.env = 'dev';
 
     function isMobile() {
         var userAgent = navigator.userAgent || navigator.vendor || window.opera;
@@ -37,7 +37,6 @@ define([
     MB.modalBlack = MBModalBlack;
     MB.modalBg = MBModalBg;
     MB.email = new MBEmail();
-    MB.cookie = new MBCookie();
     MB.session = new MBSession();
     MB.api = new MBapi();
     MB.mobile = isMobile();

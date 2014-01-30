@@ -16,7 +16,6 @@ define(['MB', 'jquery', 'hbs!templates/login', 'backbone', 'marionette', 'toggle
 
             onRender: function() {
                 $(':checkbox').iphoneStyle();
-                console.log($(':checkbox').iphoneStyle());
             },
 
             goToRegisterPage: function(e) {

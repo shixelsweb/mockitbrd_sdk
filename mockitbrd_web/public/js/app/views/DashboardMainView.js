@@ -6,6 +6,7 @@ define(['jquery', 'models/Model', 'moment', 'hbs!templates/dashboardMain', 'back
 
           tasks: null,
           model: null,
+          today: null,
 
           events: {
             'click .menu-item': 'onMenuItemClick',
@@ -13,12 +14,13 @@ define(['jquery', 'models/Model', 'moment', 'hbs!templates/dashboardMain', 'back
             'mouseout .calendar-item': 'oneMenuItemOut'
           },
           initialize: function() {
-            this.tasks = MB.api.getUserTasksFull($.parseJSON(MB.session.get('user')));
-
+            this.tasks = MB.api.getUserTasksFull(MB.session.getSession('MB-session').user);
+            this.today = this.getToday();
             this.tasks = this.checkIfInterview(this.tasks);
 
             this.model = new Model({
-              tasks: this.tasks
+              tasks: this.tasks,
+              today: this.today
             });
           },
           onRender: function () {
@@ -28,7 +30,7 @@ define(['jquery', 'models/Model', 'moment', 'hbs!templates/dashboardMain', 'back
             this.setElement(this.$el);
           },
           getToday: function() {
-            return moment().format('dddd, MMMM Do');
+            return moment().format('dddd, MMMM Do YYYY');
           },
           onMenuItemClick: function(e) {
             e.preventDefault();

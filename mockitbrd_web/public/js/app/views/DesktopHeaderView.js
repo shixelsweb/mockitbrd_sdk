@@ -6,7 +6,8 @@ define(['jquery', 'hbs!templates/desktopHeader', 'backbone', 'marionette'],
 
         events: {
 			'mouseover .MB-nav-logo': 'startHover',
-			'mouseout .MB-nav-logo': 'endHover'
+			'mouseout .MB-nav-logo': 'endHover',
+			'hover .login-button': 'handleLogin',
         },
 
 		startHover: function() {
@@ -15,6 +16,17 @@ define(['jquery', 'hbs!templates/desktopHeader', 'backbone', 'marionette'],
 
 		endHover: function() {
 			$('.MB-nav-logo').removeClass('pulse animated');
+		},
+		handleLogin: function(e) {
+			e.preventDefault();
+
+			var isLoggedIn = MB.session.getSession('MB-session');
+
+			if (isLoggedIn) {
+				$(e.currentTarget).attr('href', '#dashboard');
+			} else {
+				$(e.currentTarget).attr('href', '#login');
+			}
 		}
 	});
 });

@@ -5,6 +5,8 @@
         text-align: left;
         padding-left: 20px;
         line-height: 3em;
+        margin: 0;
+        font-size: 1em;
     }
     h3 {
         font-size: 0.8em;
@@ -85,6 +87,8 @@
         text-align: left;
         padding-left: 20px;
         line-height: 3em;
+        margin: 0;
+        font-size: 1em;
     }
     h3 {
         font-size: 0.8em;
@@ -123,7 +127,7 @@
         float: right;
         border-left: 1px groove $primary_white;
         color: $primary_blue;
-        line-height: 3em;
+        line-height: 4em;
     }
 
     .MB-reg-reg{

@@ -5,7 +5,6 @@ define(['jquery', 'hbs!templates/dashboard', 'backbone', 'marionette'],
           template:template,
 
           events: {
-            'click .MB-logout': 'logout'
           },
 
           onRender: function () {
@@ -13,9 +12,6 @@ define(['jquery', 'hbs!templates/dashboard', 'backbone', 'marionette'],
             // assumes 1 child element.
             this.$el = this.$el.children();
             this.setElement(this.$el);
-          },
-          logout: function() {
-            MB.api.logout();
           }
       });
 });

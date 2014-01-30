@@ -3,7 +3,6 @@ define([ //VIEWS
     'MB',
     'backbone',
     'marionette',
-    'webrtc',
     //UI Views
     'views/WelcomeView',
     'views/DesktopHeaderView',
@@ -13,7 +12,6 @@ define([ //VIEWS
     'views/ContactView',
     'views/TeamView',
     'views/ServicesView',
-    'views/MBConfirm',
     //Learn More Views
     'views/CandidateLearnMoreView',
     'views/EducationLearnMoreView',
@@ -52,7 +50,6 @@ function (
     MB,
     Backbone,
     Marionette,
-    SimpleWebRTC,
     //UI Views
     WelcomeView,
     DesktopHeaderView,
@@ -62,7 +59,6 @@ function (
     ContactView,
     TeamView,
     ServicesView,
-    MBConfirm,
     //Learn More Views
     EducationLearnMoreView,
     CandidateLearnMoreView,
@@ -125,30 +121,39 @@ function (
             }
             MB.headerRegion.$el.show();
         },
-        hideHeader: function() { //hides the nav (for modals and error/success messages)
+        removeView: function() { //hides the nav (for modals and error/success messages)
+            MB.mainRegion.ensureEl();
+            if (MB.mainRegion.currentView) {
+                MB.mainRegion.currentView.remove();
+            }
             MB.headerRegion.ensureEl();
-            MB.headerRegion.$el.hide();
+            if (MB.headerRegion.currentView) {
+                MB.headerRegion.currentView.remove();
+            }
+            MB.footerRegion.ensureEl();
+            if (MB.footerRegion.currentView) {
+                MB.footerRegion.currentView.remove();
+            }
+        },
+        removeHeader: function() { //hides the nav (for modals and error/success messages)
+           
         },
         launchApp: function() {
             var topAppMenu = new TopAppMenuView();
             var userAppMenu = new UserAppMenuView();
             var dashboard = new DashboardView();
-            var paymentView = new AccountPaymentView();
-            var securityView = new AccountSecurityView();
-            var notificationView = new AccountNotificationsView();
-            var supportView = new AccountSupportView();
-            var generalView = new AccountGeneralView();
-            var mediaView = new AccountMediaView();
-            var leftAppMenu = new LeftAppMenuView({'mediaView': mediaView, 'securityView': securityView, 'paymentView': paymentView, 'notificationView': notificationView, 'supportView': supportView, 'generalView': generalView});
-
+            var leftAppMenu = new LeftAppMenuView();
+            
             this.hideModal();
-            //this.showFooter();
-            this.hideHeader();
+            this.removeView();
+
+            //Show all components of dashboard
             MB.leftAppNavRegion.show(leftAppMenu);
             MB.dashboardRegion.show(dashboard);
             MB.dashboardRegion.$el.prepend(topAppMenu.render().el);
             topAppMenu.$el.prepend(userAppMenu.render().el);
             MB.dashboard.ensureEl();
+            MB.mainRegion.$el.html(MB.dashboard.$el);
             MB.dashboard.$el.show();
         },
         showModal: function(View, color) { //shows a modal and passes in the view to show in modal and the color or the modal bg
@@ -195,13 +200,8 @@ function (
             this.showModal(CleeView, 'white');
         },
         login: function () {
-            //var isLoggedIn = MB.session.get('token');
             this.hideModal();
-            //if (isLoggedIn) {
-                //MB.appRouter.navigate('dashboard', {trigger: true});
-            //} else {
             this.showModal(LoginView, 'office_bg.jpg');
-            //}
         },
         register: function () {
             this.hideModal();
@@ -258,12 +258,57 @@ function (
         },
         account: function () {
             var accountView = new AccountView();
-            var generalView = new AccountGeneralView();
+            var currentAccountView = new AccountGeneralView();
 
             this.launchApp();
             
             $('#dashboard-view').append(accountView.render().el);
-            $("#accountViewRegion").html(generalView.render().el);
+            $("#accountViewRegion").html(currentAccountView.render().el);
+        },
+        accountSecurity: function () {
+            var accountView = new AccountView();
+            var currentAccountView = new AccountSecurityView();
+
+            this.launchApp();
+            
+            $('#dashboard-view').append(accountView.render().el);
+            $("#accountViewRegion").html(currentAccountView.render().el);
+        },
+        accountSocial: function () {
+            var accountView = new AccountView();
+            var currentAccountView = new AccountMediaView();
+
+            this.launchApp();
+            
+            $('#dashboard-view').append(accountView.render().el);
+            $("#accountViewRegion").html(currentAccountView.render().el);
+        },
+        accountBilling: function () {
+            var accountView = new AccountView();
+            var currentAccountView = new AccountPaymentView();
+
+            this.launchApp();
+            
+            $('#dashboard-view').append(accountView.render().el);
+            $("#accountViewRegion").html(currentAccountView.render().el);
+        },
+        accountSupport: function () {
+            var accountView = new AccountView();
+            var currentAccountView = new AccountSupportView();
+
+            this.launchApp();
+            
+            $('#dashboard-view').append(accountView.render().el);
+            $("#accountViewRegion").html(currentAccountView.render().el);
+        },
+        accountNotifications: function () {
+            var accountView = new AccountView();
+            var currentAccountView = new AccountNotificationsView();
+
+            this.launchApp();
+            
+            $('#dashboard-view').append(accountView.render().el);
+            $("#accountViewRegion").html(currentAccountView.render().el);
         },
         dashboard: function () {
             var dashboardMainView = new DashboardMainView();
@@ -272,7 +317,7 @@ function (
             $('#dashboard-view').append(dashboardMainView.render().el);
         },
         interview: function(id) {
-            var interviewView = new InterviewView({'interview_id': id, 'webrtc': SimpleWebRTC, 'confirm': MBConfirm});
+            var interviewView = new InterviewView({'interview_id': id});
 
             this.launchApp();
 
