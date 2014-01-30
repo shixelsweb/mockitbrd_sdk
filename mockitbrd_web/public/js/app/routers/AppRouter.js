@@ -34,7 +34,8 @@ define(['backbone', 'marionette'], function(Backbone, Marionette) {
            "user/:id/account/billing": "accountBilling",
            "user/:id/account/support": "accountSupport",
            "user/:id/account/notifications": "accountNotifications",
-           "interview/:id": "interview"
+           "interview/:id": "interview",
+           "share": "share"
        }
    });
 });
