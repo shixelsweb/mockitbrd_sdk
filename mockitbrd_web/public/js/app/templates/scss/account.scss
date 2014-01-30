@@ -1,301 +1,349 @@
 
-
-.Account-bg-head {
-	color: $primary_white;
-	background: url(../../../../img/login_bg_grid.jpg) no-repeat;
-	width: 100%;
-	height: 150px;
-}
-
-.MB-db0 {
-	margin-left: 0;
-}
-
 .account-head {
 	font-family: $ethon_roman;
 	color: $primary_grey;
 	font-size: 35px;
 	margin-bottom: 20px;
 }
-
-#profile-pic-head {
-	font-size: 17px;
-	margin-bottom: 15px;
-	margin-left: 76px;
-	text-align: left;
+#userprofile {
+	min-width: 400px;
 }
-
-.MB-row-space {
-	margin-top: 5%;
-}
-
-.MB-window-bg {
-	background: $primary_black;
-}
-
-.MB-modal-body {
-	width: 1100px;
-	margin-right: auto;
-	margin-left: auto;
-	background: $primary_light_grey;
-	padding: 25px;
-	
-}
-
-.MB-account-desc {
-	margin-left: 30px;
-}
-
-.MB-account-nav {
-	border-right: 1px $primary_white solid;
-	text-align: center;
-	width: 200px;
-}
-
-.MB-account-container{
+#accountViewRegion {
+	top: 160px;
+	position: fixed;
+	z-index: 1;
+	overflow-y: scroll;
 	width: 100%;
-}
+	padding-left: 100px;
 
-.MB-account-window{
-
-	padding: 15px;
-	height: 100%;
-	background: $primary_white;
-	border: $primary_grey_hl 1px solid;
-}
-
-#photo-username {
-text-align: center;
-margin-bottom: 2px;
-}
-
-.name-info-input{
-	
-}
-
-.photo-section-align{
-	margin-left: auto;
-	margin-right: auto;
-	text-align: center;
-}
-
-.MB-user-align{
-	text-align:center;
-}
-
-.MB-name-info > div > div > input{
-	margin-top: 10px;
-	margin-bottom: 15px;
-	border-radius: 2px;
-	width: 90%;
-}
-
-.MB-button-upload{
-	text-align: center;
-	margin-top: 15px;
-	border: none;
-	color: $primary_grey_hl;
-
-	a{
-		color: $primary_grey_hl !important;
+	h4 {
+		margin-bottom: 30px;
+		font-size: 1em;
+		border-bottom: 1px solid #ddd;
+		width: 75%;
+		padding-bottom: 5px;
 	}
+}
 
-	a:hover{
-		color: $primary_blue_hl !important;
+.account-menu {
+	text-align: right;
+	position: fixed;
+	top: 60px;
+	width: 100%;
+	right: 0;
+	padding: 10px;
+	width: 100%;
+	height: 100px;
+	z-index: 1;
+
+	.account-menu-item {
 		cursor: pointer;
+		display: inline-block;
+		font-size: 1em;
+		width: 100px;
+		margin: 0 50px;
+		text-align: center;
+		color: $user_type_active;
+
+		&.active {
+			color: $post_color;
+		}
 	}
 
+	.account-menu-item-icon {
+		font-size: 2.5em;
+		display: block;
+		line-height: 1.5em;
+	}
 }
+// .Account-bg-head {
+// 	color: $primary_white;
+// 	background: url(../../../../img/login_bg_grid.jpg) no-repeat;
+// 	width: 100%;
+// 	height: 150px;
+// }
 
-.MB-user-photo-frame{
-	border-width: 0px 1px 3px 1px;
-	height: 200px;
-	width: 200px;
-	text-align: center;
-	margin-left: 0px;
-	margin-top: -60px;
-	background: $primary_black;
-	vertical-align: middle;
-	border-radius: 50%;
-}
-
-.MB-user-photo-frame:before {
-  content: '';
-  border-radius: 50%;
-  display: inline-block;
-  height: 100%;
-  vertical-align: middle;
-  margin-right: -0.25em; /* Adjusts for spacing */
-}
-
-.MB-user-photo{
-	margin-left: auto;
-	margin-right: auto;
-	width: 185px;
-	height: 185px;
-	border: 2px solid $primary_blue;
-	border-radius: 50%;
-	border-color: $primary_black; 
-	background-color: $primary_light_grey;
-	display: inline-block;
-	vertical-align: middle;
-	position: relative;
-}
-
-.MB-user-photo > img{
-	margin-bottom: 15px;
-	border-radius: 50%;
-}
-
-.shadow{
-	-webkit-box-shadow: 0 8px 6px -6px red;
-	   -moz-box-shadow: 0 8px 6px -6px black;
-	        box-shadow: 0 8px 6px -6px $primary_grey_hl;
-}
+// .MB-db0 {
+// 	margin-left: 0;
+// }
 
 
-// Left Navigation Style 
 
+// #profile-pic-head {
+// 	font-size: 17px;
+// 	margin-bottom: 15px;
+// 	margin-left: 76px;
+// 	text-align: left;
+// }
 
-.MB-account-nav-links{
+// .MB-row-space {
+// 	margin-top: 5%;
+// }
+
+// .MB-window-bg {
+// 	background: $primary_black;
+// }
+
+// .MB-modal-body {
+// 	width: 1100px;
+// 	margin-right: auto;
+// 	margin-left: auto;
+// 	background: $primary_light_grey;
+// 	padding: 25px;
 	
-		li:nth-child(1){
-			margin-top: 50px;
-		}
+// }
 
-		li {
+// .MB-account-desc {
+// 	margin-left: 30px;
+// }
 
-			color: $app_menu_font;	
-			text-align: left;	
-			padding: 20px; 
-			font-size: 0.8em;
+// .MB-account-nav {
+// 	border-right: 1px $primary_white solid;
+// 	text-align: center;
+// 	width: 200px;
+// }
+
+// .MB-account-container{
+// 	width: 100%;
+// }
+
+// .MB-account-window{
+// 	padding: 15px;
+// 	height: 100%;
+// }
+
+// #photo-username {
+// text-align: center;
+// margin-bottom: 2px;
+// }
+
+// .name-info-input{
+	
+// }
+
+// .photo-section-align{
+// 	margin-left: auto;
+// 	margin-right: auto;
+// 	text-align: center;
+// }
+
+// .MB-user-align{
+// 	text-align:center;
+// }
+
+// .MB-name-info > div > div > input{
+// 	margin-top: 10px;
+// 	margin-bottom: 15px;
+// 	border-radius: 2px;
+// 	width: 90%;
+// }
+
+// .MB-button-upload{
+// 	text-align: center;
+// 	margin-top: 15px;
+// 	border: none;
+// 	color: $primary_grey_hl;
+
+// 	a{
+// 		color: $primary_grey_hl !important;
+// 	}
+
+// 	a:hover{
+// 		color: $primary_blue_hl !important;
+// 		cursor: pointer;
+// 	}
+
+// }
+
+// .MB-user-photo-frame{
+// 	border-width: 0px 1px 3px 1px;
+// 	height: 200px;
+// 	width: 200px;
+// 	text-align: center;
+// 	margin-left: 0px;
+// 	margin-top: -60px;
+// 	background: $primary_black;
+// 	vertical-align: middle;
+// 	border-radius: 50%;
+// }
+
+// .MB-user-photo-frame:before {
+//   content: '';
+//   border-radius: 50%;
+//   display: inline-block;
+//   height: 100%;
+//   vertical-align: middle;
+//   margin-right: -0.25em; /* Adjusts for spacing */
+// }
+
+// .MB-user-photo{
+// 	margin-left: auto;
+// 	margin-right: auto;
+// 	width: 185px;
+// 	height: 185px;
+// 	border: 2px solid $primary_blue;
+// 	border-radius: 50%;
+// 	border-color: $primary_black; 
+// 	background-color: $primary_light_grey;
+// 	display: inline-block;
+// 	vertical-align: middle;
+// 	position: relative;
+// }
+
+// .MB-user-photo > img{
+// 	margin-bottom: 15px;
+// 	border-radius: 50%;
+// }
+
+// .shadow{
+// 	-webkit-box-shadow: 0 8px 6px -6px red;
+// 	   -moz-box-shadow: 0 8px 6px -6px black;
+// 	        box-shadow: 0 8px 6px -6px $primary_grey_hl;
+// }
+
+
+// // Left Navigation Style 
+
+
+// .MB-account-nav-links{
+	
+// 		li:nth-child(1){
+// 			margin-top: 50px;
+// 		}
+
+// 		li {
+
+// 			color: $app_menu_font;	
+// 			text-align: left;	
+// 			padding: 20px; 
+// 			font-size: 0.8em;
 			
 
-				&:hover{
-					background: $primary_white;
-					color: $primary_grey;
-					border-left: 8px solid $primary_yellow;
-				}
+// 				&:hover{
+// 					background: $primary_white;
+// 					color: $primary_grey;
+// 					border-left: 8px solid $primary_yellow;
+// 				}
 
-				&.active {
-					background: $primary_white;
-					color: $primary_blue;
-					border-left: 8px solid $primary_blue;
-					position: relative;
-				}
+// 				&.active {
+// 					background: $primary_white;
+// 					color: $primary_blue;
+// 					border-left: 8px solid $primary_blue;
+// 					position: relative;
+// 				}
 
-				&.active:before {
-					content: "";
-					position: absolute;
-					top: 50%;
-					left: -16px;
-					width: 0;
-					height: 0;
-					margin-top: -10px;
-					/* Build the triangle */
-					border-right: 8px solid $primary_blue;
-					border-top: 8px solid transparent;
-					border-bottom: 8px solid transparent;
+// 				&.active:before {
+// 					content: "";
+// 					position: absolute;
+// 					top: 50%;
+// 					left: -16px;
+// 					width: 0;
+// 					height: 0;
+// 					margin-top: -10px;
+// 					/* Build the triangle */
+// 					border-right: 8px solid $primary_blue;
+// 					border-top: 8px solid transparent;
+// 					border-bottom: 8px solid transparent;
 
-				}
-		}	
+// 				}
+// 		}	
 
-	i {
-		padding-right: 15px;
-	}
-}
-
-
-
-.save-bar {
-	width: 100%;
-	background: $app_menu_grey;
-	margin-bottom: 10px;
-	padding: 6px;
-	border-radius: 2px;
-
-	button{
-		margin-right: 0px;
-	}
-}
+// 	i {
+// 		padding-right: 15px;
+// 	}
+// }
 
 
-// General Panel
 
-.acclabstyle {
-	margin-bottom: 3px;
-}
+// .save-bar {
+// 	width: 100%;
+// 	background: $app_menu_grey;
+// 	margin-bottom: 10px;
+// 	padding: 6px;
+// 	border-radius: 2px;
 
-.accfulllabstyle {
-	margin-bottom: -5px;
-}
-
-#location {
-	width: 100%;
-}
-
-#locationtext, #telephonenotext, #jobstatustext, #usertypetext, #fnametext, #lnametext {
-	margin-bottom: 10px;
-}
-
-#selectstate {
-	width: 187px;
-}
-
-.inputbordernone {
-	border-radius: 0px !important;
-}
-
-.geninputborderwidth {
-	width: 173px;
-}
-
-// Notifications Panel
+// 	button{
+// 		margin-right: 0px;
+// 	}
+// }
 
 
-.notify-option {
-	float: left;
-	margin-top: 10px;
-}
+// // General Panel
 
-#option-specify {
-	float: right;
-	margin-right: 25px;
+// .acclabstyle {
+// 	margin-bottom: 3px;
+// }
 
-	#email-head {
-		margin-right: 20px;
-	}
-}
+// .accfulllabstyle {
+// 	margin-bottom: -5px;
+// }
 
-.Not-check-option {
-	float: right;
-	margin-right: 25px;
+// #location {
+// 	width: 100%;
+// }
 
-	input[type="checkbox"] {
-		margin-left: 20px;
-		height: 30px;
-		width: 30px;
+// #locationtext, #telephonenotext, #jobstatustext, #usertypetext, #fnametext, #lnametext {
+// 	margin-bottom: 10px;
+// }
+
+// #selectstate {
+// 	width: 187px;
+// }
+
+// .inputbordernone {
+// 	border-radius: 0px !important;
+// }
+
+// .geninputborderwidth {
+// 	width: 173px;
+// }
+
+// // Notifications Panel
 
 
-	}
-}
+// .notify-option {
+// 	float: left;
+// 	margin-top: 10px;
+// }
 
-// Security Panel
+// #option-specify {
+// 	float: right;
+// 	margin-right: 25px;
 
-.inputlength {
-	width: 90%;
-}
+// 	#email-head {
+// 		margin-right: 20px;
+// 	}
+// }
 
-// Support Panel
+// .Not-check-option {
+// 	float: right;
+// 	margin-right: 25px;
 
-#supportmessage {
-	resize: none;
-}
+// 	input[type="checkbox"] {
+// 		margin-left: 20px;
+// 		height: 30px;
+// 		width: 30px;
 
-#helptext {
-	font-size: 12px;
-}
 
-#helpemail {
-	margin-top: 15px;
-}
+// 	}
+// }
+
+// // Security Panel
+
+// .inputlength {
+// 	width: 90%;
+// }
+
+// // Support Panel
+
+// #supportmessage {
+// 	resize: none;
+// }
+
+// #helptext {
+// 	font-size: 12px;
+// }
+
+// #helpemail {
+// 	margin-top: 15px;
+// }

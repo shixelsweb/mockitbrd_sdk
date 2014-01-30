@@ -13,9 +13,18 @@ html, body, #page, #left-header, #dashboard {
 	overflow: hidden;
 }
 
+#main {
+	padding: 0;
+	overflow-y:scroll;
+}
+
 #left-header {float: left;}
 #dashboard {display: none; background: $dashboard_bg;}
 
 a {
 	color: $primary_blue;
+
+	&:hover {
+		text-decoration: none;
+	}
 }

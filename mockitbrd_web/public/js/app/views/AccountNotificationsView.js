@@ -9,6 +9,7 @@ define(['jquery', 'hbs!templates/accountNotification', 'backbone', 'marionette']
             // assumes 1 child element.
             this.$el = this.$el.children();
             this.setElement(this.$el);
+            $('.account-menu-item[data-accountnavigate="notifications"]').addClass('active');
           }
       });
 });

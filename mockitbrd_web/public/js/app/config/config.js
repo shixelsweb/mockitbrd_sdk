@@ -28,7 +28,9 @@ require.config({
         "webrtc": "../libs/plugins/video-chat/webrtc",
         "socket": "../libs/plugins/video-chat/socket.io",
         "simplewebrtc": "../libs/plugins/video-chat/simplewebrtc",
-        "edit": "../libs/plugins/bootstrap-editable"
+        "edit": "../libs/plugins/bootstrap-editable",
+        "session": "../libs/plugins/session",
+        "json": "../libs/plugins/json"
     },
     // Sets the configuration for your third party scripts that are not AMD compatible
     shim:{

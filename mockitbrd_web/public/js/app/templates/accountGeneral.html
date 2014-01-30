@@ -1,5 +1,66 @@
 <div id="account-general-view">
-<div class="MB-account-window-titie">
+	<h1 class="account-head">General Settings</h1>
+	<h4>Update your personal information.</h4>
+	<div class="account-box">
+		<div class="row">
+			<div class="span2">
+				<label class="acclabstyle">User Type :</label>
+				<input type="text" value="{{user.user_type}}" id="usertype" class="inputbordernone geninputborderwidth" disabled="disabled">
+			</div>
+			<div class="span2 offset1">
+				<label class="accfulllabstyle">Mockitbrd Profile :</label>
+				<input type="text" id="userprofile" disabled="disabled" value="{{user.profileURL}}">
+			</div>
+		</div>
+		<div class="row">
+			<div class="span2">
+				<label class="inline acclabstyle">First Name :</label>
+				<input type="text" value="{{user.fname}}" id="fname" class="inputbordernone geninputborderwidth"><br>	
+			</div>
+			<div class="span2 offset1">
+				<label class="inilne acclabstyle">Last Name :</label>
+				<input type="text" value="{{user.lname}}" id="lname" class="inputbordernone geninputborderwidth"><br>
+			</div>
+		</div>
+		<div class="row">
+			<div class="span2">
+				<label class="inline acclabstyle">Email:</label>
+				<input type="text" value="{{user.email}}" id="email" class="inputbordernone geninputborderwidth"><br>	
+			</div>
+			<div class="span2 offset1">
+				<label class="inilne acclabstyle">Phone :</label>
+				<input type="text" value="{{user.phone}}" id="email" class="inputbordernone geninputborderwidth"><br>
+			</div>
+		</div>
+		<div class="row">
+			<div class="span2">
+				<label class="accfulllabstyle">Job Title :</label>
+				<input type="text" id="jobtitle" value="{{user.job_title}}">
+			</div>
+			<div class="span2 offset1">
+				<label class="acclabstyle">Job Status :</label>
+				<select>
+					<option>Actively Seeking Employment</option>
+					<option>Currently Employed</option>
+					<option>Hired</option>
+					<option>Not Actively Seeking Employement</option>
+				</select>
+			</div>
+		</div>
+	</div>
+		
+		
+			
+
+
+			
+
+			<button class="MB-button noire">Save</button>
+				
+	</div>
+</div>
+
+<!-- <div class="MB-account-window-titie">
 	<h2 class="account-head">General</h2>
 	<h4>Update personal account information</h4>
 </div>
@@ -127,5 +188,4 @@
 		</div>
 		
 	</div>
-</div>			
-</div>
+</div>	 -->		

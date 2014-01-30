@@ -1,5 +1,5 @@
-define(['jquery', 'models/Model', 'hbs!templates/userAppMenu', 'backbone', 'marionette'],
-    function ($, Model, template, Backbone) {
+define(['jquery','views/MBConfirm', 'models/Model', 'hbs!templates/userAppMenu', 'backbone', 'marionette'],
+    function ($, MBConfirm, Model, template, Backbone) {
       //ItemView provides some default rendering logic
       return Backbone.Marionette.ItemView.extend({
           template:template,
@@ -9,12 +9,12 @@ define(['jquery', 'models/Model', 'hbs!templates/userAppMenu', 'backbone', 'mari
           user_pic: null,
 
           events: {
-            'click .MB-user-menu-menu': 'showAppMenu'
+            'click .MB-user-menu-menu': 'logout'
           },
 
           initialize: function() {
-            this.user = MB.api.user($.parseJSON(MB.session.get('user')));
-            this.user_pic = this.user.user_pic.file_path  + '/' + this.user.user_pic.file_name;
+            this.user = MB.api.user(MB.session.getSession('MB-session').user);
+            this.user_pic = MB.api.userpic(this.user._id);
 
             this.model = new Model({user: this.user, user_pic: this.user_pic});
           },
@@ -26,13 +26,16 @@ define(['jquery', 'models/Model', 'hbs!templates/userAppMenu', 'backbone', 'mari
             this.setElement(this.$el);
           },
 
-          showAppMenu: function(e) {
+          logout: function(e) {
+            MB.body.ensureEl();
+            MB.body.$el.addClass('modal-black-show');
+            var lougoutApp = new Backbone.Wreqr.Commands();
 
-            if ($('.MB-user-menu-open').css('top') === '60px') {
-              $('.MB-user-menu-open').css('top', '-180px');
-            } else {
-              $('.MB-user-menu-open').css('top', '60px');
-            }
+            lougoutApp.addHandler('yes', function(){
+              MB.api.logout();
+              MB.appRouter.navigate('dashboard', {trigger: true});
+            });
+            MB.confirmRegion.show( new MBConfirm({commands: lougoutApp, 'title': 'You are about to logout', 'body': 'Are you sure you want to logout?'}));
           }
       });
 });

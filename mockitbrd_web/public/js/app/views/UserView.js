@@ -6,7 +6,8 @@ define(['jquery', 'models/Model', 'hbs!templates/user', 'backbone', 'marionette'
 
           events: {
             'click .MB-user-star': 'handleStarring',
-            'click .MB-edit-profile': 'profileEditMode'
+            'click .MB-edit-profile': 'profileEditMode',
+            'click .user-profile-edit-section': 'userSectionEditMode'
           },
 
           model: null,
@@ -19,14 +20,14 @@ define(['jquery', 'models/Model', 'hbs!templates/user', 'backbone', 'marionette'
           isConnectedPending: null,
           notConnected: null,
           userPosts: [],
-          userSkills: [],
+          skillPack: [],
 
           initialize:function(options) {
 
             this.user = options.user;
-            this.currentUser = MB.api.user($.parseJSON(MB.session.get('user')));
+            this.currentUser = MB.api.user(MB.session.getSession('MB-session').user);
             this.isStarred = this.checkIfStarred(this.currentUser.interactions.starred, this.user._id);
-            this.user_pic = this.getPicURL(this.user._id);
+            this.user_pic = MB.api.userpic(this.user._id);
             this.isConnectedActive = this.checkIfConnected(this.currentUser.connections, this.user._id);
 
             if(this.user._id === this.currentUser._id) {
@@ -36,25 +37,14 @@ define(['jquery', 'models/Model', 'hbs!templates/user', 'backbone', 'marionette'
               
             }
             this.userPosts = [];
+            this.skillPack = [];
 
-            this.userSkills = [];
-            this.userSkills.skills = [];
-
-            if (this.user.skills && this.userSkills.length === 0) {
+            if (this.user.skills) {
               for (var i = 0; i < this.user.skills.length; i++) {
                 var skills = this.user.skills[i];
-                console.log(skills);
-                for(var name in skills) {
-                    this.userSkills.category = name;
-                    console.log(name);
-
-                    for (var j = 0; j < skills[name].length; j++) {
-                      var skill = skills[name][j];
-                      this.userSkills.skills.push(skills[j]);
-                  }
-                }
-
-
+                var category = Object.getOwnPropertyNames(skills)[0];
+                var skillSet = {"category": category.replace("-", " "), "skills": skills[category]};
+                this.skillPack.push(skillSet);
               }
             }
 
@@ -62,17 +52,42 @@ define(['jquery', 'models/Model', 'hbs!templates/user', 'backbone', 'marionette'
               for (var i = 0; i < this.user.posts.length; i++) {
                 var post = MB.api.post(this.user.posts[i].post_id);
                 var post_html = this.replaceURLWithHTMLLinks(post.post);
-                post.commenter_pic = this.getPicURL(this.currentUser._id);
+                post.commenter_pic = MB.api.userpic(this.currentUser._id);
+                
+                if (post.likes) {
+                  for (var k = 0; k < post.likes.length; k++) {
+                      var likes = post.likes[k];
+                      if (this.currentUser._id === likes.user_id) {
+                        post.isLiked = true;
+                        break
+                      } else {
+                        post.isLiked = false;
+                      }
+                    }
+                  post.likes_count = post.likes.length;
+                }
 
                 for (var j = 0; j < post.comments.length; j++) {
                   var comment = post.comments[j];
                   var commenter = MB.api.user(comment.user_id);
                   var comment_html = this.replaceURLWithHTMLLinks(comment.comment);
 
-                  comment.comment = comment_html;
+                  if (comment.likes) {
+                    for (var k = 0; k < comment.likes.length; k++) {
+                      var likes = comment.likes[k];
+                      if (this.currentUser._id === likes.user_id) {
+                        comment.isLiked = true;
+                        break
+                      } else {
+                        comment.isLiked = false;
+                      }
+                    }
+                    comment.likes_count = comment.likes.length;
+                  }
 
+                  comment.comment = comment_html;
                   comment.commenter = commenter.fname + " " + commenter.lname;
-                  comment.user_pic = this.getPicURL(comment.user_id);
+                  comment.user_pic = MB.api.userpic(comment.user_id);
                 }
 
                 if (!this.isOwner) { //only make api call for user info if post is not by current user
@@ -85,7 +100,7 @@ define(['jquery', 'models/Model', 'hbs!templates/user', 'backbone', 'marionette'
                 }
                 post.post = post_html;
                 post.isConnectedActive = this.isConnectedActive;
-                post.user_pic = this.getPicURL(post.user_id);
+                post.user_pic = MB.api.userpic(post.user_id);
                 this.userPosts.push(post);
               }
             } 
@@ -99,7 +114,7 @@ define(['jquery', 'models/Model', 'hbs!templates/user', 'backbone', 'marionette'
               isConnectedActive: this.isConnectedActive,
               notConnected: this.notConnected,
               posts: this.userPosts,
-              skills: this.userSkills
+              skills: this.skillPack
             });
           },
           onRender: function () {
@@ -198,12 +213,24 @@ define(['jquery', 'models/Model', 'hbs!templates/user', 'backbone', 'marionette'
 
             });
           },
-          getPicURL: function(id) {
-            return MB.userPic_path + id + '/user_pic.jpg'
+          userSectionEditMode: function(e) {
+            $.fn.editable.defaults.mode = 'inline';
+            var section = $(e.currentTarget).data('section');
+
+            if (section === 'bio') {
+
+              $('.user-bio').editable({
+                type: 'textarea',
+                pk: 1,
+                url: '/post',
+                title: 'Bio',
+
+              });
+            }
           },
           replaceURLWithHTMLLinks: function(text) {
               var exp = /(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig;
-              return text.replace(exp,"<a href='$1'>$1</a>"); 
+              return text.replace(exp,"<a href='$1' target='_blank'>$1</a>"); 
           }
     });
 });

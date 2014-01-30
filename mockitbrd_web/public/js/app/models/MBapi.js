@@ -31,11 +31,18 @@ define(["jquery", "underscore", "backbone"],
         var MBapi = Backbone.Model.extend({
 
             defaults: {
-                url: "http://api.mockitbrd.com/"
+                url: null
             },
 
             initialize: function() {
                 _.bindAll(this);
+
+                if (MB.env === 'dev') {
+                    this.set({'url': 'http://api.mockitbrd.com/'});
+                } else if (MB.env === 'prod') {
+                    this.set({'url': 'http://mb.mockitbrd.com/'});
+                }
+               
             },
 
             //TODO: remember email, stay logged in (increase session time), only login if status is active
@@ -52,7 +59,6 @@ define(["jquery", "underscore", "backbone"],
                             $('.MB-login-alert').css('display', 'table');
                         } else {
                             MB.session.start(response.data.user); //add  ", params.stayLoggedIn"
-                            MB.appRouter.navigate('dashboard', {trigger: true});
                         }
                         send = response.data.success;
                     },
@@ -65,10 +71,7 @@ define(["jquery", "underscore", "backbone"],
                 return send;
             },
             logout: function() {
-                MB.cookie.clear('MB-session-user');
-                MB.cookie.clear('MB-session-auth-token');
-                MB.cookie.clear('MB-session-user-type');
-
+                MB.session.clearSession('MB-session');
                 MB.appRouter.navigate('', {trigger: true});
             },
             getUserTasks: function(user_id) {
@@ -227,7 +230,10 @@ define(["jquery", "underscore", "backbone"],
 
                     }
                 });
-            }
+            },
+            userpic: function(id) {
+                return MB.userPic_path + id + '/user_pic.jpg'
+          },
         });
 
         // Returns the Model class

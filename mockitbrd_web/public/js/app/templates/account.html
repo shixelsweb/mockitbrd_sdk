@@ -1,27 +1,11 @@
-<div id="account-view hide-nav">
-	
-	<div class="MB-modal-body">
-	<div class="container">
-
-		<hr>
-		<div class="row">
-		<div class="span12 MB-window-bg"> 			
-				<div class="span9 MB-db0">
-
-					<div class="MB-account-window content" id="accountViewRegion"></div>
-				</div>
-				<div class="span2 Account-ul-style">
-
-					<div class="MB-user-photo-frame">
-					<div class="MB-user-photo">
-						<img src="../../../img/earl.jpg">
-						<span id="photo-username">{{user.fname}} {{user.lname}}</span>
-					</div>		
-					</div>
-
-							</div>	
-		 </div> 
-		</div>
-		</div>
-	</div>
+<div id="account-view">
+	<ul class="account-menu">
+		<li class="account-menu-item" data-accountNavigate="general"><i class="fa fa-user account-menu-item-icon"></i>General</li>
+		<li class="account-menu-item" data-accountNavigate="security"><i class="fa fa-lock account-menu-item-icon"></i>Security</li>
+		<li class="account-menu-item" data-accountNavigate="social"><i class="fa fa-comment account-menu-item-icon"></i>Social Media</li>
+		<li class="account-menu-item" data-accountNavigate="notifications"><i class="fa fa-mobile-phone account-menu-item-icon"></i>Notifications</li>
+		<li class="account-menu-item" data-accountNavigate="billing"><i class="fa fa-credit-card account-menu-item-icon"></i>Billing</li>
+		<li class="account-menu-item" data-accountNavigate="support"><i class="fa fa-question account-menu-item-icon"></i>Support</li>
+	</ul>
+	<div class="MB-account-window content" id="accountViewRegion"></div>
 </div>

@@ -1,5 +1,5 @@
-define(['jquery', 'hbs!templates/interview', 'backbone', 'marionette', 'webrtc', 'socket'],
-    function ($, template, Backbone, SimpleWebRTC, socket) {
+define(['jquery', 'webrtc', 'views/MBConfirm', 'hbs!templates/interview', 'backbone', 'marionette'],
+    function ($, webrtc, MBConfirm, template, Backbone, SimpleWebRTC, socket) {
       //ItemView provides some default rendering logic
       return Backbone.Marionette.ItemView.extend({
           template:template,
@@ -22,10 +22,10 @@ define(['jquery', 'hbs!templates/interview', 'backbone', 'marionette', 'webrtc',
           },
 
           initialize: function(options) {
-              this.confirm = options.confirm;
-              this.createConnection(options.webrtc, options.interview_id);
+              this.confirm = MBConfirm;
+              this.createConnection(webrtc, options.interview_id);
               this.setShareButton(true);
-              this.user = MB.api.user($.parseJSON(MB.session.get('user')));
+              this.user = MB.api.user(MB.session.getSession('MB-session').user);
           },
           onRender: function () {
             // get rid of that pesky wrapping-div

@@ -144,3 +144,13 @@ width: 50%;
 	}	}
 	}
 }
+
+#clee-view, #fara-view, #earl-view {
+	.MB-modal-body {
+		width: 100%;
+		margin-right: auto;
+		margin-left: auto;
+		padding: 25px;
+		background: transparent;
+	}
+}
