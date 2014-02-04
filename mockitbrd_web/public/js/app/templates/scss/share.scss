@@ -1,0 +1,253 @@
+/* Share Container */
+
+#share-container {
+	width: 100%;
+	margin: 0px auto;
+	margin-left: -5%;
+}
+
+/* Share Box Window */
+
+#share-container-top{
+	width: 100%;
+
+	img {
+		height: 50px;
+		margin-top: -10px;
+	}
+
+	#share-box {
+		z-index: 1;
+		width: 40%;
+		height: 300px;
+		margin: 40px auto;
+		background: $primary_white;
+
+		#share-box-header {
+			width: 100%;
+			height: 50px;
+			line-height: 50px;
+			font-size: 2em;
+			background: $primary_black;
+			color: $primary_white;
+			text-align: center;
+			position: relative;
+		}	
+
+			#share-box-header > h3 {
+				margin-top: 0 !important;
+				padding-top: 10px;
+		}
+		
+
+		#share-box-header:after {
+			top: 100%;
+			left: 50%;
+			border: solid transparent;
+			content: " ";
+			height: 0;
+			width: 0;
+			position: absolute;
+			pointer-events: none;
+			border-color: rgba(136, 183, 213, 0);
+			border-top-color: $primary_black;
+			border-width: 30px;
+			margin-left: -30px;
+		}
+
+		#share-box-body {
+			text-align: center;
+
+			h1 {
+				margin-top: 60px;
+				font-family: $ethon_roman;
+			}
+			
+			#share-body-input{
+				margin-top: 20px;
+
+
+				input[type="email"] {
+					padding: 9px;
+					border-radius: 0px;
+					background: $lightest_grey;
+					padding-right: 20px;
+				}
+
+				input[type="submit"] {
+					padding: 10px;
+					background: $primary_black;
+					color: $primary_white;
+					margin: 0px 10px 0px 0px;
+					position: absolute;
+					border: none;
+
+					&:hover {
+						background: $primary_yellow;
+					}
+				}
+			}		
+		}
+	}
+}	
+
+/* Bottom Container */
+
+#share-container-bottom {
+	margin: 20px auto;
+	width: 100%;
+
+	#share-section-bottom{
+		width: 60%;
+		margin: 0 auto;
+
+		div:nth-child(n + 2) {
+			margin-left: 10%;
+			background: $primary_blue !important;	
+		} 
+
+		.share-column {
+			width: 45%;
+			background: $primary_blue;
+
+			.share-column-header {
+				width: 100%;
+				height: 100%;
+				background: $primary_black;
+				color: $primary_white;
+				position: relative;
+				text-align: center;
+				margin-bottom: 40px;
+
+				 div > h3 {
+					margin-top: 0;
+					padding-top: 20px;
+				}
+			}
+
+			.share-column-header:after {
+			top: 100%;
+			left: 50%;
+			border: solid transparent;
+			content: " ";
+			height: 0;
+			width: 0;
+			position: absolute;
+			pointer-events: none;
+			border-color: rgba(136, 183, 213, 0);
+			border-top-color: $primary_black;
+			border-width: 30px;
+			margin-left: -30px;
+			}
+		}
+	}	
+}
+
+#cleardiv {
+	clear: both;
+}
+
+
+/* Share Social Media */
+
+#share-social-container {
+	margin: 10px auto;
+	width: 60%;
+
+	#share-social-text {
+		text-align: center;
+	}
+
+	#share-social-links{
+		display: inline;
+		margin-top: 30px;
+
+
+		.sub-social-text {
+			display: inline;
+			width: 30%;
+			height: 50px;
+			float: left;
+			position: relative;	
+			border-radius: 2px;	
+
+			&:hover {
+				background: $fb_lightest_grey;
+				opacity: 0.8;
+				cursor: pointer;
+
+				p {
+					color: $primary_black;
+				}
+			}
+
+			p {
+				right: 6%;
+				position: absolute;
+				top: 0;
+				line-height: 50px;
+				z-index: 1;
+			}
+
+			.sub-social {
+				height: 100%;
+				position: absolute;
+				top: 0px;	
+				margin-left: 23%;
+				color: $primary_black;
+				opacity: 0.3;
+				border-left: 4px groove $primary_white;
+				
+			}
+
+			.pad {
+				line-height: 50px;
+				margin-left: 18px;
+			}
+		}
+
+		.sub-social-text:nth-child(n+2) {
+			background: $primary_yellow;
+			margin-left: 5%;
+
+			.sub-social {
+				opacity: 0.3;
+			}
+		}
+	
+		.sub-social-text:nth-child(1) {
+			background: $linkedin_color;
+		}	
+		.sub-social-text:nth-child(2) {
+			background: $facebook_color;
+		}	
+		.sub-social-text:nth-child(3) {
+			background: $twitter_color;
+		}	
+	}
+}
+
+
+/* HR Container */
+
+#hr-container {
+	width: 100%;
+	height: 5px;
+
+	#hr-section {
+		width: 60%;
+		line-height: 5px;
+		margin: 0 auto;
+	}
+}
+
+/* Feedback Container */
+
+#share-feedback-container {
+	width: 100%;
+
+	#share-feedback-section {
+		width: 60%;
+		margin: 20px auto;
+	}
+}

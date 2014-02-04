@@ -27,7 +27,7 @@ define(['backbone', 'marionette'], function(Backbone, Marionette) {
            "dashboard": "dashboard",
            "user/:id": "user",
            "tasks": "tasks",
-           "register?referrel_code=:id": "register"
+           "register?referrel_code=:id": "register",
            "user/:id/account/general": "account",
            "user/:id/account/security": "accountSecurity",
            "user/:id/account/social": "accountSocial",

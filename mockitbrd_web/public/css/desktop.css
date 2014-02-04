@@ -67,7 +67,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
 }
 
-/* line 37, ../js/app/templates/scss/variables.scss */
+/* line 42, ../js/app/templates/scss/variables.scss */
 .glass-effect {
   box-shadow: 0px 0px 0px 8px rgba(0, 0, 0, 0.3), 0px 2px 3px 0px rgba(0, 0, 0, 0.6);
 }
@@ -97,7 +97,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   src: url('fonts/../../fonts/ethon/ethon_roman.ttf') format('truetype');
 }
 
-/* line 56, ../js/app/templates/scss/variables.scss */
+/* line 61, ../js/app/templates/scss/variables.scss */
 .unselectable {
   -moz-user-select: none;
   -khtml-user-select: none;
@@ -105,12 +105,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   -o-user-select: none;
 }
 
-/* line 63, ../js/app/templates/scss/variables.scss */
+/* line 68, ../js/app/templates/scss/variables.scss */
 .placeholderHIW {
   margin-top: 30px;
 }
 
-/* line 67, ../js/app/templates/scss/variables.scss */
+/* line 72, ../js/app/templates/scss/variables.scss */
 .MB-boardroom-bg {
   background: url("../../img/login_bg.jpg") no-repeat;
   background-position: center;
@@ -118,7 +118,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   -moz-background-size: cover;
 }
 
-/* line 74, ../js/app/templates/scss/variables.scss */
+/* line 79, ../js/app/templates/scss/variables.scss */
 .MB-office-bg {
   background: url("../../img/office_bg.jpg") no-repeat;
   background-position: center;
@@ -126,7 +126,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   -moz-background-size: cover;
 }
 
-/* line 81, ../js/app/templates/scss/variables.scss */
+/* line 86, ../js/app/templates/scss/variables.scss */
 .MB-mail-bg {
   background: url("../../img/mail_bg.jpg") no-repeat;
   background-position: center;
@@ -134,12 +134,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   -moz-background-size: cover;
 }
 
-/* line 88, ../js/app/templates/scss/variables.scss */
+/* line 93, ../js/app/templates/scss/variables.scss */
 .MB-user-bg {
   background: url("../../img/squairy.png");
 }
 
-/* line 92, ../js/app/templates/scss/variables.scss */
+/* line 97, ../js/app/templates/scss/variables.scss */
 .MB-waiting-bg {
   background: url("../../img/waiting.jpg") no-repeat;
   background-position: top;
@@ -147,7 +147,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   -moz-background-size: cover;
 }
 
-/* line 99, ../js/app/templates/scss/variables.scss */
+/* line 104, ../js/app/templates/scss/variables.scss */
 .MB-waiting-two-bg {
   background: url("../../img/waiting2.jpg") no-repeat;
   background-position: -80px -120px;
@@ -155,65 +155,65 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   -moz-background-size: cover;
 }
 
-/* line 106, ../js/app/templates/scss/variables.scss */
+/* line 111, ../js/app/templates/scss/variables.scss */
 .MB-lightGrey-bg {
   background-color: #f4f4f4;
 }
 
-/* line 109, ../js/app/templates/scss/variables.scss */
+/* line 114, ../js/app/templates/scss/variables.scss */
 .MB-white-bg {
   background-color: white;
   box-shadow: 0px 0px 2px #525252;
 }
 
-/* line 114, ../js/app/templates/scss/variables.scss */
+/* line 119, ../js/app/templates/scss/variables.scss */
 .MB-geom-bg {
   background: url("../../img/geometry.png");
   box-shadow: 0px 0px 2px #525252;
 }
 
-/* line 118, ../js/app/templates/scss/variables.scss */
+/* line 123, ../js/app/templates/scss/variables.scss */
 .clear-left {
   clear: left;
 }
 
-/* line 122, ../js/app/templates/scss/variables.scss */
+/* line 127, ../js/app/templates/scss/variables.scss */
 .clear-right {
   clear: right;
 }
 
-/* line 126, ../js/app/templates/scss/variables.scss */
+/* line 131, ../js/app/templates/scss/variables.scss */
 .clear-both {
   clear: both;
 }
 
-/* line 130, ../js/app/templates/scss/variables.scss */
+/* line 135, ../js/app/templates/scss/variables.scss */
 .noShadow {
   box-shadow: none;
   text-shadow: none;
 }
 
-/* line 135, ../js/app/templates/scss/variables.scss */
+/* line 140, ../js/app/templates/scss/variables.scss */
 .pull-left {
   float: left;
 }
 
-/* line 139, ../js/app/templates/scss/variables.scss */
+/* line 144, ../js/app/templates/scss/variables.scss */
 .pull-right {
   float: right;
 }
 
-/* line 143, ../js/app/templates/scss/variables.scss */
+/* line 148, ../js/app/templates/scss/variables.scss */
 .plus150 {
   padding-top: 150px;
 }
 
-/* line 147, ../js/app/templates/scss/variables.scss */
+/* line 152, ../js/app/templates/scss/variables.scss */
 .top52 {
   margin-top: 52px;
 }
 
-/* line 151, ../js/app/templates/scss/variables.scss */
+/* line 156, ../js/app/templates/scss/variables.scss */
 .plus100 {
   padding-top: 100px;
 }
@@ -4429,7 +4429,7 @@ header.ghost .navbar-inner {
   height: 100%;
   float: left;
   border-right: 1px groove #777;
-  overflow-y: scroll;
+  overflow-y: hidden;
   margin: 0;
   left: 0;
   z-index: 99;
@@ -5719,6 +5719,257 @@ header.ghost .navbar-inner {
   top: 15px;
   left: 15px;
   width: 40px;
+}
+
+/* Share Container */
+/* line 3, ../js/app/templates/scss/share.scss */
+#share-container {
+  width: 100%;
+  margin: 0px auto;
+  margin-left: -5%;
+}
+
+/* Share Box Window */
+/* line 11, ../js/app/templates/scss/share.scss */
+#share-container-top {
+  width: 100%;
+}
+/* line 14, ../js/app/templates/scss/share.scss */
+#share-container-top img {
+  height: 50px;
+  margin-top: -10px;
+}
+/* line 19, ../js/app/templates/scss/share.scss */
+#share-container-top #share-box {
+  z-index: 1;
+  width: 40%;
+  height: 300px;
+  margin: 40px auto;
+  background: white;
+}
+/* line 26, ../js/app/templates/scss/share.scss */
+#share-container-top #share-box #share-box-header {
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  font-size: 2em;
+  background: black;
+  color: white;
+  text-align: center;
+  position: relative;
+}
+/* line 37, ../js/app/templates/scss/share.scss */
+#share-container-top #share-box #share-box-header > h3 {
+  margin-top: 0 !important;
+  padding-top: 10px;
+}
+/* line 43, ../js/app/templates/scss/share.scss */
+#share-container-top #share-box #share-box-header:after {
+  top: 100%;
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(136, 183, 213, 0);
+  border-top-color: black;
+  border-width: 30px;
+  margin-left: -30px;
+}
+/* line 58, ../js/app/templates/scss/share.scss */
+#share-container-top #share-box #share-box-body {
+  text-align: center;
+}
+/* line 61, ../js/app/templates/scss/share.scss */
+#share-container-top #share-box #share-box-body h1 {
+  margin-top: 60px;
+  font-family: "Ethon Roman";
+}
+/* line 66, ../js/app/templates/scss/share.scss */
+#share-container-top #share-box #share-box-body #share-body-input {
+  margin-top: 20px;
+}
+/* line 70, ../js/app/templates/scss/share.scss */
+#share-container-top #share-box #share-box-body #share-body-input input[type="email"] {
+  padding: 9px;
+  border-radius: 0px;
+  background: #fafafa;
+  padding-right: 20px;
+}
+/* line 77, ../js/app/templates/scss/share.scss */
+#share-container-top #share-box #share-box-body #share-body-input input[type="submit"] {
+  padding: 10px;
+  background: black;
+  color: white;
+  margin: 0px 10px 0px 0px;
+  position: absolute;
+  border: none;
+}
+/* line 85, ../js/app/templates/scss/share.scss */
+#share-container-top #share-box #share-box-body #share-body-input input[type="submit"]:hover {
+  background: #ffe42b;
+}
+
+/* Bottom Container */
+/* line 96, ../js/app/templates/scss/share.scss */
+#share-container-bottom {
+  margin: 20px auto;
+  width: 100%;
+}
+/* line 100, ../js/app/templates/scss/share.scss */
+#share-container-bottom #share-section-bottom {
+  width: 60%;
+  margin: 0 auto;
+}
+/* line 104, ../js/app/templates/scss/share.scss */
+#share-container-bottom #share-section-bottom div:nth-child(n + 2) {
+  margin-left: 10%;
+  background: #2bbbff !important;
+}
+/* line 109, ../js/app/templates/scss/share.scss */
+#share-container-bottom #share-section-bottom .share-column {
+  width: 45%;
+  background: #2bbbff;
+}
+/* line 113, ../js/app/templates/scss/share.scss */
+#share-container-bottom #share-section-bottom .share-column .share-column-header {
+  width: 100%;
+  height: 100%;
+  background: black;
+  color: white;
+  position: relative;
+  text-align: center;
+  margin-bottom: 40px;
+}
+/* line 122, ../js/app/templates/scss/share.scss */
+#share-container-bottom #share-section-bottom .share-column .share-column-header div > h3 {
+  margin-top: 0;
+  padding-top: 20px;
+}
+/* line 128, ../js/app/templates/scss/share.scss */
+#share-container-bottom #share-section-bottom .share-column .share-column-header:after {
+  top: 100%;
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(136, 183, 213, 0);
+  border-top-color: black;
+  border-width: 30px;
+  margin-left: -30px;
+}
+
+/* line 146, ../js/app/templates/scss/share.scss */
+#cleardiv {
+  clear: both;
+}
+
+/* Share Social Media */
+/* line 153, ../js/app/templates/scss/share.scss */
+#share-social-container {
+  margin: 10px auto;
+  width: 60%;
+}
+/* line 157, ../js/app/templates/scss/share.scss */
+#share-social-container #share-social-text {
+  text-align: center;
+}
+/* line 161, ../js/app/templates/scss/share.scss */
+#share-social-container #share-social-links {
+  display: inline;
+  margin-top: 30px;
+}
+/* line 166, ../js/app/templates/scss/share.scss */
+#share-social-container #share-social-links .sub-social-text {
+  display: inline;
+  width: 30%;
+  height: 50px;
+  float: left;
+  position: relative;
+  border-radius: 2px;
+}
+/* line 174, ../js/app/templates/scss/share.scss */
+#share-social-container #share-social-links .sub-social-text:hover {
+  background: #f6f7f8;
+  opacity: 0.8;
+  cursor: pointer;
+}
+/* line 179, ../js/app/templates/scss/share.scss */
+#share-social-container #share-social-links .sub-social-text:hover p {
+  color: black;
+}
+/* line 184, ../js/app/templates/scss/share.scss */
+#share-social-container #share-social-links .sub-social-text p {
+  right: 6%;
+  position: absolute;
+  top: 0;
+  line-height: 50px;
+  z-index: 1;
+}
+/* line 192, ../js/app/templates/scss/share.scss */
+#share-social-container #share-social-links .sub-social-text .sub-social {
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  margin-left: 23%;
+  color: black;
+  opacity: 0.3;
+  border-left: 4px groove white;
+}
+/* line 203, ../js/app/templates/scss/share.scss */
+#share-social-container #share-social-links .sub-social-text .pad {
+  line-height: 50px;
+  margin-left: 18px;
+}
+/* line 209, ../js/app/templates/scss/share.scss */
+#share-social-container #share-social-links .sub-social-text:nth-child(n+2) {
+  background: #ffe42b;
+  margin-left: 5%;
+}
+/* line 213, ../js/app/templates/scss/share.scss */
+#share-social-container #share-social-links .sub-social-text:nth-child(n+2) .sub-social {
+  opacity: 0.3;
+}
+/* line 218, ../js/app/templates/scss/share.scss */
+#share-social-container #share-social-links .sub-social-text:nth-child(1) {
+  background: #1883bb;
+}
+/* line 221, ../js/app/templates/scss/share.scss */
+#share-social-container #share-social-links .sub-social-text:nth-child(2) {
+  background: #425f9c;
+}
+/* line 224, ../js/app/templates/scss/share.scss */
+#share-social-container #share-social-links .sub-social-text:nth-child(3) {
+  background: #4b9ed1;
+}
+
+/* HR Container */
+/* line 233, ../js/app/templates/scss/share.scss */
+#hr-container {
+  width: 100%;
+  height: 5px;
+}
+/* line 237, ../js/app/templates/scss/share.scss */
+#hr-container #hr-section {
+  width: 60%;
+  line-height: 5px;
+  margin: 0 auto;
+}
+
+/* Feedback Container */
+/* line 246, ../js/app/templates/scss/share.scss */
+#share-feedback-container {
+  width: 100%;
+}
+/* line 249, ../js/app/templates/scss/share.scss */
+#share-feedback-container #share-feedback-section {
+  width: 60%;
+  margin: 20px auto;
 }
 
 /*!

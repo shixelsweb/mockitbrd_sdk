@@ -8,7 +8,6 @@ define(["jquery", "backbone"],
                 
                 _.bindAll(this);
             },
-
             generateToken: function () {
                 var MAX = 9e15;
                 var MIN = 1e15;
@@ -22,7 +21,6 @@ define(["jquery", "backbone"],
                 counter += increment;
                 return counter.toString(36);
             },
-
             give: function(name) {
                 return localStorage.getItem(name);
             },
@@ -30,7 +28,6 @@ define(["jquery", "backbone"],
             begin: function(name, value) {
                 localStorage.setItem(name, value);
             },
-
             start: function(user) { //add stayLoggedIn
                 var auth_token = this.generateToken();
                 var sessionUser = JSON.stringify({'user': user.user_id, 'token': auth_token, 'user_type': user.user_type});
@@ -40,7 +37,6 @@ define(["jquery", "backbone"],
                     MB.appRouter.navigate('dashboard', {trigger: true});
                 }
             },
-
             clear: function(name) {
                 localStorage.removeItem('session');
             }

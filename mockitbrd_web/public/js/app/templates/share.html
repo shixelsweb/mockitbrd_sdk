@@ -1,3 +1,75 @@
 <div id="share-view">
-	
+	<div id="share-container">
+		<div id="share-container-top">
+			<div id="share-box">
+				<div id="share-box-header">
+					<img src="../../../img/logo-words.png" id="refer-box-logo">
+				</div>
+				<div id="share-box-body">
+					<h1>Refer a friend</h1>
+					<p>For every new user you refer to Mockitbrd, you'll be rewarded.</p>
+					<p><i class="fa fa-usd"></i></p>
+					<div id="share-body-input">
+						<input type="email" id="refer-email" placeholder="Enter Email Address...">
+						<input type="submit" id="submit-button">
+					</div>	
+				</div>
+			</div>
+		</div>
+		<div id="share-container-bottom">
+			<div id="share-section-bottom">
+				<div class="share-column pull-left" id="col1">
+					<div class="share-column-header"><h3>Refer your friends, get paid</h3></div>
+					<h5>Once you refer 5 friends that register with the site you get $5 credited to your account. It's that simple!</h5>
+				</div>
+				<div class="share-column pull-left">
+					<div class="share-column-header"><h3>Watch your networks grow</h3></div>
+					<h5>By adding users to your personal network you become more marketable and exposed to even more candidtes
+					and interviewers on Mockitbrd. You never know who's watching you. </h5>
+				</div>
+			</div>
+		</div>	
+
+		<div id="cleardiv"></div> <!-- Close Clear Div -->
+
+		<div id="share-social-container">
+			<div id="share-social-text"><h2>Spread The Word!</h2>
+			</div>
+			<div id="share-social-links">
+				<div class="sub-social-text glass-effect"><i class="fa fa-linkedin-square fa-2x pad"></i>
+					<p>Refer From LinkedIn</p>
+					<div class="sub-social "></div></div>	
+				<div class="sub-social-text glass-effect"><i class="fa fa-facebook-square fa-2x pad"></i>
+					<p>Refer From Facebook</p>
+					<div class="sub-social"></div></div>
+				<div class="sub-social-text glass-effect"><i class="fa fa-twitter fa-2x pad"></i>
+					<p>Refer From Twitter</p>
+					<div class="sub-social"></div></div>
+			</div>	
+		</div>
+
+		<div id="cleardiv"></div> <!-- Close Clear Div -->
+
+		
+		<div id="hr-container">
+			<div id="hr-section">
+				<hr>
+			</div>
+		</div> <!-- Close HR -->
+
+		<div id="share-feedback-container">
+			<div id="share-feedback-section">
+				<p> Hello {{user.fname}} you currently have "{{user.referrel_count}}" users referred.</p> 
+				<div class="progress progress-info progress-striped">
+  					<div class="bar" style="width: 20%"></div>
+				</div>
+			</div>
+		</div>
+
+		<div id="hr-container">
+			<div id="hr-section">
+				<hr>
+			</div>
+		</div> <!-- Close HR -->
+	</div>
 </div>
