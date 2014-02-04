@@ -8,12 +8,12 @@
 			{{else}}
 				{{#if isStarred}}
 				<div class="MB-user-star" data-starEvent="unstar"><i class="fa fa-star"></i></div>
-				{{else}}div
+				{{else}}
 				<div class="MB-user-star" data-starEvent="star"><i class="fa fa-star-o"></i></div>
 				{{/if}}
 			{{/if}}
 			{{#if user.location}}
-			<h2><i class="fa fa-thumb-tack user_profile_location"> {{user.location}}</i></h2>
+			<h2><i class="fa fa-map-marker user_profile_location"> {{user.location}}</i></h2>
 			{{/if}}
 			{{#if user.job_title}}
 		<h3 class="user-profile-status"><span class="user_profile_job_title">{{user.job_title}}</span> and <span class="user_profile_job_status">{{user.job_status}}</span></h3>
@@ -46,7 +46,11 @@
 		{{/if}}
 		<div class="user-profile-stats">
 			<div class="user-profile-connections-stats unselectable">
+				{{#if user.connections.length}}
 				<div class="top">{{user.connections.length}}</div>
+				{{else}}
+				<div class="top">0</div>
+				{{/if}}
 				<div class="bottom">connections</div>
 			</div>
 		</div>
@@ -104,77 +108,6 @@
 				</div>
 			</div>
 			<div class="user-posts">
-				{{#each posts}}
-					<div class="user-post">
-						<div class="top">
-							<div class="left pull-left">
-								<div class="user-post-pic pull-left"><img src="{{user_pic}}"></div>
-								<div class="user-post-details pull-right">
-									<div class="user-post-details-top">
-										<a href="#user/{{user_id}}">{{poster}}</a>
-									</div>
-									<div class="user-post-details-bottom">
-										{{date}}
-									</div>
-								</div>
-								<div class="clear-both"></div>
-							</div>
-							<div class="right pull-right">
-								<ul class="post-interactions">
-									{{#if likes_count}}
-										<span class="post_likes">{{likes_count}}</span>
-									{{/if}}
-									{{#if isLiked}}
-										<li class="fa fa-heart no_love"></li>
-									{{else}}
-										<li class="fa fa-heart-o show_love"></li>
-									{{/if}}
-									<li class="fa fa-flag"></li>
-									<li class="fa fa-share"></li>
-									{{#if isOwner}}
-										<li class="fa fa-times delete-post"></li>
-									{{/if}}
-								</ul>
-							</div>
-							<div class="clear-both"></div>
-						</div>
-						<p class="post">{{{post}}}</p>
-							<div class="bottom">
-								<div class="user-post-comments">
-									{{#each comments}}
-										<div class="user-post-comment">
-											<div class="comment-left pull-left">
-												<div class="comment-pic"><img src="{{user_pic}}"></div>
-											</div>
-											<div class="comment-right pull-left">
-												<div class="comment-commenter">
-													<a href="#user/{{user_id}}">{{commenter}}</a>&nbsp;&nbsp;
-													<span class="comment-comment">{{{comment}}}</span>
-													
-													</div>
-												<div class="comment-date">{{date}}
-													{{#if likes_count}}
-														<span class="comment-likes">&nbsp;&nbsp;{{likes_count}}</span>
-													{{/if}}
-													{{#if isLiked}}
-														<i class="fa fa-heart no_love"></i> <span class="comment-likes"> You love this</span>
-													{{else}}
-														<i class="fa fa-heart-o show_love"></i>
-													{{/if}}
-												</div>
-											</div>
-											<div class="clear-both"></div>
-										</div>
-									{{/each}}
-								</div>
-								<div class="comment-section">
-									<div class="comment-pic pull-left"><img src="{{commenter_pic}}"></div>
-									<textarea class="pull-right" placeholder="Type here to comment.."></textarea>
-									<div class="clear-both"></div>
-								</div>
-							</div>
-					</div>
-				{{/each}}
 			</div>
 		</div>
 		<div class="clear-both"></div>

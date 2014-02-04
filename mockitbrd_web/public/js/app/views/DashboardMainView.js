@@ -14,7 +14,7 @@ define(['jquery', 'models/Model', 'moment', 'hbs!templates/dashboardMain', 'back
             'mouseout .calendar-item': 'oneMenuItemOut'
           },
           initialize: function() {
-            this.tasks = MB.api.getUserTasksFull(MB.session.getSession('MB-session').user);
+            this.tasks = MB.api.getUserTasksFull($.parseJSON(MB.session.give('session')).user);
             this.today = this.getToday();
             this.tasks = this.checkIfInterview(this.tasks);
 

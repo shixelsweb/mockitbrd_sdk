@@ -7,11 +7,25 @@ define(['jquery', 'hbs!templates/dashboard', 'backbone', 'marionette'],
           events: {
           },
 
+          initialize: function() {
+            this.updateCSS();
+            $(window).on("resize", this.updateCSS);
+
+            
+          },
           onRender: function () {
             // get rid of that pesky wrapping-div
             // assumes 1 child element.
             this.$el = this.$el.children();
             this.setElement(this.$el);
-          }
+          },
+          updateCSS: function() {
+           
+          },
+          getCSS: function() {
+            return {
+              
+            }
+        }
       });
 });

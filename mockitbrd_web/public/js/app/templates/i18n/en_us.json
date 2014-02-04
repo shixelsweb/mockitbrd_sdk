@@ -1,4 +1,11 @@
 {
-  "desktop" : "Desktop Computer",
-  "mobile" : "Mobile Device"
+  "leftAppMenu" : {
+	  	"dashboard" : "Dashboard",
+	  	"profile" : "Profile",
+	  	"settings" : "Settings",
+	  	"calendar" : "Calendar",
+	  	"share" : "Share",
+	  	"explore" : "Explore",
+	  	"badges" : "Badges"
+  }
 }

@@ -10,10 +10,10 @@ define(['jquery', 'models/Model', 'hbs!templates/tasks', 'backbone', 'marionette
 
           initialize: function() {
 
-            this.user = MB.api.user(MB.session.getSession('MB-session').user);
+            this.user = MB.api.user($.parseJSON(MB.session.give('session')).user);
             this.tasks = MB.api.getUserTasksFull(this.user._id);
 
-            if((MB.session.get('user_type')) === "candidate") {
+            if(($.parseJSON(MB.session.give('session')).user_type) === "candidate") {
               isCandidate = true;
             } else {
               isCandidate = false;
@@ -27,8 +27,6 @@ define(['jquery', 'models/Model', 'hbs!templates/tasks', 'backbone', 'marionette
                 this.tasks[i].isInterview = false;
               }
             }
-
-            console.log(this.tasks);
             this.model = new Model({
               tasks: this.tasks,
               isCandidate: isCandidate

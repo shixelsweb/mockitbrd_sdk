@@ -1,0 +1,48 @@
+<div id="explore-view">
+	<div class="MB-submenu">
+		<ul class="inner">
+			<div class="title">Quick Filters:</div>
+			<li data-quickfilter="interviewers">Interviewers</li>
+			<li data-quickfilter="candidates">Candidates</li>
+			<li data-quickfilter="newest" class="active">Newest</li>
+			<li data-quickfilter="popular">Popular</li>
+			<li data-quickfilter="featured">Featured</li>
+			<li data-quickfilter="active">Most Active</li>
+			<li data-quickfilter="connections">My Connections</li>
+		</ul>
+	</div>
+	<div class="explore-handler">
+		<div class="explore-facet-menu">
+			<div class="explore-face-menu-header"></div>
+		</div>
+		<div class="explore-results">
+			{{#each results}}
+				{{#if isOwner}}
+				{{else}}
+					<div class="explore-result">
+						
+						<div class="exp-result">
+							{{#if isCandidate}}
+								<img class="explore-result-badge" src="../../../img/cand_badge.png">
+							{{else}}
+								<img class="explore-result-badge" src="../../../img/int_badge.png">
+							{{/if}}
+							<a href="#user/{{_id}}"><div class="exp-pic"><img src="{{pic}}"></div></a>
+						</div>
+						<div class="exp-name">{{fname}} {{lname}}</div>
+						{{#if isConnected}}
+							<a class="MB-button dingy smallest wide connected">Connected</a>
+						
+						{{else}}
+							<a class="MB-button dingy smallest wide">Connect</a>
+						{{/if}}
+					</div>
+					{{/if}}
+			{{/each}}
+
+		</div>
+			
+		</div>
+		<div class="clear-both"></div>
+	</div>
+</div>

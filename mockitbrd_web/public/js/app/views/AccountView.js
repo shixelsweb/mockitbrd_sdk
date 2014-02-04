@@ -34,7 +34,7 @@ define([
 
       model: null,
       view: null,
-      hash: '#user/52c4ca13de46e88f00770b62/account',
+      hash: null,
 
       events:{
         'click .account-menu-item': 'accountMenuHandler'
@@ -42,7 +42,7 @@ define([
       
 
       initialize: function(options) {
-        
+        this.hash = '#user/' + $.parseJSON(MB.session.give('session')).user + '/account';
       },
 
       onRender: function () {
@@ -56,8 +56,9 @@ define([
 
       accountMenuHandler: function(e) {
         var navTarget = $(e.currentTarget).data('accountnavigate');
+        var isLoggedIn = MB.session.give('session');
 
-        $(e.currentTarget).removeClass('active')
+        $(e.currentTarget).removeClass('active');
 
         if (navTarget === 'security') {
           this.view = new AccountSecurityView();
@@ -73,8 +74,13 @@ define([
           this.view = new AccountNotificationsView();
         }
 
-        window.location.hash = this.hash + '/' + navTarget;
-        $("#accountViewRegion").html(this.view.render().el);
+        if (isLoggedIn) {
+          window.location.hash = this.hash + '/' + navTarget;
+          $("#accountViewRegion").html(this.view.render().el);
+        } else {
+          MB.appRouter.navigate('login', {trigger: true});
+          $('.MB-login-error').html('You must be logged in to view that page!');
+        }
       }
 
       

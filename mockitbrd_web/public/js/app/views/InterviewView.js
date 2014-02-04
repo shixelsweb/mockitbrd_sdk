@@ -25,7 +25,7 @@ define(['jquery', 'webrtc', 'views/MBConfirm', 'hbs!templates/interview', 'backb
               this.confirm = MBConfirm;
               this.createConnection(webrtc, options.interview_id);
               this.setShareButton(true);
-              this.user = MB.api.user(MB.session.getSession('MB-session').user);
+              this.user = MB.api.user($.parseJSON(MB.session.give('session')).user);
           },
           onRender: function () {
             // get rid of that pesky wrapping-div

@@ -12,6 +12,7 @@ define([ //VIEWS
     'views/ContactView',
     'views/TeamView',
     'views/ServicesView',
+    'views/404View',
     //Learn More Views
     'views/CandidateLearnMoreView',
     'views/EducationLearnMoreView',
@@ -33,6 +34,7 @@ define([ //VIEWS
     'views/LeftAppMenuView',
     'views/TopAppMenuView',
     'views/UserAppMenuView',
+    'views/ExploreView',
     //Dashboard Views
     'views/DashboardMainView',
     //Interview Views
@@ -60,6 +62,7 @@ function (
     ContactView,
     TeamView,
     ServicesView,
+    404View,
     //Learn More Views
     EducationLearnMoreView,
     CandidateLearnMoreView,
@@ -81,6 +84,7 @@ function (
     LeftAppMenuView,
     TopAppMenuView,
     UserAppMenuView,
+    ExploreView,
     //Dashboard Views
     DashboardMainView,
     //Interview Views
@@ -140,23 +144,55 @@ function (
         removeHeader: function() { //hides the nav (for modals and error/success messages)
            
         },
-        launchApp: function() {
-            var topAppMenu = new TopAppMenuView();
-            var userAppMenu = new UserAppMenuView();
-            var dashboard = new DashboardView();
-            var leftAppMenu = new LeftAppMenuView();
-            
-            this.hideModal();
-            this.removeView();
+        launchApp: function(view, region, regionView, viewOptions, blank) {
+            var isLoggedIn = MB.session.give('session');
 
-            //Show all components of dashboard
-            MB.leftAppNavRegion.show(leftAppMenu);
-            MB.dashboardRegion.show(dashboard);
-            MB.dashboardRegion.$el.prepend(topAppMenu.render().el);
-            topAppMenu.$el.prepend(userAppMenu.render().el);
-            MB.dashboard.ensureEl();
-            MB.mainRegion.$el.html(MB.dashboard.$el);
-            MB.dashboard.$el.show();
+            if (!isLoggedIn) {
+                MB.appRouter.navigate('login', {trigger: true});
+                $('.MB-login-error').html('You must be logged in to view that page!');
+            } else {
+                var topAppMenu = new TopAppMenuView();
+                var userAppMenu = new UserAppMenuView();
+                var dashboard = new DashboardView();
+                var leftAppMenu = new LeftAppMenuView();
+                var theView = null;
+                
+                this.hideModal();
+                this.removeView();
+
+                //Show all components of dashboard
+
+                if (!blank) {//renders blank dash page
+                    MB.leftAppNavRegion.show(leftAppMenu);
+                }
+                
+                MB.dashboardRegion.show(dashboard);
+                MB.dashboardRegion.$el.prepend(topAppMenu.render().el);
+                if (!blank) {
+                    topAppMenu.$el.prepend(userAppMenu.render().el);
+                }
+                
+                
+                MB.dashboard.ensureEl();
+                MB.mainRegion.$el.html(MB.dashboard.$el);
+                MB.dashboard.$el.show();
+
+                if (viewOptions) {
+                    theView = new view(viewOptions);
+                } else {
+                    theView = new view();
+                }
+
+                $('#dashboard-view').append(theView.render().el);
+
+                if (region) {
+                    var theRegionView = new regionView();
+                    $(region).html(theRegionView.render().el);
+                }
+
+            }
+
+            
         },
         showModal: function(View, color) { //shows a modal and passes in the view to show in modal and the color or the modal bg
             MB.body.ensureEl();
@@ -182,155 +218,91 @@ function (
             MB.body.$el.removeClass('modal-white-show');
             MB.body.$el.removeClass('modal-bg-show');
         },
+        prep: function(value, view) {
+            this.hideModal();
+            this.showPublicHeader(value);
+            this.showFooter();
+            MB.mainRegion.show(new view());
+        },
+        prepModal: function(view, option) {
+            this.hideModal();
+            this.showModal(view, option);
+        },
         //gets mapped to in AppRouters's appRoutes
         index: function () {
-            this.hideModal();
-            this.showPublicHeader(true);
-            this.showFooter();
-            MB.mainRegion.show(new WelcomeView());
+            this.prep(true, WelcomeView);
         },
         earl: function () {
-            this.hideModal();
-            this.showModal(EarlView, 'white');
+            this.prepModal(EarlView, 'white');
         },
         fara: function () {
-            this.hideModal();
-            this.showModal(FaraView, 'white');
+            this.prepModal(FaraView, 'white');
         },
         clee: function () {
-            this.hideModal();
-            this.showModal(CleeView, 'white');
+            this.prepModal(CleeView, 'white');
         },
         login: function () {
-            this.hideModal();
-            this.showModal(LoginView, 'office_bg.jpg');
+            this.prepModal(LoginView, 'office_bg.jpg');
         },
         register: function () {
-            this.hideModal();
-            this.showModal(RegisterView, 'office_bg.jpg');
+            this.prepModal(RegisterView, 'office_bg.jpg');
         },
         services: function() {
-            this.hideModal();
-            this.showPublicHeader(false);
-            this.showFooter();
-            MB.mainRegion.show(new ServicesView());
+            this.prep(false, ServicesView);
         },
         contact: function () {
-            this.hideModal();
-            this.showModal(ContactView, 'mail_bg_grid.jpg');
+            this.prepModal(ContactView, 'mail_bg_grid.jpg');
         },
         team: function () {
-            this.hideModal();
-            this.showPublicHeader(false);
-            this.showFooter();
-            MB.mainRegion.show(new TeamView());
+            this.prep(false, TeamView);
         },
         educationLearnMore: function() {
-            this.hideModal();
-            this.showPublicHeader(false);
-            this.showFooter();
-            MB.mainRegion.show(new EducationLearnMoreView());
+            this.prep(false, EducationLearnMoreView);
         },
         candidateLearnMore: function () {
-            this.hideModal();
-            this.showPublicHeader(false);
-            this.showFooter();
+            this.prep(false);
         },
         professionalLearnMore: function () {
-            this.hideModal();
-            this.showPublicHeader(false);
-            this.showFooter();
-            MB.mainRegion.show(new ProfessionalLearnMoreView());
+            this.prep(false, ProfessionalLearnMoreView);
         },
         professionalPricing: function () {
-
+            this.prep(false);
         },
         candidatePricing: function () {
-
+            this.prep(false);
         },
         enterprisePricing: function () {
-
+            this.prep(false);
         },
         educationPricing: function () {
-            this.hideModal();
-            this.showPublicHeader(false);
-            this.showFooter();
-            MB.mainRegion.show(new EducationPricingView());
-
+            this.prep(false, EducationPricingView);
         },
         account: function () {
-            var accountView = new AccountView();
-            var currentAccountView = new AccountGeneralView();
-
-            this.launchApp();
-            
-            $('#dashboard-view').append(accountView.render().el);
-            $("#accountViewRegion").html(currentAccountView.render().el);
+            this.launchApp(AccountView, "#accountViewRegion", AccountGeneralView);
         },
         accountSecurity: function () {
-            var accountView = new AccountView();
-            var currentAccountView = new AccountSecurityView();
-
-            this.launchApp();
-            
-            $('#dashboard-view').append(accountView.render().el);
-            $("#accountViewRegion").html(currentAccountView.render().el);
+            this.launchApp(AccountView, "#accountViewRegion", AccountSecurityView);
         },
         accountSocial: function () {
-            var accountView = new AccountView();
-            var currentAccountView = new AccountMediaView();
-
-            this.launchApp();
-            
-            $('#dashboard-view').append(accountView.render().el);
-            $("#accountViewRegion").html(currentAccountView.render().el);
+            this.launchApp(AccountView, "#accountViewRegion", AccountMediaView);
         },
         accountBilling: function () {
-            var accountView = new AccountView();
-            var currentAccountView = new AccountPaymentView();
-
-            this.launchApp();
-            
-            $('#dashboard-view').append(accountView.render().el);
-            $("#accountViewRegion").html(currentAccountView.render().el);
+            this.launchApp(AccountView, "#accountViewRegion", AccountPaymentView);
         },
         accountSupport: function () {
-            var accountView = new AccountView();
-            var currentAccountView = new AccountSupportView();
-
-            this.launchApp();
-            
-            $('#dashboard-view').append(accountView.render().el);
-            $("#accountViewRegion").html(currentAccountView.render().el);
+            this.launchApp(AccountView, "#accountViewRegion", AccountSupportView);
         },
         accountNotifications: function () {
-            var accountView = new AccountView();
-            var currentAccountView = new AccountNotificationsView();
-
-            this.launchApp();
-            
-            $('#dashboard-view').append(accountView.render().el);
-            $("#accountViewRegion").html(currentAccountView.render().el);
+            this.launchApp(AccountView, "#accountViewRegion", AccountNotificationsView);
         },
         dashboard: function () {
-            var dashboardMainView = new DashboardMainView();
-
-            this.launchApp();
-            $('#dashboard-view').append(dashboardMainView.render().el);
+            this.launchApp(DashboardMainView);
         },
         interview: function(id) {
-            var interviewView = new InterviewView({'interview_id': id});
-
-            this.launchApp();
-
-            $('#dashboard-view').append(interviewView.render().el);
+            this.launchApp(InterviewView, null, null, {'interview_id': id});
         },
         tasks: function() {
-            var taskView = new TaskView();
-
-            this.launchApp();
-
-            $('#dashboard-view').append(taskView.render().el);
+            this.launchApp(TaskView);
         },
         share: function() {
             var shareView = new ShareView();
@@ -341,11 +313,13 @@ function (
         },
         user: function(id) {
             var getUser = MB.api.user(id);
-            var userView = new UserView({'user': getUser});
-
-            this.launchApp();
-
-            $('#dashboard-view').append(userView.render().el);
+            this.launchApp(UserView, null, null, {'user': getUser});
+        },
+        explore: function() {
+            this.launchApp(ExploreView);
+        },
+        notFound: function() {
+             this.launchApp(DashboardMainView, null, null, null, true);
         }
     });
 });

@@ -4,6 +4,8 @@ define(['jquery', 'hbs!templates/register', 'backbone', 'marionette'],
         return Backbone.Marionette.ItemView.extend({
             template:template,
 
+            password_html: '<h2>Password Help</h2><p class="step1">1. Must be at least 8 character long</p><p class="step2">2. Must contain at least 1 uppercase letter</p><p class="step3">3. Must contain at least 1 lowercase letter</p><p class="step4">4. Must containt at least 1 number (0-9)</p>',
+
             defaults: {
                 password: {ready: null, value: null},
                 fname: {ready: null, value: null},
@@ -11,7 +13,8 @@ define(['jquery', 'hbs!templates/register', 'backbone', 'marionette'],
                 rpassword: {ready: null, value: null},
                 email: {ready: null, value: null},
                 user_type: {ready: false, value: null},
-                toc: {ready: null, value: null}
+                toc: {ready: null, value: null},
+                gender: {ready: false, value: null}
             },
 
             isReferred: null,
@@ -19,9 +22,10 @@ define(['jquery', 'hbs!templates/register', 'backbone', 'marionette'],
             events: {
 				'click .MB-modal-close': 'hideModal',
                 'click .user-type': 'userTypeHandler',
-                'propertychange input.MB-reg-input': 'on_form_change',
-                'input input.MB-reg-input': 'on_form_change',
-                'paste input.MB-reg-input': 'on_form_change',
+                'click .gender-type': 'genderTypeHandler',
+                'propertychange .MB-reg-input': 'on_form_change',
+                'input  .MB-reg-input': 'on_form_change',
+                'paste  .MB-reg-input': 'on_form_change',
                 'focus .reg-password': 'show_tooltip',
                 'click .reg-password': 'show_tooltip',
                 'hover .reg-password': 'show_tooltip',
@@ -48,13 +52,12 @@ define(['jquery', 'hbs!templates/register', 'backbone', 'marionette'],
               this.setElement(this.$el);
             },
             show_tooltip: function() {
-                var password_html = '<h2>Password Help</h2><p class="step1">1. Must be at least 8 character long</p><p class="step2">2. Must contain at least 1 uppercase letter</p><p class="step3">3. Must contain at least 1 lowercase letter</p><p class="step4">4. Must containt at least 1 number (0-9)</p>';
-                $('.reg-password').tooltip({'trigger':'focus click hover', 'title': password_html, 'html': true, delay: {hide: 100}});
+                $('.reg-password').tooltip({'trigger':'focus click hover', 'title': this.password_html, 'html': true, delay: {hide: 100}});
             },
             explain_roles: function(e) {
                 e.preventDefault();
                 var roles_html = "<h2>Candidate</h2><p>Get interviewed by industy professionals and land your next job!</p><h2>Interviewer</h2><p>An interviewer's role is to interview candidates, and earn cash in the process</p>";
-                $('.reg-roles').popover({'trigger':'click', 'placement': 'top', 'title': 'User Types', 'content': roles_html, 'html': true, delay: {hide: 100}});
+                $('.reg-roles').popover({'trigger':'click', 'placement': 'bottom', 'title': 'User Types', 'content': roles_html, 'html': true, delay: {hide: 100}});
             },
             hideModal: function(e) {
                 this.closeModal();
@@ -69,26 +72,35 @@ define(['jquery', 'hbs!templates/register', 'backbone', 'marionette'],
             },
             registerUser: function(e) {
                 e.preventDefault();
-                $(e.currentTarget).button('loading');
-
+                $(e.currentTarget).prop('disabled', true);
+                console.log(this.defaults);
                 if (this.defaults.password.ready === true &&
                     this.defaults.fname.ready === true &&
                     this.defaults.lname.ready === true &&
                     this.defaults.rpassword.ready === true &&
                     this.defaults.email.ready === true &&
                     this.defaults.user_type.ready === true &&
-                    this.defaults.toc.ready === true) {
+                    this.defaults.toc.ready === true &&
+                    this.defaults.gender.ready === true) {
 
                     var client_ip = this.getClientIP();
+                    var timestamp = new Date().getTime();
                     var reg_send = {
+                        'signup_date': timestamp,
                         'fname':  this.defaults.fname.value,
                         'lname':  this.defaults.lname.value,
+                        'gender': this.defaults.gender.value,
                         'email':  this.defaults.email.value,
                         'password':  this.defaults.password.value,
                         'client_ip_address':  client_ip,
                         'user_type':  this.defaults.user_type.value,
                         'agree_toc':  this.defaults.toc.value,
-                        'status': 'pending'
+                        'active': 0,
+                        'user_pic': 0,
+                        'referrel_count': 0,
+                        'isFirst': 0,
+                        'login_count': 0,
+                        'liked_by': 0
                     };
 
                     MB.api.register(reg_send, this.isReferred);
@@ -99,12 +111,13 @@ define(['jquery', 'hbs!templates/register', 'backbone', 'marionette'],
                     this.defaults.rpassword.ready === true &&
                     this.defaults.email.ready === true &&
                     this.defaults.user_type.ready === true &&
+                    this.defaults.gender.ready === true &&
                     this.defaults.toc.ready === false) {
-                    $('.fullReg').button('reset');
+                    $('.fullReg').prop('disabled', false);
                     $('.MB-reg-error').html('Please accept Terms of Conditions');
                     $('.MB-reg-alert').css('display', 'table');
                 } else {
-                    $('.fullReg').button('reset');
+                    $('.fullReg').prop('disabled', false);
                     $('.MB-reg-error').html('Please fill form completely');
                     $('.MB-reg-alert').css('display', 'table');
                 }
@@ -147,6 +160,13 @@ define(['jquery', 'hbs!templates/register', 'backbone', 'marionette'],
                     $(successIndicator).css('display', 'inline');
                     $(failIndicator).css('display', 'none');
                     this.defaults.lname.ready = false;
+                }
+
+                 if ((targetClass === 'reg-gender') && (target.value !== 'default')) {
+                    this.defaults.gender.ready = true;
+                    this.defaults.gender.value = target.value;
+                } else if ((targetClass === 'reg-gender') && (target.value === 'default')) {
+                    this.defaults.gender.ready = false;
                 }
 
                 if ((targetClass === 'reg-email') && target.value) {
@@ -245,6 +265,14 @@ define(['jquery', 'hbs!templates/register', 'backbone', 'marionette'],
                 this.defaults.user_type.ready = true;
                 this.defaults.user_type.value = $(e.currentTarget).data('usertype');
                 $('div.user-type').removeClass('selected');
+                $(e.currentTarget).addClass('selected');
+
+            },
+            genderTypeHandler: function(e) {
+                this.defaults.gender.ready = true;
+                this.defaults.gender.value = $(e.currentTarget).data('gendertype');
+                console.log(this.defaults.gender);
+                $('div.gender-type').removeClass('selected');
                 $(e.currentTarget).addClass('selected');
 
             },

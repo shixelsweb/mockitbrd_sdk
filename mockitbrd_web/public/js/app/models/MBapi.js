@@ -71,8 +71,8 @@ define(["jquery", "underscore", "backbone"],
                 return send;
             },
             logout: function() {
-                MB.session.clearSession('MB-session');
-                MB.appRouter.navigate('', {trigger: true});
+                MB.session.clear('session');
+                MB.appRouter.navigate('#', {trigger: true});
             },
             getUserTasks: function(user_id) {
                 var send = null;
@@ -139,6 +139,57 @@ define(["jquery", "underscore", "backbone"],
                     dataType: 'json',
                     success: function (response) {
                         send = response.data.user;
+                    },
+                    error: function(response) {
+                        alert("error! ", response.error); //TODO-(Fara): add to Error Modal
+                    },
+                    async: false
+                });
+
+                return send;
+            },
+            allUsers: function() {
+                var send = null;
+                $.ajax({
+                    type: "GET",
+                    url: this.get('url') + "v1/users/",
+                    dataType: 'json',
+                    success: function (response) {
+                        send = response.data.users;
+                    },
+                    error: function(response) {
+                        alert("error! ", response.error); //TODO-(Fara): add to Error Modal
+                    },
+                    async: false
+                });
+
+                return send;
+            },
+            allCanidates: function() {
+                var send = null;
+                $.ajax({
+                    type: "GET",
+                    url: this.get('url') + "v1/candidates/",
+                    dataType: 'json',
+                    success: function (response) {
+                        send = response.data.candidates;
+                    },
+                    error: function(response) {
+                        alert("error! ", response.error); //TODO-(Fara): add to Error Modal
+                    },
+                    async: false
+                });
+
+                return send;
+            },
+            allInterviewers: function() {
+                var send = null;
+                $.ajax({
+                    type: "GET",
+                    url: this.get('url') + "v1/interviewers/",
+                    dataType: 'json',
+                    success: function (response) {
+                        send = response.data.interviewers;
                     },
                     error: function(response) {
                         alert("error! ", response.error); //TODO-(Fara): add to Error Modal
@@ -237,7 +288,7 @@ define(["jquery", "underscore", "backbone"],
             },
             userpic: function(id) {
                 return MB.userPic_path + id + '/user_pic.jpg'
-          },
+          }
         });
 
         // Returns the Model class

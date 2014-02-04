@@ -1,5 +1,10 @@
-@import "plugins/font-awesome/font-awesome.scss";
+//HELPERS
 @import "variables.scss";
+
+//FONT AWESOME 
+@import "plugins/font-awesome/font-awesome.scss";
+
+//TEMPLATES
 @import "register.scss";
 @import "login.scss";
 @import "welcome.scss";
@@ -11,10 +16,8 @@
 @import "education.scss";
 @import "pricing.scss";
 @import "views.scss";
-@import "plugins/animations.scss";
 @import "services.scss";
 @import "contact.scss";
-@import "vendor/toggle.scss";
 @import "account.scss";
 @import "leftAppMenu.scss";
 @import "topAppMenu.scss";
@@ -25,6 +28,16 @@
 @import "responsive.scss";
 @import "tasks.scss";
 @import "user.scss";
-@import "plugins/edit.scss";
-@import "plugins/bootstrap.scss";
+@import "explore.scss";
+@import "post.scss";
+@import "404.scss";
 @import "share.scss";
+
+
+//PLUGINS
+@import "plugins/bootstrap.scss";
+@import "plugins/edit.scss";
+@import "plugins/animations.scss";
+
+//VENDOR
+@import "vendor/toggle.scss";
