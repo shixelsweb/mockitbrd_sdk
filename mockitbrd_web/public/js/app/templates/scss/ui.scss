@@ -9,6 +9,8 @@
 	font-size: 0.9em !important;
 	border-radius: 0;
 	border: 0;
+	cursor: pointer;
+
 	&:disabled {
 		&:hover {
 			cursor: not-allowed;
@@ -28,7 +30,7 @@
 		width: 70px;
 		margin-left: 30px;
 	}
-
+	
 	&.small {
 		font-size: 15px;
 		padding: 10px 20px;
@@ -37,6 +39,12 @@
 	&.smallest {
 		font-size: 10px !important;
 		padding: 5px 10px;
+
+		&.wide {
+			padding: 10px 80px;
+			position: relative;
+			top: 15px;
+		}
 	}
 
 	&.login {
@@ -84,6 +92,22 @@
 			text-decoration: none;
 		}
 	}
+
+	&.ghost-noire {
+		background: transparent;
+		border: 2px solid rgba(0, 0, 0, 0.6);
+		color: $primary_black !important;
+		text-shadow: none !important;
+		height: 15px;
+		line-height: 15px;
+		&:hover {
+			border: 2px solid $primary_black;
+			color: $primary_white;
+			text-decoration: none;
+		}
+	}
+
+
 	&.night {
 		background: transparent;
 		border: 2px solid rgba(0, 0, 0, 0.4);
@@ -120,6 +144,30 @@
 		&:hover {
 			background-color: rgba(0, 0, 0, 0.4) !important;
 			text-decoration: none;
+		}
+	}
+	&.dingy {
+		background: $post_color;
+		border: none;
+		text-shadow: none !important;
+		color: $primary_white !important;
+		border: 3px solid transparent;
+		&:hover {
+			background-color: $user_type_active;
+			text-decoration: none;
+		}
+
+		&.connected {
+			background-color: $user_type_active;
+			cursor: not-allowed;
+		}
+
+		&.mine {
+			padding: 10px 65px;
+			background: transparent;
+			color: #000 !important;
+			font-weight: bold;
+			cursor: default;
 		}
 	}
 	&.secondary {
@@ -595,4 +643,53 @@
 	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
 	filter: alpha(opacity=100);
 	opacity: 1;
+}
+
+.MB-submenu {
+	width: 100%;
+	height: 50px;
+	position: fixed;
+	background: $app_menu_grey;
+	border-bottom: 1px solid $d_grey;
+	z-index: 101;
+	top: 61px;
+
+	.inner {
+		color: $app_menu_font;
+		font-family: $ethon_roman;
+		position: fixed;
+		width: 100%;
+
+		.title {
+			color: $primary_yellow;
+			font-family: $ethon_roman;
+			margin-right: 50px;
+			cursor: default;
+			display: inline-block;
+
+		}
+
+		 li {
+			display: inline-block;
+			font-size: 1.2em;
+			margin-right: 75px;
+			line-height: 35px;
+			cursor: pointer;
+			padding-top: 5px;
+
+			.account-menu-item-icon {
+				margin-right: 15px;
+			}
+
+			&:hover {
+				color: $app_menu_hover_font;
+			}
+
+			&.active {
+				color: $app_menu_hover_font;
+				border-bottom: 2px solid $primary_yellow;
+			}
+
+		}
+	}
 }

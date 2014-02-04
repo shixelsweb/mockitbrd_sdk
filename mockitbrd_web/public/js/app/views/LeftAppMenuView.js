@@ -23,7 +23,7 @@ define([
           },
           
           initialize: function(options) {
-            this.user = MB.api.user(MB.session.getSession('MB-session').user);
+            this.user = MB.api.user($.parseJSON(MB.session.give('session')).user);
 
             this.model = new Model({user: this.user});
           },

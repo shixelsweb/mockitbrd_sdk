@@ -13,8 +13,15 @@ define(['jquery','views/MBConfirm', 'models/Model', 'hbs!templates/userAppMenu',
           },
 
           initialize: function() {
-            this.user = MB.api.user(MB.session.getSession('MB-session').user);
-            this.user_pic = MB.api.userpic(this.user._id);
+            console.log(this);
+            this.user = MB.api.user($.parseJSON(MB.session.give('session')).user);
+            
+            if (this.user.user_pic === '0') {
+              this.user_pic = MB.api.userpic("default");
+            } else if (this.user.user_pic === '1') {
+              this.user_pic = MB.api.userpic(this.user._id);
+            }
+            
 
             this.model = new Model({user: this.user, user_pic: this.user_pic});
           },

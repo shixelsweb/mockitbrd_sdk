@@ -8,7 +8,7 @@ define(['jquery', 'models/Model', 'hbs!templates/accountGeneral', 'backbone', 'm
           model: null,
 
           initialize: function() {
-            this.user = MB.api.user(MB.session.getSession('MB-session').user) || null;
+            this.user = MB.api.user($.parseJSON(MB.session.give('session')).user) || null;
 
             this.user.profileURL = window.location.origin + '/' + 'user/' + this.user._id;
             this.model = new Model({

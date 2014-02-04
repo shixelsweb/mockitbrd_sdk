@@ -1,5 +1,5 @@
-define(['jquery', 'models/Model', 'hbs!templates/user', 'backbone', 'marionette' ,'edit'],
-    function ($, Model, template, Backbone, editable) {
+define(['jquery', 'models/Model', 'views/PostView', 'hbs!templates/user', 'backbone', 'marionette' ,'edit'],
+    function ($, Model, PostView, template, Backbone, editable) {
       //ItemView provides some default rendering logic
       return Backbone.Marionette.ItemView.extend({
           template:template,
@@ -7,7 +7,9 @@ define(['jquery', 'models/Model', 'hbs!templates/user', 'backbone', 'marionette'
           events: {
             'click .MB-user-star': 'handleStarring',
             'click .MB-edit-profile': 'profileEditMode',
-            'click .user-profile-edit-section': 'userSectionEditMode'
+            'click .user-profile-edit-section': 'userSectionEditMode',
+            'mouseover .MB-user-star i': "onHoverStar",
+            'mouseout .MB-user-star i': "unhoverStar"
           },
 
           model: null,
@@ -25,9 +27,18 @@ define(['jquery', 'models/Model', 'hbs!templates/user', 'backbone', 'marionette'
           initialize:function(options) {
 
             this.user = options.user;
-            this.currentUser = MB.api.user(MB.session.getSession('MB-session').user);
-            this.isStarred = this.checkIfStarred(this.currentUser.interactions.starred, this.user._id);
-            this.user_pic = MB.api.userpic(this.user._id);
+            this.currentUser = MB.api.user($.parseJSON(MB.session.give('session')).user);
+            if (this.currentUser.interactions) {
+              this.isStarred = this.checkIfStarred(this.currentUser.interactions.starred, this.user._id);
+            } else {
+              this.isStarred = false;
+            }
+            
+            if (this.user.user_pic === '0') {
+              this.user_pic = MB.api.userpic("default");
+            } else if (this.user.user_pic === '1') {
+              this.user_pic = MB.api.userpic(this.user._id);
+            }
             this.isConnectedActive = this.checkIfConnected(this.currentUser.connections, this.user._id);
 
             if(this.user._id === this.currentUser._id) {
@@ -36,7 +47,6 @@ define(['jquery', 'models/Model', 'hbs!templates/user', 'backbone', 'marionette'
               this.isOwner = false;
               
             }
-            this.userPosts = [];
             this.skillPack = [];
 
             if (this.user.skills) {
@@ -48,62 +58,7 @@ define(['jquery', 'models/Model', 'hbs!templates/user', 'backbone', 'marionette'
               }
             }
 
-            if (this.user.posts && this.userPosts.length === 0) {
-              for (var i = 0; i < this.user.posts.length; i++) {
-                var post = MB.api.post(this.user.posts[i].post_id);
-                var post_html = this.replaceURLWithHTMLLinks(post.post);
-                post.commenter_pic = MB.api.userpic(this.currentUser._id);
-                
-                if (post.likes) {
-                  for (var k = 0; k < post.likes.length; k++) {
-                      var likes = post.likes[k];
-                      if (this.currentUser._id === likes.user_id) {
-                        post.isLiked = true;
-                        break
-                      } else {
-                        post.isLiked = false;
-                      }
-                    }
-                  post.likes_count = post.likes.length;
-                }
-
-                for (var j = 0; j < post.comments.length; j++) {
-                  var comment = post.comments[j];
-                  var commenter = MB.api.user(comment.user_id);
-                  var comment_html = this.replaceURLWithHTMLLinks(comment.comment);
-
-                  if (comment.likes) {
-                    for (var k = 0; k < comment.likes.length; k++) {
-                      var likes = comment.likes[k];
-                      if (this.currentUser._id === likes.user_id) {
-                        comment.isLiked = true;
-                        break
-                      } else {
-                        comment.isLiked = false;
-                      }
-                    }
-                    comment.likes_count = comment.likes.length;
-                  }
-
-                  comment.comment = comment_html;
-                  comment.commenter = commenter.fname + " " + commenter.lname;
-                  comment.user_pic = MB.api.userpic(comment.user_id);
-                }
-
-                if (!this.isOwner) { //only make api call for user info if post is not by current user
-                  var poster = MB.api.user(post.user_id);
-                  post.poster = poster.fname + " " + poster.lname;
-                  post.isOwner = false;
-                } else {
-                  post.poster = this.user.fname + " " + this.user.lname;
-                  post.isOwner = true;
-                }
-                post.post = post_html;
-                post.isConnectedActive = this.isConnectedActive;
-                post.user_pic = MB.api.userpic(post.user_id);
-                this.userPosts.push(post);
-              }
-            } 
+            
 
             this.model = new Model ({
               user: this.user, 
@@ -113,7 +68,6 @@ define(['jquery', 'models/Model', 'hbs!templates/user', 'backbone', 'marionette'
               isConnectedPending: this.isConnectedPending,
               isConnectedActive: this.isConnectedActive,
               notConnected: this.notConnected,
-              posts: this.userPosts,
               skills: this.skillPack
             });
           },
@@ -123,6 +77,10 @@ define(['jquery', 'models/Model', 'hbs!templates/user', 'backbone', 'marionette'
             this.$el = this.$el.children();
             this.setElement(this.$el);
 
+            //replace only the contents of the #list element
+            
+
+
             $('.left-menu-item').removeClass('active');
 
             if (this.isOwner) {
@@ -130,6 +88,17 @@ define(['jquery', 'models/Model', 'hbs!templates/user', 'backbone', 'marionette'
             } else {
                $('.MB-connections').addClass('active');
             }
+            if (this.user.posts) {
+              for (var i = 0; i < this.user.posts.length; i++) {
+                var post = new PostView({'post': this.user.posts[i].post_id});
+                this.renderPost(post);               
+              }
+            } 
+          },
+          renderPost: function(post) {
+             var selector = '.user-posts';
+             var html = this.template(this.model.toJSON());
+             this.$el.find(selector).prepend(post.render().el);
           },
           checkIfConnected: function(connections, profile_viewing) {
             var connectionCheck = false;
@@ -228,9 +197,11 @@ define(['jquery', 'models/Model', 'hbs!templates/user', 'backbone', 'marionette'
               });
             }
           },
-          replaceURLWithHTMLLinks: function(text) {
-              var exp = /(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig;
-              return text.replace(exp,"<a href='$1' target='_blank'>$1</a>"); 
+          onHoverStar: function(e) {
+            $(e.currentTarget).removeClass('fa-star-o').addClass('fa-star');
+          },
+          unhoverStar: function(e) {
+            $(e.currentTarget).removeClass('fa-star').addClass('fa-star-o');
           }
-    });
+     });
 });

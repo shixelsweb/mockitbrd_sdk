@@ -1,10 +1,11 @@
-define(["jquery", "backbone", "json", "session"],
+define(["jquery", "backbone"],
     function($, Backbone) {
         // Creates a new Backbone Model class object
         var MBSession = Backbone.Model.extend({
 
             initialize: function() {
                 var MB = MB;
+                
                 _.bindAll(this);
             },
 
@@ -22,29 +23,26 @@ define(["jquery", "backbone", "json", "session"],
                 return counter.toString(36);
             },
 
+            give: function(name) {
+                return localStorage.getItem(name);
+            },
+
+            begin: function(name, value) {
+                localStorage.setItem(name, value);
+            },
+
             start: function(user) { //add stayLoggedIn
                 var auth_token = this.generateToken();
-                if (!this.get('MB-session')) { //only create a session if one doesn't already exsist
+                var sessionUser = JSON.stringify({'user': user.user_id, 'token': auth_token, 'user_type': user.user_type});
+                if (!this.give('session')) { //only create a session if one doesn't already exsist
 
-                    this.setSession('MB-session', {'user': user.user_id, 'token': auth_token, 'user_type': user.user_type});
+                    localStorage.setItem('session', sessionUser);
                     MB.appRouter.navigate('dashboard', {trigger: true});
                 }
             },
 
-            dumpSession: function() {
-                return Session.dump();
-            },
-
-            setSession: function (name, value) {
-                Session.set(name, value);
-            },
-
-            getSession: function(name) {
-                return Session.get(name);
-            },
-
-            clearSession: function(name) {
-                Session.clear(name);
+            clear: function(name) {
+                localStorage.removeItem('session');
             }
 
 

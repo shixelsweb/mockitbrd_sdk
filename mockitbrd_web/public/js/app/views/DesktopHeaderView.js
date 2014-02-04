@@ -11,16 +11,16 @@ define(['jquery', 'hbs!templates/desktopHeader', 'backbone', 'marionette'],
         },
 
 		startHover: function() {
-			$('.MB-nav-logo').addClass('pulse animated');
+			$('.MB-nav-logo').addClass('pulse');
 		},
 
 		endHover: function() {
-			$('.MB-nav-logo').removeClass('pulse animated');
+			$('.MB-nav-logo').removeClass('pulse');
 		},
 		handleLogin: function(e) {
 			e.preventDefault();
 
-			var isLoggedIn = MB.session.getSession('MB-session');
+			var isLoggedIn = MB.session.give('session');
 
 			if (isLoggedIn) {
 				$(e.currentTarget).attr('href', '#dashboard');
