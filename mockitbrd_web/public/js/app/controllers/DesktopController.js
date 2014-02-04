@@ -12,7 +12,7 @@ define([ //VIEWS
     'views/ContactView',
     'views/TeamView',
     'views/ServicesView',
-    'views/404View',
+    'views/NotfoundView',
     //Learn More Views
     'views/CandidateLearnMoreView',
     'views/EducationLearnMoreView',
@@ -62,7 +62,7 @@ function (
     ContactView,
     TeamView,
     ServicesView,
-    404View,
+    NotfoundView,
     //Learn More Views
     EducationLearnMoreView,
     CandidateLearnMoreView,
