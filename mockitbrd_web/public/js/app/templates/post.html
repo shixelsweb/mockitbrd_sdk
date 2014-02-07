@@ -1,7 +1,7 @@
-<div class="user-post">
+<div class="user-post" id="post_{{post._id}}">
 	<div class="top">
 		<div class="left pull-left">
-			<div class="user-post-pic pull-left"><a href="#user/{{post.user_id}}"><img src="{{post.user_pic}}"></a></div>
+			<div class="user-post-pic pull-left"><a href="#user/{{post.user_id}}"><img src="/getUserpic/{{post.user_id}}"></a></div>
 			<div class="user-post-details pull-right">
 				<div class="user-post-details-top">
 					<a href="#user/{{post.user_id}}">{{post.poster}}</a>
@@ -14,17 +14,17 @@
 		</div>
 		<div class="right pull-right">
 			<ul class="post-interactions">
-				{{#if likes_count}}
+				{{#if post.likes_count}}
 					<span class="post_likes">{{post.likes_count}}</span>
 				{{/if}}
-				{{#if isLiked}}
+				{{#if post.isLiked}}
 					<li class="fa fa-heart no_love"></li>
 				{{else}}
 					<li class="fa fa-heart-o show_love"></li>
 				{{/if}}
 				<li class="fa fa-flag"></li>
 				<li class="fa fa-share"></li>
-				{{#if isOwner}}
+				{{#if post.isOwner}}
 					<li class="fa fa-times delete-post"></li>
 				{{/if}}
 			</ul>
@@ -37,7 +37,7 @@
 				{{#each post.comments}}
 					<div class="user-post-comment">
 						<div class="comment-left pull-left">
-							<div class="comment-pic"><a href="#user/{{user_id}}"><img src="{{user_pic}}"></a></div>
+							<div class="comment-pic"><a href="#user/{{user_id}}"><img src="/getUserpic/{{user_id}}"></a></div>
 						</div>
 						<div class="comment-right pull-left">
 							<div class="comment-commenter">
@@ -61,7 +61,7 @@
 				{{/each}}
 			</div>
 			<div class="comment-section">
-				<div class="comment-pic pull-left"><a href="#user/{{post.user_id}}"><img src="{{post.commenter_pic}}"></a></div>
+				<div class="comment-pic pull-left"><a href="#user/{{post.user_id}}"><img src="/getUserpic/{{post.user_id}}"></a></div>
 				<textarea class="pull-right" placeholder="Type here to comment.."></textarea>
 				<div class="clear-both"></div>
 			</div>

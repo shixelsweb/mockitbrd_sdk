@@ -18,7 +18,8 @@ define(['jquery', 'models/Model', 'hbs!templates/explore', 'backbone', 'marionet
           events: {
             'click .MB-submenu li': 'handleExlporeMenuClick',
             'mouseover .exp-result': 'handleExploreItemHover',
-            'mouseout .exp-result': 'handleExploreItemUnHover'
+            'mouseout .exp-result': 'handleExploreItemUnHover',
+            'click .MB-user-connect': 'userConnect'
           },
 
           initialize: function() {
@@ -27,7 +28,7 @@ define(['jquery', 'models/Model', 'hbs!templates/explore', 'backbone', 'marionet
             
 
             this.fixStore(this.userStore);
-            this.newestStore = this.sortByRecents(this.userStore, 'date');
+            this.newestStore = this.sortResults(this.userStore, 'date');
 
             this.model = new Model({
               results: this.newestStore
@@ -59,12 +60,6 @@ define(['jquery', 'models/Model', 'hbs!templates/explore', 'backbone', 'marionet
 
             console.log(blocked_users);
             for (var i = 0; i < users.length; i++) {
-              if (users[i].user_pic === '0') {
-                users[i].pic = MB.api.userpic('default');
-              } else {
-                users[i].pic = MB.api.userpic(users[i]._id);
-              }
-
               if (users[i].user_type === 'candidate') {
                 users[i].isCandidate = true;
               } else {
@@ -81,6 +76,14 @@ define(['jquery', 'models/Model', 'hbs!templates/explore', 'backbone', 'marionet
                 for (var j = 0; j < connections.length; j++) {
                   if(connections[j].user_id === users[i]._id) {
                       users[i].isConnected = true;
+                      if (connections[j].status === 'pending') {
+                         users[i].status = 'Pending';
+                      } else if (connections[j].status === 'active') {
+                        users[i].status = 'Connected';
+                      }
+                     
+                  } else {
+                    //users[i].isConnected = false;
                   }
                 }
               }
@@ -95,7 +98,7 @@ define(['jquery', 'models/Model', 'hbs!templates/explore', 'backbone', 'marionet
 
             }
           },
-          sortByRecents: function(results, sortBy) {
+          sortResults: function(results, sortBy) {
 
             if(sortBy === 'date') {
                var sorted = results.sort(function(a,b) {
@@ -130,7 +133,7 @@ define(['jquery', 'models/Model', 'hbs!templates/explore', 'backbone', 'marionet
                 if (!this.candStore) {
                    this.candStore = MB.api.allCanidates();
                    this.fixStore(this.candStore);
-                   this.candStore = this.sortByRecents(this.candStore, 'date');
+                   this.candStore = this.sortResults(this.candStore, 'date');
                 }
                 this.model.attributes.results = this.candStore;
                 this.renderAgain();
@@ -138,7 +141,7 @@ define(['jquery', 'models/Model', 'hbs!templates/explore', 'backbone', 'marionet
                 if (!this.intStore) {
                    this.intStore = MB.api.allInterviewers();
                    this.fixStore(this.intStore);
-                   this.intStore = this.sortByRecents(this.intStore, 'date');
+                   this.intStore = this.sortResults(this.intStore, 'date');
                 }
                 this.model.attributes.results = this.intStore;
                 this.renderAgain();
@@ -146,19 +149,19 @@ define(['jquery', 'models/Model', 'hbs!templates/explore', 'backbone', 'marionet
                 if (!this.newestStore) {
                    this.userStore = MB.api.allUsers();
                    this.fixStore(this.userStore);
-                   this.newestStore = this.sortByRecents(this.userStore, 'date');
+                   this.newestStore = this.sortResults(this.userStore, 'date');
                 }
-                this.model.attributes.results = this.newestStore;
+                this.model.attributes.results = this.sortResults(this.newestStore, 'date');
                 this.renderAgain();
               } else if (sortBy === 'active') {
                 if (!this.activeStore && !this.newestStore) {
                    this.activeStore = MB.api.allUsers();
                    this.fixStore(this.activeStore);
-                   this.activeStore = this.sortByRecents(this.activeStore, 'date');
+                   this.activeStore = this.sortResults(this.activeStore, 'date');
                 } else if (!this.activeStore && this.newestStore) {
                   this.activeStore = this.newestStore;
                 }
-                this.model.attributes.results = this.sortByRecents(this.activeStore, 'active');
+                this.model.attributes.results = this.sortResults(this.activeStore, 'active');
                 this.renderAgain();
               } else if (sortBy === 'connections') {
                 if (!this.connStore) {
@@ -171,19 +174,19 @@ define(['jquery', 'models/Model', 'hbs!templates/explore', 'backbone', 'marionet
                    }
                    this.connStore = conns;
                    this.fixStore(this.connStore);
-                   this.connStore = this.sortByRecents(this.connStore, 'active');
+                   this.connStore = this.sortResults(this.connStore, 'active');
                 } 
-                this.model.attributes.results = this.sortByRecents(this.connStore, 'active');
+                this.model.attributes.results = this.sortResults(this.connStore, 'active');
                 this.renderAgain();
               } else if (sortBy === 'popular') {
                 if (!this.popStore && !this.newestStore) {
                    this.popStore = MB.api.allUsers();
                    this.fixStore(this.popStore);
-                   this.popStore = this.sortByRecents(this.popStore, 'popular');
-                } else if (!this.activeStore && this.newestStore) {
+                   this.popStore = this.sortResults(this.popStore, 'popular');
+                } else if (!this.popStore && this.newestStore) {
                   this.popStore = this.newestStore;
                 }
-                this.model.attributes.results = this.sortByRecents(this.popStore, 'popular');
+                this.model.attributes.results = this.sortResults(this.popStore, 'popular');
                 this.renderAgain();
               }
             } 
@@ -194,14 +197,16 @@ define(['jquery', 'models/Model', 'hbs!templates/explore', 'backbone', 'marionet
           },
           getSize: function() {
              var height =  $(this.$el[0].lastElementChild).scrollHeight + 'px';
-             // $('.explore-facet-menu').css({'height': height});
-
           },
           handleExploreItemHover: function(e) {
             $(e.currentTarget).addClass('tossing');
           },
           handleExploreItemUnHover: function(e) {
             $(e.currentTarget).removeClass('tossing');
+          },
+          userConnect: function(e) {
+            var send = {'user': this.user._id, 'connect_to': $(e.currentTarget).attr('id')};
+            MB.api.connect(send);
           }
       });
 });

@@ -26,7 +26,7 @@ define([
 ){
     var MB = window.MB = new Backbone.Marionette.Application();
 
-    MB.env = 'dev';
+    MB.env = 'test';
 
     function isMobile() {
         var userAgent = navigator.userAgent || navigator.vendor || window.opera;
@@ -40,8 +40,6 @@ define([
     MB.session = new MBSession();
     MB.api = new MBapi();
     MB.mobile = isMobile();
-    MB.userPic_path = 'https://s3-us-west-2.amazonaws.com/mockitbrd/users/';
-
     //Organize Application into regions corresponding to DOM elements
     //Regions can contain views, Layouts, or subregions nested as necessary
     MB.addRegions({

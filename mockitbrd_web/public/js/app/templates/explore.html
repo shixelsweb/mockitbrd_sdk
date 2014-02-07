@@ -27,14 +27,13 @@
 							{{else}}
 								<img class="explore-result-badge" src="../../../img/int_badge.png">
 							{{/if}}
-							<a href="#user/{{_id}}"><div class="exp-pic"><img src="{{pic}}"></div></a>
+							<a href="#user/{{_id}}"><div class="exp-pic"><img id="user_{{_id}}_pic" src="/getUserPic/{{_id}}"></div></a>
 						</div>
 						<div class="exp-name">{{fname}} {{lname}}</div>
 						{{#if isConnected}}
-							<a class="MB-button dingy smallest wide connected">Connected</a>
-						
+							<a class="MB-button dingy smallest wide disabled">{{status}}</a>
 						{{else}}
-							<a class="MB-button dingy smallest wide">Connect</a>
+							<a class="MB-button dingy smallest wide MB-user-connect" id="connect_{{_id}}">Connect</a>
 						{{/if}}
 					</div>
 					{{/if}}

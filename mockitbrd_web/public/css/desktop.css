@@ -3395,7 +3395,7 @@ header.ghost .navbar-inner {
   text-decoration: none;
 }
 /* line 160, ../js/app/templates/scss/ui.scss */
-.MB-button.dingy.connected {
+.MB-button.dingy.disabled {
   background-color: #6b7886;
   cursor: not-allowed;
 }
@@ -3929,7 +3929,7 @@ header.ghost .navbar-inner {
 .MB-submenu .inner li {
   display: inline-block;
   font-size: 1.2em;
-  margin-right: 75px;
+  margin-right: 60px;
   line-height: 35px;
   cursor: pointer;
   padding-top: 5px;
@@ -4612,15 +4612,20 @@ header.ghost .navbar-inner {
   border: 1px solid #3b3a3f;
   cursor: pointer;
 }
+/* line 50, ../js/app/templates/scss/userAppMenu.scss */
+.MB-user-menu-image img {
+  width: 100%;
+  height: 100%;
+}
 
-/* line 51, ../js/app/templates/scss/userAppMenu.scss */
+/* line 56, ../js/app/templates/scss/userAppMenu.scss */
 .MB-user-menu-menu {
   cursor: pointer;
   font-size: 1.8em;
   position: relative;
   top: 2px;
 }
-/* line 57, ../js/app/templates/scss/userAppMenu.scss */
+/* line 62, ../js/app/templates/scss/userAppMenu.scss */
 .MB-user-menu-menu:hover {
   color: #666666;
 }
@@ -4630,8 +4635,9 @@ header.ghost .navbar-inner {
   padding-top: 60px;
   width: 100%;
   height: 100%;
+  display: none;
 }
-/* line 6, ../js/app/templates/scss/dashboard.scss */
+/* line 7, ../js/app/templates/scss/dashboard.scss */
 #dashboard-view .dashboard-top {
   width: 100%;
   height: 250px;
@@ -4640,13 +4646,13 @@ header.ghost .navbar-inner {
   box-shadow: 0px 1px 1px #ddd;
 }
 
-/* line 15, ../js/app/templates/scss/dashboard.scss */
+/* line 16, ../js/app/templates/scss/dashboard.scss */
 #dashboard-main-view {
   height: 100%;
   width: 100%;
 }
 
-/* line 20, ../js/app/templates/scss/dashboard.scss */
+/* line 21, ../js/app/templates/scss/dashboard.scss */
 .dashboard-bottom {
   width: 100%;
   height: 100%;
@@ -4655,7 +4661,7 @@ header.ghost .navbar-inner {
   position: relative;
 }
 
-/* line 28, ../js/app/templates/scss/dashboard.scss */
+/* line 29, ../js/app/templates/scss/dashboard.scss */
 .dashboard-bottom-left {
   width: 70%;
   height: 100%;
@@ -4663,14 +4669,14 @@ header.ghost .navbar-inner {
   background: white;
 }
 
-/* line 34, ../js/app/templates/scss/dashboard.scss */
+/* line 35, ../js/app/templates/scss/dashboard.scss */
 .dashboard-bottom-bottom-right {
   width: 30%;
   height: 100%;
   box-shadow: 0px 0px 1px #666666;
 }
 
-/* line 39, ../js/app/templates/scss/dashboard.scss */
+/* line 40, ../js/app/templates/scss/dashboard.scss */
 #dashboard-content {
   width: 100%;
   height: 100%;
@@ -4682,7 +4688,7 @@ header.ghost .navbar-inner {
   overflow-y: scroll;
 }
 
-/* line 50, ../js/app/templates/scss/dashboard.scss */
+/* line 51, ../js/app/templates/scss/dashboard.scss */
 .dashboard-calendar {
   width: 80%;
   height: 300px;
@@ -4691,18 +4697,18 @@ header.ghost .navbar-inner {
   margin-top: 30px;
   text-align: right;
 }
-/* line 58, ../js/app/templates/scss/dashboard.scss */
+/* line 59, ../js/app/templates/scss/dashboard.scss */
 .dashboard-calendar h2 {
   font-size: 1.5em;
   font-weight: 100;
   cursor: default;
 }
-/* line 64, ../js/app/templates/scss/dashboard.scss */
+/* line 65, ../js/app/templates/scss/dashboard.scss */
 .dashboard-calendar .menu {
   position: relative;
   left: 8px;
 }
-/* line 67, ../js/app/templates/scss/dashboard.scss */
+/* line 68, ../js/app/templates/scss/dashboard.scss */
 .dashboard-calendar .menu li {
   display: inline-block;
   padding: 15px 10px;
@@ -4711,16 +4717,16 @@ header.ghost .navbar-inner {
   color: #999;
   cursor: pointer;
 }
-/* line 75, ../js/app/templates/scss/dashboard.scss */
+/* line 76, ../js/app/templates/scss/dashboard.scss */
 .dashboard-calendar .menu li.active {
   color: black;
 }
-/* line 79, ../js/app/templates/scss/dashboard.scss */
+/* line 80, ../js/app/templates/scss/dashboard.scss */
 .dashboard-calendar .menu li:hover {
   color: black;
 }
 
-/* line 87, ../js/app/templates/scss/dashboard.scss */
+/* line 88, ../js/app/templates/scss/dashboard.scss */
 .calendar-today .calendar-item {
   position: relative;
   background: #fff;
@@ -4729,14 +4735,14 @@ header.ghost .navbar-inner {
   margin-bottom: 15px;
   cursor: pointer;
 }
-/* line 95, ../js/app/templates/scss/dashboard.scss */
+/* line 96, ../js/app/templates/scss/dashboard.scss */
 .calendar-today .calendar-item li {
   display: inline-block;
   position: absolute;
   line-height: 3em;
   font-weight: 100;
 }
-/* line 101, ../js/app/templates/scss/dashboard.scss */
+/* line 102, ../js/app/templates/scss/dashboard.scss */
 .calendar-today .calendar-item li.icon {
   position: absolute;
   left: -15px;
@@ -4750,11 +4756,11 @@ header.ghost .navbar-inner {
   top: 3px;
   box-shadow: 0px 0px 1px #ddd;
 }
-/* line 115, ../js/app/templates/scss/dashboard.scss */
+/* line 116, ../js/app/templates/scss/dashboard.scss */
 .calendar-today .calendar-item li.description {
   left: 35px;
 }
-/* line 119, ../js/app/templates/scss/dashboard.scss */
+/* line 120, ../js/app/templates/scss/dashboard.scss */
 .calendar-today .calendar-item li.close {
   right: 10px;
   bottom: -10px;
@@ -5189,8 +5195,71 @@ header.ghost .navbar-inner {
   position: absolute;
   top: 0;
 }
+/* line 69, ../js/app/templates/scss/user.scss */
+.MB-user-profile-photo img {
+  width: 100%;
+  height: 100%;
+}
+/* line 74, ../js/app/templates/scss/user.scss */
+.MB-user-profile-photo .upload-pic {
+  position: relative;
+  display: none;
+}
+/* line 77, ../js/app/templates/scss/user.scss */
+.MB-user-profile-photo .upload-pic label.filebutton {
+  width: 140px;
+  height: 140px;
+  overflow: hidden;
+  position: absolute;
+  background-color: transparent;
+  cursor: pointer;
+}
+/* line 86, ../js/app/templates/scss/user.scss */
+.MB-user-profile-photo .upload-pic label span input {
+  z-index: 999;
+  line-height: 0;
+  font-size: 50px;
+  position: absolute;
+  top: -2px;
+  left: -700px;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -ms-filter: "alpha(opacity=0)";
+  cursor: pointer;
+  _cursor: hand;
+  margin: 0;
+  padding: 0;
+}
+/* line 101, ../js/app/templates/scss/user.scss */
+.MB-user-profile-photo .upload-pic .pic-upload-spinner {
+  position: absolute;
+  z-index: 100;
+  font-size: 3em;
+  text-align: center;
+  width: 140px;
+  height: 140px;
+  line-height: 140px;
+  color: white;
+  cursor: default;
+  display: none;
+}
+/* line 113, ../js/app/templates/scss/user.scss */
+.MB-user-profile-photo .upload-pic .pic-upload-button {
+  position: absolute;
+  z-index: 100;
+  font-size: 3em;
+  text-align: center;
+  width: 140px;
+  height: 140px;
+  line-height: 140px;
+  color: #2bbbff;
+}
+/* line 123, ../js/app/templates/scss/user.scss */
+.MB-user-profile-photo .upload-pic .pic-upload-button:hover {
+  color: white;
+}
 
-/* line 70, ../js/app/templates/scss/user.scss */
+/* line 130, ../js/app/templates/scss/user.scss */
 .MB-user-profile-top-info {
   display: inline-block;
   width: 50%;
@@ -5198,14 +5267,14 @@ header.ghost .navbar-inner {
   left: 200px;
   top: -45px;
 }
-/* line 77, ../js/app/templates/scss/user.scss */
+/* line 137, ../js/app/templates/scss/user.scss */
 .MB-user-profile-top-info .user-profile-status {
   font-size: 0.9em;
   padding: 0;
   margin: 0;
   margin-top: -10px;
 }
-/* line 85, ../js/app/templates/scss/user.scss */
+/* line 145, ../js/app/templates/scss/user.scss */
 .MB-user-profile-top-info h1 {
   padding-top: 55px;
   font-size: 3em;
@@ -5215,7 +5284,7 @@ header.ghost .navbar-inner {
   font-family: "Desyrel";
   display: inline-block;
 }
-/* line 95, ../js/app/templates/scss/user.scss */
+/* line 155, ../js/app/templates/scss/user.scss */
 .MB-user-profile-top-info h2 {
   padding-left: 4px;
   padding-bottom: 20px;
@@ -5223,14 +5292,14 @@ header.ghost .navbar-inner {
   text-shadow: 0px 0px 2px #000;
 }
 
-/* line 103, ../js/app/templates/scss/user.scss */
+/* line 163, ../js/app/templates/scss/user.scss */
 .MB-user-profile-quick-links {
   display: inline-block;
   right: 260px;
   position: absolute;
   top: 30px;
 }
-/* line 109, ../js/app/templates/scss/user.scss */
+/* line 169, ../js/app/templates/scss/user.scss */
 .MB-user-profile-quick-links .MB-user-profile-quick-link {
   display: inline;
   width: 100%;
@@ -5245,34 +5314,34 @@ header.ghost .navbar-inner {
   background: rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 }
-/* line 123, ../js/app/templates/scss/user.scss */
+/* line 183, ../js/app/templates/scss/user.scss */
 .MB-user-profile-quick-links .MB-user-profile-quick-link.disabled {
   color: #666666;
   cursor: not-allowed;
 }
-/* line 127, ../js/app/templates/scss/user.scss */
+/* line 187, ../js/app/templates/scss/user.scss */
 .MB-user-profile-quick-links .MB-user-profile-quick-link.disabled:hover {
   color: #666666;
 }
-/* line 132, ../js/app/templates/scss/user.scss */
+/* line 192, ../js/app/templates/scss/user.scss */
 .MB-user-profile-quick-links .MB-user-profile-quick-link i {
   font-size: 1em;
   padding-right: 15px;
 }
-/* line 137, ../js/app/templates/scss/user.scss */
+/* line 197, ../js/app/templates/scss/user.scss */
 .MB-user-profile-quick-links .MB-user-profile-quick-link:hover {
   color: #ffe42b;
 }
-/* line 140, ../js/app/templates/scss/user.scss */
+/* line 200, ../js/app/templates/scss/user.scss */
 .MB-user-profile-quick-links .MB-user-profile-quick-link:hover i {
   color: #ffe42b;
 }
-/* line 145, ../js/app/templates/scss/user.scss */
+/* line 205, ../js/app/templates/scss/user.scss */
 .MB-user-profile-quick-links .MB-user-profile-quick-link.last {
   border-bottom: none;
 }
 
-/* line 152, ../js/app/templates/scss/user.scss */
+/* line 212, ../js/app/templates/scss/user.scss */
 .MB-user-profile-top-social-links {
   position: absolute;
   bottom: -38px;
@@ -5280,7 +5349,7 @@ header.ghost .navbar-inner {
   z-index: 1;
   right: 90px;
 }
-/* line 159, ../js/app/templates/scss/user.scss */
+/* line 219, ../js/app/templates/scss/user.scss */
 .MB-user-profile-top-social-links li {
   width: 35px;
   height: 35px;
@@ -5293,14 +5362,14 @@ header.ghost .navbar-inner {
   cursor: pointer;
   border-radius: 5px;
 }
-/* line 172, ../js/app/templates/scss/user.scss */
+/* line 232, ../js/app/templates/scss/user.scss */
 .MB-user-profile-top-social-links li:hover {
   color: white;
   font-size: 1.1em;
   position: relative;
 }
 
-/* line 181, ../js/app/templates/scss/user.scss */
+/* line 241, ../js/app/templates/scss/user.scss */
 .MB-user-star {
   display: inline-block;
   color: #ffe42b;
@@ -5308,7 +5377,7 @@ header.ghost .navbar-inner {
   cursor: pointer;
 }
 
-/* line 189, ../js/app/templates/scss/user.scss */
+/* line 249, ../js/app/templates/scss/user.scss */
 .MB-user-profile-bottom {
   width: 100%;
   height: 100%;
@@ -5318,19 +5387,19 @@ header.ghost .navbar-inner {
   background: #e9eaed;
   padding-bottom: 150px;
 }
-/* line 198, ../js/app/templates/scss/user.scss */
+/* line 258, ../js/app/templates/scss/user.scss */
 .MB-user-profile-bottom .user-profile-left {
   width: 30%;
   height: 100%;
   position: absolute;
   padding-left: 30px;
 }
-/* line 204, ../js/app/templates/scss/user.scss */
+/* line 264, ../js/app/templates/scss/user.scss */
 .MB-user-profile-bottom .user-profile-right {
   width: 70%;
   height: 100%;
 }
-/* line 208, ../js/app/templates/scss/user.scss */
+/* line 268, ../js/app/templates/scss/user.scss */
 .MB-user-profile-bottom .user-profile-right .user-profile-wall-poster {
   width: 70%;
   margin-left: 60px;
@@ -5341,11 +5410,11 @@ header.ghost .navbar-inner {
   background: white;
   position: relative;
 }
-/* line 218, ../js/app/templates/scss/user.scss */
+/* line 278, ../js/app/templates/scss/user.scss */
 .MB-user-profile-bottom .user-profile-right .user-profile-wall-poster .user-profile-wall-poster-top {
   padding: 0 15px;
 }
-/* line 221, ../js/app/templates/scss/user.scss */
+/* line 281, ../js/app/templates/scss/user.scss */
 .MB-user-profile-bottom .user-profile-right .user-profile-wall-poster .user-profile-wall-poster-top textarea {
   width: 98%;
   border-radius: 0;
@@ -5354,24 +5423,24 @@ header.ghost .navbar-inner {
   margin: 15px 0;
   resize: none;
 }
-/* line 231, ../js/app/templates/scss/user.scss */
+/* line 291, ../js/app/templates/scss/user.scss */
 .MB-user-profile-bottom .user-profile-right .user-profile-wall-poster .user-profile-wall-poster-bottom {
   background: #f6f7f8;
   text-align: right;
   border-top: 1px solid #dddddd;
 }
-/* line 236, ../js/app/templates/scss/user.scss */
+/* line 296, ../js/app/templates/scss/user.scss */
 .MB-user-profile-bottom .user-profile-right .user-profile-wall-poster .user-profile-wall-poster-bottom .right-button {
   padding: 10px;
 }
-/* line 240, ../js/app/templates/scss/user.scss */
+/* line 300, ../js/app/templates/scss/user.scss */
 .MB-user-profile-bottom .user-profile-right .user-profile-wall-poster .user-profile-wall-poster-bottom .user-post-type {
   float: left;
   height: 60px;
   font-size: 1.5em;
   margin: 0;
 }
-/* line 246, ../js/app/templates/scss/user.scss */
+/* line 306, ../js/app/templates/scss/user.scss */
 .MB-user-profile-bottom .user-profile-right .user-profile-wall-poster .user-profile-wall-poster-bottom .user-post-type li {
   width: 60px;
   border-right: 1px solid #dddddd;
@@ -5382,11 +5451,11 @@ header.ghost .navbar-inner {
   color: #d3d6db;
   cursor: pointer;
 }
-/* line 256, ../js/app/templates/scss/user.scss */
+/* line 316, ../js/app/templates/scss/user.scss */
 .MB-user-profile-bottom .user-profile-right .user-profile-wall-poster .user-profile-wall-poster-bottom .user-post-type li:hover {
   color: #6b7886;
 }
-/* line 260, ../js/app/templates/scss/user.scss */
+/* line 320, ../js/app/templates/scss/user.scss */
 .MB-user-profile-bottom .user-profile-right .user-profile-wall-poster .user-profile-wall-poster-bottom .user-post-type li.active {
   background: white;
   padding-top: 1px;
@@ -5395,50 +5464,50 @@ header.ghost .navbar-inner {
   color: #6b7886;
 }
 
-/* line 275, ../js/app/templates/scss/user.scss */
+/* line 335, ../js/app/templates/scss/user.scss */
 .user-posts {
   padding-bottom: 100px;
 }
 
-/* line 280, ../js/app/templates/scss/user.scss */
+/* line 340, ../js/app/templates/scss/user.scss */
 .user-profile-section {
   background: white;
   margin: 30px 15px;
   border: 1px solid #dddddd;
   cursor: default;
 }
-/* line 286, ../js/app/templates/scss/user.scss */
+/* line 346, ../js/app/templates/scss/user.scss */
 .user-profile-section h1 {
   font-weight: bold;
   float: left;
   font-size: 1em;
   line-height: 0;
 }
-/* line 293, ../js/app/templates/scss/user.scss */
+/* line 353, ../js/app/templates/scss/user.scss */
 .user-profile-section p {
   font-size: 0.8em;
   line-height: 2em;
 }
-/* line 297, ../js/app/templates/scss/user.scss */
+/* line 357, ../js/app/templates/scss/user.scss */
 .user-profile-section .top {
   background: #f6f7f8;
   padding: 10px 15px;
   border-bottom: 1px solid #dddddd;
 }
-/* line 302, ../js/app/templates/scss/user.scss */
+/* line 362, ../js/app/templates/scss/user.scss */
 .user-profile-section .top .user-profile-edit-section {
   font-size: 0.8em;
   cursor: pointer;
 }
-/* line 306, ../js/app/templates/scss/user.scss */
+/* line 366, ../js/app/templates/scss/user.scss */
 .user-profile-section .top .user-profile-edit-section:hover {
   text-decoration: underline;
 }
-/* line 311, ../js/app/templates/scss/user.scss */
+/* line 371, ../js/app/templates/scss/user.scss */
 .user-profile-section .bottom {
   padding: 15px;
 }
-/* line 314, ../js/app/templates/scss/user.scss */
+/* line 374, ../js/app/templates/scss/user.scss */
 .user-profile-section .bottom h2 {
   text-transform: capitalize;
   font-weight: 100;
@@ -5448,7 +5517,7 @@ header.ghost .navbar-inner {
   margin: 0;
 }
 
-/* line 325, ../js/app/templates/scss/user.scss */
+/* line 385, ../js/app/templates/scss/user.scss */
 .user-profile-skill {
   display: inline-block;
   background: #2bbbff;
@@ -5461,7 +5530,7 @@ header.ghost .navbar-inner {
   border-radius: 20px;
 }
 
-/* line 337, ../js/app/templates/scss/user.scss */
+/* line 397, ../js/app/templates/scss/user.scss */
 .user-profile-stats {
   position: absolute;
   right: 200px;
@@ -5469,18 +5538,18 @@ header.ghost .navbar-inner {
   width: 150px;
   height: 90px;
 }
-/* line 344, ../js/app/templates/scss/user.scss */
+/* line 404, ../js/app/templates/scss/user.scss */
 .user-profile-stats .user-profile-connections-stats {
   width: 90px;
   height: 90px;
   position: absolute;
   cursor: pointer;
 }
-/* line 350, ../js/app/templates/scss/user.scss */
+/* line 410, ../js/app/templates/scss/user.scss */
 .user-profile-stats .user-profile-connections-stats:hover {
   color: black;
 }
-/* line 354, ../js/app/templates/scss/user.scss */
+/* line 414, ../js/app/templates/scss/user.scss */
 .user-profile-stats .user-profile-connections-stats .top {
   box-shadow: none;
   font-size: 3em;
@@ -5488,7 +5557,7 @@ header.ghost .navbar-inner {
   line-height: 1.5em;
   color: #37404e;
 }
-/* line 362, ../js/app/templates/scss/user.scss */
+/* line 422, ../js/app/templates/scss/user.scss */
 .user-profile-stats .user-profile-connections-stats .bottom {
   position: absolute;
   bottom: 10px;
@@ -5522,29 +5591,30 @@ header.ghost .navbar-inner {
 
 /* line 21, ../js/app/templates/scss/explore.scss */
 .explore-results {
-  float: right;
+  float: left;
   width: 70%;
   overflow-y: scroll;
   height: 100%;
   margin-top: 65px;
+  margin-left: 50px;
 }
 
-/* line 29, ../js/app/templates/scss/explore.scss */
+/* line 30, ../js/app/templates/scss/explore.scss */
 .explore-result {
   margin-bottom: 60px;
   float: left;
   width: 200px;
   height: 200px;
   position: relative;
-  margin-right: 90px;
+  margin-right: 60px;
 }
-/* line 37, ../js/app/templates/scss/explore.scss */
+/* line 39, ../js/app/templates/scss/explore.scss */
 .explore-result .exp-name {
   cursor: default;
   text-align: center;
   padding: 5px 0;
 }
-/* line 43, ../js/app/templates/scss/explore.scss */
+/* line 45, ../js/app/templates/scss/explore.scss */
 .explore-result .exp-pic {
   width: 150px;
   height: 150px;
@@ -5552,7 +5622,12 @@ header.ghost .navbar-inner {
   overflow: hidden;
   margin: 0 25px;
 }
-/* line 50, ../js/app/templates/scss/explore.scss */
+/* line 52, ../js/app/templates/scss/explore.scss */
+.explore-result .exp-pic img {
+  width: 100%;
+  height: 100%;
+}
+/* line 57, ../js/app/templates/scss/explore.scss */
 .explore-result .exp-type {
   text-align: center;
   position: relative;
@@ -5561,11 +5636,12 @@ header.ghost .navbar-inner {
   font-style: italic;
   font-size: 0.8em;
 }
-/* line 59, ../js/app/templates/scss/explore.scss */
+/* line 66, ../js/app/templates/scss/explore.scss */
 .explore-result .explore-result-badge {
   position: absolute;
-  width: 50px;
-  left: 15px;
+  width: 30px;
+  left: 30px;
+  top: 10px;
 }
 
 /* line 1, ../js/app/templates/scss/post.scss */
@@ -5641,7 +5717,7 @@ header.ghost .navbar-inner {
 }
 /* line 75, ../js/app/templates/scss/post.scss */
 .user-post .bottom textarea {
-  width: 87%;
+  width: 86%;
   margin: 15px;
   border-radius: 0;
   resize: none;
@@ -5649,71 +5725,80 @@ header.ghost .navbar-inner {
   border: 1px solid #dddddd;
 }
 
-/* line 89, ../js/app/templates/scss/post.scss */
+/* line 85, ../js/app/templates/scss/post.scss */
+.post-error {
+  display: none;
+  color: #cd0000;
+  position: absolute;
+  right: 20%;
+  bottom: 20px;
+}
+
+/* line 93, ../js/app/templates/scss/post.scss */
 .user-post-comments .user-post-comment {
   color: #6b7886;
   font-size: 0.8em;
   padding: 15px;
 }
-/* line 93, ../js/app/templates/scss/post.scss */
+/* line 97, ../js/app/templates/scss/post.scss */
 .user-post-comments .user-post-comment .comment-right {
   padding-left: 15px;
   width: 90%;
   position: relative;
 }
-/* line 98, ../js/app/templates/scss/post.scss */
+/* line 102, ../js/app/templates/scss/post.scss */
 .user-post-comments .user-post-comment .comment-right .comment-commenter {
   padding-bottom: 4px;
 }
-/* line 100, ../js/app/templates/scss/post.scss */
+/* line 104, ../js/app/templates/scss/post.scss */
 .user-post-comments .user-post-comment .comment-right .comment-commenter .comment-likes {
   font-size: 0.8em;
 }
-/* line 104, ../js/app/templates/scss/post.scss */
+/* line 108, ../js/app/templates/scss/post.scss */
 .user-post-comments .user-post-comment .comment-right .comment-commenter .comment-comment {
   color: #37404e;
   line-height: 1.5em;
 }
-/* line 108, ../js/app/templates/scss/post.scss */
+/* line 112, ../js/app/templates/scss/post.scss */
 .user-post-comments .user-post-comment .comment-right .comment-commenter .comment-comment a {
   color: #3b5998;
 }
-/* line 111, ../js/app/templates/scss/post.scss */
+/* line 115, ../js/app/templates/scss/post.scss */
 .user-post-comments .user-post-comment .comment-right .comment-commenter .comment-comment a:hover {
   text-decoration: underline;
 }
-/* line 117, ../js/app/templates/scss/post.scss */
+/* line 121, ../js/app/templates/scss/post.scss */
 .user-post-comments .user-post-comment .comment-right .comment-date {
   font-size: 0.8em;
 }
-/* line 120, ../js/app/templates/scss/post.scss */
+/* line 124, ../js/app/templates/scss/post.scss */
 .user-post-comments .user-post-comment .comment-right .comment-date .show_love {
   cursor: pointer;
   color: #6b7886;
   font-size: 1.5em;
 }
-/* line 125, ../js/app/templates/scss/post.scss */
+/* line 129, ../js/app/templates/scss/post.scss */
 .user-post-comments .user-post-comment .comment-right .comment-date .show_love:hover {
   color: #37404e;
 }
-/* line 129, ../js/app/templates/scss/post.scss */
+/* line 133, ../js/app/templates/scss/post.scss */
 .user-post-comments .user-post-comment .comment-right .comment-date .no_love {
   cursor: pointer;
   color: #2bbbff;
   font-size: 1.5em;
 }
-/* line 134, ../js/app/templates/scss/post.scss */
+/* line 138, ../js/app/templates/scss/post.scss */
 .user-post-comments .user-post-comment .comment-right .comment-date .no_love:hover {
   color: #37404e;
 }
-/* line 140, ../js/app/templates/scss/post.scss */
+/* line 144, ../js/app/templates/scss/post.scss */
 .user-post-comments .user-post-comment .comment-pic {
   width: 40px;
   height: 40px;
   overflow: hidden;
 }
 
-/* line 149, ../js/app/templates/scss/post.scss */
+/* line 153, ../js/app/templates/scss/post.scss */
 .comment-section .comment-pic {
   position: relative;
   top: 15px;

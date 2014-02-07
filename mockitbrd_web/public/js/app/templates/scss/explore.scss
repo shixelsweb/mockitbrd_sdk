@@ -19,11 +19,12 @@
 }
 
 .explore-results {
-	float: right;
+	float: left;
 	width: 70%;
 	overflow-y: scroll;
 	height: 100%;
 	margin-top: 65px;
+	margin-left: 50px;
 }
 
 .explore-result {
@@ -32,7 +33,8 @@
 	width: 200px;
 	height: 200px;
 	position: relative;
-	margin-right: 90px;
+	margin-right: 60px;
+
 
 	.exp-name {
 		cursor: default;
@@ -46,6 +48,11 @@
 		border-radius: 100px;
 		overflow: hidden;
 		margin: 0 25px;
+
+		img {
+			width: 100%;
+			height: 100%;
+		}
 	}
 	.exp-type {
 		text-align: center;
@@ -58,8 +65,9 @@
 
 	.explore-result-badge {
 		position: absolute;
-		width: 50px;
-		left: 15px;
+		width: 30px;
+		left: 30px;
+		top: 10px;
 	}
 	
 }

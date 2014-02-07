@@ -73,18 +73,22 @@
 		border-top: 1px solid $d_grey;
 
 		textarea {
-			width: 87%;
+			width: 86%;
 			margin: 15px;
 			border-radius: 0;
 			resize: none;
 			box-shadow: none;
 			border: 1px solid $d_grey;
-
 		}
 	}
 }
-
-
+.post-error {
+	display: none;
+	color: $primary_red;
+	position: absolute;
+	right: 20%;
+	bottom: 20px;
+}
 .user-post-comments {
 	.user-post-comment {
 		color: $user_type_active;

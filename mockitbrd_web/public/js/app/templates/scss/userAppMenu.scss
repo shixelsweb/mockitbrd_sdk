@@ -46,6 +46,11 @@
 	height: 45px;
 	border: 1px solid $app_menu_grey;
 	cursor: pointer;
+
+	img {
+		width: 100%;
+		height: 100%;
+	}
 }
 
 .MB-user-menu-menu {

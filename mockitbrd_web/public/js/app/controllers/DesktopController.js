@@ -149,12 +149,13 @@ function (
                 MB.appRouter.navigate('login', {trigger: true});
                 $('.MB-login-error').html('You must be logged in to view that page!');
             } else {
+
                 var topAppMenu = new TopAppMenuView();
                 var userAppMenu = new UserAppMenuView();
                 var dashboard = new DashboardView();
                 var leftAppMenu = new LeftAppMenuView();
                 var theView = null;
-                
+                 
                 this.hideModal();
                 this.removeView();
 
@@ -182,7 +183,7 @@ function (
                 }
 
                 $('#dashboard-view').append(theView.render().el);
-
+                $('#dashboard-view').fadeIn(500);
                 if (region) {
                     var theRegionView = new regionView();
                     $(region).html(theRegionView.render().el);

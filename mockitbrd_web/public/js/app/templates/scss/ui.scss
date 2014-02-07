@@ -157,7 +157,7 @@
 			text-decoration: none;
 		}
 
-		&.connected {
+		&.disabled {
 			background-color: $user_type_active;
 			cursor: not-allowed;
 		}
@@ -672,7 +672,7 @@
 		 li {
 			display: inline-block;
 			font-size: 1.2em;
-			margin-right: 75px;
+			margin-right: 60px;
 			line-height: 35px;
 			cursor: pointer;
 			padding-top: 5px;

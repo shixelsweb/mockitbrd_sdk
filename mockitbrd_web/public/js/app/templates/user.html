@@ -1,7 +1,16 @@
 <div id="user-view">
 	<div class="MB-user-profile-top">
 		<div class="top MB-boardroom-bg"></div>
-		<div class="MB-user-profile-photo glass-effect"><img src="{{user_pic}}"></div>
+		<div class="MB-user-profile-photo glass-effect">
+			<div class="upload-pic">
+				<label class="filebutton">
+					<i class="fa fa-refresh fa-spin pic-upload-spinner"></i>
+					<i class="fa fa-camera pic-upload-button"></i>
+				<span><input type="file" id="new-user-pic" name="myfile"></span>
+				</label>
+			</div>
+			<img id="user_profile_pic" src="/getUserpic/{{user._id}}">
+		</div>
 		<div class="MB-user-profile-top-info">
 			<h1>{{user.fname}} {{user.lname}}</h1>
 			{{#if isOwner}}
@@ -32,14 +41,13 @@
 		{{else}}
 		<ul class="MB-user-profile-quick-links">
 			{{#if isConnectedActive}}
-			<li class="MB-user-profile-quick-link connected"><i class="fa fa-check"></i>Connected</li>
+			<li class="MB-user-profile-quick-link user-connection connected MB-user-unconnect" id="unconnect_{{user._id}}"><i class="fa fa-check"></i>Connected</li>
 			{{/if}}
 			{{#if notConnected}}
-			<li class="MB-user-profile-quick-link"><i class="fa fa-plus"></i>Connect</li>
+			<li class="MB-user-profile-quick-link user-connection MB-user-connect" id="connect_{{user._id}}"><i class="fa fa-plus"></i>Connect</li>
 			{{/if}}
-			
 			{{#if isConnectedPending}}
-			<li class="MB-user-profile-quick-link disabled">Pending</li>
+			<li class="MB-user-profile-quick-link user-connection disabled">Pending</li>
 			{{/if}}			
 			<li  class="MB-user-profile-quick-link last"><i class="fa fa-share-square-o"></i>Share</li>
 		</ul>
@@ -91,6 +99,7 @@
 				</div>
 			</div>
 		</div>
+		{{#if isOwner}}
 		<div class="user-profile-right pull-right">
 			<div class="user-profile-wall-poster">
 				<div class="user-profile-wall-poster-top">
@@ -103,13 +112,15 @@
 						<li class="fa fa-picture-o"></li> -->
 					</ul>
 					<div class="right-button">
-						<button class="MB-button primary small">POST</button>
+						<div class="post-error"></div>
+						<button class="MB-button primary small MB-post-button">POST</button>
 					</div>
 				</div>
 			</div>
 			<div class="user-posts">
 			</div>
 		</div>
+		{{/if}}
 		<div class="clear-both"></div>
 	</div>
 </div>

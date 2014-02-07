@@ -6,7 +6,6 @@ define(['jquery','views/MBConfirm', 'models/Model', 'hbs!templates/userAppMenu',
 
           user: null,
           model: null,
-          user_pic: null,
 
           events: {
             'click .MB-user-menu-menu': 'logout'
@@ -14,15 +13,7 @@ define(['jquery','views/MBConfirm', 'models/Model', 'hbs!templates/userAppMenu',
 
           initialize: function() {
             console.log(this);
-            this.user = MB.api.user($.parseJSON(MB.session.give('session')).user);
-            
-            if (this.user.user_pic === '0') {
-              this.user_pic = MB.api.userpic("default");
-            } else if (this.user.user_pic === '1') {
-              this.user_pic = MB.api.userpic(this.user._id);
-            }
-            
-
+            this.user = MB.api.user($.parseJSON(MB.session.give('session')).user);            
             this.model = new Model({user: this.user, user_pic: this.user_pic});
           },
 
