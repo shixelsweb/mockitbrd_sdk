@@ -12,7 +12,9 @@ define(['jquery', 'models/Model', 'views/MBPopup', 'views/MBConfirm', 'views/Pos
             'change #new-user-pic': "uploadUserPic",
             'click .MB-post-button': "makePost",
             'click .MB-user-connect': "connectUsers",
-            'click .MB-user-unconnect': "uconnectUsers"
+            'click .MB-user-unconnect': "uconnectUsers",
+            "click .MB-user-star": "starUser",
+            "click .MB-user-unstar": "unstarUser"
           },
 
           model: null,
@@ -249,6 +251,14 @@ define(['jquery', 'models/Model', 'views/MBPopup', 'views/MBConfirm', 'views/Pos
               MB.api.unconnect(send);
             });
             MB.confirmRegion.show( new MBConfirm({commands: unconnectCommand, 'title': 'Are you sure you want to unconnect from this user?', 'body': 'You will need to reconnect and be approved in the future.'}));
+          },
+          starUser: function(e) {
+            var send = {'user': this.currentUser._id, 'what_id': this.user._id, 'what': 'person'};
+            MB.api.star(send);
+          },
+          unstarUser: function(e) {
+            var send = {'user': this.currentUser._id, 'what_id': this.user._id, 'what': 'person'};
+            MB.api.unstar(send);
           }
      });
 });

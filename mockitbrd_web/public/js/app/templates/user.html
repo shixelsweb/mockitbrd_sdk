@@ -16,9 +16,9 @@
 			{{#if isOwner}}
 			{{else}}
 				{{#if isStarred}}
-				<div class="MB-user-star" data-starEvent="unstar"><i class="fa fa-star"></i></div>
+				<div class="MB-user-star MB-user-unstar unstar-user"><i id="what_{{user._id}}" class="fa fa-star"></i></div>
 				{{else}}
-				<div class="MB-user-star" data-starEvent="star"><i class="fa fa-star-o"></i></div>
+				<div class="MB-user-star star-user"><i id="what_{{user._id}}" class="fa fa-star-o"></i></div>
 				{{/if}}
 			{{/if}}
 			{{#if user.location}}

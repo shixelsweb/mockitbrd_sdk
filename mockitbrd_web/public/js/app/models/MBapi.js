@@ -251,14 +251,17 @@ define(["jquery", "underscore", "backbone", "views/PostView"],
                 });
             },
             star: function(params) {
+                var what = '#what_' + params.what_id;
                 $.ajax({
-                    type: 'PUT',
+                    type: 'POST',
                     url: this.get('api_url') + 'v1/user/star',
                     data: params,
                     dataType: 'json',
                     success: function(response) {
-                        if (response.success === 0) {
-                            $('MB-user-star').removeClass('fa-star-o').addClass('fa-star');
+                        if (response.success === 1) {
+                            $(what).removeClass('fa-star-o').addClass('fa-star');
+                            $('.star-user').addClass('unstar-user');
+                            $('.unstar-user').addClass('unstar-user');
                         } else {
                             console.log('error: ', response.data.error);
                         }
@@ -269,19 +272,23 @@ define(["jquery", "underscore", "backbone", "views/PostView"],
                 });
             },
             unstar: function(params) {
+                var what = '#what_' + params.what_id;
                 $.ajax({
-                    type: 'PUT',
+                    type: 'DELETE',
                     url: this.get('api_url') + 'v1/user/unstar',
                     data: params,
-                    enctype: 'multipart/form-data',
+                    dataType: 'json',
                     success: function(response) {
-                        if (response.success === 0) {
-
+                        if (response.success === 1) {
+                            $(what).removeClass('fa-star').addClass('fa-star-o');
+                            $('.unstar-user').removeClass('MB-user-unstar');
+                            $('.star-user').removeClass('MB-user-unstar');
                         } else {
+                            console.log('error: ', response.data.error);
                         }
                     },
                     error: function(response) {
-
+                            alert('error: ', response);
                     }
                 });
             },
