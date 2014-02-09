@@ -41,7 +41,7 @@
 		padding: 5px 10px;
 
 		&.wide {
-			padding: 10px 80px;
+			padding: 10px 70px;
 			position: relative;
 			top: 15px;
 		}
@@ -159,8 +159,12 @@
 
 		&.disabled {
 			background-color: $user_type_active;
-			cursor: not-allowed;
+
+			&:hover {
+				color: $primary_yellow !important;
+			}
 		}
+
 
 		&.mine {
 			padding: 10px 65px;

@@ -1,0 +1,22 @@
+<div class="user-post-comment" id="comment_{{comment._id}}">
+	<div class="comment-left pull-left">
+		<div class="comment-pic"><a href="#user/{{comment.user_id}}"><img src="/getUserpic/{{comment.user_id}}"></a></div>
+	</div>
+	<div class="comment-right pull-left">
+		<div class="comment-commenter">
+			<a href="#user/{{comment.user_id}}">{{comment.commenter}}</a>&nbsp;&nbsp;
+			<span class="comment-comment">{{{comment.comment}}}</span>
+			</div>
+		<div class="comment-date">{{date}}
+			{{#if comment.likes_count}}
+				<span class="comment-likes"  data-commentid="{{comment._id}}">&nbsp;&nbsp;{{comment.likes_count}}</span>
+			{{/if}}
+			{{#if comment.isLiked}}
+				<i class="fa fa-star MB-comment-like no_love"  id="star_{{comment._id}}" starevent="unstar" data-commentid="{{comment._id}}"  person="{{comment.commenterid}}"></i> <span class="comment-likes"> You like this</span>
+			{{else}}
+				<i class="fa fa-star-o MB-comment-like show_love"  id="star_{{comment._id}}" data-commentid="{{comment._id}}" starevent="star"  data-commentwho="{{comment.user_id}}" person="{{comment.commenterid}}"></i>
+			{{/if}}
+		</div>
+	</div>
+	<div class="clear-both"></div>
+</div>

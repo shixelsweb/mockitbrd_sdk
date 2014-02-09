@@ -1,0 +1,23 @@
+<div id="notification-view" class="not_{{notification._id}} {{notification.readClass}}">
+	{{#if notification.by_who}}
+	<div class="notification_left pull-left">
+		<div class="notification-img"><img src="/getUserPic/{{notification.by_who._id}}"></div>
+		<div class="message"><a href="#user/{{notification.by_who._id}}">{{notification.by_who.fname}} {{notification.by_who.lname}}</a> {{notification.message}}</div>
+		<div class="notificatin-when">{{notification.when}}</div>
+	</div>
+	{{/if}}
+	<ul class="notification-menu" id="not_{{notification._id}}_menu">
+		{{#if notification.notReadAndConnected}}
+		<li class="notification-thanks">{{notification.done_message}} <i class="fa fa-check MB-mark-read" title="Mark as read" data-notificationid="{{notification._id}}"></i></li>
+		{{/if}}
+		{{#if notification.isRead}}
+		<li class="notification-thanks">{{notification.done_message}} <i class="fa fa-check"></i></li>
+		{{/if}}
+		{{#if notification.connectionAndNotActive}}
+		<li class="MB-user-accept" data-notificationid="{{notification._id}}" data-notificationwho="{{notification.by_who._id}}">Accept</li>
+		<li class="MB-user-unconnect" data-notificationid="{{notification._id}}" data-notificationwho="{{notification.by_who._id}}">Deny</li>
+		<li class="MB-mark-read" title="Mark as read" data-notificationid="{{notification._id}}" ><i class="fa fa-check"></i></li>
+		{{/if}}
+	</ul>
+	<div class="clear-both"></div>
+</div>

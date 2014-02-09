@@ -9,7 +9,8 @@ define([
     'models/MBModalBlack',
     'models/MBModalWhite',
     'models/MBModalBg',
-    'models/MBEmail'
+    'models/MBEmail',
+    'models/MBHelper'
     ],
     function (
     $,
@@ -22,7 +23,8 @@ define([
     MBModalBlack,
     MBModalWhite,
     MBModalBg,
-    MBEmail
+    MBEmail,
+    MBHelper
 ){
     var MB = window.MB = new Backbone.Marionette.Application();
 
@@ -36,6 +38,7 @@ define([
     MB.modalWhite = MBModalWhite;
     MB.modalBlack = MBModalBlack;
     MB.modalBg = MBModalBg;
+    MB.helper = new MBHelper();
     MB.email = new MBEmail();
     MB.session = new MBSession();
     MB.api = new MBapi();
@@ -57,7 +60,8 @@ define([
         modalBlack: MB.modalBlack,
         modalBg: MB.modalBg,
         confirmRegion: "#MB-confirm .modal",
-        body: "body"
+        body: "body",
+        topMenuRegion: "#top-app-menu-view"
     });
 
     MB.addInitializer(function () {

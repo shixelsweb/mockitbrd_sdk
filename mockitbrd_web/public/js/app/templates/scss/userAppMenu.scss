@@ -1,11 +1,36 @@
 #user-app-menu-view {
-	height: 100%;
 	float: right;
 	top: -10px;
 	position: absolute;
 	right: 190px;
 }
+.MB-new-count {
+	position: absolute;
+	right: 15px;
+	top: 10px;
+	z-index: 1;
+	cursor: default;
+	width: 10px;
+	height: 10px;
 
+	.fa-stack {
+		width: 10px;
+		height: 10px;
+	}
+
+	p {
+		color: $primary_white;
+		position: relative;
+		left: 7px;
+		top: -5px;
+		font-size: 0.7em;
+	}
+
+	i {
+		color: $primary_blue;
+		font-size: 1.5em;
+	}
+}
 .MB-notification-icon {
 	width: 40px;
 	height: 100%;

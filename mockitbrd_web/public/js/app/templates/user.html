@@ -16,9 +16,9 @@
 			{{#if isOwner}}
 			{{else}}
 				{{#if isStarred}}
-				<div class="MB-user-star MB-user-unstar unstar-user"><i id="what_{{user._id}}" class="fa fa-star"></i></div>
+				<div class="MB-user-star fa fa-star" starevent="unstar"  id="star_{{user._id}}"></div>
 				{{else}}
-				<div class="MB-user-star star-user"><i id="what_{{user._id}}" class="fa fa-star-o"></i></div>
+				<div class="MB-user-star fa fa-star-o" starevent="star"  id="star_{{user._id}}"></div>
 				{{/if}}
 			{{/if}}
 			{{#if user.location}}
@@ -41,13 +41,13 @@
 		{{else}}
 		<ul class="MB-user-profile-quick-links">
 			{{#if isConnectedActive}}
-			<li class="MB-user-profile-quick-link user-connection connected MB-user-unconnect" id="unconnect_{{user._id}}"><i class="fa fa-check"></i>Connected</li>
+			<li class="MB-user-profile-quick-link connected MB-user-connect" id="connect_{{user._id}}" connect="unconnect"><i class="fa fa-check"></i>Connected</li>
 			{{/if}}
 			{{#if notConnected}}
-			<li class="MB-user-profile-quick-link user-connection MB-user-connect" id="connect_{{user._id}}"><i class="fa fa-plus"></i>Connect</li>
+			<li class="MB-user-profile-quick-link MB-user-connect" id="connect_{{user._id}}" connect="connect"><i class="fa fa-plus"></i>Connect</li>
 			{{/if}}
 			{{#if isConnectedPending}}
-			<li class="MB-user-profile-quick-link user-connection disabled">Pending</li>
+			<li class="MB-user-profile-quick-link disabled  MB-user-connect" id="connect_{{user._id}}" connect="unconnect">Pending</li>
 			{{/if}}			
 			<li  class="MB-user-profile-quick-link last"><i class="fa fa-share-square-o"></i>Share</li>
 		</ul>
@@ -99,28 +99,29 @@
 				</div>
 			</div>
 		</div>
-		{{#if isOwner}}
-		<div class="user-profile-right pull-right">
-			<div class="user-profile-wall-poster">
-				<div class="user-profile-wall-poster-top">
-					<textarea placeholder="Type your comment here..."></textarea>
-				</div>
-				<div class="user-profile-wall-poster-bottom">
-					<ul class="user-post-type">
-						<li class="fa fa-comments active"></li>
-						<!-- <li class="fa fa-link"></li>
-						<li class="fa fa-picture-o"></li> -->
-					</ul>
-					<div class="right-button">
-						<div class="post-error"></div>
-						<button class="MB-button primary small MB-post-button">POST</button>
+			<div class="user-profile-right pull-right">
+				{{#if isOwner}}
+				<form id="MB-poster-form">
+				<div class="user-profile-wall-poster">
+					<div class="user-profile-wall-poster-top">
+						<textarea placeholder="Type your comment here..."></textarea>
+					</div>
+					<div class="user-profile-wall-poster-bottom">
+						<ul class="user-post-type">
+							<li class="fa fa-comments active"></li>
+							<!-- <li class="fa fa-link"></li>
+							<li class="fa fa-picture-o"></li> -->
+						</ul>
+						<div class="right-button">
+							<div class="post-error"></div>
+							<button class="MB-button primary small MB-post-button" type="submit">POST</button>
+						</div>
 					</div>
 				</div>
+				</form>
+				{{/if}}
+				<div class="user-posts"></div>
 			</div>
-			<div class="user-posts">
-			</div>
-		</div>
-		{{/if}}
 		<div class="clear-both"></div>
 	</div>
 </div>

@@ -31,9 +31,8 @@ define([ //VIEWS
     'views/UserView',
     //Application UI
     'views/LeftAppMenuView',
-    'views/TopAppMenuView',
-    'views/UserAppMenuView',
     'views/ExploreView',
+    'views/UserAppMenuView',
     //Dashboard Views
     'views/DashboardMainView',
     //Interview Views
@@ -80,9 +79,8 @@ function (
     UserView,
     //Application UI
     LeftAppMenuView,
-    TopAppMenuView,
-    UserAppMenuView,
     ExploreView,
+    UserAppMenuView,
     //Dashboard Views
     DashboardMainView,
     //Interview Views
@@ -96,6 +94,7 @@ function (
     AccountMediaView
 ){
     return Backbone.Marionette.Controller.extend({
+
         initialize: function (options) {
             this.showPublicHeader(true);
         },
@@ -140,7 +139,7 @@ function (
             }
         },
         removeHeader: function() { //hides the nav (for modals and error/success messages)
-           
+
         },
         launchApp: function(view, region, regionView, viewOptions, blank) {
             var isLoggedIn = MB.session.give('session');
@@ -149,32 +148,23 @@ function (
                 MB.appRouter.navigate('login', {trigger: true});
                 $('.MB-login-error').html('You must be logged in to view that page!');
             } else {
-
-                var topAppMenu = new TopAppMenuView();
-                var userAppMenu = new UserAppMenuView();
                 var dashboard = new DashboardView();
-                var leftAppMenu = new LeftAppMenuView();
+                var leftAppMenu = new LeftAppMenuView({'blank': blank});
                 var theView = null;
-                 
+                var userAppMenu = new UserAppMenuView();
+
                 this.hideModal();
                 this.removeView();
+                MB.leftAppNavRegion.show(leftAppMenu);
 
                 //Show all components of dashboard
 
-                if (!blank) {//renders blank dash page
-                    MB.leftAppNavRegion.show(leftAppMenu);
-                }
-                
                 MB.dashboardRegion.show(dashboard);
-                MB.dashboardRegion.$el.prepend(topAppMenu.render().el);
-                if (!blank) {
-                    topAppMenu.$el.prepend(userAppMenu.render().el);
-                }
-                
-                
+
                 MB.dashboard.ensureEl();
                 MB.mainRegion.$el.html(MB.dashboard.$el);
                 MB.dashboard.$el.show();
+                MB.topMenuRegion.show(userAppMenu);
 
                 if (viewOptions) {
                     theView = new view(viewOptions);
@@ -191,7 +181,7 @@ function (
 
             }
 
-            
+
         },
         showModal: function(View, color) { //shows a modal and passes in the view to show in modal and the color or the modal bg
             MB.body.ensureEl();

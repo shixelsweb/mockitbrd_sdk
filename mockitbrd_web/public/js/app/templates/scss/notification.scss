@@ -1,0 +1,91 @@
+#notification-view {
+	width: 100%;
+	height: 50px;
+	border-bottom: 1px solid rgba(204, 204, 204, 0.4);
+	cursor: default;
+	background: $lightest_grey;
+
+	&.read {
+		background: $read_grey;
+		.MB-mark-read {
+			color: $user_type_active !important;
+			cursor: default;
+		}
+	
+	}
+	&.unread {
+		.MB-mark-read {
+			color: $primary_blue !important;
+
+			&:hover {
+				color: darken($primary_blue, 20%) !important;
+			}
+		}
+	}
+	.notification_left {
+		margin-left: 15px;
+		padding-top: 10px;
+	}
+	.notification-img {
+		width: 30px;
+		height: 30px;
+		margin-right: 10px;
+		overflow: hidden;
+		float: left;
+		border-radius: 100px
+	}
+
+	.notification-thanks {
+		color: $user_type_active;
+
+		i {
+			font-size: 1.5em !important;
+			padding-left: 10px;
+		}
+	}
+	.notificatin-when {
+		font-size: 0.6em;
+	}
+	.message {
+		float: right;
+		font-size: 0.8em;
+	}
+	.notification-menu {
+		float: right;
+		right: 10px;
+		position: relative;
+		margin: 0;
+		margin-top: 9px;
+		font-size: 0.9em;
+
+
+		li {
+			display: inline-block;
+			font-size: 0.7em;
+			margin-right: 10px;
+			cursor: pointer;
+
+			&.MB-user-accept {
+				color: $primary_green;
+			}
+
+			&.MB-user-unconnect {
+				color: $primary_red;
+			}
+
+			&.MB-user-accept, &.MB-user-unconnect {
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+
+			&.MB-mark-read {
+				font-size: 1.1em;
+				color: $primary_blue;
+				&:hover {
+					color: darken($primary_blue, 10%);
+				}
+			}
+		}
+	}
+}

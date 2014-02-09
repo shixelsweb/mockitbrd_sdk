@@ -182,10 +182,8 @@
 
 		&.disabled {
 			color: $devil_grey;
-			cursor: not-allowed;
-
 			&:hover {
-				color: $devil_grey;
+				color: $primary_yellow;
 			}
 		}
 

@@ -20,11 +20,10 @@
 
 .explore-results {
 	float: left;
-	width: 70%;
-	overflow-y: scroll;
-	height: 100%;
-	margin-top: 65px;
-	margin-left: 50px;
+width: 70%;
+margin-left: 50px;
+position: relative;
+top: 120px;
 }
 
 .explore-result {
@@ -71,3 +70,11 @@
 	}
 	
 }
+
+.no-results {
+	font-family: $cursive_font;
+	text-align: center;
+	font-size: 3em;
+	line-height: 10em;
+}
+

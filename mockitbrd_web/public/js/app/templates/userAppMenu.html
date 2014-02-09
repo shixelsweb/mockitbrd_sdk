@@ -4,5 +4,14 @@
 		<a href="#user/{{user._id}}"><li class="MB-user-menu-image"><img src="/getUserpic/{{user._id}}"></li></a>
 		<li class="MB-user-menu-menu fa fa-power-off"></li>
 	</ul>
+	{{#if new_count}}
+	<div class="MB-new-count">
+		<span class="fa-stack">
+		  <i class="fa fa-circle fa-stack-2x"></i>
+		  <p>{{new_count}}</p>
+		</span>
+	</div>
+	{{/if}}
 	<div class="MB-notification-icon fa fa-bell"></div>
+	
 </div>

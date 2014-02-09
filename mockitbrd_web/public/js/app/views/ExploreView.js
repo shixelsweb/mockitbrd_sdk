@@ -1,5 +1,5 @@
-define(['jquery', 'models/Model', 'hbs!templates/explore', 'backbone', 'marionette'],
-    function ($, Model, template, Backbone) {
+define(['jquery', 'models/Model', 'views/MBConfirm', 'hbs!templates/explore', 'backbone', 'marionette'],
+    function ($, Model, MBConfirm, template, Backbone) {
       //ItemView provides some default rendering logic
       return Backbone.Marionette.ItemView.extend({
           template:template,
@@ -14,19 +14,20 @@ define(['jquery', 'models/Model', 'hbs!templates/explore', 'backbone', 'marionet
           connStore: null,
           popStore: null,
           blockedList: null,
+          isChanged: null,
+          featStore: null,
 
           events: {
             'click .MB-submenu li': 'handleExlporeMenuClick',
-            'mouseover .exp-result': 'handleExploreItemHover',
-            'mouseout .exp-result': 'handleExploreItemUnHover',
-            'click .MB-user-connect': 'userConnect'
+            'click .MB-user-connect': 'connectHandler'
           },
 
           initialize: function() {
-            this.userStore = MB.api.allUsers();
-            this.user =  MB.api.user($.parseJSON(MB.session.give('session')).user);
-            
 
+            //TODO: Add "No showing - of - results", and also enable pagination
+            
+            this.user =  MB.api.user($.parseJSON(MB.session.give('session')).user);
+            this.userStore = MB.api.allUsers();
             this.fixStore(this.userStore);
             this.newestStore = this.sortResults(this.userStore, 'date');
 
@@ -65,13 +66,11 @@ define(['jquery', 'models/Model', 'hbs!templates/explore', 'backbone', 'marionet
               } else {
                 users[i].isCandidate = false;
               }
-
               if (users[i]._id === this.user._id) {
                 users[i].isOwner = true;
               } else {
                 users[i].isOwner = false;
               }
-
               if (connections) {
                 for (var j = 0; j < connections.length; j++) {
                   if(connections[j].user_id === users[i]._id) {
@@ -81,21 +80,16 @@ define(['jquery', 'models/Model', 'hbs!templates/explore', 'backbone', 'marionet
                       } else if (connections[j].status === 'active') {
                         users[i].status = 'Connected';
                       }
-                     
-                  } else {
-                    //users[i].isConnected = false;
                   }
                 }
               }
-
             if(blocked_users) {
               for (var k = 0; k < blocked_users.length; k++) {
                  if(blocked_users[k].user_id === users[i]._id) {
                     users[i].isBlocked = true;
-                 }
+                   }
+                }
               }
-            }
-
             }
           },
           sortResults: function(results, sortBy) {
@@ -136,7 +130,6 @@ define(['jquery', 'models/Model', 'hbs!templates/explore', 'backbone', 'marionet
                    this.candStore = this.sortResults(this.candStore, 'date');
                 }
                 this.model.attributes.results = this.candStore;
-                this.renderAgain();
               } else if (sortBy === 'interviewers') {
                 if (!this.intStore) {
                    this.intStore = MB.api.allInterviewers();
@@ -144,7 +137,6 @@ define(['jquery', 'models/Model', 'hbs!templates/explore', 'backbone', 'marionet
                    this.intStore = this.sortResults(this.intStore, 'date');
                 }
                 this.model.attributes.results = this.intStore;
-                this.renderAgain();
               } else if (sortBy === 'newest') {
                 if (!this.newestStore) {
                    this.userStore = MB.api.allUsers();
@@ -152,7 +144,6 @@ define(['jquery', 'models/Model', 'hbs!templates/explore', 'backbone', 'marionet
                    this.newestStore = this.sortResults(this.userStore, 'date');
                 }
                 this.model.attributes.results = this.sortResults(this.newestStore, 'date');
-                this.renderAgain();
               } else if (sortBy === 'active') {
                 if (!this.activeStore && !this.newestStore) {
                    this.activeStore = MB.api.allUsers();
@@ -162,7 +153,6 @@ define(['jquery', 'models/Model', 'hbs!templates/explore', 'backbone', 'marionet
                   this.activeStore = this.newestStore;
                 }
                 this.model.attributes.results = this.sortResults(this.activeStore, 'active');
-                this.renderAgain();
               } else if (sortBy === 'connections') {
                 if (!this.connStore) {
                    var connections = this.user.connections;
@@ -177,7 +167,6 @@ define(['jquery', 'models/Model', 'hbs!templates/explore', 'backbone', 'marionet
                    this.connStore = this.sortResults(this.connStore, 'active');
                 } 
                 this.model.attributes.results = this.sortResults(this.connStore, 'active');
-                this.renderAgain();
               } else if (sortBy === 'popular') {
                 if (!this.popStore && !this.newestStore) {
                    this.popStore = MB.api.allUsers();
@@ -187,8 +176,14 @@ define(['jquery', 'models/Model', 'hbs!templates/explore', 'backbone', 'marionet
                   this.popStore = this.newestStore;
                 }
                 this.model.attributes.results = this.sortResults(this.popStore, 'popular');
-                this.renderAgain();
+              } else if (sortBy === 'featured') { //TODO: Add a featured mechanism somehow
+                if (!this.featStore) {
+                   this.featStore = null;
+                } 
+                this.model.attributes.results = this.featStore;
+                
               }
+              this.renderAgain();
             } 
 
             $('.MB-submenu li').removeClass('active');
@@ -198,15 +193,42 @@ define(['jquery', 'models/Model', 'hbs!templates/explore', 'backbone', 'marionet
           getSize: function() {
              var height =  $(this.$el[0].lastElementChild).scrollHeight + 'px';
           },
-          handleExploreItemHover: function(e) {
-            $(e.currentTarget).addClass('tossing');
+          connectHandler: function(e) {
+            var self = this;
+            var connectType = $(e.currentTarget).attr('connect');
+            var send = {'user': this.user._id, 'connect_to': $(e.currentTarget).attr('id').split('_')[1]};
+            var unconnectCommand = new Backbone.Wreqr.Commands();
+            var change = '#connect_' + $(e.currentTarget).attr('id').split('_')[1];
+
+            if (connectType === 'connect') {
+               this.isChanged = MB.api.connect(send);
+               if (this.isChanged) {
+                  this.refreshStore();
+                  $(change).html('Pending');
+                  $(change).attr('connect', 'unconnect')                            
+                  $(change).addClass('disabled');
+               }
+            } else if (connectType === 'unconnect') {
+               MB.body.ensureEl();
+                MB.body.$el.addClass('modal-black-show');
+                unconnectCommand.addHandler('yes', function(){
+                  self.isChanged = MB.api.unconnect(send);
+                  if (self.isChanged) {
+                      self.refreshStore();
+                      $(change).html('<i class="fa fa-plus"></i>&nbsp;&nbsp;Connect');
+                      $(change).attr('connect', 'connect')                            
+                      $(change).removeClass('disabled');
+                 }
+                });
+                MB.confirmRegion.show( new MBConfirm({commands: unconnectCommand, 'title': 'Are you sure you want to unconnect from this user?', 'body': 'You will need to reconnect and be approved in the future.'}));
+            }
+           
           },
-          handleExploreItemUnHover: function(e) {
-            $(e.currentTarget).removeClass('tossing');
-          },
-          userConnect: function(e) {
-            var send = {'user': this.user._id, 'connect_to': $(e.currentTarget).attr('id')};
-            MB.api.connect(send);
+          refreshStore: function() {
+            this.user =  MB.api.user($.parseJSON(MB.session.give('session')).user);
+            this.userStore = MB.api.allUsers();
+            this.fixStore(this.userStore);
+            this.newestStore = this.sortResults(this.userStore, 'date');
           }
       });
 });

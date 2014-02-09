@@ -16,6 +16,7 @@
 			<div class="explore-face-menu-header"></div>
 		</div>
 		<div class="explore-results">
+			{{#if results.length}}
 			{{#each results}}
 				{{#if isOwner}}
 				{{else}}
@@ -31,13 +32,16 @@
 						</div>
 						<div class="exp-name">{{fname}} {{lname}}</div>
 						{{#if isConnected}}
-							<a class="MB-button dingy smallest wide disabled">{{status}}</a>
+							<a class="MB-button dingy smallest wide disabled MB-user-connect" connect="unconnect"  id="connect_{{_id}}">{{status}}</a>
 						{{else}}
-							<a class="MB-button dingy smallest wide MB-user-connect" id="connect_{{_id}}">Connect</a>
+							<a class="MB-button dingy smallest wide MB-user-connect" connect="connect" id="connect_{{_id}}"><i class="fa fa-plus"></i>&nbsp;&nbsp;Connect</a>
 						{{/if}}
 					</div>
 					{{/if}}
 			{{/each}}
+			{{else}}
+				<p class="no-results">No Results Found</p>
+			{{/if}}
 
 		</div>
 			
