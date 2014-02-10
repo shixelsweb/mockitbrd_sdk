@@ -25,7 +25,6 @@
     MB.api.update(data);
 
 */
-<<<<<<< Updated upstream
 define([
     "jquery",
     "underscore",
@@ -123,42 +122,6 @@ define([
                     if (response.data.userTasks) {
                         for(var i = 0; i < response.data.userTasks.length; i++) {
                             tasks.push(self.task(response.data.userTasks[i].task_id));
-=======
-define(["jquery", "underscore", "backbone"],
-    function($, _, Backbone) {
-        // Creates a new Backbone Model class object
-        var MBapi = Backbone.Model.extend({
-
-            defaults: {
-                url: null
-            },
-
-            initialize: function() {
-                _.bindAll(this);
-
-                if (MB.env === 'dev') {
-                    this.set({'url': 'http://mockitbrdapi-11009.onmodulus.net/'});
-                } else if (MB.env === 'prod') {
-                    this.set({'url': 'http://mb.mockitbrd.com/'});
-                }
-               
-            },
-
-            //TODO: remember email, stay logged in (increase session time), only login if status is active
-            login: function(params) {
-                var send = null;
-                $.ajax({
-                    type: "POST",
-                    url: this.get('url') + "v1/user/verify_user",
-                    data: params,
-                    dataType: 'json',
-                    success: function (response) {
-                        if (response.success === 0) {
-                            $('.MB-login-error').html(response.data.error);
-                            $('.MB-login-alert').css('display', 'table');
-                        } else {
-                            MB.session.start(response.data.user); //add  ", params.stayLoggedIn"
->>>>>>> Stashed changes
                         }
                     }
                 },
