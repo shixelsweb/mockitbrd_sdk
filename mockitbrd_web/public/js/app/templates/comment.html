@@ -7,7 +7,7 @@
 			<a href="#user/{{comment.user_id}}">{{comment.commenter}}</a>&nbsp;&nbsp;
 			<span class="comment-comment">{{{comment.comment}}}</span>
 			</div>
-		<div class="comment-date">{{date}}
+		<div class="comment-date">{{comment.date}}
 			{{#if comment.likes_count}}
 				<span class="comment-likes"  data-commentid="{{comment._id}}">&nbsp;&nbsp;{{comment.likes_count}}</span>
 			{{/if}}

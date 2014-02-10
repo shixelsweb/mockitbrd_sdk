@@ -18,7 +18,14 @@ define(['jquery', 'models/Model', 'views/MBConfirm', 'moment', 'hbs!templates/no
             this.notification = options.notification;
             this.currentUser = MB.api.user($.parseJSON(MB.session.give('session')).user);
             this.notification.by_who = MB.api.user(this.notification.by_who);
-            this.notification.when = moment(this.notification.date, "YYYYMMDD").fromNow();
+            this.notification.when = moment(this.notification.date).fromNow();
+            if (parseInt(this.notification.read) === 0 && this.notification.type !== 'connction') {
+                this.notification.notReadandNotConnection = true;
+            } else if (parseInt(this.notification.read) === 1 && this.notification.type !== 'connction') {
+                this.notification.isRead = true;
+                 this.notification.done_message = 'Read';
+                  this.notification.readClass = 'read';
+            }
             if (this.currentUser.connections) {
               for (var i = 0; i < this.currentUser.connections.length; i++) {
                 if(this.currentUser.connections[i].user_id === this.notification.by_who._id) {
@@ -28,6 +35,7 @@ define(['jquery', 'models/Model', 'views/MBConfirm', 'moment', 'hbs!templates/no
                           this.notification.done_message = 'Connected';
                       } else {
                         this.notification.readClass = 'unread';
+                        this.notification.isRead = false;
                       }
                     if (parseInt(this.notification.read) === 1) {
                       this.notification.readClass = 'read';

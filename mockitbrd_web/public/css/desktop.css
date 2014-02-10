@@ -5761,9 +5761,11 @@ header.ghost .navbar-inner {
   resize: none;
   box-shadow: none;
   border: 1px solid #dddddd;
+  font-size: 0.8em;
+  padding-top: 10px !important;
 }
 
-/* line 85, ../js/app/templates/scss/post.scss */
+/* line 87, ../js/app/templates/scss/post.scss */
 .post-error {
   display: none;
   color: #cd0000;
@@ -5772,76 +5774,97 @@ header.ghost .navbar-inner {
   bottom: 20px;
 }
 
-/* line 93, ../js/app/templates/scss/post.scss */
+/* line 95, ../js/app/templates/scss/post.scss */
 .user-post-comments .user-post-comment {
   color: #6b7886;
   font-size: 0.8em;
   padding: 15px;
 }
-/* line 97, ../js/app/templates/scss/post.scss */
+/* line 99, ../js/app/templates/scss/post.scss */
 .user-post-comments .user-post-comment .comment-right {
   padding-left: 15px;
   width: 90%;
   position: relative;
 }
-/* line 102, ../js/app/templates/scss/post.scss */
+/* line 104, ../js/app/templates/scss/post.scss */
 .user-post-comments .user-post-comment .comment-right .comment-commenter {
   padding-bottom: 4px;
 }
-/* line 104, ../js/app/templates/scss/post.scss */
+/* line 106, ../js/app/templates/scss/post.scss */
 .user-post-comments .user-post-comment .comment-right .comment-commenter .comment-likes {
   font-size: 0.8em;
 }
-/* line 108, ../js/app/templates/scss/post.scss */
+/* line 110, ../js/app/templates/scss/post.scss */
 .user-post-comments .user-post-comment .comment-right .comment-commenter .comment-comment {
   color: #37404e;
   line-height: 1.5em;
 }
-/* line 112, ../js/app/templates/scss/post.scss */
+/* line 114, ../js/app/templates/scss/post.scss */
 .user-post-comments .user-post-comment .comment-right .comment-commenter .comment-comment a {
   color: #3b5998;
 }
-/* line 115, ../js/app/templates/scss/post.scss */
+/* line 117, ../js/app/templates/scss/post.scss */
 .user-post-comments .user-post-comment .comment-right .comment-commenter .comment-comment a:hover {
   text-decoration: underline;
 }
-/* line 121, ../js/app/templates/scss/post.scss */
+/* line 123, ../js/app/templates/scss/post.scss */
 .user-post-comments .user-post-comment .comment-right .comment-date {
   font-size: 0.8em;
 }
-/* line 124, ../js/app/templates/scss/post.scss */
+/* line 126, ../js/app/templates/scss/post.scss */
 .user-post-comments .user-post-comment .comment-right .comment-date .show_love {
   cursor: pointer;
   color: #6b7886;
   font-size: 1.5em;
 }
-/* line 129, ../js/app/templates/scss/post.scss */
+/* line 131, ../js/app/templates/scss/post.scss */
 .user-post-comments .user-post-comment .comment-right .comment-date .show_love:hover {
   color: #37404e;
 }
-/* line 133, ../js/app/templates/scss/post.scss */
+/* line 135, ../js/app/templates/scss/post.scss */
 .user-post-comments .user-post-comment .comment-right .comment-date .no_love {
   cursor: pointer;
   color: #2bbbff;
   font-size: 1.5em;
 }
-/* line 138, ../js/app/templates/scss/post.scss */
+/* line 140, ../js/app/templates/scss/post.scss */
 .user-post-comments .user-post-comment .comment-right .comment-date .no_love:hover {
   color: #37404e;
 }
-/* line 144, ../js/app/templates/scss/post.scss */
+/* line 146, ../js/app/templates/scss/post.scss */
 .user-post-comments .user-post-comment .comment-pic {
   width: 40px;
   height: 40px;
   overflow: hidden;
 }
 
-/* line 153, ../js/app/templates/scss/post.scss */
+/* line 155, ../js/app/templates/scss/post.scss */
 .comment-section .comment-pic {
   position: relative;
   top: 15px;
   left: 15px;
   width: 40px;
+}
+
+/* line 163, ../js/app/templates/scss/post.scss */
+.comment-instructions {
+  float: right;
+  position: relative;
+  top: -10px;
+  right: 15px;
+  color: #6b7886;
+  cursor: default;
+  font-size: 0.7em;
+}
+
+/* line 172, ../js/app/templates/scss/post.scss */
+.comment-error {
+  float: left;
+  position: relative;
+  left: 10%;
+  top: -15px;
+  font-size: 0.8em;
+  color: #cd0000;
 }
 
 /* line 1, ../js/app/templates/scss/notification.scss */

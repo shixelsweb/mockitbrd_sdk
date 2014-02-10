@@ -33,10 +33,12 @@
 	</div>
 	<p class="post">{{{post.post}}}</p>
 	<div class="bottom">
-			<div class="user-post-comments"></div>
+			<div class="user-post-comments" id="comments_{{post._id}}"></div>
 			<div class="comment-section">
-				<div class="comment-pic pull-left"><a href="#user/{{post.user_id}}"><img src="/getUserpic/{{post.user_id}}"></a></div>
-				<textarea class="pull-right" placeholder="Type here to comment.."></textarea>
+				<div class="comment-pic pull-left"><a href="#user/{{post.currentUser}}"><img src="/getUserpic/{{post.currentUser}}"></a></div>
+				<textarea class="comment_area_{{post._id}} pull-right" placeholder="Type here to comment.." data-postid="{{post._id}}" data-poster="{{post.user_id}}"></textarea>
+				<div class="comment-error"></div>
+				<div class="comment-instructions">Press Enter to submit (Shift + Enter for new line)</div>
 				<div class="clear-both"></div>
 			</div>
 		</div>

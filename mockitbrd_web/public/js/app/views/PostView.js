@@ -1,5 +1,5 @@
-define(['jquery', 'models/Model', 'views/MBConfirm', 'views/CommentView', 'autogrow', 'hbs!templates/post', 'backbone', 'marionette'],
-    function ($, Model, MBConfirm, CommentView, autogrow, template, Backbone) {
+define(['moment', 'jquery', 'models/Model', 'views/MBConfirm', 'views/CommentView', 'autogrow', 'hbs!templates/post', 'backbone', 'marionette'],
+    function (moment, $, Model, MBConfirm, CommentView, autogrow, template, Backbone) {
       //ItemView provides some default rendering logic
       return Backbone.Marionette.ItemView.extend({
           template:template,
@@ -7,7 +7,8 @@ define(['jquery', 'models/Model', 'views/MBConfirm', 'views/CommentView', 'autog
           events: {
             'click .delete-post': "deletePost",
             'click .comment-section textarea': "autgrowArea",
-            'click .MB-post-like': "postLikeHandler"
+            'click .MB-post-like': "postLikeHandler",
+            'keyup .comment-section textarea': 'submitCommentByEnter'
           },
 
           model: null,
@@ -52,6 +53,7 @@ define(['jquery', 'models/Model', 'views/MBConfirm', 'views/CommentView', 'autog
           }
           this.post.post = post_html;
           this.post.isConnectedActive = this.isConnectedActive;
+          this.post.currentUser = this.currentUser._id;
 
           this.model = new Model ({
             post: this.post
@@ -116,6 +118,27 @@ define(['jquery', 'models/Model', 'views/MBConfirm', 'views/CommentView', 'autog
             } else {
                $('.post_likes[data-postid="' + postId +'"]').hide().html((postLikes )).fadeIn('slow');
             }
+        }
+      },
+      submitCommentByEnter: function(e) {
+        var postId = $(e.currentTarget).data('postid');
+        commented = null;
+        var commentSection = '#comments_' + postId;
+        var commentTextArea = '.comment_area_' + postId;
+        var poster =  $(e.currentTarget).data('poster');
+        send = {'comment': $.trim($(e.currentTarget).val()), 'date': moment(new Date()).format(), 'likes': [], 'user_id': this.currentUser._id};
+        if (e.which == 13 && ! e.shiftKey) {
+          if ($.trim($(e.currentTarget).val())) {
+            commented = MB.api.comment(send, postId, poster);
+
+            if (commented.changed) {
+              $(commentTextArea).val('');
+              var com = new CommentView({'comment': commented.comment, 'post_id': postId});
+              this.renderComment(com);
+            }
+          } else {
+              $('.comment-error').html('Please enter comment!');
+          }
         }
       }
      });

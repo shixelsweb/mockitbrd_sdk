@@ -30,6 +30,7 @@ define([
     "underscore",
     "backbone",
     "views/PostView",
+    "views/CommentView",
     "views/NotificationView",
     "moment"
     ],
@@ -38,6 +39,7 @@ define([
     _,
     Backbone,
     PostView,
+    CommentView,
     NotificationView,
     moment
     ){
@@ -494,6 +496,34 @@ define([
             });
 
             return send;
+        },
+        comment: function(comment, postid, poster) {
+            var send = {comment: comment, post_id: postid};
+            var changed = {};
+            var self = this;
+            $.ajax({
+                type: "POST",
+                url: this.get('api_url') + "v1/post/comment",
+                data: send,
+                dataType: 'json',
+                success: function (response) {
+                    if (response.success === 0) {
+                        //Add popup here
+                    } else {
+                        changed = {changed: true, comment: response.data.comment};
+
+                        if(poster !== response.data.comment.user_id) {
+                            self.notification({'date': moment(new Date()).format(), 'notify': poster, 'type': 'comment', 'message': MB.helper.message('commented'), 'by_who': response.data.comment.user_id, 'read': '0'},'create');
+                        }
+                    }
+                },
+                error: function (response) {
+                    console.log("error: ", response); //TODO-(Fara) : add to Error Modal
+                },
+                async: false
+            });
+
+            return changed;
         }
     });
 

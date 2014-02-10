@@ -1,5 +1,5 @@
-define(['jquery', 'models/Model', 'views/MBConfirm', 'hbs!templates/comment', 'backbone', 'marionette'],
-    function ($, Model, MBConfirm, template, Backbone) {
+define(['moment', 'jquery', 'models/Model', 'views/MBConfirm', 'hbs!templates/comment', 'backbone', 'marionette'],
+    function (moment, $, Model, MBConfirm, template, Backbone) {
       //ItemView provides some default rendering logic
       return Backbone.Marionette.ItemView.extend({
           template:template,
@@ -31,6 +31,7 @@ define(['jquery', 'models/Model', 'views/MBConfirm', 'hbs!templates/comment', 'b
             this.comment.likes_count = this.comment.likes.length;
           }
 
+          this.comment.date = moment(this.comment.date).format('MMMM Do YYYY, h:mma');
           this.comment.comment = MB.helper.replaceURLWithHTMLLinks(this.comment.comment);
           this.comment.commenter = commenter.fname + " " + commenter.lname;
           this.comment.commenterid = commenter._id;
@@ -43,7 +44,7 @@ define(['jquery', 'models/Model', 'views/MBConfirm', 'hbs!templates/comment', 'b
         // assumes 1 child element.
         this.$el = this.$el.children();
         this.setElement(this.$el);
-        $('.user-post-comments').prepend(this.$el);
+        //$('.user-post-comments').prepend(this.$el);
       },
       autgrowArea: function(e) {
         $(e.currentTarget).autogrow();

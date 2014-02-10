@@ -18,6 +18,9 @@
 		<li class="MB-user-unconnect" data-notificationid="{{notification._id}}" data-notificationwho="{{notification.by_who._id}}">Deny</li>
 		<li class="MB-mark-read" title="Mark as read" data-notificationid="{{notification._id}}" ><i class="fa fa-check"></i></li>
 		{{/if}}
+		{{#if notification.notReadandNotConnection}}
+		<li class="MB-mark-read" title="Mark as read" data-notificationid="{{notification._id}}" ><i class="fa fa-check"></i></li>
+		{{/if}}
 	</ul>
 	<div class="clear-both"></div>
 </div>
