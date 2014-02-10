@@ -1,183 +1,69 @@
 <div id="account-general-view">
-	<h1 class="account-head">General Settings</h1>
-	<h4>Update your personal information.</h4>
-	<div class="account-box">
-		<div class="row">
-			<div class="span2">
-				<label class="acclabstyle">User Type :</label>
-				<input type="text" value="{{user.user_type}}" id="usertype" class="inputbordernone geninputborderwidth" disabled="disabled">
-			</div>
-			<div class="span2 offset1">
-				<label class="accfulllabstyle">Mockitbrd Profile :</label>
-				<input type="text" id="userprofile" disabled="disabled" value="{{user.profileURL}}">
-			</div>
-		</div>
-		<div class="row">
-			<div class="span2">
-				<label class="inline acclabstyle">First Name :</label>
-				<input type="text" value="{{user.fname}}" id="fname" class="inputbordernone geninputborderwidth"><br>	
-			</div>
-			<div class="span2 offset1">
-				<label class="inilne acclabstyle">Last Name :</label>
-				<input type="text" value="{{user.lname}}" id="lname" class="inputbordernone geninputborderwidth"><br>
-			</div>
-		</div>
-		<div class="row">
-			<div class="span2">
-				<label class="inline acclabstyle">Email:</label>
-				<input type="text" value="{{user.email}}" id="email" class="inputbordernone geninputborderwidth"><br>	
-			</div>
-			<div class="span2 offset1">
-				<label class="inilne acclabstyle">Phone :</label>
-				<input type="text" value="{{user.phone}}" id="email" class="inputbordernone geninputborderwidth"><br>
-			</div>
-		</div>
-		<div class="row">
-			<div class="span2">
-				<label class="accfulllabstyle">Job Title :</label>
-				<input type="text" id="jobtitle" value="{{user.job_title}}">
-			</div>
-			<div class="span2 offset1">
-				<label class="acclabstyle">Job Status :</label>
-				<select>
-					<option>Actively Seeking Employment</option>
-					<option>Currently Employed</option>
-					<option>Hired</option>
-					<option>Not Actively Seeking Employement</option>
-				</select>
-			</div>
-		</div>
+	<div class="top-stretch"></div>
+	<div id="top-account-banner">
+		<h1 class="account-head">General Settings</h1>
+		<h4>Update your personal information.</h4>
 	</div>
-	<button class="MB-button noire">Save</button>			
-	</div>
-</div>
+	
+	<div id="account-gen-box">
+		<div id="account-gen-box-head" class="section-head">Manage your Personal Information</div>
 
-<!-- <div class="MB-account-window-titie">
-	<h2 class="account-head">General</h2>
-	<h4>Update personal account information</h4>
-</div>
-<hr>
-<div class="MB-name-info">
-	<div class="row">
-		<div class="span6 offset1 name-info-input">
-
-			<div class="row">
-				<div class="span2">
-					<label class="acclabstyle">User Type :</label>
-					<input type="text" value="{{user.user_type}}" id="usertype" class="inputbordernone geninputborderwidth" disabled="disabled">
-				</div>
-				<div class="span2 offset1">
-					<label id=""></label>
+		<div id="account-gen-container">
+			<div class="account-gen-line">
+				<div class="gen-label-line"><p class="acc-p">User-Type:</p></div>
+				<div class="gen-input-line">
+					<input type="text" value="{{user.user_type}}" id="" class="gen-input" disabled="disabled">
 				</div>
 			</div>
-
-			<label class="accfulllabstyle">Email:</label>
-			<input type="email" value="{{user.email}}"><br>
-			
-			<div class="row">
-				<div class="span2">
-					<label class="inline acclabstyle">First Name :</label>
-					<input type="text" value="{{user.fname}}" id="fname" class="inputbordernone geninputborderwidth"><br>	
-				</div>
-				<div class="span2 offset1">
-					<label class="inilne acclabstyle">Last Name :</label>
-					<input type="text" value="{{user.lname}}" id="lname" class="inputbordernone geninputborderwidth"><br>
-				</div>
-			</div>	
-
-
-			<div class="row">
-				<div class="span2">
-					<label class="inline acclabstyle">Telephone No :</label>
-					<input type="text" value="{{user.phone}}" id="telephoneno" class="inputbordernone geninputborderwidth"><br>
-				</div>
-				<div class="span2 offset1">
-					<label class="inline acclabstyle">Location :</label>
-						<select name="state" id="selectstate">
-							<option value="AL">Alabama</option>
-							<option value="AK">Alaska</option>
-							<option value="AZ">Arizona</option>
-							<option value="AR">Arkansas</option>
-							<option value="CA">California</option>
-							<option value="CO">Colorado</option>
-							<option value="CT">Connecticut</option>
-							<option value="DE">Delaware</option>
-							<option value="DC">District of Columbia</option>
-							<option value="FL">Florida</option>
-							<option value="GA">Georgia</option>
-							<option value="HI">Hawaii</option>
-							<option value="ID">Idaho</option>
-							<option value="IL">Illinois</option>
-							<option value="IN">Indiana</option>
-							<option value="IA">Iowa</option>
-							<option value="KS">Kansas</option>
-							<option value="KY">Kentucky</option>
-							<option value="LA">Louisiana</option>
-							<option value="ME">Maine</option>
-							<option value="MD">Maryland</option>
-							<option value="MA">Massachusetts</option>
-							<option value="MI">Michigan</option>
-							<option value="MN">Minnesota</option>
-							<option value="MS">Mississippi</option>
-							<option value="MO">Missouri</option>
-							<option value="MT">Montana</option>
-							<option value="NE">Nebraska</option>
-							<option value="NV">Nevada</option>
-							<option value="NH">New Hampshire</option>
-							<option value="NJ">New Jersey</option>
-							<option value="NM">New Mexico</option>
-							<option value="NY">New York</option>
-							<option value="NC">North Carolina</option>
-							<option value="ND">North Dakota</option>
-							<option value="OH">Ohio</option>
-							<option value="OK">Oklahoma</option>
-							<option value="OR">Oregon</option>
-							<option value="PA">Pennsylvania</option>
-							<option value="RI">Rhode Island</option>
-							<option value="SC">South Carolina</option>
-							<option value="SD">South Dakota</option>
-							<option value="TN">Tennessee</option>
-							<option value="TX">Texas</option>
-							<option value="UT">Utah</option>
-							<option value="VT">Vermont</option>
-							<option value="VA">Virginia</option>
-							<option value="WA">Washington</option>
-							<option value="WV">West Virginia</option>
-							<option value="WI">Wisconsin</option>
-							<option value="WY">Wyoming</option>
-						</select>
-
+			<div class="account-gen-line">
+				<div class="gen-label-line"><p class="acc-p">Profile ID:</p></div>
+				<div class="gen-input-line">
+					<input type="text" id="" disabled="disabled" value="{{user.profileURL}}" class="gen-input">
 				</div>
 			</div>
 			<hr>
+			<div class="account-gen-line">
+				<div class="gen-label-line"><p class="acc-p">Name:</p></div>
+				<div class="gen-input-line">
+					<input type="text" value="{{user.fname}}" class="fName gen-input">
+					<input type="text" value="{{user.lname}}" class="lName gen-input">
+				</div>
+			</div>
+			<div class="account-gen-line">
+				<div class="gen-label-line"><p class="acc-p">Email:</p></div>
+				<div class="gen-input-line">
+					<input type="text" value="{{user.email}}" class="gen-input">
+				</div>
+			</div>
+			<div class="account-gen-line">
+				<div class="gen-label-line"><p class="acc-p">Phone:</p></div>
+				<div class="gen-input-line">
+					<input type="text" value="{{user.phone}}" class="gen-input">
+				</div>
+			</div>
+			<div class="account-gen-line">
+				<div class="gen-label-line"><p class="acc-p">Job Title:</p></div>
+				<div class="gen-input-line">
+					<input type="text" value="{{user.job_title}}" class="gen-input">
+				</div>
+			</div>
+			<div class="account-gen-line">
+				<div class="gen-label-line"><p class="acc-p">Name:</p></div>
+				<div class="gen-input-line">
+					<select class="gen-input">
+							<option>Actively Seeking Employment</option>
+							<option>Currently Employed</option>
+							<option>Hired</option>
+							<option>Not Actively Seeking Employement</option>
+					</select>
+				</div>
+			</div>
 
-			<label class="acclabstyle">Job Status :</label>
-			<select>
-				<option>Actively Seeking Employment</option>
-				<option>Currently Employed</option>
-			</select>
-			
-			<label class="accfulllabstyle">Highest Level of Education :</label>
-			<input type="text" id="edulevel">
-
-			<label class="accfulllabstyle">Job Title :</label>
-			<input type="text" id="jobtitle" value="{{user.job_title}}">
-
-			<label class="accfulllabstyle">Company Name :</label>
-			<input type="text" id="companyname">
-
-			<label class="accfulllabstyle">Mockitbrd Profile :</label>
-			<input type="text" id="userprofile" disabled="disabled" value="http:test/{{user._id}}/account">
-
-			<button class="MB-button noire">Save</button>
-		
-
-			
-			<hr>
-			
-			</div>		
+			<button class="MB-button noire">Save</button>	
 
 		</div>
-		
-	</div>
-</div>	 -->		
+	</div>	
+
+			
+</div>
+	

@@ -1,27 +1,33 @@
 
-.account-head {
-	font-family: $ethon_roman;
-	color: $primary_grey;
-	font-size: 35px;
-	margin-bottom: 20px;
+#top-account-banner {
+	width: 100%;
+	background: $primary_grey_hl;
+	border-top: 1px solid $primary_black;
+	border-bottom: 2px groove $primary_grey_hl;
+
+
+	.account-head {
+		font-family: $ethon_roman;
+		color: $lightest_grey;
+		font-size: 35px;
+		margin-bottom: 20px;
+		margin-left: 10%;
+	}
 }
-#userprofile {
-	min-width: 400px;
-}
+
 #accountViewRegion {
-	top: 160px;
-	position: fixed;
+	top: 112px;
 	z-index: 1;
 	overflow-y: scroll;
 	width: 100%;
-	padding-left: 100px;
 
 	h4 {
-		margin-bottom: 30px;
+		margin-top: 0;
+		margin-left: 10%;
 		font-size: 1em;
-		border-bottom: 1px solid #ddd;
 		width: 75%;
 		padding-bottom: 5px;
+		color: $lightest_grey;
 	}
 }
 
@@ -57,3 +63,562 @@
 	}
 }
 
+// General Tab
+
+#account-gen-box {
+	width: 100%;
+	background: $fb_lightest_grey;
+
+	#account-gen-box-head {
+	}
+
+	#account-gen-container {
+		width: 900px;
+		margin: 0 auto;
+		margin-left: 15%;
+
+		.account-gen-line {
+			width: 100%;
+			margin-bottom: 2px;
+
+			.gen-label-line {
+				width: 150px;
+				padding-right: 20px;
+				display: inline-block;
+				text-align: right;
+
+				.acc-p {
+					margin: 0px;
+					font-size: 12px;
+				}
+			}
+
+			.gen-input-line {
+				width: 70%;
+				display: inline;
+
+				.lName {
+					margin-left: 20px;
+				}
+
+				.gen-input {
+						padding: 10px;
+						border-radius: 4px;
+						background: $primary_white;
+						box-shadow: none;
+						margin-top: 7px;
+						border: 1px solid $d_grey;
+						width: 250px;
+				}
+			}
+		}
+	}
+}
+
+
+// Account Security Tab
+
+.top-stretch {
+	width: 100%;
+	height: 40px;
+	background: $primary_white;
+	margin-top: 0;
+}
+
+.section-head {
+	height: 35px;
+	line-height: 35px;
+	background: $primary_white;
+	color: $primary_black;
+	border: 1px solid $d_grey;
+	padding-left: 5%;
+}
+
+
+#account-pass-box {
+	width: 100%;
+	background: $fb_lightest_grey;
+
+	#account-pass-container{
+		width: 900px;
+		margin-left: 15%;
+	
+		.account-pass-line {
+			width: 100%;
+			margin-bottom: 2px;
+
+			.pass-label-line {
+				width: 150px;
+				padding-right: 20px;
+				display: inline-block;
+				text-align: right;
+			}
+
+			.pass-input-line {
+				width: 70%;
+				display: inline;
+
+				.gen-input {
+					padding: 10px;
+					border-radius: 4px;
+					background: $primary_white;
+					box-shadow: none;
+					margin-top: 7px;
+					border: 1px solid $d_grey;
+					width: 250px;
+				}	
+			}		
+		}
+	}	
+}
+
+// Account Social Media Tab
+
+#account-soc-box {
+	width: 100%;
+	background: $fb_lightest_grey;
+
+	#account-soc-container {
+		width: 900px;
+		margin-left: 15%;
+
+		.account-soc-line {
+			width: 100%;
+			margin-bottom: 5px;
+
+			.soc-label-line {
+				margin-top: 7px;
+
+				.acc-p {
+					width: 150px;
+					padding-right: 20px;
+					display: inline-block;
+					text-align: right;
+					padding: 10px;
+ 
+				}
+
+				.input-prepend {
+
+					display: inline;
+					.add-on {
+						padding: 10px;
+					}
+
+					.soc-input {
+						padding: 10px;
+
+					}				
+				}
+			}	
+		}
+	}
+}
+
+// Notifications Tab 
+
+#account-not-box {
+	width: 100%;
+	background: $fb_lightest_grey;
+
+	#account-not-container {
+		width: 650px;
+		margin-left: 15%;
+
+		.account-not-line-top {
+			width: 100%;
+			margin-top: 10px;
+			padding-bottom: 5px;
+			border-bottom: 2px solid;
+
+			p {
+				display: inline;
+				font-size: 20px;
+			}
+
+			.not-type {
+				float: right;
+				display: inline;
+
+				p {
+					margin-left: 20px;
+					display: inline;
+				}
+
+				p:nth-child(2) {
+					margin-right: 10px;
+				}
+			}
+
+		}
+
+		.account-not-line {
+			margin-top: 10px;
+			width: 100%;
+			border-bottom: 1px dotted $primary_grey;
+			padding-bottom: 5px;
+
+			p {
+				display: inline;
+				padding-left: 15px;
+			}
+
+			.not-type {
+				float: right;
+				display: inline;
+
+				input[type="checkbox"] {
+					margin-left: 55px;
+				}
+
+				input[type="checkbox"]:nth-child(2) {
+					margin-right: 20px;
+				}
+			}
+		}
+	}
+}
+
+// Billing Tab 
+
+#account-pay-box {
+	width: 100%;
+
+	#account-pay-container {
+		width: 950px;
+		margin-left: 5%;
+
+		.account-pay-line-top {
+			width: 100%;
+			border-top: 2px solid;
+			border-bottom: 2px solid;
+
+		}
+
+		.account-cc-line {
+
+
+			#cc-front {
+				margin-top: 20px;
+				width: 450px;
+				background: url('../../../../img/squairy.png');
+				display: inline-block;
+				position: relative;
+
+				#MB-logo-two {
+					position: absolute;
+					height: 100%;
+					z-index: 1;
+					left: 25%;
+					opacity: 0.3;
+				} 
+
+				#cc-front-top-line {
+					height: 50px;
+					line-height: 50px;
+					position: relative;
+					z-index: 2;
+
+					p {
+						display: inline;
+						font-size: 18px;
+
+						img {
+							height: 20px;
+						}
+					}
+
+					img {
+						display: inline;
+						height: 50px;
+						margin-left: 20px;
+					}
+
+				}
+
+				#chip-card {
+					position: absolute;
+					margin-left: 25px;
+					height: 45px;
+					z-index: 50px;
+
+				}
+
+				#cc-number-line {
+					padding-left: 20px;
+					margin-top: 50px;
+					width: 100%;
+					position: relative;
+					z-index: 2;
+
+					label {
+						position: relative;
+						z-index: 60;
+					}
+
+					input[type="text"] {
+						width: 88%;
+						border-radius: 0px;
+					}
+
+				}
+
+				#cc-bottom-line {
+					margin-top: 10px;
+					width: 100%;
+					padding-left: 20px;
+					display: inline-flex;
+					position: relative;
+					z-index: 2;
+
+					#cc-name {
+						display: inline;
+
+						input[type="text"] {
+							width: 150px;
+							border-radius: 0px;
+						}
+
+					}
+
+					#cc-expire {
+						display: inline;
+						margin-left: 30px;
+
+						#cc-label {
+
+						}
+
+						#cc-dropdown {
+
+							.dropdown-select {
+								display: inline;
+								width: 100px;
+								border-radius: 0px !important;
+							}
+						}
+					}
+				}
+			}
+
+			#cc-back {
+				margin-top: 20px;
+				width: 450px;
+				height: 240px;
+				background: url('../../../../img/squairy.png');
+				position: relative;
+				display: inline-block;
+				float: right;
+
+				#cc-back-clear {
+					width: 100%;
+					height: 20px;
+				}
+
+				#cc-back-black-strip {
+					background: url('../../../../img/black_strip.png');
+					width: 100%;
+					height: 50px;
+				}
+
+				#cc-card-strip {
+					background: url('../../../../img/credit_card_strip.png');
+					width: 100%;
+					margin: 0 auto;
+
+					#cc-sign {
+						display: inline-block;
+						height: 50px;
+						width: 340px;
+						background: $primary_white;
+						opacity: 0.7;
+						margin-top: 10px;
+						margin-left: 20px;
+
+					}
+
+					#cc-code {
+						display: inline-table;
+						margin-top: -4px;
+						margin-left: 5px;
+
+						label {
+							color: $primary_white;
+						}
+
+						#cv-code {
+							width: 45px;
+							text-indent: 10px;
+							letter-spacing: 1px;
+							border-radius: 0px;
+						}
+					}	
+				}
+
+				#cc-card-disclosure {
+					width: 90%;
+					margin: 0 auto;
+					line-height: 11px;
+					p {
+						margin-top: 10px; 
+						font-size: 10px;
+						text-indent: 30px
+					}
+				}
+
+				#cc-back-img {
+					position: absolute;
+					left: 15px;
+					height: 20px;
+				}
+
+				#cc-copy {
+					width: 100%;
+					padding-top: 1px;
+
+					p {
+						text-align: center;
+						font-size: 10px;
+					}
+				}	
+			}
+
+			#check-box {
+				margin-top: 50px;
+				width:950px;
+				background: red;
+				padding-top: 2px;
+				padding-bottom: 2px;
+
+				#check-container {
+					width: 930px;
+					margin: 10px auto;
+					background: $primary_white;
+
+					#check-top-line {
+						padding-top: 15px;
+
+						#address {
+							margin-left: 15px;
+							width: 300px;
+							display: inline-block;
+							line-height: 10px;
+
+							p:nth-child(1) {
+								font-size: 25px;
+							}
+						}
+
+						#date {
+							display: inline-block;
+							float: right;
+							margin-right: 40px;
+						}
+					}
+					#check-pay-line {
+						margin: 40px 0 0 65px;
+						position: relative;
+
+						#pay-order {
+							position: absolute;
+							display: inline-block;
+
+						}
+						#pay-company {
+							width: 680px;
+							border-bottom: 1px solid;
+							display: inline-block;
+							text-align: center;
+
+						}
+						#pad-dollar-sign {
+							display: inline-block;
+							margin-left: 20px;
+						}
+
+						#pay-no {
+							display: inline-block;
+							border: 2px solid red;
+							padding: 10px 25px 0 25px;
+							margin-left: 5px;
+
+						}
+					}
+					#check-dollar-line {	
+						margin: 20px 0 0 65px; 
+
+						#pay-dollars {
+							width: 750px;
+							display: inline-block;
+							border-bottom: 1px solid;
+							text-align: right;
+							display: inline-block;
+							
+						}
+
+						#pay-secure {
+							margin-left: 20px;
+							display: inline-block;
+						}
+					}
+					#check-bank {
+						margin: 12px 0 0 15px;
+
+
+					}
+					#check-memo-line {
+						margin-top: 20px;
+						margin-left: 30px;
+
+						#pay-memo {
+							width: 370px;
+							display: inline-block;
+							border-bottom: 1px solid;
+						}
+						#pay-sig {
+							width: 370px;
+							display: inline-block;	
+							border-bottom: 1px solid;
+							margin-left: 120px;
+
+							p:nth-child(1) {
+								font-family: $cursive_font;
+								display: inline-block;
+								margin-left: 120px;
+								font-size: 15px;
+							}
+
+							p:nth-child(2) {
+								display: inline-block;
+							}
+
+						}
+					}
+					#check-account-line {
+						margin-left: 15px;
+						margin-top: 20px;
+
+						.pay-account-font {
+							font-family: $micr_font;
+							display: inline-block;
+						}
+
+						#pay-account-no {
+							font-family: $micr_font;
+							border-radius: 0px;
+							background: $primary_white;
+							display: inline-block;
+						}
+						#pay-route-no {
+							font-family: $micr_font;
+							border-radius: 0px;
+							background: $primary_white;
+							display: inline-block;
+
+						}
+					}
+				}
+			}
+		}
+	}
+}

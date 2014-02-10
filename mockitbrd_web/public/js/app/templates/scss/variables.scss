@@ -36,6 +36,11 @@ $post_color: #37404e;
 $post_link: #3b5998;
 $read_grey: #e9eaed;
 
+$linkedin_color: #1883BB;
+$facebook_color: #425F9C;
+$twitter_color: #4B9ED1;
+
+
 .glass-effect {
 	box-shadow: 0px 0px 0px 8px rgba(0, 0, 0, 0.3), 0px 2px 3px 0px rgba(0, 0, 0, 0.6);
 }
@@ -48,12 +53,14 @@ $primary_yellow_rgb: rgb(255, 228, 43);
 @include font-face("Lotte", font-files("../../fonts/lotte/lotte.ttf"));
 @include font-face("Ethon Black", font-files("../../fonts/ethon/ethon_black.ttf"));
 @include font-face("Ethon Roman", font-files("../../fonts/ethon/ethon_roman.ttf"));
+@include font-face("Micr", font-files("../../fonts/micr/micrenc.ttf"));
 
 $primary_font: "Open Sans";
 $cursive_font: "Desyrel";
 $lotte_font: "Lotte";
 $ethon_black: "Ethon Black";
 $ethon_roman: "Ethon Roman";
+$micr_font: "Micr";
 
 .unselectable {
 	-moz-user-select: none;

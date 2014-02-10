@@ -29,6 +29,7 @@ define([ //VIEWS
     'views/AccountView',
     'views/TaskView',
     'views/UserView',
+    'views/ShareView',
     //Application UI
     'views/LeftAppMenuView',
     'views/ExploreView',
@@ -77,6 +78,7 @@ function (
     AccountView,
     TaskView,
     UserView,
+    ShareView,
     //Application UI
     LeftAppMenuView,
     ExploreView,
@@ -290,6 +292,9 @@ function (
         },
         tasks: function() {
             this.launchApp(TaskView);
+        },
+        share: function() {
+            this.launchApp(ShareView);
         },
         user: function(id) {
             var getUser = MB.api.user(id);

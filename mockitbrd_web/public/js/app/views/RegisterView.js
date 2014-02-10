@@ -17,6 +17,8 @@ define(['jquery', 'hbs!templates/register', 'backbone', 'marionette'],
                 gender: {ready: false, value: null}
             },
 
+            isReferred: null,
+
             events: {
 				'click .MB-modal-close': 'hideModal',
                 'click .user-type': 'userTypeHandler',
@@ -35,6 +37,12 @@ define(['jquery', 'hbs!templates/register', 'backbone', 'marionette'],
             initialize: function() {
                 _.bindAll(this, 'on_keyup');
                 $(document).bind('keyup', this.on_keyup);
+
+                var getLocation = window.location.href;
+                var urlsep = getLocation.split("?");
+
+                this.isReferred = urlsep[1].split("=")[1];
+
             },
 
             onRender: function () {
@@ -95,8 +103,7 @@ define(['jquery', 'hbs!templates/register', 'backbone', 'marionette'],
                         'liked_by': 0
                     };
 
-                    MB.api.register(reg_send);
-
+                    MB.api.register(reg_send, this.isReferred);
 
                 } else if (this.defaults.password.ready === true &&
                     this.defaults.fname.ready === true &&
