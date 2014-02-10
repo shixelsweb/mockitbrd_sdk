@@ -142,9 +142,7 @@ function (
 
         },
         launchApp: function(view, region, regionView, viewOptions, blank) {
-            var isLoggedIn = MB.session.give('session');
-
-            if (!isLoggedIn) {
+            if (!MB.session.isLoggedIn()) {
                 MB.appRouter.navigate('login', {trigger: true});
                 $('.MB-login-error').html('You must be logged in to view that page!');
             } else {

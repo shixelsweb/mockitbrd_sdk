@@ -56,8 +56,6 @@ define([
 
       accountMenuHandler: function(e) {
         var navTarget = $(e.currentTarget).data('accountnavigate');
-        var isLoggedIn = MB.session.give('session');
-
         $(e.currentTarget).removeClass('active');
 
         if (navTarget === 'security') {
@@ -74,7 +72,7 @@ define([
           this.view = new AccountNotificationsView();
         }
 
-        if (isLoggedIn) {
+        if (MB.session.isLoggedIn()) {
           window.location.hash = this.hash + '/' + navTarget;
           $("#accountViewRegion").html(this.view.render().el);
         } else {

@@ -11,7 +11,11 @@
 			color: $user_type_active !important;
 			cursor: default;
 		}
-	
+
+		.notification-thanks {
+			cursor: default;
+		}
+
 	}
 	&.unread {
 		.MB-mark-read {

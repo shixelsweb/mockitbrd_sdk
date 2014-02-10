@@ -5,7 +5,6 @@ define(["jquery", "backbone"],
 
             initialize: function() {
                 var MB = MB;
-                
                 _.bindAll(this);
             },
 
@@ -43,6 +42,9 @@ define(["jquery", "backbone"],
 
             clear: function(name) {
                 localStorage.removeItem('session');
+            },
+            isLoggedIn: function() {
+                return this.give('session');
             }
 
 

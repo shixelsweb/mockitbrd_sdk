@@ -50,13 +50,13 @@
 		&:hover {
 			background: $app_menu_hover_active;
 			color: $app_menu_hover_font;
-			border-right:8px solid $primary_yellow;
+			border-right:4px solid $primary_yellow;
 		}
 
 		&.active {
 			background: $app_menu_hover_active;
 			color: $app_menu_hover_font;
-			border-right:8px solid $primary_blue;
+			border-right:4px solid $primary_blue;
 		}
 	}
 

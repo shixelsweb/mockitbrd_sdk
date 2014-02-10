@@ -20,9 +20,7 @@ define(['jquery', 'hbs!templates/desktopHeader', 'backbone', 'marionette'],
 		handleLogin: function(e) {
 			e.preventDefault();
 
-			var isLoggedIn = MB.session.give('session');
-
-			if (isLoggedIn) {
+			if (MB.session.isLoggedIn()) {
 				$(e.currentTarget).attr('href', '#dashboard');
 			} else {
 				$(e.currentTarget).attr('href', '#login');

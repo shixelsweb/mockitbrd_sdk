@@ -55,18 +55,21 @@ server.configure(function () {
 
 //get user profile picture
 server.get('/getUserpic/:id', function (request, response) {
-    	var user_id = request.params.id;
-    	var userFilePath = '/users/' + user_id + '/user_pic.jpg';
-        s3.getFile(userFilePath, function(err, imageStream) {
-        	var statusCode = imageStream.statusCode;
-        	if (statusCode !== 200) {
-        		s3.getFile('/users/default/user_pic.jpg', function(error, defaultImage) {
-        			defaultImage.pipe(response);
-        		});
-        	} else {
-        		imageStream.pipe(response);
-        	}
-            
+	var user_id = request.params.id;
+	var userFilePath = '/users/' + user_id + '/user_pic.jpg';
+    s3.getFile(userFilePath, function(err, imageStream) {
+    	var statusCode = imageStream.statusCode;
+    	if (statusCode !== 200) {
+    		s3.getFile('/users/default/user_pic.jpg', function(error, defaultImage) {
+                if (error) {
+                    defaultImage.pipe(error);
+                } else {
+                    defaultImage.pipe(response);
+                }
+    		});
+    	} else {
+    		imageStream.pipe(response);
+    	}
     });
 });
 server.put('/uploadUserpic', function (request, response) {
@@ -89,8 +92,7 @@ server.put('/uploadUserpic', function (request, response) {
             responsePackage.data.image = request.files.image;
         }
         response.send(responsePackage);
-           
-            s3req.end(buf); // execute uploading
+        s3req.end(buf); // execute uploading
     });
 });
 

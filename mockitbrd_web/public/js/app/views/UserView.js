@@ -206,7 +206,7 @@ define([
           var data = new FormData();
 
           if (tempFile) {
-            var fileType = tempFile.type.split('/');
+            var fileType = tempFile.type.split('/')[0];
           }
 
           var backToUpload = new Backbone.Wreqr.Commands();

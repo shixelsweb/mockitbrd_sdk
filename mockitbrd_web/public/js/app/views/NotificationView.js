@@ -26,6 +26,9 @@ define(['jquery', 'models/Model', 'views/MBConfirm', 'moment', 'hbs!templates/no
                  this.notification.done_message = 'Read';
                   this.notification.readClass = 'read';
             }
+            if (parseInt(this.notification.read) === 1) {
+                this.notification.isRead = true;
+            }
             if (this.currentUser.connections) {
               for (var i = 0; i < this.currentUser.connections.length; i++) {
                 if(this.currentUser.connections[i].user_id === this.notification.by_who._id) {
@@ -33,16 +36,10 @@ define(['jquery', 'models/Model', 'views/MBConfirm', 'moment', 'hbs!templates/no
                     this.notification.isRead = true;
                     if (this.notification.type === 'connction') {
                           this.notification.done_message = 'Connected';
-                      } else {
-                        this.notification.readClass = 'unread';
-                        this.notification.isRead = false;
                       }
                     if (parseInt(this.notification.read) === 1) {
                       this.notification.readClass = 'read';
                       this.notification.done_message = 'Read';
-                    } else {
-                      this.notification.notReadAndConnected = true;
-                      this.notification.isRead = false;
                     }
                   } else if (this.currentUser.connections[i].status === 'pending') {
                       if (this.notification.type === 'connection') {
