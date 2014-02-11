@@ -14,6 +14,11 @@
 
 		.notification-thanks {
 			cursor: default;
+			i {
+				font-size: 1.5em !important;
+				padding-left: 10px;
+				color: $user_type_active;
+			}
 		}
 
 	}
@@ -45,6 +50,7 @@
 		i {
 			font-size: 1.5em !important;
 			padding-left: 10px;
+			color: $primary_blue;
 		}
 	}
 	.notificatin-when {
@@ -53,6 +59,7 @@
 	.message {
 		float: right;
 		font-size: 0.8em;
+		margin-right: 30px;
 	}
 	.notification-menu {
 		float: right;
@@ -70,11 +77,15 @@
 			cursor: pointer;
 
 			&.MB-user-accept {
-				color: $primary_green;
+				color: $primary_blue;
 			}
 
 			&.MB-user-unconnect {
-				color: $primary_red;
+				color: $user_type_active;
+
+				&.last {
+					margin-right: -5px !important;
+				}
 			}
 
 			&.MB-user-accept, &.MB-user-unconnect {

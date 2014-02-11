@@ -61,7 +61,8 @@ define([
         modalBg: MB.modalBg,
         confirmRegion: "#MB-confirm .modal",
         body: "body",
-        topMenuRegion: "#top-app-menu-view"
+        topMenuRegion: "#top-app-menu-view",
+        notMenuRegion: "#not-menu"
     });
 
     MB.addInitializer(function () {

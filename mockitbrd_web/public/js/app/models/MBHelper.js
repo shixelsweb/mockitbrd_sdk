@@ -21,6 +21,7 @@ define(["jquery", "backbone"],
                     case 'liked_comment': return "liked your comment"; break;
                     case 'liked_post': return "liked your post"; break;
                     case 'commented': return "commented on your post"; break;
+                    case 'liked_you': return "added you as a favorite"; break;
                 }
             }
 

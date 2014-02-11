@@ -25,7 +25,6 @@ define(['jquery','views/MBConfirm', 'views/NotificationQuickMenuView', 'models/M
               }
             }
             this.model = new Model({user: this.user, user_pic: this.user_pic, new_count: this.not_count});
-            this.delegateEvents();
           },
 
           onRender: function () {
@@ -50,12 +49,13 @@ define(['jquery','views/MBConfirm', 'views/NotificationQuickMenuView', 'models/M
           showQuickMenu: function(e) {
             e.stopPropagation();
             this.notQuickMenu = new NotificationQuickMenuView();
-            MB.dashboardRegion.$el.before(this.notQuickMenu.render().el);
-            this.notQuickMenu.delegateEvents();
+            MB.notMenuRegion.show(this.notQuickMenu);
+
+            $('body').on('click', this.hideQuickMenu);
           },
           hideQuickMenu: function(e) {
             e.stopPropagation();
-            $('.MB-notification-quick-menu').remove();
+            MB.notMenuRegion.currentView.remove();
             $('body').off('click');
           }
       });

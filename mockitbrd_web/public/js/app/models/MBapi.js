@@ -283,7 +283,9 @@ define([
                                 self.notification({'date': moment(new Date()).format(), 'notify': person, 'type': 'liked_comment', 'message': MB.helper.message('liked_comment'), 'by_who': params.user, 'read': '0'},'create');
                             } else if (params.what === 'post') {
                                 self.notification({'date': moment(new Date()).format(), 'notify': person, 'type': 'liked_post', 'message': MB.helper.message('liked_post'), 'by_who': params.user, 'read': '0'},'create');
-                            }
+                        } else if (params.what === 'person') {
+                            self.notification({'date': moment(new Date()).format(), 'notify': params.what_id, 'type': 'liked_you', 'message': MB.helper.message('liked_you'), 'by_who': params.user, 'read': '0'},'create');
+                        }
                         }
                     } else {
                         console.log('error: ', response.data.error);

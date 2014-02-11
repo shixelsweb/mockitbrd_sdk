@@ -7,19 +7,27 @@
 	</div>
 	{{/if}}
 	<ul class="notification-menu" id="not_{{notification._id}}_menu">
-		{{#if notification.notReadAndConnected}}
+		{{#if notification.notReadandNotConnection }}
+		<li class="MB-mark-read" title="Mark as read" data-notificationid="{{notification._id}}" ><i class="fa fa-check"></i></li>
+		{{/if}}
+		{{#if notification.readandNotConnection }}
+		<li class="notification-thanks">{{notification.done_message}} <i class="fa fa-check" title="Mark as read" data-notificationid="{{notification._id}}"></i></li>
+		{{/if}}
+		{{#if notification.connectionNotReadAndActive }}
 		<li class="notification-thanks">{{notification.done_message}} <i class="fa fa-check MB-mark-read" title="Mark as read" data-notificationid="{{notification._id}}"></i></li>
 		{{/if}}
-		{{#if notification.isRead}}
-		<li class="notification-thanks">{{notification.done_message}} <i class="fa fa-check"></i></li>
-		{{/if}}
-		{{#if notification.connectionAndNotActive}}
+		{{#if notification.connectionNotReadAndNotActive}}
 		<li class="MB-user-accept" data-notificationid="{{notification._id}}" data-notificationwho="{{notification.by_who._id}}">Accept</li>
-		<li class="MB-user-unconnect" data-notificationid="{{notification._id}}" data-notificationwho="{{notification.by_who._id}}">Deny</li>
+		<li class="MB-user-unconnect last" data-notificationid="{{notification._id}}" data-notificationwho="{{notification.by_who._id}}">Decline</li>
 		<li class="MB-mark-read" title="Mark as read" data-notificationid="{{notification._id}}" ><i class="fa fa-check"></i></li>
 		{{/if}}
-		{{#if notification.notReadandNotConnection}}
-		<li class="MB-mark-read" title="Mark as read" data-notificationid="{{notification._id}}" ><i class="fa fa-check"></i></li>
+		{{#if notification.connectionReadAndNotActive}}
+		<li class="MB-user-accept" data-notificationid="{{notification._id}}" data-notificationwho="{{notification.by_who._id}}">Accept</li>
+		<li class="MB-user-unconnect last" data-notificationid="{{notification._id}}" data-notificationwho="{{notification.by_who._id}}">Decline</li>
+		<li class="notification-thanks">{{notification.done_message}} <i class="fa fa-check MB-mark-read" title="Mark as read" data-notificationid="{{notification._id}}"></i></li>
+		{{/if}}
+		{{#if notification.connectionReadAndActive }}
+		<li class="notification-thanks">{{notification.done_message}} <i class="fa fa-check MB-mark-read" title="Mark as read" data-notificationid="{{notification._id}}"></i></li>
 		{{/if}}
 	</ul>
 	<div class="clear-both"></div>

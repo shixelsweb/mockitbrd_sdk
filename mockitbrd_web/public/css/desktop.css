@@ -5888,20 +5888,26 @@ header.ghost .navbar-inner {
 #notification-view.read .notification-thanks {
   cursor: default;
 }
-/* line 21, ../js/app/templates/scss/notification.scss */
+/* line 17, ../js/app/templates/scss/notification.scss */
+#notification-view.read .notification-thanks i {
+  font-size: 1.5em !important;
+  padding-left: 10px;
+  color: #6b7886;
+}
+/* line 26, ../js/app/templates/scss/notification.scss */
 #notification-view.unread .MB-mark-read {
   color: #2bbbff !important;
 }
-/* line 24, ../js/app/templates/scss/notification.scss */
+/* line 29, ../js/app/templates/scss/notification.scss */
 #notification-view.unread .MB-mark-read:hover {
   color: #0085c4 !important;
 }
-/* line 29, ../js/app/templates/scss/notification.scss */
+/* line 34, ../js/app/templates/scss/notification.scss */
 #notification-view .notification_left {
   margin-left: 15px;
   padding-top: 10px;
 }
-/* line 33, ../js/app/templates/scss/notification.scss */
+/* line 38, ../js/app/templates/scss/notification.scss */
 #notification-view .notification-img {
   width: 30px;
   height: 30px;
@@ -5910,25 +5916,27 @@ header.ghost .navbar-inner {
   float: left;
   border-radius: 100px;
 }
-/* line 42, ../js/app/templates/scss/notification.scss */
+/* line 47, ../js/app/templates/scss/notification.scss */
 #notification-view .notification-thanks {
   color: #6b7886;
 }
-/* line 45, ../js/app/templates/scss/notification.scss */
+/* line 50, ../js/app/templates/scss/notification.scss */
 #notification-view .notification-thanks i {
   font-size: 1.5em !important;
   padding-left: 10px;
+  color: #2bbbff;
 }
-/* line 50, ../js/app/templates/scss/notification.scss */
+/* line 56, ../js/app/templates/scss/notification.scss */
 #notification-view .notificatin-when {
   font-size: 0.6em;
 }
-/* line 53, ../js/app/templates/scss/notification.scss */
+/* line 59, ../js/app/templates/scss/notification.scss */
 #notification-view .message {
   float: right;
   font-size: 0.8em;
+  margin-right: 30px;
 }
-/* line 57, ../js/app/templates/scss/notification.scss */
+/* line 64, ../js/app/templates/scss/notification.scss */
 #notification-view .notification-menu {
   float: right;
   right: 10px;
@@ -5937,38 +5945,42 @@ header.ghost .navbar-inner {
   margin-top: 9px;
   font-size: 0.9em;
 }
-/* line 66, ../js/app/templates/scss/notification.scss */
+/* line 73, ../js/app/templates/scss/notification.scss */
 #notification-view .notification-menu li {
   display: inline-block;
   font-size: 0.7em;
   margin-right: 10px;
   cursor: pointer;
 }
-/* line 72, ../js/app/templates/scss/notification.scss */
+/* line 79, ../js/app/templates/scss/notification.scss */
 #notification-view .notification-menu li.MB-user-accept {
-  color: #629a40;
+  color: #2bbbff;
 }
-/* line 76, ../js/app/templates/scss/notification.scss */
+/* line 83, ../js/app/templates/scss/notification.scss */
 #notification-view .notification-menu li.MB-user-unconnect {
-  color: #cd0000;
+  color: #6b7886;
 }
-/* line 81, ../js/app/templates/scss/notification.scss */
+/* line 86, ../js/app/templates/scss/notification.scss */
+#notification-view .notification-menu li.MB-user-unconnect.last {
+  margin-right: -5px !important;
+}
+/* line 92, ../js/app/templates/scss/notification.scss */
 #notification-view .notification-menu li.MB-user-accept:hover, #notification-view .notification-menu li.MB-user-unconnect:hover {
   text-decoration: underline;
 }
-/* line 86, ../js/app/templates/scss/notification.scss */
+/* line 97, ../js/app/templates/scss/notification.scss */
 #notification-view .notification-menu li.MB-mark-read {
   font-size: 1.1em;
   color: #2bbbff;
 }
-/* line 89, ../js/app/templates/scss/notification.scss */
+/* line 100, ../js/app/templates/scss/notification.scss */
 #notification-view .notification-menu li.MB-mark-read:hover {
   color: #00a8f7;
 }
 
 /* line 1, ../js/app/templates/scss/notificationquickmenu.scss */
 .MB-notification-quick-menu {
-  width: 400px;
+  min-width: 350px;
   height: auto;
   background: white;
   position: fixed;
