@@ -67,7 +67,7 @@ define(['moment', 'jquery', 'models/Model', 'views/MBConfirm', 'views/CommentVie
         $('.user-posts').prepend(this.$el);
         if (this.post.comments) {
           for (var i = 0; i < this.post.comments.length; i++) {
-              var comment = new CommentView({'comment': this.post.comments[i], 'poster_id': this.post.user_id});
+              var comment = new CommentView({'comment': this.post.comments[i], 'post_id': this.post._id, 'poster_id': this.post.user_id});
               this.renderComment(comment);
             }
           }
@@ -133,7 +133,7 @@ define(['moment', 'jquery', 'models/Model', 'views/MBConfirm', 'views/CommentVie
 
             if (commented.changed) {
               $(commentTextArea).val('');
-              var com = new CommentView({'comment': commented.comment, 'post_id': postId});
+              var com = new CommentView({'comment': commented.comment, 'post_id': postId, 'post_id': poster});
               this.renderComment(com);
             }
           } else {

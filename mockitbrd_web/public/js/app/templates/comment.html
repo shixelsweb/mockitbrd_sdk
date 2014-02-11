@@ -3,6 +3,9 @@
 		<div class="comment-pic"><a href="#user/{{comment.user_id}}"><img src="/getUserpic/{{comment.user_id}}"></a></div>
 	</div>
 	<div class="comment-right pull-left">
+		{{#if comment.isOwner}}
+			<i class="fa fa-times delete_comment" data-commentid="{{comment._id}}" data-postid="{{comment.post_id}}"></i>
+		{{/if}}
 		<div class="comment-commenter">
 			<a href="#user/{{comment.user_id}}">{{comment.commenter}}</a>&nbsp;&nbsp;
 			<span class="comment-comment">{{{comment.comment}}}</span>

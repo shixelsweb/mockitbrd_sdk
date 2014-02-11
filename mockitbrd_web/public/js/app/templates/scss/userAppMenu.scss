@@ -31,6 +31,9 @@
 		font-size: 1.5em;
 	}
 }
+.MB-notification-icon.hasNots {
+	color: $user_type_active;
+}
 .MB-notification-icon {
 	width: 40px;
 	height: 100%;

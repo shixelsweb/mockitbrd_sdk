@@ -178,6 +178,15 @@ font-size: 0.8em;
 color: $primary_red;
 }
 
+.delete_comment {
+	position: absolute;
+	right: 0;
+	cursor: pointer;
+
+	&:hover {
+		color: $d_grey;
+	}
+}
 
 
 

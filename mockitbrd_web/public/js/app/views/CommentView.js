@@ -2,18 +2,19 @@ define(['moment', 'jquery', 'models/Model', 'views/MBConfirm', 'hbs!templates/co
     function (moment, $, Model, MBConfirm, template, Backbone) {
       //ItemView provides some default rendering logic
       return Backbone.Marionette.ItemView.extend({
-          template:template,
-          poster: null,
+        template:template,
+        poster: null,
 
-          events: {
-            'click .MB-comment-like': 'commentLikeHandler'
-          },
+        events: {
+          'click .MB-comment-like': 'commentLikeHandler',
+          'click .delete_comment': 'deleteComment'
+        },
 
-          model: null,
-          currentUser: null,
-          comment: null,
+        model: null,
+        currentUser: null,
+        comment: null,
 
-          initialize:function(options) {
+        initialize:function(options) {
           this.comment = options.comment;
           this.currentUser = MB.api.user($.parseJSON(MB.session.give('session')).user);
           var commenter = MB.api.user(this.comment.user_id);
@@ -31,6 +32,11 @@ define(['moment', 'jquery', 'models/Model', 'views/MBConfirm', 'hbs!templates/co
             this.comment.likes_count = this.comment.likes.length;
           }
 
+          if (this.comment.user_id === this.currentUser._id) {
+            this.comment.isOwner = true;
+          }
+
+          this.comment.post_id = options.post_id;
           this.comment.date = moment(this.comment.date).format('MMMM Do YYYY, h:mma');
           this.comment.comment = MB.helper.replaceURLWithHTMLLinks(this.comment.comment);
           this.comment.commenter = commenter.fname + " " + commenter.lname;
@@ -56,7 +62,6 @@ define(['moment', 'jquery', 'models/Model', 'views/MBConfirm', 'hbs!templates/co
         var commentLikes = parseInt($('.comment-likes[data-commentid="' + commentID +'"]').text());
         var person = $(e.currentTarget).attr('person');
         if (starEvent === 'star') {
-          console.log(send);
           if (person === this.currentUser._id) {
              MB.api.star(send);
            } else {
@@ -74,6 +79,16 @@ define(['moment', 'jquery', 'models/Model', 'views/MBConfirm', 'hbs!templates/co
             } else {
                $('.comment-likes[data-commentid="' + commentID +'"]').hide().html((commentLikes )).fadeIn('slow');
             }
+        }
+      },
+      deleteComment: function(e) {
+        var commentId = $(e.currentTarget).data('commentid');
+        var commentToDelete = '#comment_' + commentId;
+        var postId = $(e.currentTarget).data('postid');
+        var deleted = MB.api.deleteComment({'comment_id': commentId, 'post_id': postId});
+
+        if (deleted) {
+          $(commentToDelete).fadeOut(300, function() { $(this).remove(); });
         }
       }
      });

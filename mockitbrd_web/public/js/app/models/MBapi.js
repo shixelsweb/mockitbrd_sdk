@@ -526,6 +526,29 @@ define([
             });
 
             return changed;
+        },
+        deleteComment: function(comment) {
+            var changed = null;
+            var self = this;
+            $.ajax({
+                type: "DELETE",
+                url: this.get('api_url') + "v1/post/comment/delete",
+                data: comment,
+                dataType: 'json',
+                success: function (response) {
+                    if (response.success === 0) {
+                        //Add popup here
+                    } else {
+                        changed = true;
+                    }
+                },
+                error: function (response) {
+                    console.log("error: ", response); //TODO-(Fara) : add to Error Modal
+                },
+                async: false
+            });
+
+            return changed;
         }
     });
 

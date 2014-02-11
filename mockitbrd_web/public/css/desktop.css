@@ -5143,6 +5143,11 @@ header.ghost .navbar-inner {
 }
 
 /* line 34, ../js/app/templates/scss/userAppMenu.scss */
+.MB-notification-icon.hasNots {
+  color: #6b7886;
+}
+
+/* line 37, ../js/app/templates/scss/userAppMenu.scss */
 .MB-notification-icon {
   width: 40px;
   height: 100%;
@@ -5154,12 +5159,12 @@ header.ghost .navbar-inner {
   position: relative;
   top: 6px;
 }
-/* line 45, ../js/app/templates/scss/userAppMenu.scss */
+/* line 48, ../js/app/templates/scss/userAppMenu.scss */
 .MB-notification-icon:hover {
   color: #cccccc;
 }
 
-/* line 50, ../js/app/templates/scss/userAppMenu.scss */
+/* line 53, ../js/app/templates/scss/userAppMenu.scss */
 .MB-user-menu {
   height: 60px;
   float: left;
@@ -5169,14 +5174,14 @@ header.ghost .navbar-inner {
   font-weight: 100;
   top: 17px;
 }
-/* line 60, ../js/app/templates/scss/userAppMenu.scss */
+/* line 63, ../js/app/templates/scss/userAppMenu.scss */
 .MB-user-menu li {
   display: inline-block;
   margin-right: 15px;
   vertical-align: middle;
 }
 
-/* line 67, ../js/app/templates/scss/userAppMenu.scss */
+/* line 70, ../js/app/templates/scss/userAppMenu.scss */
 .MB-user-menu-image {
   border-radius: 100px;
   overflow: hidden;
@@ -5185,20 +5190,20 @@ header.ghost .navbar-inner {
   border: 1px solid #3b3a3f;
   cursor: pointer;
 }
-/* line 75, ../js/app/templates/scss/userAppMenu.scss */
+/* line 78, ../js/app/templates/scss/userAppMenu.scss */
 .MB-user-menu-image img {
   width: 100%;
   height: 100%;
 }
 
-/* line 81, ../js/app/templates/scss/userAppMenu.scss */
+/* line 84, ../js/app/templates/scss/userAppMenu.scss */
 .MB-user-menu-menu {
   cursor: pointer;
   font-size: 1.8em;
   position: relative;
   top: 2px;
 }
-/* line 87, ../js/app/templates/scss/userAppMenu.scss */
+/* line 90, ../js/app/templates/scss/userAppMenu.scss */
 .MB-user-menu-menu:hover {
   color: #666666;
 }
@@ -5239,14 +5244,15 @@ header.ghost .navbar-inner {
   width: 70%;
   display: block;
   background: white;
+  height: 100%;
 }
 
-/* line 34, ../js/app/templates/scss/dashboard.scss */
+/* line 35, ../js/app/templates/scss/dashboard.scss */
 .dashboard-bottom-bottom-right {
   width: 30%;
 }
 
-/* line 37, ../js/app/templates/scss/dashboard.scss */
+/* line 38, ../js/app/templates/scss/dashboard.scss */
 #dashboard-content {
   width: 100%;
   height: 100%;
@@ -5258,7 +5264,7 @@ header.ghost .navbar-inner {
   overflow-y: scroll;
 }
 
-/* line 48, ../js/app/templates/scss/dashboard.scss */
+/* line 49, ../js/app/templates/scss/dashboard.scss */
 .dashboard-calendar {
   width: 80%;
   height: 300px;
@@ -5267,18 +5273,18 @@ header.ghost .navbar-inner {
   margin-top: 30px;
   text-align: right;
 }
-/* line 56, ../js/app/templates/scss/dashboard.scss */
+/* line 57, ../js/app/templates/scss/dashboard.scss */
 .dashboard-calendar h2 {
   font-size: 1.5em;
   font-weight: 100;
   cursor: default;
 }
-/* line 62, ../js/app/templates/scss/dashboard.scss */
+/* line 63, ../js/app/templates/scss/dashboard.scss */
 .dashboard-calendar .menu {
   position: relative;
   left: 8px;
 }
-/* line 65, ../js/app/templates/scss/dashboard.scss */
+/* line 66, ../js/app/templates/scss/dashboard.scss */
 .dashboard-calendar .menu li {
   display: inline-block;
   padding: 15px 10px;
@@ -5287,16 +5293,16 @@ header.ghost .navbar-inner {
   color: #999;
   cursor: pointer;
 }
-/* line 73, ../js/app/templates/scss/dashboard.scss */
+/* line 74, ../js/app/templates/scss/dashboard.scss */
 .dashboard-calendar .menu li.active {
   color: black;
 }
-/* line 77, ../js/app/templates/scss/dashboard.scss */
+/* line 78, ../js/app/templates/scss/dashboard.scss */
 .dashboard-calendar .menu li:hover {
   color: black;
 }
 
-/* line 85, ../js/app/templates/scss/dashboard.scss */
+/* line 86, ../js/app/templates/scss/dashboard.scss */
 .calendar-today .calendar-item {
   position: relative;
   background: #fff;
@@ -5305,14 +5311,14 @@ header.ghost .navbar-inner {
   margin-bottom: 15px;
   cursor: pointer;
 }
-/* line 93, ../js/app/templates/scss/dashboard.scss */
+/* line 94, ../js/app/templates/scss/dashboard.scss */
 .calendar-today .calendar-item li {
   display: inline-block;
   position: absolute;
   line-height: 3em;
   font-weight: 100;
 }
-/* line 99, ../js/app/templates/scss/dashboard.scss */
+/* line 100, ../js/app/templates/scss/dashboard.scss */
 .calendar-today .calendar-item li.icon {
   position: absolute;
   left: -15px;
@@ -5326,24 +5332,24 @@ header.ghost .navbar-inner {
   top: 3px;
   box-shadow: 0px 0px 1px #ddd;
 }
-/* line 113, ../js/app/templates/scss/dashboard.scss */
+/* line 114, ../js/app/templates/scss/dashboard.scss */
 .calendar-today .calendar-item li.description {
   left: 35px;
 }
-/* line 117, ../js/app/templates/scss/dashboard.scss */
+/* line 118, ../js/app/templates/scss/dashboard.scss */
 .calendar-today .calendar-item li.close {
   right: 10px;
   bottom: -10px;
   display: none;
 }
 
-/* line 126, ../js/app/templates/scss/dashboard.scss */
+/* line 127, ../js/app/templates/scss/dashboard.scss */
 #dashboard-posts {
   float: right;
   width: 80%;
   position: relative;
 }
-/* line 130, ../js/app/templates/scss/dashboard.scss */
+/* line 131, ../js/app/templates/scss/dashboard.scss */
 #dashboard-posts .user-post {
   width: 85%;
   margin-left: 0;
@@ -6416,6 +6422,17 @@ header.ghost .navbar-inner {
   top: -15px;
   font-size: 0.8em;
   color: #cd0000;
+}
+
+/* line 181, ../js/app/templates/scss/post.scss */
+.delete_comment {
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+}
+/* line 186, ../js/app/templates/scss/post.scss */
+.delete_comment:hover {
+  color: #dddddd;
 }
 
 /* line 1, ../js/app/templates/scss/notification.scss */

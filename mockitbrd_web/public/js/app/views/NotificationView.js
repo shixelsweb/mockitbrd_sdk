@@ -146,6 +146,7 @@ define(['jquery', 'models/Model', 'views/MBConfirm', 'moment', 'hbs!templates/no
             if(changed) {
               if ((currentNotNum-=1) === 0) {
                 $('.MB-new-count').fadeOut();
+                $('.MB-notification-icon').removeClass('hasNots');
               } else {
                 $('.MB-new-count p').hide().html((currentNotNum)).fadeIn('slow');
               }

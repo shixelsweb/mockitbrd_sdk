@@ -24,6 +24,9 @@ define(['jquery','views/MBConfirm', 'views/NotificationQuickMenuView', 'models/M
                 }
               }
             }
+            if (this.not_count > 0) {
+              this.user.notifications.hasClass = 'hasNots';
+            }
             this.model = new Model({user: this.user, user_pic: this.user_pic, new_count: this.not_count});
           },
 
