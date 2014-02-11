@@ -2,7 +2,7 @@
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-/* line 17, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 17, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -24,50 +24,50 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 22, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 24, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 26, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 28, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 30, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 103, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 32, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 116, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
   display: block;
 }
 
-/* line 39, ../js/app/templates/scss/variables.scss */
+/* line 44, ../js/app/templates/scss/variables.scss */
 .glass-effect {
   box-shadow: 0px 0px 0px 8px rgba(0, 0, 0, 0.3), 0px 2px 3px 0px rgba(0, 0, 0, 0.6);
 }
@@ -97,7 +97,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   src: url('fonts/../../fonts/ethon/ethon_roman.ttf') format('truetype');
 }
 
-/* line 58, ../js/app/templates/scss/variables.scss */
+@font-face {
+  font-family: "Micr";
+  src: url('fonts/../../fonts/micr/micrenc.ttf') format('truetype');
+}
+
+/* line 65, ../js/app/templates/scss/variables.scss */
 .unselectable {
   -moz-user-select: none;
   -khtml-user-select: none;
@@ -105,12 +110,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   -o-user-select: none;
 }
 
-/* line 65, ../js/app/templates/scss/variables.scss */
+/* line 72, ../js/app/templates/scss/variables.scss */
 .placeholderHIW {
   margin-top: 30px;
 }
 
-/* line 69, ../js/app/templates/scss/variables.scss */
+/* line 76, ../js/app/templates/scss/variables.scss */
 .MB-boardroom-bg {
   background: url("../../img/login_bg.jpg") no-repeat;
   background-position: center;
@@ -118,7 +123,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   -moz-background-size: cover;
 }
 
-/* line 76, ../js/app/templates/scss/variables.scss */
+/* line 83, ../js/app/templates/scss/variables.scss */
 .MB-office-bg {
   background: url("../../img/office_bg.jpg") no-repeat;
   background-position: center;
@@ -126,7 +131,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   -moz-background-size: cover;
 }
 
-/* line 83, ../js/app/templates/scss/variables.scss */
+/* line 90, ../js/app/templates/scss/variables.scss */
 .MB-mail-bg {
   background: url("../../img/mail_bg.jpg") no-repeat;
   background-position: center;
@@ -134,12 +139,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   -moz-background-size: cover;
 }
 
-/* line 90, ../js/app/templates/scss/variables.scss */
+/* line 97, ../js/app/templates/scss/variables.scss */
 .MB-user-bg {
   background: url("../../img/squairy.png");
 }
 
-/* line 94, ../js/app/templates/scss/variables.scss */
+/* line 101, ../js/app/templates/scss/variables.scss */
 .MB-waiting-bg {
   background: url("../../img/waiting.jpg") no-repeat;
   background-position: top;
@@ -147,7 +152,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   -moz-background-size: cover;
 }
 
-/* line 101, ../js/app/templates/scss/variables.scss */
+/* line 108, ../js/app/templates/scss/variables.scss */
 .MB-waiting-two-bg {
   background: url("../../img/waiting2.jpg") no-repeat;
   background-position: -80px -120px;
@@ -155,65 +160,65 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   -moz-background-size: cover;
 }
 
-/* line 108, ../js/app/templates/scss/variables.scss */
+/* line 115, ../js/app/templates/scss/variables.scss */
 .MB-lightGrey-bg {
   background-color: #f4f4f4;
 }
 
-/* line 111, ../js/app/templates/scss/variables.scss */
+/* line 118, ../js/app/templates/scss/variables.scss */
 .MB-white-bg {
   background-color: white;
   box-shadow: 0px 0px 2px #525252;
 }
 
-/* line 116, ../js/app/templates/scss/variables.scss */
+/* line 123, ../js/app/templates/scss/variables.scss */
 .MB-geom-bg {
   background: url("../../img/geometry.png");
   box-shadow: 0px 0px 2px #525252;
 }
 
-/* line 120, ../js/app/templates/scss/variables.scss */
+/* line 127, ../js/app/templates/scss/variables.scss */
 .clear-left {
   clear: left;
 }
 
-/* line 124, ../js/app/templates/scss/variables.scss */
+/* line 131, ../js/app/templates/scss/variables.scss */
 .clear-right {
   clear: right;
 }
 
-/* line 128, ../js/app/templates/scss/variables.scss */
+/* line 135, ../js/app/templates/scss/variables.scss */
 .clear-both {
   clear: both;
 }
 
-/* line 132, ../js/app/templates/scss/variables.scss */
+/* line 139, ../js/app/templates/scss/variables.scss */
 .noShadow {
   box-shadow: none;
   text-shadow: none;
 }
 
-/* line 137, ../js/app/templates/scss/variables.scss */
+/* line 144, ../js/app/templates/scss/variables.scss */
 .pull-left {
   float: left;
 }
 
-/* line 141, ../js/app/templates/scss/variables.scss */
+/* line 148, ../js/app/templates/scss/variables.scss */
 .pull-right {
   float: right;
 }
 
-/* line 145, ../js/app/templates/scss/variables.scss */
+/* line 152, ../js/app/templates/scss/variables.scss */
 .plus150 {
   padding-top: 150px;
 }
 
-/* line 149, ../js/app/templates/scss/variables.scss */
+/* line 156, ../js/app/templates/scss/variables.scss */
 .top52 {
   margin-top: 52px;
 }
 
-/* line 153, ../js/app/templates/scss/variables.scss */
+/* line 160, ../js/app/templates/scss/variables.scss */
 .plus100 {
   padding-top: 100px;
 }
@@ -4362,37 +4367,39 @@ header.ghost .navbar-inner {
 }
 
 /* line 2, ../js/app/templates/scss/account.scss */
-.account-head {
+#top-account-banner {
+  width: 100%;
+  background: #6c6c6c;
+  border-top: 1px solid black;
+  border-bottom: 2px groove #6c6c6c;
+}
+/* line 9, ../js/app/templates/scss/account.scss */
+#top-account-banner .account-head {
   font-family: "Ethon Roman";
-  color: #525252;
+  color: #fafafa;
   font-size: 35px;
   margin-bottom: 20px;
+  margin-left: 10%;
 }
 
-/* line 8, ../js/app/templates/scss/account.scss */
-#userprofile {
-  min-width: 400px;
-}
-
-/* line 11, ../js/app/templates/scss/account.scss */
+/* line 18, ../js/app/templates/scss/account.scss */
 #accountViewRegion {
-  top: 160px;
-  position: fixed;
+  top: 112px;
   z-index: 1;
   overflow-y: scroll;
   width: 100%;
-  padding-left: 100px;
 }
-/* line 19, ../js/app/templates/scss/account.scss */
+/* line 24, ../js/app/templates/scss/account.scss */
 #accountViewRegion h4 {
-  margin-bottom: 30px;
+  margin-top: 0;
+  margin-left: 10%;
   font-size: 1em;
-  border-bottom: 1px solid #ddd;
   width: 75%;
   padding-bottom: 5px;
+  color: #fafafa;
 }
 
-/* line 28, ../js/app/templates/scss/account.scss */
+/* line 34, ../js/app/templates/scss/account.scss */
 .account-menu {
   text-align: right;
   position: fixed;
@@ -4404,7 +4411,7 @@ header.ghost .navbar-inner {
   height: 100px;
   z-index: 1;
 }
-/* line 39, ../js/app/templates/scss/account.scss */
+/* line 45, ../js/app/templates/scss/account.scss */
 .account-menu .account-menu-item {
   cursor: pointer;
   display: inline-block;
@@ -4414,15 +4421,549 @@ header.ghost .navbar-inner {
   text-align: center;
   color: #6b7886;
 }
-/* line 48, ../js/app/templates/scss/account.scss */
+/* line 54, ../js/app/templates/scss/account.scss */
 .account-menu .account-menu-item.active {
   color: #37404e;
 }
-/* line 53, ../js/app/templates/scss/account.scss */
+/* line 59, ../js/app/templates/scss/account.scss */
 .account-menu .account-menu-item-icon {
   font-size: 2.5em;
   display: block;
   line-height: 1.5em;
+}
+
+/* line 68, ../js/app/templates/scss/account.scss */
+#account-gen-box {
+  width: 100%;
+  background: #f6f7f8;
+}
+/* line 75, ../js/app/templates/scss/account.scss */
+#account-gen-box #account-gen-container {
+  width: 900px;
+  margin: 0 auto;
+  margin-left: 15%;
+}
+/* line 80, ../js/app/templates/scss/account.scss */
+#account-gen-box #account-gen-container .account-gen-line {
+  width: 100%;
+  margin-bottom: 2px;
+}
+/* line 84, ../js/app/templates/scss/account.scss */
+#account-gen-box #account-gen-container .account-gen-line .gen-label-line {
+  width: 150px;
+  padding-right: 20px;
+  display: inline-block;
+  text-align: right;
+}
+/* line 90, ../js/app/templates/scss/account.scss */
+#account-gen-box #account-gen-container .account-gen-line .gen-label-line .acc-p {
+  margin: 0px;
+  font-size: 12px;
+}
+/* line 96, ../js/app/templates/scss/account.scss */
+#account-gen-box #account-gen-container .account-gen-line .gen-input-line {
+  width: 70%;
+  display: inline;
+}
+/* line 100, ../js/app/templates/scss/account.scss */
+#account-gen-box #account-gen-container .account-gen-line .gen-input-line .lName {
+  margin-left: 20px;
+}
+/* line 104, ../js/app/templates/scss/account.scss */
+#account-gen-box #account-gen-container .account-gen-line .gen-input-line .gen-input {
+  padding: 10px;
+  border-radius: 4px;
+  background: white;
+  box-shadow: none;
+  margin-top: 7px;
+  border: 1px solid #dddddd;
+  width: 250px;
+}
+
+/* line 121, ../js/app/templates/scss/account.scss */
+.top-stretch {
+  width: 100%;
+  height: 40px;
+  background: white;
+  margin-top: 0;
+}
+
+/* line 128, ../js/app/templates/scss/account.scss */
+.section-head {
+  height: 35px;
+  line-height: 35px;
+  background: white;
+  color: black;
+  border: 1px solid #dddddd;
+  padding-left: 5%;
+}
+
+/* line 138, ../js/app/templates/scss/account.scss */
+#account-pass-box {
+  width: 100%;
+  background: #f6f7f8;
+}
+/* line 142, ../js/app/templates/scss/account.scss */
+#account-pass-box #account-pass-container {
+  width: 900px;
+  margin-left: 15%;
+}
+/* line 146, ../js/app/templates/scss/account.scss */
+#account-pass-box #account-pass-container .account-pass-line {
+  width: 100%;
+  margin-bottom: 2px;
+}
+/* line 150, ../js/app/templates/scss/account.scss */
+#account-pass-box #account-pass-container .account-pass-line .pass-label-line {
+  width: 150px;
+  padding-right: 20px;
+  display: inline-block;
+  text-align: right;
+}
+/* line 157, ../js/app/templates/scss/account.scss */
+#account-pass-box #account-pass-container .account-pass-line .pass-input-line {
+  width: 70%;
+  display: inline;
+}
+/* line 161, ../js/app/templates/scss/account.scss */
+#account-pass-box #account-pass-container .account-pass-line .pass-input-line .gen-input {
+  padding: 10px;
+  border-radius: 4px;
+  background: white;
+  box-shadow: none;
+  margin-top: 7px;
+  border: 1px solid #dddddd;
+  width: 250px;
+}
+
+/* line 177, ../js/app/templates/scss/account.scss */
+#account-soc-box {
+  width: 100%;
+  background: #f6f7f8;
+}
+/* line 181, ../js/app/templates/scss/account.scss */
+#account-soc-box #account-soc-container {
+  width: 900px;
+  margin-left: 15%;
+}
+/* line 185, ../js/app/templates/scss/account.scss */
+#account-soc-box #account-soc-container .account-soc-line {
+  width: 100%;
+  margin-bottom: 5px;
+}
+/* line 189, ../js/app/templates/scss/account.scss */
+#account-soc-box #account-soc-container .account-soc-line .soc-label-line {
+  margin-top: 7px;
+}
+/* line 192, ../js/app/templates/scss/account.scss */
+#account-soc-box #account-soc-container .account-soc-line .soc-label-line .acc-p {
+  width: 150px;
+  padding-right: 20px;
+  display: inline-block;
+  text-align: right;
+  padding: 10px;
+}
+/* line 201, ../js/app/templates/scss/account.scss */
+#account-soc-box #account-soc-container .account-soc-line .soc-label-line .input-prepend {
+  display: inline;
+}
+/* line 204, ../js/app/templates/scss/account.scss */
+#account-soc-box #account-soc-container .account-soc-line .soc-label-line .input-prepend .add-on {
+  padding: 10px;
+}
+/* line 208, ../js/app/templates/scss/account.scss */
+#account-soc-box #account-soc-container .account-soc-line .soc-label-line .input-prepend .soc-input {
+  padding: 10px;
+}
+
+/* line 220, ../js/app/templates/scss/account.scss */
+#account-not-box {
+  width: 100%;
+  background: #f6f7f8;
+}
+/* line 224, ../js/app/templates/scss/account.scss */
+#account-not-box #account-not-container {
+  width: 650px;
+  margin-left: 15%;
+}
+/* line 228, ../js/app/templates/scss/account.scss */
+#account-not-box #account-not-container .account-not-line-top {
+  width: 100%;
+  margin-top: 10px;
+  padding-bottom: 5px;
+  border-bottom: 2px solid;
+}
+/* line 234, ../js/app/templates/scss/account.scss */
+#account-not-box #account-not-container .account-not-line-top p {
+  display: inline;
+  font-size: 20px;
+}
+/* line 239, ../js/app/templates/scss/account.scss */
+#account-not-box #account-not-container .account-not-line-top .not-type {
+  float: right;
+  display: inline;
+}
+/* line 243, ../js/app/templates/scss/account.scss */
+#account-not-box #account-not-container .account-not-line-top .not-type p {
+  margin-left: 20px;
+  display: inline;
+}
+/* line 248, ../js/app/templates/scss/account.scss */
+#account-not-box #account-not-container .account-not-line-top .not-type p:nth-child(2) {
+  margin-right: 10px;
+}
+/* line 255, ../js/app/templates/scss/account.scss */
+#account-not-box #account-not-container .account-not-line {
+  margin-top: 10px;
+  width: 100%;
+  border-bottom: 1px dotted #525252;
+  padding-bottom: 5px;
+}
+/* line 261, ../js/app/templates/scss/account.scss */
+#account-not-box #account-not-container .account-not-line p {
+  display: inline;
+  padding-left: 15px;
+}
+/* line 266, ../js/app/templates/scss/account.scss */
+#account-not-box #account-not-container .account-not-line .not-type {
+  float: right;
+  display: inline;
+}
+/* line 270, ../js/app/templates/scss/account.scss */
+#account-not-box #account-not-container .account-not-line .not-type input[type="checkbox"] {
+  margin-left: 55px;
+}
+/* line 274, ../js/app/templates/scss/account.scss */
+#account-not-box #account-not-container .account-not-line .not-type input[type="checkbox"]:nth-child(2) {
+  margin-right: 20px;
+}
+
+/* line 284, ../js/app/templates/scss/account.scss */
+#account-pay-box {
+  width: 100%;
+}
+/* line 287, ../js/app/templates/scss/account.scss */
+#account-pay-box #account-pay-container {
+  width: 950px;
+  margin-left: 5%;
+}
+/* line 291, ../js/app/templates/scss/account.scss */
+#account-pay-box #account-pay-container .account-pay-line-top {
+  width: 100%;
+  border-top: 2px solid;
+  border-bottom: 2px solid;
+}
+/* line 301, ../js/app/templates/scss/account.scss */
+#account-pay-box #account-pay-container .account-cc-line #cc-front {
+  margin-top: 20px;
+  width: 450px;
+  background: url("../../../../img/squairy.png");
+  display: inline-block;
+  position: relative;
+}
+/* line 308, ../js/app/templates/scss/account.scss */
+#account-pay-box #account-pay-container .account-cc-line #cc-front #MB-logo-two {
+  position: absolute;
+  height: 100%;
+  z-index: 1;
+  left: 25%;
+  opacity: 0.3;
+}
+/* line 316, ../js/app/templates/scss/account.scss */
+#account-pay-box #account-pay-container .account-cc-line #cc-front #cc-front-top-line {
+  height: 50px;
+  line-height: 50px;
+  position: relative;
+  z-index: 2;
+}
+/* line 322, ../js/app/templates/scss/account.scss */
+#account-pay-box #account-pay-container .account-cc-line #cc-front #cc-front-top-line p {
+  display: inline;
+  font-size: 18px;
+}
+/* line 326, ../js/app/templates/scss/account.scss */
+#account-pay-box #account-pay-container .account-cc-line #cc-front #cc-front-top-line p img {
+  height: 20px;
+}
+/* line 331, ../js/app/templates/scss/account.scss */
+#account-pay-box #account-pay-container .account-cc-line #cc-front #cc-front-top-line img {
+  display: inline;
+  height: 50px;
+  margin-left: 20px;
+}
+/* line 339, ../js/app/templates/scss/account.scss */
+#account-pay-box #account-pay-container .account-cc-line #cc-front #chip-card {
+  position: absolute;
+  margin-left: 25px;
+  height: 45px;
+  z-index: 50px;
+}
+/* line 347, ../js/app/templates/scss/account.scss */
+#account-pay-box #account-pay-container .account-cc-line #cc-front #cc-number-line {
+  padding-left: 20px;
+  margin-top: 50px;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+/* line 354, ../js/app/templates/scss/account.scss */
+#account-pay-box #account-pay-container .account-cc-line #cc-front #cc-number-line label {
+  position: relative;
+  z-index: 60;
+}
+/* line 359, ../js/app/templates/scss/account.scss */
+#account-pay-box #account-pay-container .account-cc-line #cc-front #cc-number-line input[type="text"] {
+  width: 88%;
+  border-radius: 0px;
+}
+/* line 366, ../js/app/templates/scss/account.scss */
+#account-pay-box #account-pay-container .account-cc-line #cc-front #cc-bottom-line {
+  margin-top: 10px;
+  width: 100%;
+  padding-left: 20px;
+  display: inline-flex;
+  position: relative;
+  z-index: 2;
+}
+/* line 374, ../js/app/templates/scss/account.scss */
+#account-pay-box #account-pay-container .account-cc-line #cc-front #cc-bottom-line #cc-name {
+  display: inline;
+}
+/* line 377, ../js/app/templates/scss/account.scss */
+#account-pay-box #account-pay-container .account-cc-line #cc-front #cc-bottom-line #cc-name input[type="text"] {
+  width: 150px;
+  border-radius: 0px;
+}
+/* line 384, ../js/app/templates/scss/account.scss */
+#account-pay-box #account-pay-container .account-cc-line #cc-front #cc-bottom-line #cc-expire {
+  display: inline;
+  margin-left: 30px;
+}
+/* line 394, ../js/app/templates/scss/account.scss */
+#account-pay-box #account-pay-container .account-cc-line #cc-front #cc-bottom-line #cc-expire #cc-dropdown .dropdown-select {
+  display: inline;
+  width: 100px;
+  border-radius: 0px !important;
+}
+/* line 404, ../js/app/templates/scss/account.scss */
+#account-pay-box #account-pay-container .account-cc-line #cc-back {
+  margin-top: 20px;
+  width: 450px;
+  height: 240px;
+  background: url("../../../../img/squairy.png");
+  position: relative;
+  display: inline-block;
+  float: right;
+}
+/* line 413, ../js/app/templates/scss/account.scss */
+#account-pay-box #account-pay-container .account-cc-line #cc-back #cc-back-clear {
+  width: 100%;
+  height: 20px;
+}
+/* line 418, ../js/app/templates/scss/account.scss */
+#account-pay-box #account-pay-container .account-cc-line #cc-back #cc-back-black-strip {
+  background: url("../../../../img/black_strip.png");
+  width: 100%;
+  height: 50px;
+}
+/* line 424, ../js/app/templates/scss/account.scss */
+#account-pay-box #account-pay-container .account-cc-line #cc-back #cc-card-strip {
+  background: url("../../../../img/credit_card_strip.png");
+  width: 100%;
+  margin: 0 auto;
+}
+/* line 429, ../js/app/templates/scss/account.scss */
+#account-pay-box #account-pay-container .account-cc-line #cc-back #cc-card-strip #cc-sign {
+  display: inline-block;
+  height: 50px;
+  width: 340px;
+  background: white;
+  opacity: 0.7;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+/* line 440, ../js/app/templates/scss/account.scss */
+#account-pay-box #account-pay-container .account-cc-line #cc-back #cc-card-strip #cc-code {
+  display: inline-table;
+  margin-top: -4px;
+  margin-left: 5px;
+}
+/* line 445, ../js/app/templates/scss/account.scss */
+#account-pay-box #account-pay-container .account-cc-line #cc-back #cc-card-strip #cc-code label {
+  color: white;
+}
+/* line 449, ../js/app/templates/scss/account.scss */
+#account-pay-box #account-pay-container .account-cc-line #cc-back #cc-card-strip #cc-code #cv-code {
+  width: 45px;
+  text-indent: 10px;
+  letter-spacing: 1px;
+  border-radius: 0px;
+}
+/* line 458, ../js/app/templates/scss/account.scss */
+#account-pay-box #account-pay-container .account-cc-line #cc-back #cc-card-disclosure {
+  width: 90%;
+  margin: 0 auto;
+  line-height: 11px;
+}
+/* line 462, ../js/app/templates/scss/account.scss */
+#account-pay-box #account-pay-container .account-cc-line #cc-back #cc-card-disclosure p {
+  margin-top: 10px;
+  font-size: 10px;
+  text-indent: 30px;
+}
+/* line 469, ../js/app/templates/scss/account.scss */
+#account-pay-box #account-pay-container .account-cc-line #cc-back #cc-back-img {
+  position: absolute;
+  left: 15px;
+  height: 20px;
+}
+/* line 475, ../js/app/templates/scss/account.scss */
+#account-pay-box #account-pay-container .account-cc-line #cc-back #cc-copy {
+  width: 100%;
+  padding-top: 1px;
+}
+/* line 479, ../js/app/templates/scss/account.scss */
+#account-pay-box #account-pay-container .account-cc-line #cc-back #cc-copy p {
+  text-align: center;
+  font-size: 10px;
+}
+/* line 486, ../js/app/templates/scss/account.scss */
+#account-pay-box #account-pay-container .account-cc-line #check-box {
+  margin-top: 50px;
+  width: 950px;
+  background: red;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+/* line 493, ../js/app/templates/scss/account.scss */
+#account-pay-box #account-pay-container .account-cc-line #check-box #check-container {
+  width: 930px;
+  margin: 10px auto;
+  background: white;
+}
+/* line 498, ../js/app/templates/scss/account.scss */
+#account-pay-box #account-pay-container .account-cc-line #check-box #check-container #check-top-line {
+  padding-top: 15px;
+}
+/* line 501, ../js/app/templates/scss/account.scss */
+#account-pay-box #account-pay-container .account-cc-line #check-box #check-container #check-top-line #address {
+  margin-left: 15px;
+  width: 300px;
+  display: inline-block;
+  line-height: 10px;
+}
+/* line 507, ../js/app/templates/scss/account.scss */
+#account-pay-box #account-pay-container .account-cc-line #check-box #check-container #check-top-line #address p:nth-child(1) {
+  font-size: 25px;
+}
+/* line 512, ../js/app/templates/scss/account.scss */
+#account-pay-box #account-pay-container .account-cc-line #check-box #check-container #check-top-line #date {
+  display: inline-block;
+  float: right;
+  margin-right: 40px;
+}
+/* line 518, ../js/app/templates/scss/account.scss */
+#account-pay-box #account-pay-container .account-cc-line #check-box #check-container #check-pay-line {
+  margin: 40px 0 0 65px;
+  position: relative;
+}
+/* line 522, ../js/app/templates/scss/account.scss */
+#account-pay-box #account-pay-container .account-cc-line #check-box #check-container #check-pay-line #pay-order {
+  position: absolute;
+  display: inline-block;
+}
+/* line 527, ../js/app/templates/scss/account.scss */
+#account-pay-box #account-pay-container .account-cc-line #check-box #check-container #check-pay-line #pay-company {
+  width: 680px;
+  border-bottom: 1px solid;
+  display: inline-block;
+  text-align: center;
+}
+/* line 534, ../js/app/templates/scss/account.scss */
+#account-pay-box #account-pay-container .account-cc-line #check-box #check-container #check-pay-line #pad-dollar-sign {
+  display: inline-block;
+  margin-left: 20px;
+}
+/* line 539, ../js/app/templates/scss/account.scss */
+#account-pay-box #account-pay-container .account-cc-line #check-box #check-container #check-pay-line #pay-no {
+  display: inline-block;
+  border: 2px solid red;
+  padding: 10px 25px 0 25px;
+  margin-left: 5px;
+}
+/* line 547, ../js/app/templates/scss/account.scss */
+#account-pay-box #account-pay-container .account-cc-line #check-box #check-container #check-dollar-line {
+  margin: 20px 0 0 65px;
+}
+/* line 550, ../js/app/templates/scss/account.scss */
+#account-pay-box #account-pay-container .account-cc-line #check-box #check-container #check-dollar-line #pay-dollars {
+  width: 750px;
+  display: inline-block;
+  border-bottom: 1px solid;
+  text-align: right;
+  display: inline-block;
+}
+/* line 559, ../js/app/templates/scss/account.scss */
+#account-pay-box #account-pay-container .account-cc-line #check-box #check-container #check-dollar-line #pay-secure {
+  margin-left: 20px;
+  display: inline-block;
+}
+/* line 564, ../js/app/templates/scss/account.scss */
+#account-pay-box #account-pay-container .account-cc-line #check-box #check-container #check-bank {
+  margin: 12px 0 0 15px;
+}
+/* line 569, ../js/app/templates/scss/account.scss */
+#account-pay-box #account-pay-container .account-cc-line #check-box #check-container #check-memo-line {
+  margin-top: 20px;
+  margin-left: 30px;
+}
+/* line 573, ../js/app/templates/scss/account.scss */
+#account-pay-box #account-pay-container .account-cc-line #check-box #check-container #check-memo-line #pay-memo {
+  width: 370px;
+  display: inline-block;
+  border-bottom: 1px solid;
+}
+/* line 578, ../js/app/templates/scss/account.scss */
+#account-pay-box #account-pay-container .account-cc-line #check-box #check-container #check-memo-line #pay-sig {
+  width: 370px;
+  display: inline-block;
+  border-bottom: 1px solid;
+  margin-left: 120px;
+}
+/* line 584, ../js/app/templates/scss/account.scss */
+#account-pay-box #account-pay-container .account-cc-line #check-box #check-container #check-memo-line #pay-sig p:nth-child(1) {
+  font-family: "Desyrel";
+  display: inline-block;
+  margin-left: 120px;
+  font-size: 15px;
+}
+/* line 591, ../js/app/templates/scss/account.scss */
+#account-pay-box #account-pay-container .account-cc-line #check-box #check-container #check-memo-line #pay-sig p:nth-child(2) {
+  display: inline-block;
+}
+/* line 597, ../js/app/templates/scss/account.scss */
+#account-pay-box #account-pay-container .account-cc-line #check-box #check-container #check-account-line {
+  margin-left: 15px;
+  margin-top: 20px;
+}
+/* line 601, ../js/app/templates/scss/account.scss */
+#account-pay-box #account-pay-container .account-cc-line #check-box #check-container #check-account-line .pay-account-font {
+  font-family: "Micr";
+  display: inline-block;
+}
+/* line 606, ../js/app/templates/scss/account.scss */
+#account-pay-box #account-pay-container .account-cc-line #check-box #check-container #check-account-line #pay-account-no {
+  font-family: "Micr";
+  border-radius: 0px;
+  background: white;
+  display: inline-block;
+}
+/* line 612, ../js/app/templates/scss/account.scss */
+#account-pay-box #account-pay-container .account-cc-line #check-box #check-container #check-account-line #pay-route-no {
+  font-family: "Micr";
+  border-radius: 0px;
+  background: white;
+  display: inline-block;
 }
 
 /* line 1, ../js/app/templates/scss/leftAppMenu.scss */
@@ -4432,7 +4973,7 @@ header.ghost .navbar-inner {
   height: 100%;
   float: left;
   border-right: 1px groove #777;
-  overflow-y: scroll;
+  overflow-y: hidden;
   margin: 0;
   left: 0;
   z-index: 99;
@@ -6073,6 +6614,277 @@ header.ghost .navbar-inner {
   font-size: 3em;
   height: 10px;
   text-shadow: 0px -2px 1px #cccccc;
+}
+
+/* Share Container */
+/* line 3, ../js/app/templates/scss/share.scss */
+#share-container {
+  width: 100%;
+  margin: 0px auto;
+  margin-left: -5%;
+}
+
+/* Share Box Window */
+/* line 11, ../js/app/templates/scss/share.scss */
+#share-container-top {
+  width: 100%;
+}
+/* line 14, ../js/app/templates/scss/share.scss */
+#share-container-top #share-box-img-top {
+  display: block;
+  margin: 0 auto;
+  height: 225px;
+  z-index: 100;
+  margin-bottom: -90px;
+  position: relative;
+}
+/* line 23, ../js/app/templates/scss/share.scss */
+#share-container-top img {
+  height: 50px;
+  margin-top: -10px;
+}
+/* line 28, ../js/app/templates/scss/share.scss */
+#share-container-top #share-box {
+  z-index: 1;
+  width: 40%;
+  height: 350px;
+  margin: 0 auto;
+  background: white;
+  box-shadow: 0 0 100px -30px #555;
+}
+/* line 36, ../js/app/templates/scss/share.scss */
+#share-container-top #share-box #share-box-header {
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  font-size: 2em;
+  background: #4d4c50;
+  color: black;
+  text-align: center;
+  position: relative;
+}
+/* line 47, ../js/app/templates/scss/share.scss */
+#share-container-top #share-box #share-box-header:after {
+  top: 100%;
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(136, 183, 213, 0);
+  border-top-color: #4d4c50;
+  border-width: 30px;
+  margin-left: -30px;
+}
+/* line 62, ../js/app/templates/scss/share.scss */
+#share-container-top #share-box #share-box-body {
+  text-align: center;
+}
+/* line 67, ../js/app/templates/scss/share.scss */
+#share-container-top #share-box #share-box-body #refer-no #share-box-refer-no {
+  font-size: 30px;
+}
+/* line 72, ../js/app/templates/scss/share.scss */
+#share-container-top #share-box #share-box-body h1 {
+  margin-top: 40px;
+  font-family: "Ethon Roman";
+}
+/* line 77, ../js/app/templates/scss/share.scss */
+#share-container-top #share-box #share-box-body #share-body-input {
+  margin-top: 20px;
+}
+/* line 81, ../js/app/templates/scss/share.scss */
+#share-container-top #share-box #share-box-body #share-body-input input[type="email"] {
+  padding: 9px;
+  border-radius: 0px;
+  background: #fafafa;
+  padding-right: 20px;
+}
+/* line 88, ../js/app/templates/scss/share.scss */
+#share-container-top #share-box #share-box-body #share-body-input input[type="submit"] {
+  padding: 10px;
+  background: black;
+  color: white;
+  margin: 0px 10px 0px 0px;
+  position: absolute;
+  border: none;
+}
+/* line 96, ../js/app/templates/scss/share.scss */
+#share-container-top #share-box #share-box-body #share-body-input input[type="submit"]:hover {
+  background: #ffe42b;
+}
+
+/* Bottom Container */
+/* line 107, ../js/app/templates/scss/share.scss */
+#share-container-bottom {
+  margin: 20px auto;
+  width: 100%;
+}
+/* line 111, ../js/app/templates/scss/share.scss */
+#share-container-bottom #share-section-bottom {
+  width: 60%;
+  margin: 0 auto;
+}
+/* line 115, ../js/app/templates/scss/share.scss */
+#share-container-bottom #share-section-bottom div:nth-child(n + 2) {
+  margin-left: 10%;
+  background: #2bbbff !important;
+}
+/* line 120, ../js/app/templates/scss/share.scss */
+#share-container-bottom #share-section-bottom .share-column {
+  width: 80%;
+  margin: 0 auto;
+  background: white;
+  border-radius: 2px;
+  -webkit-box-shadow: 0 0 100px -30px #555;
+  -moz-box-shadow: 0 0 100px -30px #555;
+  box-shadow: 0 0 100px -30px #555;
+}
+/* line 129, ../js/app/templates/scss/share.scss */
+#share-container-bottom #share-section-bottom .share-column .share-column-header {
+  width: 100%;
+  height: 100%;
+  background: #4d4c50;
+  color: white;
+  position: relative;
+  text-align: center;
+  margin-bottom: 10px;
+}
+/* line 138, ../js/app/templates/scss/share.scss */
+#share-container-bottom #share-section-bottom .share-column .share-column-header h3 {
+  margin-top: 0;
+  padding-top: 5px;
+}
+/* line 144, ../js/app/templates/scss/share.scss */
+#share-container-bottom #share-section-bottom .share-column h5 {
+  padding: 20px;
+  text-align: justify;
+  text-indent: 10%;
+}
+/* line 150, ../js/app/templates/scss/share.scss */
+#share-container-bottom #share-section-bottom .share-column .share-column-header:after {
+  top: 100%;
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(136, 183, 213, 0);
+  border-top-color: #4d4c50;
+  border-width: 30px;
+  margin-left: -30px;
+}
+
+/* line 168, ../js/app/templates/scss/share.scss */
+#cleardiv {
+  clear: both;
+}
+
+/* Share Social Media */
+/* line 175, ../js/app/templates/scss/share.scss */
+#share-social-container {
+  margin: 20px auto;
+  width: 60%;
+}
+/* line 179, ../js/app/templates/scss/share.scss */
+#share-social-container #share-social-links {
+  display: inline;
+  margin-top: 30px;
+}
+/* line 184, ../js/app/templates/scss/share.scss */
+#share-social-container #share-social-links .sub-social-text {
+  display: inline;
+  width: 30%;
+  height: 50px;
+  float: left;
+  position: relative;
+  border-radius: 5px;
+}
+/* line 192, ../js/app/templates/scss/share.scss */
+#share-social-container #share-social-links .sub-social-text:hover {
+  background: #f6f7f8;
+  opacity: 0.8;
+  cursor: pointer;
+}
+/* line 197, ../js/app/templates/scss/share.scss */
+#share-social-container #share-social-links .sub-social-text:hover p {
+  color: black;
+}
+/* line 202, ../js/app/templates/scss/share.scss */
+#share-social-container #share-social-links .sub-social-text p {
+  right: 6%;
+  position: absolute;
+  top: 0;
+  line-height: 50px;
+  z-index: 1;
+  color: white;
+  font-weight: bolder;
+}
+/* line 212, ../js/app/templates/scss/share.scss */
+#share-social-container #share-social-links .sub-social-text .sub-social {
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  margin-left: 23%;
+  color: black;
+  opacity: 0.3;
+  border-left: 4px groove white;
+}
+/* line 223, ../js/app/templates/scss/share.scss */
+#share-social-container #share-social-links .sub-social-text .pad {
+  line-height: 50px;
+  margin-left: 18px;
+  color: white;
+  box-shadow: 0 8px 6px -6px;
+}
+/* line 231, ../js/app/templates/scss/share.scss */
+#share-social-container #share-social-links .sub-social-text:nth-child(n+2) {
+  background: #ffe42b;
+  margin-left: 5%;
+}
+/* line 235, ../js/app/templates/scss/share.scss */
+#share-social-container #share-social-links .sub-social-text:nth-child(n+2) .sub-social {
+  opacity: 0.3;
+}
+/* line 240, ../js/app/templates/scss/share.scss */
+#share-social-container #share-social-links .sub-social-text:nth-child(1) {
+  background: #1883bb;
+}
+/* line 243, ../js/app/templates/scss/share.scss */
+#share-social-container #share-social-links .sub-social-text:nth-child(2) {
+  background: #425f9c;
+}
+/* line 246, ../js/app/templates/scss/share.scss */
+#share-social-container #share-social-links .sub-social-text:nth-child(3) {
+  background: #4b9ed1;
+}
+
+/* HR Container */
+/* line 255, ../js/app/templates/scss/share.scss */
+#hr-container {
+  width: 100%;
+  height: 5px;
+}
+/* line 259, ../js/app/templates/scss/share.scss */
+#hr-container #hr-section {
+  width: 60%;
+  line-height: 5px;
+  margin: 0 auto;
+}
+
+/* Feedback Container */
+/* line 268, ../js/app/templates/scss/share.scss */
+#share-feedback-container {
+  width: 100%;
+}
+/* line 271, ../js/app/templates/scss/share.scss */
+#share-feedback-container #share-feedback-section {
+  width: 60%;
+  margin: 20px auto;
 }
 
 /*!

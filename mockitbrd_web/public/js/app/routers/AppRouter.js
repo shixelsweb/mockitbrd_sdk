@@ -27,6 +27,7 @@ define(['backbone', 'marionette'], function(Backbone, Marionette) {
            "dashboard": "dashboard",
            "user/:id": "user",
            "tasks": "tasks",
+           "register?referrel_code=:id": "register",
            "user/:id/account/general": "account",
            "user/:id/account/security": "accountSecurity",
            "user/:id/account/social": "accountSocial",
@@ -34,6 +35,7 @@ define(['backbone', 'marionette'], function(Backbone, Marionette) {
            "user/:id/account/support": "accountSupport",
            "user/:id/account/notifications": "accountNotifications",
            "interview/:id": "interview",
+           "share": "share",
            "explore": "explore",
            //404 error route
            "*notFound": "notFound"
