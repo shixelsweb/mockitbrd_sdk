@@ -5,7 +5,6 @@ define(["jquery", "backbone"],
 
             initialize: function() {
                 var MB = MB;
-                
                 _.bindAll(this);
             },
 
@@ -23,6 +22,34 @@ define(["jquery", "backbone"],
                     case 'commented': return "commented on your post"; break;
                     case 'liked_you': return "added you as a favorite"; break;
                 }
+            },
+            getPostsToShow: function(user) {
+                var posts = [];
+                var myPosts = [];
+                var usersPosts = {};
+                var myPost = {};
+                var connection = null;
+                if (user.connections) {
+                  for (var i = 0; i < user.connections.length; i++) {
+                      connection = MB.api.user(user.connections[i].user_id);
+                    if (connection.posts && connection.posts.length > 0) {
+                      for (var j = 0; j < connection.posts.length; j++) {
+                        usersPosts.user_id = connection._id;
+                        usersPosts.post_id = connection.posts[j];
+                        posts.push(usersPosts);
+                      }
+                    }
+                  }
+                }
+                if (user.posts && user.posts.length > 0) {
+                  for (var k = 0; k < user.posts.length; k++) {
+                        myPost.user_id = user._id;
+                        myPost.post_id = user.posts[k];
+                        myPosts.push(myPost);
+                  }
+                }
+                var returnPosts = posts.concat(myPosts);
+                return returnPosts;
             }
 
         });

@@ -56,6 +56,7 @@ define(['moment', 'jquery', 'models/Model', 'views/MBConfirm', 'hbs!templates/co
         var commentLikes = parseInt($('.comment-likes[data-commentid="' + commentID +'"]').text());
         var person = $(e.currentTarget).attr('person');
         if (starEvent === 'star') {
+          console.log(send);
           if (person === this.currentUser._id) {
              MB.api.star(send);
            } else {

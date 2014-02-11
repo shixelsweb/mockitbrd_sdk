@@ -65,8 +65,6 @@ define(['jquery', 'models/Model', 'views/MBConfirm', 'moment', 'hbs!templates/no
                 this.notification.readClass = 'read';
               }
             }
-            console.log(this.notification);
-
             this.model = new Model ({
               notification: this.notification
             });
