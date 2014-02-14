@@ -16,7 +16,7 @@ define(['underscore', 'jquery', 'models/Model', 'views/MBConfirm', 'views/Notifi
 
           initialize: function () {
             this.currentUser = MB.api.user($.parseJSON(MB.session.give('session')).user);
-            this.notifications = this.currentUser.notifications;
+            this.notifications = this.currentUser.app_config.notifications;
             var new_count = 0;
 
             if (this.notifications) {

@@ -1,3 +1,26 @@
 <div id="tasks-view">
+	<div id ="MB-create-task-view"></div>
 	<h1 class="account-head">My Calendar</h1>
+	<ul class="MB-calendar-top unselectable">
+		<li class="menuItem giveRightSpace">Today</li>
+		<li class="menuItem"><i class="fa fa-angle-left"></i></li>
+		<li class="menuItem"><i class="fa fa-angle-right"></i></li>
+		<li class="date">{{calendar.month}} {{calendar.year}}</li>
+		<li data-monthtype="week" class="menuItem">Week</li>
+		<li class="active menuItem" data-monthtype="month">Month</li>
+		{{#if user.isCandidate}}
+			<li class="menuItem calendar_button MB_create_interview"><i class="fa fa-calendar"></i>&nbsp;&nbsp;Create</li>
+		{{/if}}
+	</ul>
+	<div clas="MB-calendar"></div>
+
+	<div class="MB-calendar-list">
+		<div class="search_header">Upcoming Tasks<i class="fa fa-search moveright"></i><i class="fa fa-angle-down"></i></div>
+		<div class="search_box"><input type="text" placeholder="Filter interviewer, subject, etc"></div>
+		<ul class="upcoming_tasks">
+			{{#each user.tasks}}
+				<li class="upcoming_task {{typeClass}}">{{title}}</li>
+			{{/each}}
+		</ul>
+	</div>
 </div>

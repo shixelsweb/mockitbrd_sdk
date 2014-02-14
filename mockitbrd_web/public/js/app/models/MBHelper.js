@@ -29,9 +29,9 @@ define(["jquery", "backbone"],
                 var usersPosts = {};
                 var myPost = {};
                 var connection = null;
-                if (user.connections) {
-                  for (var i = 0; i < user.connections.length; i++) {
-                      connection = MB.api.user(user.connections[i].user_id);
+                if (user.social.connections) {
+                  for (var i = 0; i < user.social.connections.length; i++) {
+                      connection = MB.api.user(user.social.connections[i].user_id);
                     if (connection.posts && connection.posts.length > 0) {
                       for (var j = 0; j < connection.posts.length; j++) {
                         usersPosts.user_id = connection._id;
@@ -41,10 +41,10 @@ define(["jquery", "backbone"],
                     }
                   }
                 }
-                if (user.posts && user.posts.length > 0) {
-                  for (var k = 0; k < user.posts.length; k++) {
+                if (user.app_config.posts && user.app_config.posts.length > 0) {
+                  for (var k = 0; k < user.app_config.posts.length; k++) {
                         myPost.user_id = user._id;
-                        myPost.post_id = user.posts[k];
+                        myPost.post_id = user.app_config.posts[k];
                         myPosts.push(myPost);
                   }
                 }

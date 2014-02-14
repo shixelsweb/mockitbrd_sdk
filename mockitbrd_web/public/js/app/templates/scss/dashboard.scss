@@ -3,12 +3,13 @@
 	width: 100%;
 	height: 100%;
 	display: none;
+	overflow-y:scroll;
 
 	.dashboard-top {
 		width: 100%;
 		height: 250px;
-		position: absolute;
-		border-top: 10px solid rgba(0,0,0, 0.3);
+		position: relative;
+		border-top: 10px solid rgba(0,0,0, 0.5);
 		box-shadow: 0px 1px 1px #ddd;
 	}
 }
@@ -21,8 +22,6 @@
 .dashboard-bottom {
 	width: 100%;
 	height: 100%;
-	top: 260px;
-	right: 180px;
 	position: relative;
 }
 
@@ -31,6 +30,7 @@
 	display: block;
 	background: $primary_white;
 	height: 100%;
+
 }
 .dashboard-bottom-bottom-right {
 	width: 30%;
@@ -42,8 +42,6 @@
 	-webkit-transition-property: left;
     -webkit-transition-duration: 0.2s;
     position: relative;
-    left: 180px;
-    overflow-y: scroll;
 }
 
 .dashboard-calendar {
@@ -126,7 +124,8 @@
 
 #dashboard-posts {
 float: right;
-width: 80%;
+background: $primary_white;
+width: 100%;
 position: relative;
 .user-post {
 width: 85%;

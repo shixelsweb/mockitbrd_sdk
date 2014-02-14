@@ -1,0 +1,57 @@
+{
+    "_id" : ObjectId("52eb2bbd14eb909300e8d635"),
+    "personal": {
+        "fname" : "Bob",
+        "lname" : "Saget",
+        "email" : "bobsaget@gmail.com",
+        "phone" : "801-921-9242",
+        "location" : "Salt Lake City, UT",
+        "user_type" : "interviewer",
+        "bio" : "Systems Administrator with a passion for secruity!",
+        "password" : "$2a$10$.cUukaVXqe8unBpjh7wZgu8gGCKO8Nf4JV4Eiw1hAR2PQRFDZTSZW",
+        "signup_date" : "1391143869605",
+        "job_status" : "Currently Employed",
+        "job_title" : "Systems Administrator"
+    },
+    "account": {
+        "login": {
+            "active" : 1,
+            "agree_toc" : 1,
+            "client_ip_address" : "24.211.247.195",
+            "isFirst" : 0,
+            "isPrivate" : false,
+            "liked_by" : 0,
+            "login_count" : 0
+        },
+        "config": {
+            "profile": {
+                "wallpaper": "blue_purple.jpg"
+            }
+        }
+    },
+    "social": {
+        "social_network_id" : "1231170184",
+        "social_network_type" : "facebook",
+        "connections" : [
+        ],
+        "interactions" : {
+            "blocked" : [
+            ],
+            "starred" : [
+            ]
+        },
+        "links" : [
+        ]
+    },
+    "app_config": {
+        "notifications" : [
+        ],
+        "referrels" : [],
+        "posts" : [
+        ],
+        "skills" : [
+        ],
+        "tasks" : [
+        ]
+    }
+}

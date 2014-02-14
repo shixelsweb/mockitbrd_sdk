@@ -48,13 +48,13 @@ define([
 
           this.user = options.user;
           this.currentUser = MB.api.user($.parseJSON(MB.session.give('session')).user);
-          if (this.currentUser.interactions) {
-            this.isStarred = this.checkIfStarred(this.currentUser.interactions.starred, this.user._id);
+          if (this.currentUser.social.interactions) {
+            this.isStarred = this.checkIfStarred(this.currentUser.social.interactions.starred, this.user._id);
           } else {
             this.isStarred = false;
           }
 
-          this.isConnectedActive = this.checkIfConnected(this.currentUser.connections, this.user._id);
+          this.isConnectedActive = this.checkIfConnected(this.currentUser.social.connections, this.user._id);
 
           if(this.user._id === this.currentUser._id) {
             this.isOwner = true;
@@ -64,9 +64,9 @@ define([
           }
           this.skillPack = [];
 
-          if (this.user.skills) {
-            for (var i = 0; i < this.user.skills.length; i++) {
-              var skills = this.user.skills[i];
+          if (this.user.app_config.skills) {
+            for (var i = 0; i < this.user.app_config.skills.length; i++) {
+              var skills = this.user.app_config.skills[i];
               var category = Object.getOwnPropertyNames(skills)[0];
               var skillSet = {"category": category.replace("-", " "), "skills": skills[category]};
               this.skillPack.push(skillSet);
@@ -96,9 +96,9 @@ define([
           } else {
              $('.MB-connections').addClass('active');
           }
-          if (this.user.posts) {
-            for (var i = 0; i < this.user.posts.length; i++) {
-              var post = new PostView({'user': this.user._id, 'post': this.user.posts[i]});
+          if (this.user.app_config.posts) {
+            for (var i = 0; i < this.user.app_config.posts.length; i++) {
+              var post = new PostView({'user': this.user._id, 'post': this.user.app_config.posts[i]});
               this.renderPost(post);
             }
           }

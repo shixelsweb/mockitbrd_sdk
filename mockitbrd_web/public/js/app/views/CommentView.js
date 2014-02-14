@@ -39,7 +39,7 @@ define(['moment', 'jquery', 'models/Model', 'views/MBConfirm', 'hbs!templates/co
           this.comment.post_id = options.post_id;
           this.comment.date = moment(this.comment.date).format('MMMM Do YYYY, h:mma');
           this.comment.comment = MB.helper.replaceURLWithHTMLLinks(this.comment.comment);
-          this.comment.commenter = commenter.fname + " " + commenter.lname;
+          this.comment.commenter = commenter.personal.fname + " " + commenter.personal.lname;
           this.comment.commenterid = commenter._id;
           this.model = new Model ({
             comment: this.comment

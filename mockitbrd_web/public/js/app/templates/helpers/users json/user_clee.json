@@ -1,0 +1,79 @@
+{
+    "_id" : ObjectId("52c4cda5de46e88f00770b64"),
+    "personal": {
+        "fname" : "Clee",
+        "lname" : "Sherrod",
+        "email" : "cleesherrod3@gmail.com",
+        "phone" : "919-638-1733",
+        "location" : "Raleigh, NC",
+        "user_type" : "interviewer",
+        "bio" : "",
+        "password" : "$2a$10$sMdW6ao207fHr90unITQAeKqHtCBqISmIuuPWq7sJURyzbTsTHJry",
+        "signup_date" : "1385787600000",
+        "job_status" : "",
+        "job_title" : ""
+    },
+    "account": {
+        "login": {
+            "active" : 1,
+            "agree_toc" : 1,
+            "client_ip_address" : "168.215.121.254",
+            "isFirst" : 0,
+            "isPrivate" : false,
+            "liked_by" : 0,
+            "login_count" : 0
+        },
+        "config": {
+            "profile": {
+                "wallpaper": "default.jpg"
+            }
+        }
+    },
+    "social": {
+        "social_network_id" : "66108062",
+        "social_network_type" : "facebook",
+        "connections" : [
+        ],
+        "interactions" : {
+            "blocked" : [
+            ],
+            "starred" : [
+            ]
+        },
+        "links" : [
+           {
+            "type" : "facebook",
+            "url" : "http://www.facebook.com/clee.sherrod"
+            },
+            {
+                "type" : "instagram",
+                "url" : "http://www.instagram.com/lasttogetit"
+            },
+            {
+                "type": "twitter",
+                "url": "http://www.twitter.com/csherrod3"
+            }
+        ]
+    },
+    "app_config": {
+        "notifications" : [
+            {
+                "date" : "2014-02-09T04:24:07-05:00",
+                "notify" : "52c4cda5de46e88f00770b64",
+                "type" : "acceptance",
+                "message" : "accepted your request",
+                "by_who" : "52c4ca13de46e88f00770b62",
+                "read" : "1",
+                "_id" : ObjectId("52f749370113430000f53207")
+            }
+        ],
+        "referrels" : [],
+        "posts" : [
+            ObjectId("52f4fd1d265c110000248cdf")
+        ],
+        "skills" : [
+        ],
+        "tasks" : [
+        ]
+    }
+}

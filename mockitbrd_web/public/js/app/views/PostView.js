@@ -45,10 +45,10 @@ define(['moment', 'jquery', 'models/Model', 'views/MBConfirm', 'views/CommentVie
           }
           if (!this.isOwner) { //only make api call for user info if post is not by current user
             var poster = MB.api.user(this.post.user_id);
-            this.post.poster = poster.fname + " " + poster.lname;
+            this.post.poster = poster.personal.fname + " " + poster.personal.lname;
             this.post.isOwner = false;
           } else {
-            this.post.poster = this.user.fname + " " + this.user.lname;
+            this.post.poster = this.user.personal.fname + " " + this.user.personal.lname;
             this.post.isOwner = true;
           }
           this.post.post = post_html;

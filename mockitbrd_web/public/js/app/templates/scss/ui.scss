@@ -299,7 +299,7 @@
 	opacity: 1;
 }
 
-.modal-white-show #MB-modal-white {
+.modal-white-show #MB-modal-white, , .modal-white-show #MB-confirm  {
 	visibility: visible;
 	opacity: 1;
 }
@@ -499,7 +499,7 @@
 
 	.modal {
 		margin: 0 auto;
-		top: 25%;
+		top: 5%;
 		background: $primary_white;
 		width: 45%;
 		z-index: 2000;

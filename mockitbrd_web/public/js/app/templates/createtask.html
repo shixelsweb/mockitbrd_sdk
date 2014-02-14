@@ -1,0 +1,80 @@
+<div id="create-task-view">
+	<div class="create_task_header">
+		{{#if user.isCandidate}}
+			<div class="title pull-left">New Interview</div>
+		{{else}}
+			<div class="title pull-left">New Skil Exam</div>
+		{{/if}}
+		<div class="date pull-right">
+			<div class="daymonth">{{user.calendar.day}}</div>
+			<div class="year">{{user.calendar.year}}</div>
+		</div>
+		<div class="clear-both"></div>
+	</div>
+	<div class="create_task_body">
+		<label>Type</label>
+		{{#if user.isCandidate}}
+		<input type="text" disabled value="Interview">
+		{{else}}
+		<input type="text" disabled value="Skill Test">
+		{{/if}}
+		<div class="task_why_question">Why can't I edit this?</div>
+		<div class="task_subject_cat">
+			<div class="pull-left">
+			<label>Category</label>
+				<select class="cat_drop_down">
+					<option>Choose a category</option>
+					{{#each tags}}
+					<option data-cat="{{name}}">{{name}}</option>
+					{{/each}}
+				</select>
+			</div>
+			<div class="pull-right">
+				<label class="tag_drop_down_label">Subject</label>
+				<select class="tag_drop_down" disabled='disabled'>
+					<option><i class="fa fa-arrow-circle-o-left"></i> Pick Category</option>
+				</select>
+			</div>
+			<div class="clear-both"></div>
+		</div>
+		<div class="create_task_rest">
+			<div class="pull-left">
+				<label>Interview Type</label>
+				<ul class="create_task_type">
+					<li><i class="fa fa-phone" data-inttype="phone"></i>Phone</li>
+					<li><i class="fa fa-desktop" data-inttype="video"></i>Video</li>
+				</ul>
+			</div>
+			<div class="pull-right">
+				<label>Interview Duration</label>
+				<select class="create_task_duration">
+					<option>15 minutes</option>
+					<option>30 minutes</option>
+					<option>45 minutes</option>
+					<option>60 minutes</option>
+				</select>
+			</div>
+			<div class="clear-both"></div>
+		</div>
+		<div class="create_task_rest">
+			<div class="pull-left">
+				<label>Interview Focus</label>
+				<select class="create_task_focus">
+					<option>Technical</option>
+					<option>Behavorial</option>
+					<option>Both</option>
+				</select>
+			</div>
+			<div class="clear-both"></div>
+		</div>
+	</div>
+	<div class="create_task_footer">
+		<div class="cancel_task pull-left"><a class="no">Cancel</a></div>
+		{{#if user.isCandidate}}
+			<div class="match_int pull-right"><button class="smallest MB-button calendar_button">Match with Interviewer</button></div>
+		{{else}}
+			<div class="schedule_exam pull-right MB-button ghost"><button class=" MB-button calendar_button">Schedule Exam</button></div>
+		{{/if}}
+		<div class="clear-both"></div>
+	</div>
+</div>

@@ -1,0 +1,80 @@
+{
+    "_id" : ObjectId("52ebc51614eb909300e8d639"),
+    "personal": {
+        "fname" : "Tracy",
+        "email" : "tracycole@gmail.com",
+        "lname" : "Cole",
+        "phone" : "404-293-8403",
+        "location" : "Atlanta, GA",
+        "user_type" : "candidate",
+        "bio" : "Future Doctor .. watch out Dougie Howser",
+        "password" : "$2a$10$wahtZVza16QfaiNzcIh9ruJwMMkxjhjHVJ1jmyNIIQ.jcu4wQylbi",
+        "signup_date" : "1391183125770",
+        "job_status" : "Student Doctor",
+        "job_title" : "Actively Seeking Employement",
+        "gender" : "female"
+    },
+    "account": {
+        "login": {
+            "active" : 1,
+            "agree_toc" : 1,
+            "client_ip_address" : "168.215.121.254",
+            "isFirst" : 0,
+            "isPrivate" : false,
+            "liked_by" : 0,
+            "login_count" : 0
+        },
+        "config": {
+            "profile": {
+                "wallpaper": "default.jpg"
+            }
+        }
+    },
+    "social": {
+        "social_network_id" : "",
+        "social_network_type" : "",
+        "connections" : [
+            {
+                "user_id" : ObjectId("52c4ca13de46e88f00770b62"),
+                "status" : "pending"
+            }
+        ],
+        "interactions" : {
+            "blocked" : [
+            ],
+            "starred" : [
+            ]
+        },
+        "links" : [
+        ]
+    },
+    "app_config": {
+        "notifications" : [
+            {
+                "date" : "2014-02-09T19:23:56-05:00",
+                "notify" : "52ebc51614eb909300e8d639",
+                "type" : "connection",
+                "message" : "would like to connect with you",
+                "by_who" : "52c4ca13de46e88f00770b62",
+                "read" : "0",
+                "_id" : ObjectId("52f81c1c975ec40000295584")
+            }, 
+            {
+                "date" : "2014-02-11T21:44:37-05:00",
+                "notify" : "52ebc51614eb909300e8d639",
+                "type" : "connection",
+                "message" : "would like to connect with you",
+                "by_who" : "52c4ca13de46e88f00770b62",
+                "read" : "0",
+                "_id" : ObjectId("52fae01558af2d00003ac6d2")
+            }
+        ],
+        "referrels" : [],
+        "posts" : [
+        ],
+        "skills" : [
+        ],
+        "tasks" : [
+        ]
+    }
+}

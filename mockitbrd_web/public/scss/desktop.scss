@@ -13,6 +13,12 @@ html, body, #page, #left-header, #dashboard {
 	overflow: hidden;
 }
 
+#left-header {
+	float: left;
+	width: 15%;
+	height: 100%;
+}
+
 #main {
 	padding: 0;
 	overflow-y:scroll;
@@ -27,4 +33,9 @@ a {
 	&:hover {
 		text-decoration: none;
 	}
+}
+#right-header {
+float: right;
+width: 85%;
+height: 100%;
 }

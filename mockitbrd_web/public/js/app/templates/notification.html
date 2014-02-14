@@ -2,7 +2,7 @@
 	{{#if notification.by_who}}
 	<div class="notification_left pull-left">
 		<div class="notification-img"><img src="/getUserPic/{{notification.by_who._id}}"></div>
-		<div class="message"><a href="#user/{{notification.by_who._id}}">{{notification.by_who.fname}} {{notification.by_who.lname}}</a> {{notification.message}}</div>
+		<div class="message"><a href="#user/{{notification.by_who._id}}">{{notification.by_who.personal.fname}} {{notification.by_who.personal.lname}}</a> {{notification.message}}</div>
 		<div class="notificatin-when">{{notification.when}}</div>
 	</div>
 	{{/if}}

@@ -12,7 +12,7 @@
 			<img id="user_profile_pic" src="/getUserpic/{{user._id}}">
 		</div>
 		<div class="MB-user-profile-top-info">
-			<h1>{{user.fname}} {{user.lname}}</h1>
+			<h1>{{user.personal.fname}} {{user.personal.lname}}</h1>
 			{{#if isOwner}}
 			{{else}}
 				{{#if isStarred}}
@@ -21,14 +21,14 @@
 				<div class="MB-user-star fa fa-star-o" starevent="star"  id="star_{{user._id}}"></div>
 				{{/if}}
 			{{/if}}
-			{{#if user.location}}
-			<h2><i class="fa fa-map-marker user_profile_location"> {{user.location}}</i></h2>
+			{{#if user.personal.location}}
+			<h2><i class="fa fa-map-marker user_profile_location"> {{user.personal.location}}</i></h2>
 			{{/if}}
-			{{#if user.job_title}}
-		<h3 class="user-profile-status"><span class="user_profile_job_title">{{user.job_title}}</span> and <span class="user_profile_job_status">{{user.job_status}}</span></h3>
+			{{#if user.personal.job_title}}
+		<h3 class="user-profile-status"><span class="user_profile_job_title">{{user.personal.job_title}}</span> and <span class="user_profile_job_status">{{user.personal.job_status}}</span></h3>
 		{{/if}}
 			<ul class="MB-user-profile-top-social-links">
-				{{#each user.social_links}}
+				{{#each user.social.links}}
 					<a href="{{url}}" target="_blank"><li class="fa fa-{{type}}"></li></a>
 				{{/each}}
 			</ul>
@@ -54,8 +54,8 @@
 		{{/if}}
 		<div class="user-profile-stats">
 			<div class="user-profile-connections-stats unselectable">
-				{{#if user.connections.length}}
-				<div class="top">{{user.connections.length}}</div>
+				{{#if user.social.connections.length}}
+				<div class="top">{{user.social.connections.length}}</div>
 				{{else}}
 				<div class="top">0</div>
 				{{/if}}

@@ -1,0 +1,61 @@
+{
+    "_id" : ObjectId("52ebb73f14eb909300e8d636"),
+    "personal": {
+        "fname" : "Charles",
+        "lname" : "Mcgee",
+        "email" : "charlesmcgee@gmail.com",
+        "phone" : "",
+        "location" : "",
+        "user_type" : "candidate",
+        "bio" : "",
+        "password" : "$2a$10$qIquEu07FSNePFHdsZGGneusVH6//inHcUzViJ8Dn7hQsN8c/ThUe",
+        "signup_date" : "1391179583152",
+        "job_status" : "",
+        "job_title" : "",
+        "gender" : ""
+    },
+    "account": {
+        "login": {
+            "active" : 1,
+            "agree_toc" : 1,
+            "client_ip_address" : "168.215.121.254",
+            "isFirst" : 0,
+            "isPrivate" : false,
+            "liked_by" : 0,
+            "login_count" : 0
+        },
+        "config": {
+            "profile": {
+                "wallpaper": "default.jpg"
+            }
+        }
+    },
+    "social": {
+        "social_network_id" : "",
+        "social_network_type" : "",
+        "connections" : [
+        ],
+        "interactions" : {
+            "blocked" : [
+            ],
+            "starred" : [
+                {
+                    "user_id" : ObjectId("52c4ca13de46e88f00770b62")
+                }
+            ]
+        },
+        "links" : [
+        ]
+    },
+    "app_config": {
+        "notifications" : [
+        ],
+        "referrels" : [],
+        "posts" : [
+        ],
+        "skills" : [
+        ],
+        "tasks" : [
+        ]
+    }
+}

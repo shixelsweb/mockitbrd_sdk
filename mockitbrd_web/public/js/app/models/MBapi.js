@@ -549,6 +549,54 @@ define([
             });
 
             return changed;
+        },
+        getTasks: function(params, type) {
+            var url = null;
+            var send = null;
+            if (type === 'interviews') {
+                url = "v1/tasks/user";
+            } else if (type === 'tasks') {
+                url = "v1/tasks/interviews/user";
+            }
+
+            $.ajax({
+                type: "POST",
+                url: this.get('api_url') + url,
+                data: params,
+                dataType: 'json',
+                success: function (response) {
+                    if (response.success === 0) {
+                        //Add popup here
+                    } else {
+                        send = response.data.tasks;
+                    }
+                },
+                error: function (response) {
+                    console.log("error: ", response); //TODO-(Fara) : add to Error Modal
+                },
+                async: false
+            });
+            return send;
+        },
+        tags: function () {
+            var send = null;
+            $.ajax({
+                type: "GET",
+                url: this.get('api_url') + 'v1/tags',
+                dataType: 'json',
+                success: function (response) {
+                    if (response.success === 0) {
+                        //Add popup here
+                    } else {
+                        send = response.data.tags;
+                    }
+                },
+                error: function (response) {
+                    console.log("error: ", response); //TODO-(Fara) : add to Error Modal
+                },
+                async: false
+            });
+            return send;
         }
     });
 

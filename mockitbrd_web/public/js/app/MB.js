@@ -62,7 +62,8 @@ define([
         confirmRegion: "#MB-confirm .modal",
         body: "body",
         topMenuRegion: "#top-app-menu-view",
-        notMenuRegion: "#not-menu"
+        notMenuRegion: "#not-menu",
+        createTaskRegion: '#MB-create-task-view'
     });
 
     MB.addInitializer(function () {

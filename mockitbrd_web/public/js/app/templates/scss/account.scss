@@ -67,8 +67,8 @@
 
 #account-gen-box {
 	width: 100%;
-	background: $fb_lightest_grey;
-
+	position: relative;
+top: 60px;
 	#account-gen-box-head {
 	}
 
@@ -137,7 +137,7 @@
 
 #account-pass-box {
 	width: 100%;
-	background: $fb_lightest_grey;
+	
 
 	#account-pass-container{
 		width: 900px;
@@ -176,7 +176,7 @@
 
 #account-soc-box {
 	width: 100%;
-	background: $fb_lightest_grey;
+	
 
 	#account-soc-container {
 		width: 900px;
@@ -219,7 +219,7 @@
 
 #account-not-box {
 	width: 100%;
-	background: $fb_lightest_grey;
+	
 
 	#account-not-container {
 		width: 650px;

@@ -305,6 +305,9 @@ function (
         },
         notFound: function() {
              this.launchApp(DashboardMainView, null, null, null, true);
+        },
+        createInterview: function() {
+            this.prepModal(FaraView, 'black');
         }
     });
 });

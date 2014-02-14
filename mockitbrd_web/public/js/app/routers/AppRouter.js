@@ -37,6 +37,7 @@ define(['backbone', 'marionette'], function(Backbone, Marionette) {
            "interview/:id": "interview",
            "share": "share",
            "explore": "explore",
+           "user/interview/create": "createInterview",
            //404 error route
            "*notFound": "notFound"
        }

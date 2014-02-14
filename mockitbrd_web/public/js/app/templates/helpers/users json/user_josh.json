@@ -1,0 +1,89 @@
+{
+    "_id" : ObjectId("52f3d0ac0ec1640000d0fb63"),
+    "personal": {
+        "fname" : "Josh",
+        "lname" : "Toner",
+        "email" : "joshtoner@gmail.com",
+        "phone" : "919-743-2938",
+        "location" : "Durham, NC",
+        "user_type" : "interviewer",
+        "bio" : "I'm searching the land for work..",
+        "password" : "$2a$10$PKn/eZKhdkZWaG8npnJ7u.mBlchg/iIXFKWwYBBnYVSdzHmva7Fhq",
+        "signup_date" : "1391710380174",
+        "job_status" : "Actively Seeking Employemnt",
+        "job_title" : "Full-Time Student",
+        "gender" : "male"
+    },
+    "account": {
+        "login": {
+            "active" : 1,
+            "agree_toc" : 1,
+            "client_ip_address" : "24.211.247.195",
+            "isFirst" : 0,
+            "isPrivate" : false,
+            "liked_by" : 0,
+            "login_count" : 0
+        },
+        "config": {
+            "profile": {
+                "wallpaper": "default.jpg"
+            }
+        }
+    },
+    "social": {
+        "social_network_id" : "",
+        "social_network_type" : "",
+        "connections" : [
+            {
+                "status" : "active",
+                "user_id" : ObjectId("52ebb7ac14eb909300e8d637")
+            }
+        ],
+        "interactions" : {
+            "blocked" : [
+            ],
+            "starred" : [
+            ]
+        },
+        "links" : [
+        ]
+    },
+    "app_config": {
+        "notifications" : [
+            {
+                "date" : "2014-02-09T01:38:55-05:00",
+                "notify" : "52f3d0ac0ec1640000d0fb63",
+                "type" : "acceptance",
+                "message" : "accepted your request",
+                "by_who" : "52c4ca13de46e88f00770b62",
+                "read" : "0",
+                "_id" : ObjectId("52f7227f5872b1000036c92d")
+            }, 
+            {
+                "date" : "2014-02-09T21:08:02-05:00",
+                "notify" : "52f3d0ac0ec1640000d0fb63",
+                "type" : "connection",
+                "message" : "would like to connect with you",
+                "by_who" : "52c4ca13de46e88f00770b62",
+                "read" : "0",
+                "_id" : ObjectId("52f83482975ec40000295585")
+            }, 
+            {
+                "date" : "2014-02-09T22:01:54-05:00",
+                "notify" : "52f3d0ac0ec1640000d0fb63",
+                "type" : "acceptance",
+                "message" : "accepted your request",
+                "by_who" : "52ebb7ac14eb909300e8d637",
+                "read" : "0",
+                "_id" : ObjectId("52f84122975ec40000295587")
+            }
+        ],
+        "referrels" : [],
+        "posts" : [
+        ],
+        "skills" : [
+        ],
+        "tasks" : [
+        ]
+    }
+}

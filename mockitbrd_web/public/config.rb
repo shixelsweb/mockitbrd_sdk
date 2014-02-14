@@ -5,7 +5,7 @@ http_path = "/"
 css_dir = "css"
 sass_dir = "scss"
 images_dir = "img"
-javascripts_dir = "js"
+javascripts_dir = "js/libs"
 add_import_path "js/app/templates/scss"
 
 # You can select your preferred output style here (can be overridden via the command line):

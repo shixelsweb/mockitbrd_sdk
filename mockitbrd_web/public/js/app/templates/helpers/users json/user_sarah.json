@@ -1,0 +1,85 @@
+{
+    "_id" : ObjectId("52ebb7ac14eb909300e8d637"),
+    "personal": {
+        "fname" : "Sarah",
+        "lname" : "Kate",
+        "email" : "sarahkate@gmail.com",
+        "phone" : "212-394-3940",
+        "location" : "Brooklyn, NY",
+        "user_type" : "candidate",
+        "bio" : "I can make you shine!",
+        "password" : "$2a$10$vl9z4.P.6Ifv94S4M5CSHuLTJAdbxSeq5bQGuHZf/ClibtbWLQDs.",
+        "signup_date" : "1391179692121",
+        "job_status" : "Currently Employed",
+        "job_title" : "Business Manager",
+        "gender" : "Female"
+    },
+    "account": {
+        "login": {
+            "active" : 1,
+            "agree_toc" : 1,
+            "client_ip_address" : "168.215.121.254",
+            "isFirst" : 0,
+            "isPrivate" : false,
+            "liked_by" : 0,
+            "login_count" : 0
+        },
+        "config": {
+            "profile": {
+                "wallpaper": "default.jpg"
+            }
+        }
+    },
+    "social": {
+        "social_network_id" : "",
+        "social_network_type" : "",
+        "connections" : [
+            {
+                "status" : "active",
+                "user_id" : ObjectId("52f3d0ac0ec1640000d0fb63")
+            }, 
+            {
+                "user_id" : ObjectId("52c4ca13de46e88f00770b62"),
+                "status" : "pending"
+            }
+        ],
+        "interactions" : {
+            "blocked" : [
+            ],
+            "starred" : [
+            ]
+        },
+        "links" : [
+        ]
+    },
+    "app_config": {
+        "notifications" : [
+            {
+                "date" : "2014-02-09T22:01:37-05:00",
+                "notify" : "52ebb7ac14eb909300e8d637",
+                "type" : "connection",
+                "message" : "would like to connect with you",
+                "by_who" : "52f3d0ac0ec1640000d0fb63",
+                "read" : "1",
+                "_id" : ObjectId("52f84111975ec40000295586")
+            }, 
+            {
+                "date" : "2014-02-13T02:17:48-05:00",
+                "notify" : "52ebb7ac14eb909300e8d637",
+                "type" : "connection",
+                "message" : "would like to connect with you",
+                "by_who" : "52c4ca13de46e88f00770b62",
+                "read" : "0",
+                "_id" : ObjectId("52fc719d58af2d00003ac6da")
+            }
+        ],
+        "referrels" : [],
+        "posts" : [
+            ObjectId("52f846ec975ec40000295588")
+        ],
+        "skills" : [
+        ],
+        "tasks" : [
+        ]
+    }
+}

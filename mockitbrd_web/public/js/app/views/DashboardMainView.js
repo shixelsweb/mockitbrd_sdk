@@ -17,7 +17,7 @@ define(['jquery', 'models/Model', 'views/PostView', 'moment', 'hbs!templates/das
           },
           initialize: function() {
             this.user = MB.api.user($.parseJSON(MB.session.give('session')).user);
-            this.tasks = MB.api.getUserTasksFull($.parseJSON(MB.session.give('session')).user);
+            this.tasks = MB.api.getUserTasksFull(this.user._id);
             this.today = this.getToday();
             this.tasks = this.checkIfInterview(this.tasks);
             this.posts = MB.helper.getPostsToShow(this.user);
@@ -25,6 +25,7 @@ define(['jquery', 'models/Model', 'views/PostView', 'moment', 'hbs!templates/das
               tasks: this.tasks,
               today: this.today
             });
+            console.log(this.user);
           },
           onRender: function () {
             // get rid of that pesky wrapping-div
