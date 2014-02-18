@@ -41,7 +41,9 @@ define(['jquery', 'hbs!templates/register', 'backbone', 'marionette'],
                 var getLocation = window.location.href;
                 var urlsep = getLocation.split("?");
 
-                this.isReferred = urlsep[1].split("=")[1];
+                if (urlsep[1]) {
+                    this.isReferred = urlsep[1].split("=")[1];
+                }
 
             },
 
