@@ -24,7 +24,7 @@ html, body, #page, #left-header, #dashboard {
 	overflow-y:scroll;
 }
 
-#left-header {float: left;}
+#left-header {float: left; left: 0px;}
 #dashboard {display: none; background: $dashboard_bg;}
 
 a {

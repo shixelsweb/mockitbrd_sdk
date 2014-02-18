@@ -56,12 +56,12 @@ define(['jquery', 'models/Model', 'views/MBConfirm', 'hbs!templates/explore', 'b
             this.$el.find(selector).replaceWith($(selector, html));
           },
           fixStore: function(users) {
-            var connections = this.user.connections;
-            var blocked_users = this.user.blocked_list;
+            var connections = this.user.social.connections;
+            var blocked_users = this.user.social.interactions.blocked;
 
             console.log(blocked_users);
             for (var i = 0; i < users.length; i++) {
-              if (users[i].user_type === 'candidate') {
+              if (users[i].personal.user_type === 'candidate') {
                 users[i].isCandidate = true;
               } else {
                 users[i].isCandidate = false;
@@ -155,7 +155,7 @@ define(['jquery', 'models/Model', 'views/MBConfirm', 'hbs!templates/explore', 'b
                 this.model.attributes.results = this.sortResults(this.activeStore, 'active');
               } else if (sortBy === 'connections') {
                 if (!this.connStore) {
-                   var connections = this.user.connections;
+                   var connections = this.user.social.connections;
                    var conns = [];
                    if (connections) {
                       for (var i = 0; i < connections.length; i++) {

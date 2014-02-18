@@ -72,6 +72,29 @@ server.get('/getUserpic/:id', function (request, response) {
     	}
     });
 });
+//get user wallpaper 
+server.get('/wallpaper/:id', function (request, response) {
+    var wallpaper = request.params.id;
+    console.log(wallpaper);
+    var wallpaperFilePath = '/wallpapers/' + wallpaper;
+    console.log(wallpaperFilePath);
+    s3.getFile(wallpaperFilePath, function(err, wallPaperStream) {
+        var statusCode = wallPaperStream.statusCode;
+        console.log(statusCode);
+        if (statusCode !== 200) {
+            s3.getFile('/wallpapers/default.jpg', function(error, defaultImage) {
+                if (error) {
+                    defaultImage.pipe(error);
+                } else {
+                    defaultImage.pipe(response);
+                }
+            });
+        } else {
+            wallPaperStream.pipe(response);
+         }
+    });
+});
+//upload a user profile pic
 server.put('/uploadUserpic', function (request, response) {
     console.log(request, response);
     fs.readFile(request.files.image.path, function(err, buf){ // read file submitted from the form on the fly

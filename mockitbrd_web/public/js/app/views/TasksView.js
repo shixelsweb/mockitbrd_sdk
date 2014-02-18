@@ -18,10 +18,10 @@ define(['jquery', 'views/CreateTaskView', 'moment', 'models/Model', 'hbs!templat
             this.user = MB.api.user($.parseJSON(MB.session.give('session')).user);
             this.calendar.month = moment().format("MMMM");
             this.calendar.year = moment().format('YYYY');
-            this.user.tasks = MB.api.getTasks({'user_id': this.user._id, 'type': this.user.user_type}, 'tasks');
-            //this.user.interviews = MB.api.getTasks({'user_id': this.user._id, 'type': this.user.user_type}, 'interviews');
+            this.user.tasks = MB.api.getTasks({'user_id': this.user._id, 'type': this.user.personal.user_type}, 'tasks');
+            this.user.interviews = MB.api.getTasks({'user_id': this.user._id, 'type': this.user.personal.user_type}, 'interviews');
 
-            if(this.user.user_type === "candidate") {
+            if(this.user.personal.user_type === "candidate") {
               this.user.isCandidate = true;
             } else {
               this.user.isCandidate = false;

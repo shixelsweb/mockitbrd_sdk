@@ -27,7 +27,7 @@ define([ //VIEWS
     //Application Views
     'views/DashboardView',
     'views/AccountView',
-    'views/TaskView',
+    'views/TasksView',
     'views/UserView',
     'views/ShareView',
     //Application UI
@@ -76,7 +76,7 @@ function (
     //Application Views
     DashboardView,
     AccountView,
-    TaskView,
+    TasksView,
     UserView,
     ShareView,
     //Application UI
@@ -291,7 +291,7 @@ function (
             this.launchApp(InterviewView, null, null, {'interview_id': id});
         },
         tasks: function() {
-            this.launchApp(TaskView);
+            this.launchApp(TasksView);
         },
         share: function() {
             this.launchApp(ShareView);

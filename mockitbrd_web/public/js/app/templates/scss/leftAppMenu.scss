@@ -6,8 +6,8 @@
 	border-right: 1px groove #777;
 	overflow-y: hidden;
 	margin: 0;
-	// -webkit-transition-property: left;
-	// -webkit-transition-duration: 0.2s;
+	-webkit-transition-property: left;
+	-webkit-transition-duration: 0.2s;
 	left: 0;
 	z-index: 99;
     .tooltip {
@@ -18,7 +18,7 @@
 	li {
 		height: 60px;
 		color: $app_menu_font;
-		font-size: 0.8em;
+		font-size: 0.9em;
 		text-align: left;
 		line-height: 5em;
 		cursor: pointer;
@@ -72,19 +72,16 @@ height: 100%;
 .MB-left-app-menu-button {
 	width: 35px;
 	height: 35px;
-	color: $primary_white;
 	position: absolute;
-	background: $app_menu_grey;
-	left: 196px;
+	left: 215px;
 	top: 0;
 	z-index: 1001;
 	line-height: 35px;
 	text-align: center;
-	font-size: 1em;
-	border: 1px groove #777;
 	border-left: none;
 	border-top: none;
 	cursor: pointer;
+	font-size: 1.5em;
 }
 
 .scroll-left-menu {

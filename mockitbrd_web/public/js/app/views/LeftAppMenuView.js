@@ -40,12 +40,16 @@ define([
           onLeftAppMenuButtonClick: function(e) {
             e.preventDefault();
 
-            if ($('.MB-left-app-menu').css('left') === '0px') {
-              $('.MB-left-app-menu').css('left', '-180px');
-              $('.MB-left-app-menu-button').css('left', '0px');
+            if ($('#left-header').css('left') === '0px') {
+              $('#right-header').css('position', 'absolute');
+              $('#right-header').css('width', '100%');
+              $('.MB-left-app-menu-button').css('left', '0');
+              $('#left-header').css('left', '-216px');
             } else {
-              $('.MB-left-app-menu').css('left', '0px');
-              $('.MB-left-app-menu-button').css('left', '180px');
+              $('#right-header').css('position', 'inherit');
+              $('#right-header').css('width', '85%');
+              $('.MB-left-app-menu-button').css('left', '215px');
+              $('#left-header').css('left', '0px');
             }
           }
       });
