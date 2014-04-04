@@ -88,25 +88,55 @@ define(['jquery', 'hbs!templates/register', 'backbone', 'marionette'],
                     var client_ip = this.getClientIP();
                     var timestamp = new Date().getTime();
                     var reg_send = {
-                        'signup_date': timestamp,
-                        'fname':  this.defaults.fname.value,
-                        'lname':  this.defaults.lname.value,
-                        'gender': this.defaults.gender.value,
-                        'email':  this.defaults.email.value,
-                        'password':  this.defaults.password.value,
-                        'client_ip_address':  client_ip,
-                        'user_type':  this.defaults.user_type.value,
-                        'agree_toc':  this.defaults.toc.value,
-                        'active': 0,
-                        'user_pic': 0,
-                        'referrel_count': 0,
-                        'isFirst': 0,
-                        'login_count': 0,
-                        'liked_by': 0
+                        personal: {
+                            'fname': this.defaults.fname.value,
+                            'lname': this.defaults.lname.value,
+                            'email': this.defaults.email.value,
+                            'phone': null,
+                            'location': null,
+                            'user_type': this.defaults.user_type.value,
+                            'bio': null,
+                            'password': this.defaults.password.value,
+                            'signup_date': timestamp,
+                            'job_status': null,
+                            'job_title': null,
+                            'gender': this.defaults.gender.value
+                        },
+                        account: {
+                            login: {
+                                'active': 0,
+                                'agree_toc':  parseInt(this.defaults.toc.value),
+                                'client_ip_address':  client_ip,
+                                'isFirst': 0,
+                                'isPrivate': false,
+                                'liked_by': 0,
+                                'login_count': 0
+                            },
+                            config: {
+                                profile: {
+                                    'wallpaper': 'default.jpg'
+                                }
+                            }
+                        },
+                        social: {
+                            'social_network_id': null,
+                            'social_network_type': null,
+                            connections: {},
+                            intercations: {
+                                blocked: {},
+                                starred: {}
+                            },
+                            links: {}
+                        },
+                        app_config: {
+                            notifications: {},
+                            referrels: {},
+                            posts: {},
+                            skills: {},
+                            tasks: {}
+                        }
                     };
-
                     MB.api.register(reg_send, this.isReferred);
-
                 } else if (this.defaults.password.ready === true &&
                     this.defaults.fname.ready === true &&
                     this.defaults.lname.ready === true &&

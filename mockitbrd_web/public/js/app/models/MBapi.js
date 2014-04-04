@@ -252,8 +252,8 @@ define([
                         }
                     } else {
                         $('.MB-registration-form').hide();
-                        $('.MB-reg-name').html(response.data.registeredUser.fname);
-                        $('.MB-reg-email').html(response.data.registeredUser.email);
+                        $('.MB-reg-name').html(response.data.registeredUser.personal.fname);
+                        $('.MB-reg-email').html(response.data.registeredUser.personal.email);
                         $('.MB-reg-success').addClass('hatch');
                     }
                     //MB.appRouter.navigate('#register', { trigger: true });
